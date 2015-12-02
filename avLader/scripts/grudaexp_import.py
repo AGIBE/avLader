@@ -31,7 +31,6 @@ def run():
         'ITF_FILE': str(itf_file),
         'LOGFILE': str(fme_logfile)
     }
-    logger.info(unicode(parameters))
     try:
         runner.runWithParameters(str(fme_script), parameters)
     except fmeobjects.FMEException as ex:
