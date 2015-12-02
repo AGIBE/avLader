@@ -5,6 +5,6 @@
 build/*
 dist/*
 docs/_build/*
-oerebLader.egg-info/*
+avLader.egg-info/*
 *.pyt.xml
 *.recover
