@@ -82,7 +82,8 @@ def run():
     logger.info("GRUDA-Upload wird ausgeführt.")
     
     logger.info("Alte Zip-Datei wird gelöscht.")
-    zip_file = os.path.join(config['DIRECTORIES']['gruda'], "gruda_export.zip")
+    zip_filename = config['GRUDA_FTP']['filename']    
+    zip_file = os.path.join(config['DIRECTORIES']['gruda'], zip_filename)
     if os.path.exists(zip_file):
         logger.info("Lösche " + zip_file)
         os.remove(zip_file)
@@ -91,5 +92,7 @@ def run():
     
     logger.info("Datei wird umbenannt von " + os.path.basename(downloaded_file) + " in " + os.path.basename(zip_file))
     os.rename(downloaded_file, zip_file)
+    
+    #TODO: Upload auf FTP-Server
 
     avLader.helpers.connection_helper.delete_connection_files(config, logger)    
