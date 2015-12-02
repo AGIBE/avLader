@@ -10,7 +10,7 @@ def init_logging(config, subcommand):
     config['LOGGING']['log_directory'] = log_directory
     if not os.path.exists(log_directory):
         os.makedirs(log_directory)
-    logfile = os.path.join(log_directory, subcommand + "_" + datetime.datetime.now().strftime("_%Y_%m_%d_%H_%M_%S") + ".log")
+    logfile = os.path.join(log_directory, subcommand + datetime.datetime.now().strftime("_%Y_%m_%d_%H_%M_%S") + ".log")
         
     logger = logging.getLogger("avLaderLogger")
     logger.setLevel(logging.DEBUG)
