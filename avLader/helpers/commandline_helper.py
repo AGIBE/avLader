@@ -2,24 +2,35 @@
 from __future__ import absolute_import, division, print_function, unicode_literals
 import argparse
 from avLader import __version__
-from _ctypes_test import func
+import avLader.scripts.gruda_upload
+import avLader.scripts.grudaexp_import
+import avLader.scripts.mopube_import
+import avLader.scripts.dipanu_import
+import avLader.scripts.gebadr_import
+import avLader.scripts.fds_import
 
 def run_gruda_upload(args):
+    avLader.scripts.gruda_upload.run()
     print("GRUDA-Upload SUCCESSFUL!")
     
 def run_grudaexp_import(args):
+    avLader.scripts.grudaexp_import.run()
     print("GRUDAEXP-Import SUCCESSFUL!")
     
 def run_mopube_import(args):
+    avLader.scripts.mopube_import.run()
     print("MOPUBE-Import SUCCESSFUL!")
     
 def run_dipanu_import(args):
+    avLader.scripts.dipanu_import.run()
     print("DIPANU-Import SUCCESSFUL!")
     
 def run_gebadr_import(args):
+    avLader.scripts.gebadr_import.run()
     print("GEBADR-Import SUCCESSFUL!")
     
 def run_fds_import(args):
+    avLader.scripts.fds_import.run()
     print("FDS-Import SUCCESSFUL!")
 
 def main():

@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # übernommen aus: https://pythonhosted.org/setuptools/setuptools.html#id24
 import ez_setup
-from oerebLader import __version__
-import oerebLader
+from avLader import __version__
+import avLader
 ez_setup.use_setuptools()
 
 from setuptools import setup, find_packages
