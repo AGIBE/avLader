@@ -61,8 +61,12 @@ def run():
     logger.info("Datei wird umbenannt von " + os.path.basename(downloaded_file) + " in " + os.path.basename(zip_file))
     os.rename(downloaded_file, zip_file)
 
-    logger.info("Upload auf den infoGrips-Server beginnt.")    
-    avLader.helpers.ftp_helper.upload_zip(zip_file, zip_filename, config, logger)
-    logger.info("Upload auf den infoGrips-Server beendet.")
+    logger.info("Upload auf den infoGrips-Server beginnt.")
+    try:    
+        avLader.helpers.ftp_helper.upload_zip(zip_file, zip_filename, config, logger)
+        logger.info("Upload auf den infoGrips-Server beendet.")
+    except Exception as e:
+        logger.error("Upload auf den infoGrips-Server nicht erfolgreich!")
+        logger.error(e)
 
     avLader.helpers.connection_helper.delete_connection_files(config, logger)    
