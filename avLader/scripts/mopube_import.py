@@ -14,9 +14,12 @@ def calculate_grid_size(fc):
     eine ganze Zahl gerundet.
     :param fc: Feature Class, für die die Grid Size gerechnet wird.
     '''
-    result = arcpy.CalculateDefaultGridIndex_management(fc)
-    grid_size = float(result.getOutput(0))
-    grid_size = int(round(grid_size))
+    fc_count = int(arcpy.GetCount_management(fc)[0])
+    grid_size = 0
+    if fc_count > 0:
+        result = arcpy.CalculateDefaultGridIndex_management(fc)
+        grid_size = float(result.getOutput(0))
+        grid_size = int(round(grid_size))
     return grid_size
 
 def run():
@@ -124,7 +127,10 @@ def run():
                         logger.info("Grid Size wird berechnet.")
                         grid_size = calculate_grid_size(source_object)
                         logger.info("Grid Size ist: " + unicode(grid_size))
-                        arcpy.AddSpatialIndex_management(target_object, grid_size)
+                        if grid_size > 0:
+                            arcpy.AddSpatialIndex_management(target_object, grid_size)
+                        else:
+                            arcpy.AddSpatialIndex_management(target_object)
                         logger.info("Spatial Index erfolgreich erstellt.")
                     else:
                         logger.warn("Spatial Index konnte wegen eines Locks nicht erstellt werden.")
