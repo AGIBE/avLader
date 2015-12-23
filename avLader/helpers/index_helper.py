@@ -12,7 +12,13 @@ def calculate_grid_size(fc):
     fc_count = int(arcpy.GetCount_management(fc)[0])
     grid_size = 0
     if fc_count > 0:
-        result = arcpy.CalculateDefaultGridIndex_management(fc)
-        grid_size = float(result.getOutput(0))
-        grid_size = int(round(grid_size))
+        # CalculateDefaultGridIndex_management bricht mit Fehler ab,
+        # wenn die Featureclass nur aus Features mit leerer Geometrie
+        # besteht. Kann bei den Nachführungstabellen vorkommen.
+        try:
+            result = arcpy.CalculateDefaultGridIndex_management(fc)
+            grid_size = float(result.getOutput(0))
+            grid_size = int(round(grid_size))
+        except:
+            grid_size = 0
     return grid_size
