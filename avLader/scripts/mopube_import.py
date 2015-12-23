@@ -3,24 +3,10 @@ from __future__ import absolute_import, division, print_function, unicode_litera
 import avLader.helpers.config_helper
 import avLader.helpers.connection_helper
 import avLader.helpers.ftp_helper
+import avLader.helpers.index_helper
 import os
 import arcpy
 import sys
-
-def calculate_grid_size(fc):
-    '''
-    Berechnet die Grid Size einer Feature Class.
-    Der von arcpy berechnete Wert wird dabei auf
-    eine ganze Zahl gerundet.
-    :param fc: Feature Class, für die die Grid Size gerechnet wird.
-    '''
-    fc_count = int(arcpy.GetCount_management(fc)[0])
-    grid_size = 0
-    if fc_count > 0:
-        result = arcpy.CalculateDefaultGridIndex_management(fc)
-        grid_size = float(result.getOutput(0))
-        grid_size = int(round(grid_size))
-    return grid_size
 
 def run():
     config = avLader.helpers.config_helper.get_config('mopube_import')
@@ -125,7 +111,7 @@ def run():
                     logger.info("Spatial Index wird erstellt.")
                     if arcpy.TestSchemaLock(target_object):
                         logger.info("Grid Size wird berechnet.")
-                        grid_size = calculate_grid_size(source_object)
+                        grid_size = avLader.helpers.index_helper.calculate_grid_size(source_object)
                         logger.info("Grid Size ist: " + unicode(grid_size))
                         if grid_size > 0:
                             arcpy.AddSpatialIndex_management(target_object, grid_size)
