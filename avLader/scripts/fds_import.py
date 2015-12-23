@@ -3,6 +3,7 @@ from __future__ import absolute_import, division, print_function, unicode_litera
 import avLader.helpers.config_helper
 import avLader.helpers.connection_helper
 import avLader.helpers.ftp_helper
+import avLader.helpers.index_helper
 import os
 import arcpy
 import sys
@@ -238,7 +239,13 @@ def run():
                 if needs_spatial_index:
                     logger.info("Spatial Index wird erstellt.")
                     if arcpy.TestSchemaLock(target_object):
-                        arcpy.AddSpatialIndex_management(target_object)
+                        logger.info("Grid Size wird berechnet.")
+                        grid_size = avLader.helpers.index_helper.calculate_grid_size(source_object)
+                        logger.info("Grid Size ist: " + unicode(grid_size))
+                        if grid_size > 0:
+                            arcpy.AddSpatialIndex_management(target_object, grid_size)
+                        else:
+                            arcpy.AddSpatialIndex_management(target_object)
                         logger.info("Spatial Index erfolgreich erstellt.")
                     else:
                         logger.warn("Spatial Index konnte wegen eines Locks nicht erstellt werden.")
