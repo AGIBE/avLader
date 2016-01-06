@@ -27,6 +27,7 @@ def download_file(config, logger):
     ftps.login(ftp_username, ftp_password)
     ftps.prot_p()
     ftps.cwd(ftp_directory)
+    #TODO: quote site set email (damit Mail an die richtige Adresse geschickt wird) 
     # MLSD liefert die Dateiinfos maschinenlesbar d.h. mit Strichpunkt getrennt zurueck
     ftps.retrlines('MLSD', process_ftp_listing)
     
