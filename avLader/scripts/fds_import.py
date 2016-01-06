@@ -255,7 +255,7 @@ def run():
                 logger.info("Anzahl Records in der Quelle: " + unicode(source_count))
                 target_count = int(arcpy.GetCount_management(target_object)[0])
                 logger.info("Anzahl Records im Ziel: " + unicode(target_count))
-                
+                 
                 if source_count==target_count:
                     logger.info("Anzahl Records identisch")
                 else:
