@@ -8,6 +8,7 @@ import avLader.scripts.mopube_import
 import avLader.scripts.dipanu_import
 import avLader.scripts.gebadr_import
 import avLader.scripts.fds_import
+import avLader.helpers.release_helper
 
 def run_gruda_upload(args):
     avLader.scripts.gruda_upload.run()
@@ -32,6 +33,22 @@ def run_gebadr_import(args):
 def run_fds_import(args):
     avLader.scripts.fds_import.run()
     print("FDS-Import SUCCESSFUL!")
+    
+def run_grudaexp_release(args):
+    avLader.helpers.release_helper.release('GRUDAEXP')
+    print("GRUDAEXP-Release SUCCESSFUL!")
+    
+def run_mopube_release(args):
+    avLader.helpers.release_helper.release('MOPUBE')
+    print("MOPUBE-Release SUCCESSFUL!")
+
+def run_dipanu_release(args):
+    avLader.helpers.release_helper.release('DIPANU')
+    print("DIPANU-Release SUCCESSFUL!")
+
+def run_gebadr_release(args):
+    avLader.helpers.release_helper.release('GEBADR')
+    print("GEBADR-Release SUCCESSFUL!")
 
 def main():
     version_text = "avLader v" + __version__
@@ -61,6 +78,22 @@ def main():
     # FDS_IMPORT-Befehl
     fds_import_parser = subparsers.add_parser('fds_import', help='Importiert den AV-Fachdatensatz aus der gelieferten Filegeodatabase.')
     fds_import_parser.set_defaults(func=run_fds_import)
+    
+    # GRUDAEXP_RELEASE-Befehl
+    grudaexp_release_parser = subparsers.add_parser('grudaexp_release', help='Gibt GRUDAEXP frei für den iLader-Import.')
+    grudaexp_release_parser.set_defaults(func=run_grudaexp_release)
+    
+    # MOPUBE_RELEASE-Befehl
+    mopube_release_parser = subparsers.add_parser('mopube_release', help='Gibt MOPUBE frei für den iLader-Import.')
+    mopube_release_parser.set_defaults(func=run_mopube_release)
+    
+    # DIPANU_RELEASE-Befehl
+    dipanu_release_parser = subparsers.add_parser('dipanu_release', help='Gibt DIPANU frei für den iLader-Import.')
+    dipanu_release_parser.set_defaults(func=run_dipanu_release)
+
+    # GEBADR_RELEASE-Befehl
+    gebadr_release_parser = subparsers.add_parser('gebadr_release', help='Gibt GEBADR frei für den iLader-Import.')
+    gebadr_release_parser.set_defaults(func=run_gebadr_release)
     
     args = parser.parse_args()
     args.func(args)
