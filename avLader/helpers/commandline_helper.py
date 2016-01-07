@@ -9,6 +9,7 @@ import avLader.scripts.dipanu_import
 import avLader.scripts.gebadr_import
 import avLader.scripts.fds_import
 import avLader.helpers.release_helper
+import avLader.scripts.oereb_liegenschaften
 
 def run_gruda_upload(args):
     avLader.scripts.gruda_upload.run()
@@ -49,6 +50,10 @@ def run_dipanu_release(args):
 def run_gebadr_release(args):
     avLader.helpers.release_helper.release('GEBADR')
     print("GEBADR-Release SUCCESSFUL!")
+    
+def run_oereb_liegenschaften(args):
+    avLader.scripts.oereb_liegenschaften.run()
+    print("ÖREB-Liegenschaften SUCCESSFUL!")
 
 def main():
     version_text = "avLader v" + __version__
@@ -94,6 +99,10 @@ def main():
     # GEBADR_RELEASE-Befehl
     gebadr_release_parser = subparsers.add_parser('gebadr_release', help='Gibt GEBADR frei für den iLader-Import.')
     gebadr_release_parser.set_defaults(func=run_gebadr_release)
+    
+    # OEREB_LIEGENSCHAFTEN-Befehl
+    oereb_liegenschaften_parser = subparsers.add_parser('oereb_liegenschaften', help='Aktualisiert den ÖREBK-Liegenschaftslayer.')
+    oereb_liegenschaften_parser.set_defaults(func=run_oereb_liegenschaften)
     
     args = parser.parse_args()
     args.func(args)
