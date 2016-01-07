@@ -1,0 +1,2041 @@
+#! <?xml version="1.0" encoding="iso-8859-1" ?>
+#! <WORKSPACE
+#    
+#    
+#    Command-line to run this workspace:
+#    
+#    
+#    "C:\Program Files (x86)\FME\fme.exe" D:\Daten\repos\avLader\avLader\scripts\dipanu_import_qa.fmw
+#          --QA_EXCEL ""
+#          --NORM_DATABASE ""
+#          --NORM_USERNAME ""
+#          --NORM_PASSWORD ********
+#          --LOGFILE ""
+#          --VEK1_DATABASE ""
+#          --VEK1_USERNAME ""
+#          --VEK1_PASSWORD ********
+#    
+#    
+#! PASSWORD=""
+#! ATTR_TYPE_ENCODING="SDF"
+#! VIEW_POSITION="294 -3417"
+#! SHOW_INFO_NODES="true"
+#! FME_STROKE_MAX_DEVIATION="0"
+#! BEGIN_PYTHON=""
+#! FME_GEOMETRY_HANDLING="Classic"
+#! DESCRIPTION=""
+#! TITLE=""
+#! MAX_LOG_FEATURES="200"
+#! END_TCL=""
+#! FME_BUILD_NUM="14433"
+#! ZOOM_SCALE="100"
+#! CATEGORY=""
+#! REDIRECT_TERMINATORS="NONE"
+#! LEGAL_TERMS_CONDITIONS=""
+#! FME_REPROJECTION_ENGINE="FME"
+#! USAGE=""
+#! END_PYTHON=""
+#! HISTORY=""
+#! FME_DOCUMENT_PRIORGUID="0c1bd23d-7fa0-428c-96b6-a50e3f2cae25,1370209b-5e09-4739-ae32-01280a5291a0"
+#! DOC_TOP_LEFT="36 -5136"
+#! REQUIREMENTS_KEYWORD=""
+#! SOURCE_ROUTING_FILE=""
+#! DESTINATION_ROUTING_FILE=""
+#! DESTINATION="NONE"
+#! LAST_SAVE_DATE="2016-01-07T14:19:18"
+#! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Datum"
+#! WORKSPACE_VERSION="1"
+#! SOURCE="NONE"
+#! LAST_SAVE_BUILD="FME(R) 2014 SP4 (20141022 - Build 14433 - WIN32)"
+#! FME_SERVER_SERVICES=""
+#! LOG_MAX_RECORDED_FEATURES="200"
+#! LOG_FILE="$(LOGFILE)"
+#! REQUIREMENTS=""
+#! BEGIN_TCL=""
+#! DOC_EXTENTS="3174 5090"
+#! FME_DOCUMENT_GUID="6941d6a2-db9b-413a-b4f7-106bd1d6de12"
+#! SHOW_ANNOTATIONS="true"
+#! IGNORE_READER_FAILURE="No"
+#! WARN_INVALID_XFORM_PARAM="Yes"
+#! >
+#! <DATASETS>
+#! <DATASET
+#! IS_SOURCE="false"
+#! ROLE="WRITER"
+#! FORMAT="XLS_ADO"
+#! DATASET="$(QA_EXCEL)"
+#! KEYWORD="XLS_ADO_1"
+#! MULTI_GEOM_ALLOWED="true"
+#! ATTR_MAX_LENGTH="255"
+#! ATTR_CASE="ANY"
+#! ALLOWED_FEAT_TYPES=""
+#! WRITE_DEFS="true"
+#! DEFLINE_TEMPLATE="xls_update_key_columns &quot;&quot; xls_table_writer_mode INHERIT_FROM_WRITER xls_is_named_range NO"
+#! DEFLINE_ATTRS="true"
+#! EXPOSABLE_ATTRS="fme_secondary_axis double fme_dataset varchar(50) fme_fill_color varchar(50) fme_text_string varchar(50) fme_feature_type varchar(50) fme_text_size double fme_start_angle double db_type varchar(254) fme_type varchar(50) fme_rotation double fme_geometry fme_char(50) fme_db_operation varchar(8) fme_primary_axis double fme_where varchar(254) fme_sweep_angle double fme_basename varchar(50) fme_color varchar(50)"
+#! DEFLINE_PARMS="&quot;GUI CHOICE xls_table_writer_mode INHERIT_FROM_WRITER%INSERT%UPDATE Writer Mode&quot; INHERIT_FROM_WRITER &quot;GUI OPTIONAL ATTRLIST_COMMAS xls_update_key_columns SQL Key Columns&quot; &quot;&quot; &quot;GUI CHOICE xls_is_named_range NO%YES Is Named Range&quot; NO "
+#! ATTR_INDEX_TYPES=""
+#! ATTR_NAME_INVALID_CHARS="./*#;:!&amp;-&quot;&apos;$[]"
+#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! GENERATE_FME_BUILD_NUM="6523"
+#! NAME="QA_EXCEL"
+#! FANOUT_PREFIX=""
+#! COORDSYS=""
+#! FANOUT="No"
+#! FANOUT_SUFFIX=""
+#! FANOUT_ID_ATTR=""
+#! FANOUT_DIRECTORY=""
+#! >
+#! <METAFILE_PARAMETER
+#! NAME="MIME_TYPE"
+#! VALUE="application/vnd.ms-excel ADD_DISPOSITION"
+#! />
+#! </DATASET>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="varchar(width)"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="XLS_ADO"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="varchar(width)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="XLS_ADO"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="text"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="XLS_ADO"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="datetime"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="XLS_ADO"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="datetime"
+#! FME_TYPE="fme_time"
+#! FORMAT="XLS_ADO"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="datetime"
+#! FME_TYPE="fme_date"
+#! FORMAT="XLS_ADO"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="decimal(width,decimal)"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="XLS_ADO"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="currency(width,decimal)"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="XLS_ADO"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="double"
+#! FME_TYPE="fme_real64"
+#! FORMAT="XLS_ADO"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="double"
+#! FME_TYPE="fme_real32"
+#! FORMAT="XLS_ADO"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="double"
+#! FME_TYPE="fme_int32"
+#! FORMAT="XLS_ADO"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="double"
+#! FME_TYPE="fme_int16"
+#! FORMAT="XLS_ADO"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="bit"
+#! FME_TYPE="fme_boolean"
+#! FORMAT="XLS_ADO"
+#! />
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="db_none"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="XLS_ADO"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="db_none"
+#! FME_TYPE="fme_point"
+#! FORMAT="XLS_ADO"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="db_none"
+#! FME_TYPE="fme_line"
+#! FORMAT="XLS_ADO"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="db_none"
+#! FME_TYPE="fme_area"
+#! FORMAT="XLS_ADO"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="db_none"
+#! FME_TYPE="fme_text"
+#! FORMAT="XLS_ADO"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="db_none"
+#! FME_TYPE="fme_ellipse"
+#! FORMAT="XLS_ADO"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="db_none"
+#! FME_TYPE="fme_arc"
+#! FORMAT="XLS_ADO"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="db_none"
+#! FME_TYPE="fme_rectangle"
+#! FORMAT="XLS_ADO"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="db_none"
+#! FME_TYPE="fme_rounded_rectangle"
+#! FORMAT="XLS_ADO"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="db_none"
+#! FME_TYPE="fme_collection"
+#! FORMAT="XLS_ADO"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="db_none"
+#! FME_TYPE="fme_raster"
+#! FORMAT="XLS_ADO"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="db_none"
+#! FME_TYPE="fme_surface"
+#! FORMAT="XLS_ADO"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="db_none"
+#! FME_TYPE="fme_solid"
+#! FORMAT="XLS_ADO"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="db_none"
+#! FME_TYPE="fme_point_cloud"
+#! FORMAT="XLS_ADO"
+#! />
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="verschwundenFlächen"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="8"
+#! FEAT_GEOMTYPE="&lt;NO_GEOMETRY&gt;"
+#! POSITION="2152 -952"
+#! ORDER="63"
+#! COLLAPSED="false"
+#! KEYWORD="XLS_ADO_1"
+#! ENABLED="true"
+#! FANOUT="No"
+#! FANOUT_ID_ATTR=""
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="BFSNR" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GBKR" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="xls_is_named_range" PARM_VALUE="NO"/>
+#! <DEFLINE_PARM PARM_NAME="xls_update_key_columns" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="xls_table_writer_mode" PARM_VALUE="INHERIT_FROM_WRITER"/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="doppelte3_Flächen"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="50"
+#! FEAT_GEOMTYPE="&lt;NO_GEOMETRY&gt;"
+#! POSITION="1200 -4609"
+#! ORDER="68"
+#! COLLAPSED="false"
+#! KEYWORD="XLS_ADO_1"
+#! ENABLED="true"
+#! FANOUT="No"
+#! FANOUT_ID_ATTR=""
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="GENGBKRI" ATTR_TYPE="varchar(50)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GSTBEZ" ATTR_TYPE="varchar(50)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="PROJSTAT" ATTR_TYPE="varchar(50)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="xls_is_named_range" PARM_VALUE="NO"/>
+#! <DEFLINE_PARM PARM_NAME="xls_update_key_columns" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="xls_table_writer_mode" PARM_VALUE="INHERIT_FROM_WRITER"/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="doppelte2_Punkte"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="53"
+#! FEAT_GEOMTYPE="&lt;NO_GEOMETRY&gt;"
+#! POSITION="3155 -3852"
+#! ORDER="69"
+#! COLLAPSED="false"
+#! KEYWORD="XLS_ADO_1"
+#! ENABLED="true"
+#! FANOUT="No"
+#! FANOUT_ID_ATTR=""
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="BFSNR" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GBKR" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GEMNAME" ATTR_TYPE="varchar(50)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GSTNR" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GSTTEIL" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GSTART" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GZNR" ATTR_TYPE="varchar(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="PROJSTAT" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="xls_is_named_range" PARM_VALUE="NO"/>
+#! <DEFLINE_PARM PARM_NAME="xls_update_key_columns" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="xls_table_writer_mode" PARM_VALUE="INHERIT_FROM_WRITER"/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="doppelte2_Flächen"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="61"
+#! FEAT_GEOMTYPE="&lt;NO_GEOMETRY&gt;"
+#! POSITION="1121 -3956"
+#! ORDER="71"
+#! COLLAPSED="false"
+#! KEYWORD="XLS_ADO_1"
+#! ENABLED="true"
+#! FANOUT="No"
+#! FANOUT_ID_ATTR=""
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="BFSNR" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GBKR" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GSTBEZ" ATTR_TYPE="varchar(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="PROJSTAT" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="xls_is_named_range" PARM_VALUE="NO"/>
+#! <DEFLINE_PARM PARM_NAME="xls_update_key_columns" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="xls_table_writer_mode" PARM_VALUE="INHERIT_FROM_WRITER"/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="unveraendertFlächen"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="11"
+#! FEAT_GEOMTYPE="&lt;NO_GEOMETRY&gt;"
+#! POSITION="2568 -290"
+#! ORDER="73"
+#! COLLAPSED="false"
+#! KEYWORD="XLS_ADO_1"
+#! ENABLED="true"
+#! FANOUT="No"
+#! FANOUT_ID_ATTR=""
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="BFSNR" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GBKR" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL_ALT" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL_NEU" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="DIFF_ABS" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="DIFF_REL" ATTR_TYPE="decimal(30,10)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="xls_is_named_range" PARM_VALUE="NO"/>
+#! <DEFLINE_PARM PARM_NAME="xls_update_key_columns" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="xls_table_writer_mode" PARM_VALUE="INHERIT_FROM_WRITER"/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="hinzugekommenFlächen"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="10"
+#! FEAT_GEOMTYPE="&lt;NO_GEOMETRY&gt;"
+#! POSITION="2166 -1233"
+#! ORDER="74"
+#! COLLAPSED="false"
+#! KEYWORD="XLS_ADO_1"
+#! ENABLED="true"
+#! FANOUT="No"
+#! FANOUT_ID_ATTR=""
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="BFSNR" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GBKR" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="xls_is_named_range" PARM_VALUE="NO"/>
+#! <DEFLINE_PARM PARM_NAME="xls_update_key_columns" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="xls_table_writer_mode" PARM_VALUE="INHERIT_FROM_WRITER"/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="verschwundenPoint"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="70"
+#! FEAT_GEOMTYPE="&lt;NO_GEOMETRY&gt;"
+#! POSITION="2205 -2547"
+#! ORDER="84"
+#! COLLAPSED="false"
+#! KEYWORD="XLS_ADO_1"
+#! ENABLED="true"
+#! FANOUT="No"
+#! FANOUT_ID_ATTR=""
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="BFSNR" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GBKR" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="xls_is_named_range" PARM_VALUE="NO"/>
+#! <DEFLINE_PARM PARM_NAME="xls_update_key_columns" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="xls_table_writer_mode" PARM_VALUE="INHERIT_FROM_WRITER"/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="unveraendertPoint"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="71"
+#! FEAT_GEOMTYPE="&lt;NO_GEOMETRY&gt;"
+#! POSITION="2621 -1885"
+#! ORDER="86"
+#! COLLAPSED="false"
+#! KEYWORD="XLS_ADO_1"
+#! ENABLED="true"
+#! FANOUT="No"
+#! FANOUT_ID_ATTR=""
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="BFSNR" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GBKR" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL_ALT" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL_NEU" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="DIFF_ABS" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="DIFF_REL" ATTR_TYPE="decimal(30,10)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="xls_is_named_range" PARM_VALUE="NO"/>
+#! <DEFLINE_PARM PARM_NAME="xls_update_key_columns" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="xls_table_writer_mode" PARM_VALUE="INHERIT_FROM_WRITER"/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="hinzugekommenPoint"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="72"
+#! FEAT_GEOMTYPE="&lt;NO_GEOMETRY&gt;"
+#! POSITION="2219 -2828"
+#! ORDER="87"
+#! COLLAPSED="false"
+#! KEYWORD="XLS_ADO_1"
+#! ENABLED="true"
+#! FANOUT="No"
+#! FANOUT_ID_ATTR=""
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="BFSNR" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GBKR" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="xls_is_named_range" PARM_VALUE="NO"/>
+#! <DEFLINE_PARM PARM_NAME="xls_update_key_columns" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="xls_table_writer_mode" PARM_VALUE="INHERIT_FROM_WRITER"/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="doppelte_Punkte"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="52"
+#! FEAT_GEOMTYPE="&lt;NO_GEOMETRY&gt;"
+#! POSITION="3153 -3161"
+#! ORDER="90"
+#! COLLAPSED="false"
+#! KEYWORD="XLS_ADO_1"
+#! ENABLED="true"
+#! FANOUT="No"
+#! FANOUT_ID_ATTR=""
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="BFSNR" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GBKR" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GSTBEZ" ATTR_TYPE="varchar(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="PROJSTAT" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="xls_is_named_range" PARM_VALUE="NO"/>
+#! <DEFLINE_PARM PARM_NAME="xls_update_key_columns" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="xls_table_writer_mode" PARM_VALUE="INHERIT_FROM_WRITER"/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="doppelte3_Punkte"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="54"
+#! FEAT_GEOMTYPE="&lt;NO_GEOMETRY&gt;"
+#! POSITION="3210 -4629"
+#! ORDER="92"
+#! COLLAPSED="false"
+#! KEYWORD="XLS_ADO_1"
+#! ENABLED="true"
+#! FANOUT="No"
+#! FANOUT_ID_ATTR=""
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="GENGBKRI" ATTR_TYPE="varchar(50)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GSTBEZ" ATTR_TYPE="varchar(50)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="PROJSTAT" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="xls_is_named_range" PARM_VALUE="NO"/>
+#! <DEFLINE_PARM PARM_NAME="xls_update_key_columns" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="xls_table_writer_mode" PARM_VALUE="INHERIT_FROM_WRITER"/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="doppelte_EGRID"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="107"
+#! FEAT_GEOMTYPE="&lt;NO_GEOMETRY&gt;"
+#! POSITION="1198 -5070"
+#! ORDER="93"
+#! COLLAPSED="false"
+#! KEYWORD="XLS_ADO_1"
+#! ENABLED="true"
+#! FANOUT="No"
+#! FANOUT_ID_ATTR=""
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="EGRID" ATTR_TYPE="varchar(50)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="PROJSTAT" ATTR_TYPE="varchar(50)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL" ATTR_TYPE="varchar(50)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="xls_is_named_range" PARM_VALUE="NO"/>
+#! <DEFLINE_PARM PARM_NAME="xls_update_key_columns" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="xls_table_writer_mode" PARM_VALUE="INHERIT_FROM_WRITER"/>
+#! </FEATURE_TYPE>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI TEXT QA_EXCEL QA-Excelfile:"
+#! DEFAULT_VALUE=""
+#! IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI TEXT NORM_DATABASE Norm-Database:"
+#! DEFAULT_VALUE=""
+#! IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI TEXT NORM_USERNAME Norm-Username:"
+#! DEFAULT_VALUE=""
+#! IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI PASSWORD NORM_PASSWORD Norm-Passwort:"
+#! DEFAULT_VALUE=""
+#! IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI TEXT LOGFILE Logfile:"
+#! DEFAULT_VALUE=""
+#! IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI TEXT VEK1_DATABASE Vek1-Database:"
+#! DEFAULT_VALUE=""
+#! IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI TEXT VEK1_USERNAME Vek1-Username:"
+#! DEFAULT_VALUE=""
+#! IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI PASSWORD VEK1_PASSWORD Vek1-Password:"
+#! DEFAULT_VALUE=""
+#! IS_STAND_ALONE="true"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! <COMMENT
+#! IDENTIFIER="1"
+#! COMMENT_VALUE="&lt;html&gt;&lt;body&gt;VEK1P&lt;/body&gt;&lt;/html&gt;"
+#! POSITION="131 -46"
+#! ORDER="53"
+#! FOLLOW_ANCHOR="true"
+#! INFO_NODE="false"
+#! TOP_LEFT="131 -46"
+#! BOTTOM_RIGHT="131 -46"
+#! COLOUR="1,1,0.784314,0.192157"
+#! SIZE_POLICY="8"
+#! COMMENT_TYPE="REGULAR"
+#! ANCHORED_NODE="17"
+#! />
+#! <COMMENT
+#! IDENTIFIER="6"
+#! COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:11px; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;TEAMP&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#! POSITION="36 -724"
+#! ORDER="54"
+#! FOLLOW_ANCHOR="true"
+#! INFO_NODE="false"
+#! TOP_LEFT="36 -724"
+#! BOTTOM_RIGHT="36 -724"
+#! COLOUR="1,1,0.784314,0.192157"
+#! SIZE_POLICY="8"
+#! COMMENT_TYPE="REGULAR"
+#! ANCHORED_NODE="2"
+#! />
+#! <COMMENT
+#! IDENTIFIER="94"
+#! COMMENT_VALUE="&lt;html&gt;&lt;body&gt;VEK1P&lt;/body&gt;&lt;/html&gt;"
+#! POSITION="184 -1641"
+#! ORDER="75"
+#! FOLLOW_ANCHOR="true"
+#! INFO_NODE="false"
+#! TOP_LEFT="184 -1641"
+#! BOTTOM_RIGHT="184 -1641"
+#! COLOUR="1,1,0.784314,0.192157"
+#! SIZE_POLICY="8"
+#! COMMENT_TYPE="REGULAR"
+#! ANCHORED_NODE="76"
+#! />
+#! <COMMENT
+#! IDENTIFIER="95"
+#! COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:11px; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;TEAMP&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#! POSITION="110 -2319"
+#! ORDER="76"
+#! FOLLOW_ANCHOR="true"
+#! INFO_NODE="false"
+#! TOP_LEFT="110 -2319"
+#! BOTTOM_RIGHT="110 -2319"
+#! COLOUR="1,1,0.784314,0.192157"
+#! SIZE_POLICY="8"
+#! COMMENT_TYPE="REGULAR"
+#! ANCHORED_NODE="81"
+#! />
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#! IDENTIFIER="12"
+#! TYPE="StringConcatenator"
+#! VERSION="6"
+#! POSITION="165 -1046"
+#! ORDER="55"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="BFSNR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GBKR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ANZAHL" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="TEMPKEY" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="PARM_LINE" PARM_VALUE="fme_basicstring:13%12:&lt;at&gt;Value&lt;openparen&gt;BFSNR&lt;closeparen&gt;&lt;at&gt;Value&lt;openparen&gt;GBKR&lt;closeparen&gt;"/>
+#! <XFORM_PARM PARM_NAME="VAL_ATTR" PARM_VALUE="TEMPKEY"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="StringConcatenator_2"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="7"
+#! TYPE="StringConcatenator"
+#! VERSION="6"
+#! POSITION="95 -314"
+#! ORDER="56"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="BFSNR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GBKR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ANZAHL" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="TEMPKEY" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="PARM_LINE" PARM_VALUE="fme_basicstring:13%12:&lt;at&gt;Value&lt;openparen&gt;BFSNR&lt;closeparen&gt;&lt;at&gt;Value&lt;openparen&gt;GBKR&lt;closeparen&gt;"/>
+#! <XFORM_PARM PARM_NAME="VAL_ATTR" PARM_VALUE="TEMPKEY"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="StringConcatenator"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="15"
+#! TYPE="AttributePrefixer"
+#! VERSION="0"
+#! POSITION="168 -1309"
+#! ORDER="57"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="BFSNR_NEU" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GBKR_NEU" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ANZAHL_NEU" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="TEMPKEY_NEU" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="WHERE" PARM_VALUE="End"/>
+#! <XFORM_PARM PARM_NAME="PREFIX" PARM_VALUE="_NEU"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributePrefixer_2"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="17"
+#! TYPE="SQLCreator"
+#! VERSION="0"
+#! POSITION="231 -126"
+#! ORDER="58"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="RESULT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="BFSNR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GBKR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ANZAHL" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="PASSWORD" PARM_VALUE="$(VEK1_PASSWORD)"/>
+#! <XFORM_PARM PARM_NAME="SQL_STATEMENT" PARM_VALUE="select&lt;space&gt;t.bfsnr&lt;comma&gt;&lt;space&gt;t.gbkr&lt;comma&gt;&lt;space&gt;count&lt;openparen&gt;*&lt;closeparen&gt;&lt;space&gt;anzahl&lt;space&gt;from&lt;space&gt;geodb.dipanu_dipanuf&lt;space&gt;t&lt;space&gt;group&lt;space&gt;by&lt;space&gt;t.bfsnr&lt;comma&gt;&lt;space&gt;t.gbkr&lt;space&gt;order&lt;space&gt;by&lt;space&gt;t.bfsnr&lt;space&gt;asc&lt;comma&gt;&lt;space&gt;t.gbkr&lt;space&gt;asc"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="SQLCreator"/>
+#! <XFORM_PARM PARM_NAME="EXPOSED_ATTRIBUTE_LIST" PARM_VALUE="BFSNR,GBKR,ANZAHL"/>
+#! <XFORM_PARM PARM_NAME="USER_NAME" PARM_VALUE="$(VEK1_USERNAME)"/>
+#! <XFORM_PARM PARM_NAME="DIRECTIVES" PARM_VALUE="SERVER_TYPE ORACLE8i REMOVE_SCHEMA_QUALIFIER NO _DEFAULT_FILTER_ geo _MERGE_SCHEMAS YES"/>
+#! <XFORM_PARM PARM_NAME="DATASET" PARM_VALUE="$(VEK1_DATABASE)"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="FORMAT" PARM_VALUE="ORACLE8I_DB"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="14"
+#! TYPE="AttributePrefixer"
+#! VERSION="0"
+#! POSITION="98 -543"
+#! ORDER="59"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="BFSNR_ALT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GBKR_ALT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ANZAHL_ALT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="TEMPKEY_ALT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="WHERE" PARM_VALUE="End"/>
+#! <XFORM_PARM PARM_NAME="PREFIX" PARM_VALUE="_ALT"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributePrefixer"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="18"
+#! TYPE="FeatureMerger"
+#! VERSION="8"
+#! POSITION="861 -596"
+#! ORDER="60"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="COMPLETE"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="BFSNR_ALT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GBKR_ALT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ANZAHL_ALT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="TEMPKEY_ALT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="BFSNR_NEU" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GBKR_NEU" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ANZAHL_NEU" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="TEMPKEY_NEU" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="INCOMPLETE"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <XFORM_ATTR ATTR_NAME="BFSNR_ALT" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="GBKR_ALT" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="ANZAHL_ALT" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="TEMPKEY_ALT" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <OUTPUT_FEAT NAME="EMPTY"/>
+#! <FEAT_COLLAPSED COLLAPSED="2"/>
+#! <XFORM_ATTR ATTR_NAME="BFSNR_ALT" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="GBKR_ALT" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="ANZAHL_ALT" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="TEMPKEY_ALT" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <OUTPUT_FEAT NAME="REFERENCED"/>
+#! <FEAT_COLLAPSED COLLAPSED="3"/>
+#! <XFORM_ATTR ATTR_NAME="BFSNR_NEU" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="GBKR_NEU" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="ANZAHL_NEU" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="TEMPKEY_NEU" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <OUTPUT_FEAT NAME="UNREFERENCED"/>
+#! <FEAT_COLLAPSED COLLAPSED="4"/>
+#! <XFORM_ATTR ATTR_NAME="BFSNR_NEU" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="GBKR_NEU" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="ANZAHL_NEU" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="TEMPKEY_NEU" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <OUTPUT_FEAT NAME="DUPLICATE_SUPPLIER"/>
+#! <FEAT_COLLAPSED COLLAPSED="5"/>
+#! <XFORM_ATTR ATTR_NAME="BFSNR_NEU" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#! <XFORM_ATTR ATTR_NAME="GBKR_NEU" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#! <XFORM_ATTR ATTR_NAME="ANZAHL_NEU" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#! <XFORM_ATTR ATTR_NAME="TEMPKEY_NEU" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#! <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="BUILD_INCOMPLETE" PARM_VALUE="No"/>
+#! <XFORM_PARM PARM_NAME="PROCESS_DUPS" PARM_VALUE="No"/>
+#! <XFORM_PARM PARM_NAME="MERGE_TYPE" PARM_VALUE="Attributes Only"/>
+#! <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureMerger"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="REFERATTR" PARM_VALUE="TEMPKEY_ALT"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="REFEEATTR" PARM_VALUE="TEMPKEY_NEU"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="33"
+#! TYPE="ExpressionEvaluator"
+#! VERSION="1"
+#! POSITION="1320 -184"
+#! ORDER="61"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="BFSNR_ALT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GBKR_ALT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ANZAHL_ALT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="TEMPKEY_ALT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="BFSNR_NEU" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GBKR_NEU" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ANZAHL_NEU" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="TEMPKEY_NEU" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="DIFF_ABS" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="VAL_ATTR" PARM_VALUE="DIFF_ABS"/>
+#! <XFORM_PARM PARM_NAME="EXPRESSION" PARM_VALUE="(@Value(ANZAHL_NEU)-@Value(ANZAHL_ALT))"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="ExpressionEvaluator"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="39"
+#! TYPE="ExpressionEvaluator"
+#! VERSION="1"
+#! POSITION="1542 -546"
+#! ORDER="62"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="BFSNR_ALT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GBKR_ALT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ANZAHL_ALT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="TEMPKEY_ALT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="BFSNR_NEU" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GBKR_NEU" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ANZAHL_NEU" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="TEMPKEY_NEU" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="DIFF_ABS" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="DIFF_REL" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="VAL_ATTR" PARM_VALUE="DIFF_REL"/>
+#! <XFORM_PARM PARM_NAME="EXPRESSION" PARM_VALUE="(@Value(DIFF_ABS)/(@Value(ANZAHL_ALT)/100.0))"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="ExpressionEvaluator_2"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="2"
+#! TYPE="SQLCreator"
+#! VERSION="0"
+#! POSITION="164 -804"
+#! ORDER="66"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="RESULT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="BFSNR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GBKR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ANZAHL" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="PASSWORD" PARM_VALUE="$(NORM_PASSWORD)"/>
+#! <XFORM_PARM PARM_NAME="SQL_STATEMENT" PARM_VALUE="select&lt;space&gt;t.bfsnr&lt;comma&gt;&lt;space&gt;t.gbkr&lt;comma&gt;&lt;space&gt;count&lt;openparen&gt;*&lt;closeparen&gt;&lt;space&gt;anzahl&lt;space&gt;from&lt;space&gt;dipanu_dipanuf&lt;space&gt;t&lt;space&gt;group&lt;space&gt;by&lt;space&gt;t.bfsnr&lt;comma&gt;&lt;space&gt;t.gbkr&lt;space&gt;order&lt;space&gt;by&lt;space&gt;t.bfsnr&lt;space&gt;asc&lt;comma&gt;&lt;space&gt;t.gbkr&lt;space&gt;asc"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="SQLCreator_2"/>
+#! <XFORM_PARM PARM_NAME="EXPOSED_ATTRIBUTE_LIST" PARM_VALUE="BFSNR,GBKR,ANZAHL"/>
+#! <XFORM_PARM PARM_NAME="USER_NAME" PARM_VALUE="$(NORM_USERNAME)"/>
+#! <XFORM_PARM PARM_NAME="DIRECTIVES" PARM_VALUE="SERVER_TYPE ORACLE8i REMOVE_SCHEMA_QUALIFIER NO PERSISTENT_CONNECTION YES SHOW_SYSTEM_TABLES NO _DEFAULT_FILTER_ norm _MERGE_SCHEMAS YES"/>
+#! <XFORM_PARM PARM_NAME="DATASET" PARM_VALUE="$(NORM_DATABASE)"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="FORMAT" PARM_VALUE="ORACLE8I_DB"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="49"
+#! TYPE="SQLCreator"
+#! VERSION="0"
+#! POSITION="174 -4671"
+#! ORDER="67"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="RESULT"/>
+#! <XFORM_ATTR ATTR_NAME="GENGBKRI" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GSTBEZ" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="PROJSTAT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="PASSWORD" PARM_VALUE="$(NORM_PASSWORD)"/>
+#! <XFORM_PARM PARM_NAME="SQL_STATEMENT" PARM_VALUE="select&lt;space&gt;t.gengbkri&lt;comma&gt;&lt;space&gt;t.gstbez&lt;comma&gt;&lt;space&gt;t.projstat&lt;comma&gt;&lt;space&gt;count&lt;openparen&gt;*&lt;closeparen&gt;&lt;space&gt;anzahl&lt;lf&gt;&lt;space&gt;&lt;space&gt;from&lt;space&gt;dipanu_dipanuf&lt;space&gt;t&lt;lf&gt;&lt;space&gt;group&lt;space&gt;by&lt;space&gt;t.gengbkri&lt;comma&gt;&lt;space&gt;t.gstbez&lt;comma&gt;&lt;space&gt;t.projstat&lt;lf&gt;&lt;space&gt;having&lt;space&gt;count&lt;openparen&gt;*&lt;closeparen&gt;&lt;space&gt;&lt;gt&gt;&lt;space&gt;1&lt;lf&gt;&lt;space&gt;order&lt;space&gt;by&lt;space&gt;t.gengbkri&lt;comma&gt;&lt;space&gt;t.gstbez&lt;comma&gt;&lt;space&gt;t.projstat"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="SQLCreator_5"/>
+#! <XFORM_PARM PARM_NAME="EXPOSED_ATTRIBUTE_LIST" PARM_VALUE="GENGBKRI,GSTBEZ,PROJSTAT"/>
+#! <XFORM_PARM PARM_NAME="USER_NAME" PARM_VALUE="$(NORM_USERNAME)"/>
+#! <XFORM_PARM PARM_NAME="DIRECTIVES" PARM_VALUE="SERVER_TYPE ORACLE8i REMOVE_SCHEMA_QUALIFIER NO PERSISTENT_CONNECTION YES SHOW_SYSTEM_TABLES NO _DEFAULT_FILTER_ norm _MERGE_SCHEMAS YES"/>
+#! <XFORM_PARM PARM_NAME="DATASET" PARM_VALUE="$(NORM_DATABASE)"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="FORMAT" PARM_VALUE="ORACLE8I_DB"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="56"
+#! TYPE="SQLCreator"
+#! VERSION="0"
+#! POSITION="2140 -3964"
+#! ORDER="70"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="RESULT"/>
+#! <XFORM_ATTR ATTR_NAME="BFSNR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GEMNAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GBKR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GSTNR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GZNR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GSTTEIL" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GSTART" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="PROJSTAT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ANZAHL" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="PASSWORD" PARM_VALUE="$(NORM_PASSWORD)"/>
+#! <XFORM_PARM PARM_NAME="SQL_STATEMENT" PARM_VALUE="select&lt;space&gt;t.bfsnr&lt;comma&gt;&lt;space&gt;t.gbkr&lt;comma&gt;&lt;space&gt;t.gstnr&lt;comma&gt;&lt;space&gt;t.gznr&lt;comma&gt;&lt;space&gt;t.gstteil&lt;comma&gt;&lt;space&gt;t.gstart&lt;comma&gt;&lt;space&gt;t.projstat&lt;comma&gt;&lt;space&gt;count&lt;openparen&gt;*&lt;closeparen&gt;&lt;space&gt;anzahl&lt;lf&gt;&lt;space&gt;&lt;space&gt;from&lt;space&gt;dipanu_dipanup&lt;space&gt;t&lt;lf&gt;&lt;space&gt;group&lt;space&gt;by&lt;space&gt;t.bfsnr&lt;comma&gt;&lt;space&gt;t.gbkr&lt;comma&gt;&lt;space&gt;t.gstnr&lt;comma&gt;&lt;space&gt;t.gznr&lt;comma&gt;&lt;space&gt;t.gstteil&lt;comma&gt;&lt;space&gt;t.gstart&lt;comma&gt;&lt;space&gt;t.projstat&lt;lf&gt;&lt;space&gt;having&lt;space&gt;count&lt;openparen&gt;*&lt;closeparen&gt;&lt;space&gt;&lt;gt&gt;&lt;space&gt;1&lt;lf&gt;&lt;space&gt;order&lt;space&gt;by&lt;space&gt;t.bfsnr&lt;space&gt;asc&lt;comma&gt;&lt;space&gt;t.gbkr&lt;space&gt;asc&lt;comma&gt;&lt;space&gt;t.gstnr&lt;space&gt;asc&lt;comma&gt;&lt;space&gt;t.gznr&lt;space&gt;asc&lt;comma&gt;&lt;space&gt;t.gstteil&lt;space&gt;asc&lt;comma&gt;&lt;space&gt;t.gstart&lt;space&gt;asc&lt;comma&gt;&lt;space&gt;t.projstat&lt;space&gt;asc"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="SQLCreator_7"/>
+#! <XFORM_PARM PARM_NAME="EXPOSED_ATTRIBUTE_LIST" PARM_VALUE="BFSNR,GEMNAME,GBKR,GSTNR,GZNR,GSTTEIL,GSTART,PROJSTAT,ANZAHL"/>
+#! <XFORM_PARM PARM_NAME="USER_NAME" PARM_VALUE="$(NORM_USERNAME)"/>
+#! <XFORM_PARM PARM_NAME="DIRECTIVES" PARM_VALUE="SERVER_TYPE ORACLE8i REMOVE_SCHEMA_QUALIFIER NO PERSISTENT_CONNECTION YES SHOW_SYSTEM_TABLES NO _DEFAULT_FILTER_ norm _MERGE_SCHEMAS YES"/>
+#! <XFORM_PARM PARM_NAME="DATASET" PARM_VALUE="$(NORM_DATABASE)"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="FORMAT" PARM_VALUE="ORACLE8I_DB"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="62"
+#! TYPE="SQLCreator"
+#! VERSION="0"
+#! POSITION="168 -4096"
+#! ORDER="72"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="RESULT"/>
+#! <XFORM_ATTR ATTR_NAME="BFSNR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GEMNAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GBKR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GSTBEZ" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="PROJSTAT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ANZAHL" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="PASSWORD" PARM_VALUE="$(NORM_PASSWORD)"/>
+#! <XFORM_PARM PARM_NAME="SQL_STATEMENT" PARM_VALUE="select&lt;space&gt;t.bfsnr&lt;comma&gt;&lt;space&gt;t.gbkr&lt;comma&gt;&lt;space&gt;t.gstbez&lt;comma&gt;&lt;space&gt;t.projstat&lt;comma&gt;&lt;space&gt;count&lt;openparen&gt;*&lt;closeparen&gt;&lt;space&gt;anzahl&lt;lf&gt;&lt;space&gt;&lt;space&gt;from&lt;space&gt;dipanu_dipanuf&lt;space&gt;t&lt;lf&gt;&lt;space&gt;group&lt;space&gt;by&lt;space&gt;t.bfsnr&lt;comma&gt;&lt;space&gt;t.gbkr&lt;comma&gt;&lt;space&gt;t.gstbez&lt;comma&gt;&lt;space&gt;t.projstat&lt;lf&gt;&lt;space&gt;having&lt;space&gt;count&lt;openparen&gt;*&lt;closeparen&gt;&lt;space&gt;&lt;gt&gt;&lt;space&gt;1&lt;lf&gt;&lt;space&gt;order&lt;space&gt;by&lt;space&gt;t.bfsnr&lt;space&gt;asc&lt;comma&gt;&lt;space&gt;t.gbkr&lt;space&gt;asc&lt;comma&gt;&lt;space&gt;t.gstbez&lt;space&gt;asc&lt;comma&gt;&lt;space&gt;t.projstat&lt;space&gt;asc"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="SQLCreator_4"/>
+#! <XFORM_PARM PARM_NAME="EXPOSED_ATTRIBUTE_LIST" PARM_VALUE="BFSNR,GEMNAME,GBKR,GSTBEZ,PROJSTAT,ANZAHL"/>
+#! <XFORM_PARM PARM_NAME="USER_NAME" PARM_VALUE="$(NORM_USERNAME)"/>
+#! <XFORM_PARM PARM_NAME="DIRECTIVES" PARM_VALUE="SERVER_TYPE ORACLE8i REMOVE_SCHEMA_QUALIFIER NO PERSISTENT_CONNECTION YES SHOW_SYSTEM_TABLES NO _DEFAULT_FILTER_ norm _MERGE_SCHEMAS YES"/>
+#! <XFORM_PARM PARM_NAME="DATASET" PARM_VALUE="$(NORM_DATABASE)"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="FORMAT" PARM_VALUE="ORACLE8I_DB"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="73"
+#! TYPE="StringConcatenator"
+#! VERSION="6"
+#! POSITION="218 -2641"
+#! ORDER="77"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="BFSNR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GBKR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ANZAHL" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="TEMPKEY" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="PARM_LINE" PARM_VALUE="fme_basicstring:13%12:&lt;at&gt;Value&lt;openparen&gt;BFSNR&lt;closeparen&gt;&lt;at&gt;Value&lt;openparen&gt;GBKR&lt;closeparen&gt;"/>
+#! <XFORM_PARM PARM_NAME="VAL_ATTR" PARM_VALUE="TEMPKEY"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="StringConcatenator_3"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="74"
+#! TYPE="StringConcatenator"
+#! VERSION="6"
+#! POSITION="148 -1909"
+#! ORDER="78"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="BFSNR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GBKR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ANZAHL" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="TEMPKEY" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="PARM_LINE" PARM_VALUE="fme_basicstring:13%12:&lt;at&gt;Value&lt;openparen&gt;BFSNR&lt;closeparen&gt;&lt;at&gt;Value&lt;openparen&gt;GBKR&lt;closeparen&gt;"/>
+#! <XFORM_PARM PARM_NAME="VAL_ATTR" PARM_VALUE="TEMPKEY"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="StringConcatenator_4"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="75"
+#! TYPE="AttributePrefixer"
+#! VERSION="0"
+#! POSITION="221 -2904"
+#! ORDER="79"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="BFSNR_NEU" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GBKR_NEU" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ANZAHL_NEU" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="TEMPKEY_NEU" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="WHERE" PARM_VALUE="End"/>
+#! <XFORM_PARM PARM_NAME="PREFIX" PARM_VALUE="_NEU"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributePrefixer_3"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="76"
+#! TYPE="SQLCreator"
+#! VERSION="0"
+#! POSITION="304 -1721"
+#! ORDER="80"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="RESULT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="BFSNR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GBKR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ANZAHL" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="PASSWORD" PARM_VALUE="$(VEK1_PASSWORD)"/>
+#! <XFORM_PARM PARM_NAME="SQL_STATEMENT" PARM_VALUE="select&lt;space&gt;t.bfsnr&lt;comma&gt;&lt;space&gt;t.gbkr&lt;comma&gt;&lt;space&gt;count&lt;openparen&gt;*&lt;closeparen&gt;&lt;space&gt;anzahl&lt;space&gt;from&lt;space&gt;geodb.dipanu_dipanup&lt;space&gt;t&lt;space&gt;group&lt;space&gt;by&lt;space&gt;t.bfsnr&lt;comma&gt;&lt;space&gt;t.gbkr&lt;space&gt;order&lt;space&gt;by&lt;space&gt;t.bfsnr&lt;space&gt;asc&lt;comma&gt;&lt;space&gt;t.gbkr&lt;space&gt;asc"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="SQLCreator_9"/>
+#! <XFORM_PARM PARM_NAME="EXPOSED_ATTRIBUTE_LIST" PARM_VALUE="BFSNR,GBKR,ANZAHL"/>
+#! <XFORM_PARM PARM_NAME="USER_NAME" PARM_VALUE="$(VEK1_USERNAME)"/>
+#! <XFORM_PARM PARM_NAME="DIRECTIVES" PARM_VALUE="SERVER_TYPE ORACLE8i REMOVE_SCHEMA_QUALIFIER NO PERSISTENT_CONNECTION YES SHOW_SYSTEM_TABLES NO _DEFAULT_FILTER_ geo _MERGE_SCHEMAS YES"/>
+#! <XFORM_PARM PARM_NAME="DATASET" PARM_VALUE="$(VEK1_DATABASE)"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="FORMAT" PARM_VALUE="ORACLE8I_DB"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="77"
+#! TYPE="AttributePrefixer"
+#! VERSION="0"
+#! POSITION="151 -2138"
+#! ORDER="81"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="BFSNR_ALT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GBKR_ALT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ANZAHL_ALT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="TEMPKEY_ALT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="WHERE" PARM_VALUE="End"/>
+#! <XFORM_PARM PARM_NAME="PREFIX" PARM_VALUE="_ALT"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributePrefixer_4"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="78"
+#! TYPE="FeatureMerger"
+#! VERSION="8"
+#! POSITION="914 -2191"
+#! ORDER="82"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="COMPLETE"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="BFSNR_ALT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GBKR_ALT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ANZAHL_ALT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="TEMPKEY_ALT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="BFSNR_NEU" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GBKR_NEU" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ANZAHL_NEU" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="TEMPKEY_NEU" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="INCOMPLETE"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <XFORM_ATTR ATTR_NAME="BFSNR_ALT" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="GBKR_ALT" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="ANZAHL_ALT" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="TEMPKEY_ALT" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <OUTPUT_FEAT NAME="EMPTY"/>
+#! <FEAT_COLLAPSED COLLAPSED="2"/>
+#! <XFORM_ATTR ATTR_NAME="BFSNR_ALT" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="GBKR_ALT" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="ANZAHL_ALT" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="TEMPKEY_ALT" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <OUTPUT_FEAT NAME="REFERENCED"/>
+#! <FEAT_COLLAPSED COLLAPSED="3"/>
+#! <XFORM_ATTR ATTR_NAME="BFSNR_NEU" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="GBKR_NEU" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="ANZAHL_NEU" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="TEMPKEY_NEU" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <OUTPUT_FEAT NAME="UNREFERENCED"/>
+#! <FEAT_COLLAPSED COLLAPSED="4"/>
+#! <XFORM_ATTR ATTR_NAME="BFSNR_NEU" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="GBKR_NEU" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="ANZAHL_NEU" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="TEMPKEY_NEU" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <OUTPUT_FEAT NAME="DUPLICATE_SUPPLIER"/>
+#! <FEAT_COLLAPSED COLLAPSED="5"/>
+#! <XFORM_ATTR ATTR_NAME="BFSNR_NEU" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#! <XFORM_ATTR ATTR_NAME="GBKR_NEU" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#! <XFORM_ATTR ATTR_NAME="ANZAHL_NEU" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#! <XFORM_ATTR ATTR_NAME="TEMPKEY_NEU" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#! <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="BUILD_INCOMPLETE" PARM_VALUE="No"/>
+#! <XFORM_PARM PARM_NAME="PROCESS_DUPS" PARM_VALUE="No"/>
+#! <XFORM_PARM PARM_NAME="MERGE_TYPE" PARM_VALUE="Attributes Only"/>
+#! <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureMerger_2"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="REFERATTR" PARM_VALUE="TEMPKEY_ALT"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="REFEEATTR" PARM_VALUE="TEMPKEY_NEU"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="80"
+#! TYPE="ExpressionEvaluator"
+#! VERSION="1"
+#! POSITION="1595 -2141"
+#! ORDER="83"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="BFSNR_ALT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GBKR_ALT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ANZAHL_ALT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="TEMPKEY_ALT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="BFSNR_NEU" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GBKR_NEU" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ANZAHL_NEU" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="TEMPKEY_NEU" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="DIFF_ABS" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="DIFF_REL" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="VAL_ATTR" PARM_VALUE="DIFF_REL"/>
+#! <XFORM_PARM PARM_NAME="EXPRESSION" PARM_VALUE="(@Value(DIFF_ABS)/(@Value(ANZAHL_ALT)/100.0))"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="ExpressionEvaluator_4"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="81"
+#! TYPE="SQLCreator"
+#! VERSION="0"
+#! POSITION="237 -2399"
+#! ORDER="85"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="RESULT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="BFSNR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GBKR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ANZAHL" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="PASSWORD" PARM_VALUE="$(NORM_PASSWORD)"/>
+#! <XFORM_PARM PARM_NAME="SQL_STATEMENT" PARM_VALUE="select&lt;space&gt;t.bfsnr&lt;comma&gt;&lt;space&gt;t.gbkr&lt;comma&gt;&lt;space&gt;count&lt;openparen&gt;*&lt;closeparen&gt;&lt;space&gt;anzahl&lt;space&gt;from&lt;space&gt;dipanu_dipanup&lt;space&gt;t&lt;space&gt;group&lt;space&gt;by&lt;space&gt;t.bfsnr&lt;comma&gt;&lt;space&gt;t.gbkr&lt;space&gt;order&lt;space&gt;by&lt;space&gt;t.bfsnr&lt;space&gt;asc&lt;comma&gt;&lt;space&gt;t.gbkr&lt;space&gt;asc"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="SQLCreator_10"/>
+#! <XFORM_PARM PARM_NAME="EXPOSED_ATTRIBUTE_LIST" PARM_VALUE="BFSNR,GBKR,ANZAHL"/>
+#! <XFORM_PARM PARM_NAME="USER_NAME" PARM_VALUE="$(NORM_USERNAME)"/>
+#! <XFORM_PARM PARM_NAME="DIRECTIVES" PARM_VALUE="SERVER_TYPE ORACLE8i REMOVE_SCHEMA_QUALIFIER NO PERSISTENT_CONNECTION YES SHOW_SYSTEM_TABLES NO _DEFAULT_FILTER_ norm _MERGE_SCHEMAS YES"/>
+#! <XFORM_PARM PARM_NAME="DATASET" PARM_VALUE="$(NORM_DATABASE)"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="FORMAT" PARM_VALUE="ORACLE8I_DB"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="79"
+#! TYPE="ExpressionEvaluator"
+#! VERSION="1"
+#! POSITION="1373 -1779"
+#! ORDER="88"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="BFSNR_ALT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GBKR_ALT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ANZAHL_ALT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="TEMPKEY_ALT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="BFSNR_NEU" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GBKR_NEU" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ANZAHL_NEU" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="TEMPKEY_NEU" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="DIFF_ABS" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="VAL_ATTR" PARM_VALUE="DIFF_ABS"/>
+#! <XFORM_PARM PARM_NAME="EXPRESSION" PARM_VALUE="(@Value(ANZAHL_NEU)-@Value(ANZAHL_ALT))"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="ExpressionEvaluator_3"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="55"
+#! TYPE="SQLCreator"
+#! VERSION="0"
+#! POSITION="2128 -3295"
+#! ORDER="89"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="RESULT"/>
+#! <XFORM_ATTR ATTR_NAME="BFSNR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GEMNAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GBKR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GSTBEZ" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="PROJSTAT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ANZAHL" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="PASSWORD" PARM_VALUE="$(NORM_PASSWORD)"/>
+#! <XFORM_PARM PARM_NAME="SQL_STATEMENT" PARM_VALUE="select&lt;space&gt;t.bfsnr&lt;comma&gt;&lt;space&gt;t.gbkr&lt;comma&gt;&lt;space&gt;t.gstbez&lt;comma&gt;&lt;space&gt;t.projstat&lt;comma&gt;&lt;space&gt;count&lt;openparen&gt;*&lt;closeparen&gt;&lt;space&gt;anzahl&lt;lf&gt;&lt;space&gt;&lt;space&gt;from&lt;space&gt;dipanu_dipanup&lt;space&gt;t&lt;lf&gt;&lt;space&gt;group&lt;space&gt;by&lt;space&gt;t.bfsnr&lt;comma&gt;&lt;space&gt;t.gbkr&lt;comma&gt;&lt;space&gt;t.gstbez&lt;comma&gt;&lt;space&gt;t.projstat&lt;lf&gt;&lt;space&gt;having&lt;space&gt;count&lt;openparen&gt;*&lt;closeparen&gt;&lt;space&gt;&lt;gt&gt;&lt;space&gt;1&lt;lf&gt;&lt;space&gt;order&lt;space&gt;by&lt;space&gt;t.bfsnr&lt;space&gt;asc&lt;comma&gt;&lt;space&gt;t.gbkr&lt;space&gt;asc&lt;comma&gt;&lt;space&gt;t.gstbez&lt;space&gt;asc&lt;comma&gt;&lt;space&gt;t.projstat&lt;space&gt;asc"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="SQLCreator_6"/>
+#! <XFORM_PARM PARM_NAME="EXPOSED_ATTRIBUTE_LIST" PARM_VALUE="BFSNR,GEMNAME,GBKR,GSTBEZ,PROJSTAT,ANZAHL"/>
+#! <XFORM_PARM PARM_NAME="USER_NAME" PARM_VALUE="$(NORM_USERNAME)"/>
+#! <XFORM_PARM PARM_NAME="DIRECTIVES" PARM_VALUE="SERVER_TYPE ORACLE8i REMOVE_SCHEMA_QUALIFIER NO PERSISTENT_CONNECTION YES SHOW_SYSTEM_TABLES NO _DEFAULT_FILTER_ norm _MERGE_SCHEMAS YES"/>
+#! <XFORM_PARM PARM_NAME="DATASET" PARM_VALUE="$(NORM_DATABASE)"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="FORMAT" PARM_VALUE="ORACLE8I_DB"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="57"
+#! TYPE="SQLCreator"
+#! VERSION="0"
+#! POSITION="2123 -4733"
+#! ORDER="91"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="RESULT"/>
+#! <XFORM_ATTR ATTR_NAME="GENGBKRI" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GSTBEZ" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="PROJSTAT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="PASSWORD" PARM_VALUE="$(NORM_PASSWORD)"/>
+#! <XFORM_PARM PARM_NAME="SQL_STATEMENT" PARM_VALUE="select&lt;space&gt;t.gengbkri&lt;comma&gt;&lt;space&gt;t.gstbez&lt;comma&gt;&lt;space&gt;t.projstat&lt;comma&gt;&lt;space&gt;count&lt;openparen&gt;*&lt;closeparen&gt;&lt;space&gt;anzahl&lt;lf&gt;&lt;space&gt;&lt;space&gt;from&lt;space&gt;dipanu_dipanup&lt;space&gt;t&lt;lf&gt;&lt;space&gt;group&lt;space&gt;by&lt;space&gt;t.gengbkri&lt;comma&gt;&lt;space&gt;t.gstbez&lt;comma&gt;&lt;space&gt;t.projstat&lt;lf&gt;&lt;space&gt;having&lt;space&gt;count&lt;openparen&gt;*&lt;closeparen&gt;&lt;space&gt;&lt;gt&gt;&lt;space&gt;1&lt;lf&gt;&lt;space&gt;order&lt;space&gt;by&lt;space&gt;t.gengbkri&lt;comma&gt;&lt;space&gt;t.gstbez&lt;comma&gt;&lt;space&gt;t.projstat"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="SQLCreator_8"/>
+#! <XFORM_PARM PARM_NAME="EXPOSED_ATTRIBUTE_LIST" PARM_VALUE="GENGBKRI,GSTBEZ,PROJSTAT"/>
+#! <XFORM_PARM PARM_NAME="USER_NAME" PARM_VALUE="$(NORM_USERNAME)"/>
+#! <XFORM_PARM PARM_NAME="DIRECTIVES" PARM_VALUE="SERVER_TYPE ORACLE8i REMOVE_SCHEMA_QUALIFIER NO PERSISTENT_CONNECTION YES SHOW_SYSTEM_TABLES NO _DEFAULT_FILTER_ norm _MERGE_SCHEMAS YES"/>
+#! <XFORM_PARM PARM_NAME="DATASET" PARM_VALUE="$(NORM_DATABASE)"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="FORMAT" PARM_VALUE="ORACLE8I_DB"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="108"
+#! TYPE="SQLCreator"
+#! VERSION="0"
+#! POSITION="172 -5136"
+#! ORDER="94"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="RESULT"/>
+#! <XFORM_ATTR ATTR_NAME="EGRID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="PROJSTAT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ANZAHL" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="PASSWORD" PARM_VALUE="$(NORM_PASSWORD)"/>
+#! <XFORM_PARM PARM_NAME="SQL_STATEMENT" PARM_VALUE="select&lt;space&gt;t.egrid&lt;comma&gt;&lt;space&gt;t.projstat&lt;comma&gt;&lt;space&gt;count&lt;openparen&gt;*&lt;closeparen&gt;&lt;space&gt;anzahl&lt;lf&gt;&lt;space&gt;&lt;space&gt;from&lt;space&gt;dipanu_dipanuf&lt;space&gt;t&lt;lf&gt;&lt;space&gt;group&lt;space&gt;by&lt;space&gt;t.egrid&lt;comma&gt;&lt;space&gt;t.projstat&lt;lf&gt;&lt;space&gt;having&lt;space&gt;count&lt;openparen&gt;*&lt;closeparen&gt;&lt;space&gt;&lt;gt&gt;&lt;space&gt;1&lt;lf&gt;&lt;space&gt;order&lt;space&gt;by&lt;space&gt;t.egrid&lt;space&gt;asc&lt;comma&gt;&lt;space&gt;t.projstat&lt;space&gt;asc"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="SQLCreator_11"/>
+#! <XFORM_PARM PARM_NAME="EXPOSED_ATTRIBUTE_LIST" PARM_VALUE="EGRID,PROJSTAT,ANZAHL"/>
+#! <XFORM_PARM PARM_NAME="USER_NAME" PARM_VALUE="$(NORM_USERNAME)"/>
+#! <XFORM_PARM PARM_NAME="DIRECTIVES" PARM_VALUE="SERVER_TYPE ORACLE8i REMOVE_SCHEMA_QUALIFIER NO PERSISTENT_CONNECTION YES SHOW_SYSTEM_TABLES NO _DEFAULT_FILTER_ norm _MERGE_SCHEMAS YES"/>
+#! <XFORM_PARM PARM_NAME="DATASET" PARM_VALUE="$(NORM_DATABASE)"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="FORMAT" PARM_VALUE="ORACLE8I_DB"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#! IDENTIFIER="9"
+#! SOURCE_NODE="17"
+#! TARGET_NODE="7"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="13"
+#! SOURCE_NODE="2"
+#! TARGET_NODE="12"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="16"
+#! SOURCE_NODE="7"
+#! TARGET_NODE="14"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="42"
+#! SOURCE_NODE="12"
+#! TARGET_NODE="15"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="19"
+#! SOURCE_NODE="14"
+#! TARGET_NODE="18"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="20"
+#! SOURCE_NODE="15"
+#! TARGET_NODE="18"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="21"
+#! SOURCE_NODE="18"
+#! TARGET_NODE="8"
+#! SOURCE_PORT_DESC="fo 1"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="25"
+#! SOURCE_NODE="18"
+#! TARGET_NODE="8"
+#! SOURCE_PORT_DESC="fo 2"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="29"
+#! SOURCE_NODE="18"
+#! TARGET_NODE="10"
+#! SOURCE_PORT_DESC="fo 4"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="34"
+#! SOURCE_NODE="18"
+#! TARGET_NODE="33"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="40"
+#! SOURCE_NODE="33"
+#! TARGET_NODE="39"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="41"
+#! SOURCE_NODE="39"
+#! TARGET_NODE="11"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="51"
+#! SOURCE_NODE="49"
+#! TARGET_NODE="50"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="58"
+#! SOURCE_NODE="55"
+#! TARGET_NODE="52"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="59"
+#! SOURCE_NODE="56"
+#! TARGET_NODE="53"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="60"
+#! SOURCE_NODE="57"
+#! TARGET_NODE="54"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="63"
+#! SOURCE_NODE="62"
+#! TARGET_NODE="61"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="82"
+#! SOURCE_NODE="76"
+#! TARGET_NODE="74"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="83"
+#! SOURCE_NODE="81"
+#! TARGET_NODE="73"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="84"
+#! SOURCE_NODE="74"
+#! TARGET_NODE="77"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="85"
+#! SOURCE_NODE="73"
+#! TARGET_NODE="75"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="86"
+#! SOURCE_NODE="77"
+#! TARGET_NODE="78"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="87"
+#! SOURCE_NODE="75"
+#! TARGET_NODE="78"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="88"
+#! SOURCE_NODE="78"
+#! TARGET_NODE="70"
+#! SOURCE_PORT_DESC="fo 1"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="89"
+#! SOURCE_NODE="78"
+#! TARGET_NODE="70"
+#! SOURCE_PORT_DESC="fo 2"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="90"
+#! SOURCE_NODE="78"
+#! TARGET_NODE="72"
+#! SOURCE_PORT_DESC="fo 4"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="91"
+#! SOURCE_NODE="78"
+#! TARGET_NODE="79"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="92"
+#! SOURCE_NODE="79"
+#! TARGET_NODE="80"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="93"
+#! SOURCE_NODE="80"
+#! TARGET_NODE="71"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="109"
+#! SOURCE_NODE="108"
+#! TARGET_NODE="107"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! <ATTR_LINK
+#! IDENTIFIER="131093"
+#! SOURCE_NODE="18"
+#! TARGET_NODE="8"
+#! SOURCE_PORT_DESC="ao 1 2"
+#! TARGET_PORT_DESC="2"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="65557"
+#! SOURCE_NODE="18"
+#! TARGET_NODE="8"
+#! SOURCE_PORT_DESC="ao 1 1"
+#! TARGET_PORT_DESC="1"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="196629"
+#! SOURCE_NODE="18"
+#! TARGET_NODE="8"
+#! SOURCE_PORT_DESC="ao 1 0"
+#! TARGET_PORT_DESC="0"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="131097"
+#! SOURCE_NODE="18"
+#! TARGET_NODE="8"
+#! SOURCE_PORT_DESC="ao 2 1"
+#! TARGET_PORT_DESC="1"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="65561"
+#! SOURCE_NODE="18"
+#! TARGET_NODE="8"
+#! SOURCE_PORT_DESC="ao 2 2"
+#! TARGET_PORT_DESC="2"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="196633"
+#! SOURCE_NODE="18"
+#! TARGET_NODE="8"
+#! SOURCE_PORT_DESC="ao 2 0"
+#! TARGET_PORT_DESC="0"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="131101"
+#! SOURCE_NODE="18"
+#! TARGET_NODE="10"
+#! SOURCE_PORT_DESC="ao 4 2"
+#! TARGET_PORT_DESC="2"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="65565"
+#! SOURCE_NODE="18"
+#! TARGET_NODE="10"
+#! SOURCE_PORT_DESC="ao 4 1"
+#! TARGET_PORT_DESC="1"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="196637"
+#! SOURCE_NODE="18"
+#! TARGET_NODE="10"
+#! SOURCE_PORT_DESC="ao 4 0"
+#! TARGET_PORT_DESC="0"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="131113"
+#! SOURCE_NODE="39"
+#! TARGET_NODE="11"
+#! SOURCE_PORT_DESC="ao 0 5"
+#! TARGET_PORT_DESC="1"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="65577"
+#! SOURCE_NODE="39"
+#! TARGET_NODE="11"
+#! SOURCE_PORT_DESC="ao 0 4"
+#! TARGET_PORT_DESC="0"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="196696"
+#! SOURCE_NODE="78"
+#! TARGET_NODE="70"
+#! SOURCE_PORT_DESC="ao 1 0"
+#! TARGET_PORT_DESC="0"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="131160"
+#! SOURCE_NODE="78"
+#! TARGET_NODE="70"
+#! SOURCE_PORT_DESC="ao 1 2"
+#! TARGET_PORT_DESC="2"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="65624"
+#! SOURCE_NODE="78"
+#! TARGET_NODE="70"
+#! SOURCE_PORT_DESC="ao 1 1"
+#! TARGET_PORT_DESC="1"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="196697"
+#! SOURCE_NODE="78"
+#! TARGET_NODE="70"
+#! SOURCE_PORT_DESC="ao 2 0"
+#! TARGET_PORT_DESC="0"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="131161"
+#! SOURCE_NODE="78"
+#! TARGET_NODE="70"
+#! SOURCE_PORT_DESC="ao 2 2"
+#! TARGET_PORT_DESC="2"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="65625"
+#! SOURCE_NODE="78"
+#! TARGET_NODE="70"
+#! SOURCE_PORT_DESC="ao 2 1"
+#! TARGET_PORT_DESC="1"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="131162"
+#! SOURCE_NODE="78"
+#! TARGET_NODE="72"
+#! SOURCE_PORT_DESC="ao 4 0"
+#! TARGET_PORT_DESC="0"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="65626"
+#! SOURCE_NODE="78"
+#! TARGET_NODE="72"
+#! SOURCE_PORT_DESC="ao 4 2"
+#! TARGET_PORT_DESC="2"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="196698"
+#! SOURCE_NODE="78"
+#! TARGET_NODE="72"
+#! SOURCE_PORT_DESC="ao 4 1"
+#! TARGET_PORT_DESC="1"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="131165"
+#! SOURCE_NODE="80"
+#! TARGET_NODE="71"
+#! SOURCE_PORT_DESC="ao 0 4"
+#! TARGET_PORT_DESC="0"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="65629"
+#! SOURCE_NODE="80"
+#! TARGET_NODE="71"
+#! SOURCE_PORT_DESC="ao 0 5"
+#! TARGET_PORT_DESC="1"
+#! />
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </WORKSPACE>
+#! 
+GUI IGNORE DestDataset_XLS_ADO_1,XLS_ADO_OUT_VERSION_XLS_ADO_1,XLS_ADO_OUT_WRITER_MODE_XLS_ADO_1,XLS_ADO_OUT_START_TRANSACTION_XLS_ADO_1,XLS_ADO_OUT_BEGIN_SQL_XLS_ADO_1,XLS_ADO_OUT_END_SQL_XLS_ADO_1,XLS_ADO_OUT_INIT_TABLES_XLS_ADO_1
+DEFAULT_MACRO QA_EXCEL 
+GUI TEXT QA_EXCEL QA-Excelfile:
+DEFAULT_MACRO NORM_DATABASE 
+GUI TEXT NORM_DATABASE Norm-Database:
+DEFAULT_MACRO NORM_USERNAME 
+GUI TEXT NORM_USERNAME Norm-Username:
+DEFAULT_MACRO NORM_PASSWORD 
+GUI PASSWORD NORM_PASSWORD Norm-Passwort:
+DEFAULT_MACRO LOGFILE 
+GUI TEXT LOGFILE Logfile:
+DEFAULT_MACRO VEK1_DATABASE 
+GUI TEXT VEK1_DATABASE Vek1-Database:
+DEFAULT_MACRO VEK1_USERNAME 
+GUI TEXT VEK1_USERNAME Vek1-Username:
+DEFAULT_MACRO VEK1_PASSWORD 
+GUI PASSWORD VEK1_PASSWORD Vek1-Password:
+INCLUDE [ if {{$(QA_EXCEL)} == {}} { puts_real {Parameter 'QA_EXCEL' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(NORM_DATABASE)} == {}} { puts_real {Parameter 'NORM_DATABASE' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(NORM_USERNAME)} == {}} { puts_real {Parameter 'NORM_USERNAME' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(NORM_PASSWORD)} == {}} { puts_real {Parameter 'NORM_PASSWORD' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(LOGFILE)} == {}} { puts_real {Parameter 'LOGFILE' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(VEK1_DATABASE)} == {}} { puts_real {Parameter 'VEK1_DATABASE' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(VEK1_USERNAME)} == {}} { puts_real {Parameter 'VEK1_USERNAME' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(VEK1_PASSWORD)} == {}} { puts_real {Parameter 'VEK1_PASSWORD' must be given a value.}; exit 1; }; ]
+#! START_HEADER
+#! START_WB_HEADER
+READER_TYPE NULL
+READER_KEYWORD NULL_SOURCE
+NULL_SOURCE_DATASET null
+WRITER_TYPE MULTI_WRITER
+MULTI_WRITER_DATASET_ORDER BY_ID
+MULTI_WRITER_FIRST_WRITER_ID 0
+MULTI_WRITER_TYPE{0} XLS_ADO
+MULTI_WRITER_KEYWORD{0} XLS_ADO_1
+#! END_WB_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "XLS_ADO_1"
+#! END_WB_HEADER
+#! START_DEST_HEADER XLS_ADO XLS_ADO_1
+# ============================================================================
+# First get the dataset for the database. For Excel, it's the file name.
+# For now we'll use whatever they had when they generated this mapping file,
+# and not reprompt
+#! END_DEST_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO DestDataset
+INCLUDE [ if {"$(DestDataset)" != ""} {                          \
+ puts {DEFAULT_MACRO DestDataset_XLS_ADO_1 $(DestDataset)}         \
+ } ]
+#! END_WB_HEADER
+#! START_DEST_HEADER XLS_ADO XLS_ADO_1
+DEFAULT_MACRO DestDataset_XLS_ADO_1 $(QA_EXCEL)
+GUI FILENAME DestDataset_XLS_ADO_1 Excel_Files(*.xls;*.xlsx;*.xlsb)|*.xls;*.xlsx;*.xlsb|All_files(*.*)|*.* Destination Microsoft Excel File:
+# ============================================================================
+# The ADO provider in use. For Excel, this is always XLS_ADO
+DEFAULT_MACRO XLS_ADO_OUT_PROVIDER_TYPE_XLS_ADO_1 XLS_ADO
+XLS_ADO_1_PROVIDER_TYPE "$(XLS_ADO_OUT_PROVIDER_TYPE_XLS_ADO_1)"
+# ============================================================================
+# Optional Version (defaultstonewestversion)
+DEFAULT_MACRO XLS_ADO_OUT_VERSION_XLS_ADO_1 97/2000/2002/2003
+XLS_ADO_1_VERSION "$(XLS_ADO_OUT_VERSION_XLS_ADO_1)"
+GUI RADIO_GROUP XLS_ADO_OUT_VERSION_XLS_ADO_1 5%2007%97/2000/2002/2003%5.0/95%4.0%3.0 Excel Version
+# ============================================================================
+# This keyword sets the mode of the writer
+DEFAULT_MACRO XLS_ADO_OUT_WRITER_MODE_XLS_ADO_1 INSERT
+GUI CHOICE XLS_ADO_OUT_WRITER_MODE_XLS_ADO_1 INSERT%UPDATE Writer Mode:
+XLS_ADO_1_WRITER_MODE $(XLS_ADO_OUT_WRITER_MODE_XLS_ADO_1)
+# ============================================================================
+# This keyword sets the starting transaction
+DEFAULT_MACRO XLS_ADO_OUT_START_TRANSACTION_XLS_ADO_1 0
+GUI OPTIONAL TEXT XLS_ADO_OUT_START_TRANSACTION_XLS_ADO_1 Start writing at feature:
+XLS_ADO_1_START_TRANSACTION $(XLS_ADO_OUT_START_TRANSACTION_XLS_ADO_1)
+# ============================================================================
+# This keyword sets the number of features between transaction commits
+DEFAULT_MACRO XLS_ADO_OUT_TRANSACTION_INTERVAL_XLS_ADO_1 1
+XLS_ADO_1_TRANSACTION_INTERVAL $(XLS_ADO_OUT_TRANSACTION_INTERVAL_XLS_ADO_1)
+# ============================================================================
+# The following specifies an SQL command to execute before opening the first
+# table.
+DEFAULT_MACRO XLS_ADO_OUT_BEGIN_SQL_XLS_ADO_1 
+GUI OPTIONAL TEXT_EDIT_SQL XLS_ADO_OUT_BEGIN_SQL_XLS_ADO_1 SQL Statement to Execute Before Translation:
+XLS_ADO_1_BEGIN_SQL{0} "$(XLS_ADO_OUT_BEGIN_SQL_XLS_ADO_1)"
+# ============================================================================
+# The following specifies an SQL command to execute after closing all the
+# tables.
+DEFAULT_MACRO XLS_ADO_OUT_END_SQL_XLS_ADO_1 
+GUI OPTIONAL TEXT_EDIT_SQL XLS_ADO_OUT_END_SQL_XLS_ADO_1 SQL Statement to Execute After Translation:
+XLS_ADO_1_END_SQL{0} "$(XLS_ADO_OUT_END_SQL_XLS_ADO_1)"
+# ============================================================================
+# The following specifies when we should perform table initialization.
+# Table initialization is when we DROP, TRUNCATE, and CREATE TABLE.
+DEFAULT_MACRO XLS_ADO_OUT_INIT_TABLES_XLS_ADO_1 FIRSTFEATURE
+GUI OPTIONAL CHOICE XLS_ADO_OUT_INIT_TABLES_XLS_ADO_1 FIRSTFEATURE%IMMEDIATELY Initialize Tables:
+XLS_ADO_1_INIT_TABLES "$(XLS_ADO_OUT_INIT_TABLES_XLS_ADO_1)"
+XLS_ADO_1_DATASET "$(DestDataset_XLS_ADO_1)"
+#! END_DEST_HEADER
+#! END_HEADER
+
+LOG_FILENAME "$(LOGFILE)"
+LOG_APPEND NO
+LOG_MAX_FEATURES 200
+LOG_MAX_RECORDED_FEATURES 200
+FME_REPROJECTION_ENGINE FME
+FME_IMPLICIT_CSMAP_REPROJECTION_MODE Datum
+FME_GEOMETRY_HANDLING Classic
+FME_STROKE_MAX_DEVIATION 0
+LOG_TIMINGS YES
+LOG_FILTER_MASK -1
+DEFAULT_MACRO DATASET_KEYWORD_XLS_ADO_1 XLS_ADO_1
+FME_PASSWORD_PARAMETER_LIST NORM_PASSWORD VEK1_PASSWORD
+# -------------------------------------------------------------------------
+
+MULTI_READER_CONTINUE_ON_READER_FAILURE No
+
+# -------------------------------------------------------------------------
+
+MACRO WORKSPACE_NAME dipanu_import_qa
+MACRO FME_VIEWER_APP fmedatainspector
+# -------------------------------------------------------------------------
+
+INCLUDE [ if {[info exists env(FME_TEMP)] && [file isdirectory $env(FME_TEMP)]} {set gVisualizerTemp $env(FME_TEMP)}  elseif {[info exists env(TEMP)] && [file isdirectory $env(TEMP)]}  {set gVisualizerTemp $env(TEMP)}  elseif { $tcl_platform(platform) == "unix" } {set gVisualizerTemp "/tmp"} else {set gVisualizerTemp c:};  regsub -all {[ ,&]} {$(WORKSPACE_NAME)} {_} wsname; set gVisualizerTemp $gVisualizerTemp/${wsname}_[clock format [clock seconds] -format %H%M%S];  puts "MACRO WORKSPACE_TEMP_DIR $gVisualizerTemp"; 
+MACRO VISUALIZER_FEATURE_FILE $(WORKSPACE_TEMP_DIR)/inspector.ffs
+MACRO VISUALIZER_SCHEMA_FILE $(WORKSPACE_TEMP_DIR)/inspector.fsc
+MACRO VISUALIZER_CREATE_SPATIAL_INDEX YES
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * CreationFactory    FACTORY_NAME SQLCreator_11_Creator    OUTPUT FEATURE_TYPE _____CREATED______
+FACTORY_DEF * QueryFactory    FACTORY_NAME SQLCreator_11    INPUT FEATURE_TYPE _____CREATED______    QUERY_SQL_STATEMENT  select<space>t.egrid<comma><space>t.projstat<comma><space>count<openparen>*<closeparen><space>anzahl<lf><space><space>from<space>dipanu_dipanuf<space>t<lf><space>group<space>by<space>t.egrid<comma><space>t.projstat<lf><space>having<space>count<openparen>*<closeparen><space><gt><space>1<lf><space>order<space>by<space>t.egrid<space>asc<comma><space>t.projstat<space>asc    COMBINE_ATTRIBUTES   RESULT_ONLY    COMBINE_GEOMETRY     RESULT_ONLY    READER_TYPE         	ORACLE8I_DB    READER_DATASET      	"$(NORM_DATABASE)"    READER_PARAMS     USER_NAME "$(NORM_USERNAME)" USERID "$(NORM_USERNAME)" PASSWORD "$(NORM_PASSWORD)"     SERVER_TYPE ORACLE8i REMOVE_SCHEMA_QUALIFIER NO PERSISTENT_CONNECTION YES SHOW_SYSTEM_TABLES NO _DEFAULT_FILTER_ norm _MERGE_SCHEMAS YES    OUTPUT RESULT FEATURE_TYPE SQLCreator_11_RESULT
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * CreationFactory    FACTORY_NAME SQLCreator_8_Creator    OUTPUT FEATURE_TYPE _____CREATED______
+FACTORY_DEF * QueryFactory    FACTORY_NAME SQLCreator_8    INPUT FEATURE_TYPE _____CREATED______    QUERY_SQL_STATEMENT  select<space>t.gengbkri<comma><space>t.gstbez<comma><space>t.projstat<comma><space>count<openparen>*<closeparen><space>anzahl<lf><space><space>from<space>dipanu_dipanup<space>t<lf><space>group<space>by<space>t.gengbkri<comma><space>t.gstbez<comma><space>t.projstat<lf><space>having<space>count<openparen>*<closeparen><space><gt><space>1<lf><space>order<space>by<space>t.gengbkri<comma><space>t.gstbez<comma><space>t.projstat    COMBINE_ATTRIBUTES   RESULT_ONLY    COMBINE_GEOMETRY     RESULT_ONLY    READER_TYPE         	ORACLE8I_DB    READER_DATASET      	"$(NORM_DATABASE)"    READER_PARAMS     USER_NAME "$(NORM_USERNAME)" USERID "$(NORM_USERNAME)" PASSWORD "$(NORM_PASSWORD)"     SERVER_TYPE ORACLE8i REMOVE_SCHEMA_QUALIFIER NO PERSISTENT_CONNECTION YES SHOW_SYSTEM_TABLES NO _DEFAULT_FILTER_ norm _MERGE_SCHEMAS YES    OUTPUT RESULT FEATURE_TYPE SQLCreator_8_RESULT
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * CreationFactory    FACTORY_NAME SQLCreator_6_Creator    OUTPUT FEATURE_TYPE _____CREATED______
+FACTORY_DEF * QueryFactory    FACTORY_NAME SQLCreator_6    INPUT FEATURE_TYPE _____CREATED______    QUERY_SQL_STATEMENT  select<space>t.bfsnr<comma><space>t.gbkr<comma><space>t.gstbez<comma><space>t.projstat<comma><space>count<openparen>*<closeparen><space>anzahl<lf><space><space>from<space>dipanu_dipanup<space>t<lf><space>group<space>by<space>t.bfsnr<comma><space>t.gbkr<comma><space>t.gstbez<comma><space>t.projstat<lf><space>having<space>count<openparen>*<closeparen><space><gt><space>1<lf><space>order<space>by<space>t.bfsnr<space>asc<comma><space>t.gbkr<space>asc<comma><space>t.gstbez<space>asc<comma><space>t.projstat<space>asc    COMBINE_ATTRIBUTES   RESULT_ONLY    COMBINE_GEOMETRY     RESULT_ONLY    READER_TYPE         	ORACLE8I_DB    READER_DATASET      	"$(NORM_DATABASE)"    READER_PARAMS     USER_NAME "$(NORM_USERNAME)" USERID "$(NORM_USERNAME)" PASSWORD "$(NORM_PASSWORD)"     SERVER_TYPE ORACLE8i REMOVE_SCHEMA_QUALIFIER NO PERSISTENT_CONNECTION YES SHOW_SYSTEM_TABLES NO _DEFAULT_FILTER_ norm _MERGE_SCHEMAS YES    OUTPUT RESULT FEATURE_TYPE SQLCreator_6_RESULT
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * CreationFactory    FACTORY_NAME SQLCreator_10_Creator    OUTPUT FEATURE_TYPE _____CREATED______
+FACTORY_DEF * QueryFactory    FACTORY_NAME SQLCreator_10    INPUT FEATURE_TYPE _____CREATED______    QUERY_SQL_STATEMENT  select<space>t.bfsnr<comma><space>t.gbkr<comma><space>count<openparen>*<closeparen><space>anzahl<space>from<space>dipanu_dipanup<space>t<space>group<space>by<space>t.bfsnr<comma><space>t.gbkr<space>order<space>by<space>t.bfsnr<space>asc<comma><space>t.gbkr<space>asc    COMBINE_ATTRIBUTES   RESULT_ONLY    COMBINE_GEOMETRY     RESULT_ONLY    READER_TYPE         	ORACLE8I_DB    READER_DATASET      	"$(NORM_DATABASE)"    READER_PARAMS     USER_NAME "$(NORM_USERNAME)" USERID "$(NORM_USERNAME)" PASSWORD "$(NORM_PASSWORD)"     SERVER_TYPE ORACLE8i REMOVE_SCHEMA_QUALIFIER NO PERSISTENT_CONNECTION YES SHOW_SYSTEM_TABLES NO _DEFAULT_FILTER_ norm _MERGE_SCHEMAS YES    OUTPUT RESULT FEATURE_TYPE SQLCreator_10_RESULT
+
+# -------------------------------------------------------------------------
+
+Tcl2 proc StringConcatenator_3_855fe669_7f4f_4b1e_b0bf_0aa75fde784d1_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {TEMPKEY}] [FME_DecodeText $attrText] }
+FACTORY_DEF * TeeFactory    FACTORY_NAME StringConcatenator_3    INPUT  FEATURE_TYPE SQLCreator_10_RESULT    OUTPUT FEATURE_TYPE StringConcatenator_3_OUTPUT        @Tcl2("StringConcatenator_3_855fe669_7f4f_4b1e_b0bf_0aa75fde784d1_doSetAttr {@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>BFSNR<closeparen><at>Value<openparen>GBKR<closeparen>,StringConcatenator_3)} ")
+
+# -------------------------------------------------------------------------
+
+# Create the prefix attributes just one time, at startup, to avoid doing it
+# over and over and over and over and over again for each attribute of each
+# feature.
+
+Tcl2 set AttributePrefixer_3_start {};      set AttributePrefixer_3_end {};      if [string equal End End] {          set AttributePrefixer_3_end {_NEU}      } else {          set AttributePrefixer_3_start {_NEU}      }
+Tcl2 proc AttributePrefixer_3_prefix {} {     global AttributePrefixer_3_end AttributePrefixer_3_start;     foreach attr [FME_AttributeNames] {         if {![regexp "^fme_" $attr]} {           FME_RenameAttribute [set AttributePrefixer_3_start]$attr[set AttributePrefixer_3_end] $attr;         };     }; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME AttributePrefixer_3    INPUT  FEATURE_TYPE StringConcatenator_3_OUTPUT    OUTPUT FEATURE_TYPE AttributePrefixer_3_OUTPUT        @Tcl2("AttributePrefixer_3_prefix")
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * CreationFactory    FACTORY_NAME SQLCreator_9_Creator    OUTPUT FEATURE_TYPE _____CREATED______
+FACTORY_DEF * QueryFactory    FACTORY_NAME SQLCreator_9    INPUT FEATURE_TYPE _____CREATED______    QUERY_SQL_STATEMENT  select<space>t.bfsnr<comma><space>t.gbkr<comma><space>count<openparen>*<closeparen><space>anzahl<space>from<space>geodb.dipanu_dipanup<space>t<space>group<space>by<space>t.bfsnr<comma><space>t.gbkr<space>order<space>by<space>t.bfsnr<space>asc<comma><space>t.gbkr<space>asc    COMBINE_ATTRIBUTES   RESULT_ONLY    COMBINE_GEOMETRY     RESULT_ONLY    READER_TYPE         	ORACLE8I_DB    READER_DATASET      	"$(VEK1_DATABASE)"    READER_PARAMS     USER_NAME "$(VEK1_USERNAME)" USERID "$(VEK1_USERNAME)" PASSWORD "$(VEK1_PASSWORD)"     SERVER_TYPE ORACLE8i REMOVE_SCHEMA_QUALIFIER NO PERSISTENT_CONNECTION YES SHOW_SYSTEM_TABLES NO _DEFAULT_FILTER_ geo _MERGE_SCHEMAS YES    OUTPUT RESULT FEATURE_TYPE SQLCreator_9_RESULT
+
+# -------------------------------------------------------------------------
+
+Tcl2 proc StringConcatenator_4_28b802f4_b9c2_49a9_87ce_86cba61452281_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {TEMPKEY}] [FME_DecodeText $attrText] }
+FACTORY_DEF * TeeFactory    FACTORY_NAME StringConcatenator_4    INPUT  FEATURE_TYPE SQLCreator_9_RESULT    OUTPUT FEATURE_TYPE StringConcatenator_4_OUTPUT        @Tcl2("StringConcatenator_4_28b802f4_b9c2_49a9_87ce_86cba61452281_doSetAttr {@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>BFSNR<closeparen><at>Value<openparen>GBKR<closeparen>,StringConcatenator_4)} ")
+
+# -------------------------------------------------------------------------
+
+# Create the prefix attributes just one time, at startup, to avoid doing it
+# over and over and over and over and over again for each attribute of each
+# feature.
+
+Tcl2 set AttributePrefixer_4_start {};      set AttributePrefixer_4_end {};      if [string equal End End] {          set AttributePrefixer_4_end {_ALT}      } else {          set AttributePrefixer_4_start {_ALT}      }
+Tcl2 proc AttributePrefixer_4_prefix {} {     global AttributePrefixer_4_end AttributePrefixer_4_start;     foreach attr [FME_AttributeNames] {         if {![regexp "^fme_" $attr]} {           FME_RenameAttribute [set AttributePrefixer_4_start]$attr[set AttributePrefixer_4_end] $attr;         };     }; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME AttributePrefixer_4    INPUT  FEATURE_TYPE StringConcatenator_4_OUTPUT    OUTPUT FEATURE_TYPE AttributePrefixer_4_OUTPUT        @Tcl2("AttributePrefixer_4_prefix")
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * ReferenceFactory    FACTORY_NAME FeatureMerger_2    INPUT REFERENCER FEATURE_TYPE AttributePrefixer_4_OUTPUT    INPUT REFERENCEE FEATURE_TYPE AttributePrefixer_3_OUTPUT    REFERENCE_INFO ATTRIBUTES    REFERENCEE_FIELDS "TEMPKEY_NEU"    REFERENCER_FIELDS "TEMPKEY_ALT"    MERGE_ATTRIBUTES Yes    MANAGE_FME_TYPE Yes    MODE COMPLETE    PROCESS_DUPLICATE_REFERENCEES No    BUILD_INCOMPLETE_REFERENCERS No    OUTPUT COMPLETE FEATURE_TYPE FeatureMerger_2_COMPLETE    OUTPUT INCOMPLETE FEATURE_TYPE FeatureMerger_2_INCOMPLETE    OUTPUT NO_REFERENCES FEATURE_TYPE FeatureMerger_2_EMPTY    OUTPUT UNREFERENCED FEATURE_TYPE FeatureMerger_2_UNREFERENCED
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME ExpressionEvaluator_3    INPUT  FEATURE_TYPE FeatureMerger_2_COMPLETE    OUTPUT FEATURE_TYPE ExpressionEvaluator_3_OUTPUT         "DIFF_ABS" @Evaluate("(@Value(ANZAHL_NEU)-@Value(ANZAHL_ALT))")
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME ExpressionEvaluator_4    INPUT  FEATURE_TYPE ExpressionEvaluator_3_OUTPUT    OUTPUT FEATURE_TYPE ExpressionEvaluator_4_OUTPUT         "DIFF_REL" @Evaluate("(@Value(DIFF_ABS)/(@Value(ANZAHL_ALT)/100.0))")
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * CreationFactory    FACTORY_NAME SQLCreator_4_Creator    OUTPUT FEATURE_TYPE _____CREATED______
+FACTORY_DEF * QueryFactory    FACTORY_NAME SQLCreator_4    INPUT FEATURE_TYPE _____CREATED______    QUERY_SQL_STATEMENT  select<space>t.bfsnr<comma><space>t.gbkr<comma><space>t.gstbez<comma><space>t.projstat<comma><space>count<openparen>*<closeparen><space>anzahl<lf><space><space>from<space>dipanu_dipanuf<space>t<lf><space>group<space>by<space>t.bfsnr<comma><space>t.gbkr<comma><space>t.gstbez<comma><space>t.projstat<lf><space>having<space>count<openparen>*<closeparen><space><gt><space>1<lf><space>order<space>by<space>t.bfsnr<space>asc<comma><space>t.gbkr<space>asc<comma><space>t.gstbez<space>asc<comma><space>t.projstat<space>asc    COMBINE_ATTRIBUTES   RESULT_ONLY    COMBINE_GEOMETRY     RESULT_ONLY    READER_TYPE         	ORACLE8I_DB    READER_DATASET      	"$(NORM_DATABASE)"    READER_PARAMS     USER_NAME "$(NORM_USERNAME)" USERID "$(NORM_USERNAME)" PASSWORD "$(NORM_PASSWORD)"     SERVER_TYPE ORACLE8i REMOVE_SCHEMA_QUALIFIER NO PERSISTENT_CONNECTION YES SHOW_SYSTEM_TABLES NO _DEFAULT_FILTER_ norm _MERGE_SCHEMAS YES    OUTPUT RESULT FEATURE_TYPE SQLCreator_4_RESULT
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * CreationFactory    FACTORY_NAME SQLCreator_7_Creator    OUTPUT FEATURE_TYPE _____CREATED______
+FACTORY_DEF * QueryFactory    FACTORY_NAME SQLCreator_7    INPUT FEATURE_TYPE _____CREATED______    QUERY_SQL_STATEMENT  select<space>t.bfsnr<comma><space>t.gbkr<comma><space>t.gstnr<comma><space>t.gznr<comma><space>t.gstteil<comma><space>t.gstart<comma><space>t.projstat<comma><space>count<openparen>*<closeparen><space>anzahl<lf><space><space>from<space>dipanu_dipanup<space>t<lf><space>group<space>by<space>t.bfsnr<comma><space>t.gbkr<comma><space>t.gstnr<comma><space>t.gznr<comma><space>t.gstteil<comma><space>t.gstart<comma><space>t.projstat<lf><space>having<space>count<openparen>*<closeparen><space><gt><space>1<lf><space>order<space>by<space>t.bfsnr<space>asc<comma><space>t.gbkr<space>asc<comma><space>t.gstnr<space>asc<comma><space>t.gznr<space>asc<comma><space>t.gstteil<space>asc<comma><space>t.gstart<space>asc<comma><space>t.projstat<space>asc    COMBINE_ATTRIBUTES   RESULT_ONLY    COMBINE_GEOMETRY     RESULT_ONLY    READER_TYPE         	ORACLE8I_DB    READER_DATASET      	"$(NORM_DATABASE)"    READER_PARAMS     USER_NAME "$(NORM_USERNAME)" USERID "$(NORM_USERNAME)" PASSWORD "$(NORM_PASSWORD)"     SERVER_TYPE ORACLE8i REMOVE_SCHEMA_QUALIFIER NO PERSISTENT_CONNECTION YES SHOW_SYSTEM_TABLES NO _DEFAULT_FILTER_ norm _MERGE_SCHEMAS YES    OUTPUT RESULT FEATURE_TYPE SQLCreator_7_RESULT
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * CreationFactory    FACTORY_NAME SQLCreator_5_Creator    OUTPUT FEATURE_TYPE _____CREATED______
+FACTORY_DEF * QueryFactory    FACTORY_NAME SQLCreator_5    INPUT FEATURE_TYPE _____CREATED______    QUERY_SQL_STATEMENT  select<space>t.gengbkri<comma><space>t.gstbez<comma><space>t.projstat<comma><space>count<openparen>*<closeparen><space>anzahl<lf><space><space>from<space>dipanu_dipanuf<space>t<lf><space>group<space>by<space>t.gengbkri<comma><space>t.gstbez<comma><space>t.projstat<lf><space>having<space>count<openparen>*<closeparen><space><gt><space>1<lf><space>order<space>by<space>t.gengbkri<comma><space>t.gstbez<comma><space>t.projstat    COMBINE_ATTRIBUTES   RESULT_ONLY    COMBINE_GEOMETRY     RESULT_ONLY    READER_TYPE         	ORACLE8I_DB    READER_DATASET      	"$(NORM_DATABASE)"    READER_PARAMS     USER_NAME "$(NORM_USERNAME)" USERID "$(NORM_USERNAME)" PASSWORD "$(NORM_PASSWORD)"     SERVER_TYPE ORACLE8i REMOVE_SCHEMA_QUALIFIER NO PERSISTENT_CONNECTION YES SHOW_SYSTEM_TABLES NO _DEFAULT_FILTER_ norm _MERGE_SCHEMAS YES    OUTPUT RESULT FEATURE_TYPE SQLCreator_5_RESULT
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * CreationFactory    FACTORY_NAME SQLCreator_2_Creator    OUTPUT FEATURE_TYPE _____CREATED______
+FACTORY_DEF * QueryFactory    FACTORY_NAME SQLCreator_2    INPUT FEATURE_TYPE _____CREATED______    QUERY_SQL_STATEMENT  select<space>t.bfsnr<comma><space>t.gbkr<comma><space>count<openparen>*<closeparen><space>anzahl<space>from<space>dipanu_dipanuf<space>t<space>group<space>by<space>t.bfsnr<comma><space>t.gbkr<space>order<space>by<space>t.bfsnr<space>asc<comma><space>t.gbkr<space>asc    COMBINE_ATTRIBUTES   RESULT_ONLY    COMBINE_GEOMETRY     RESULT_ONLY    READER_TYPE         	ORACLE8I_DB    READER_DATASET      	"$(NORM_DATABASE)"    READER_PARAMS     USER_NAME "$(NORM_USERNAME)" USERID "$(NORM_USERNAME)" PASSWORD "$(NORM_PASSWORD)"     SERVER_TYPE ORACLE8i REMOVE_SCHEMA_QUALIFIER NO PERSISTENT_CONNECTION YES SHOW_SYSTEM_TABLES NO _DEFAULT_FILTER_ norm _MERGE_SCHEMAS YES    OUTPUT RESULT FEATURE_TYPE SQLCreator_2_RESULT
+
+# -------------------------------------------------------------------------
+
+Tcl2 proc StringConcatenator_2_55436f4f_81ce_406e_8f5d_626c2152c5f51_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {TEMPKEY}] [FME_DecodeText $attrText] }
+FACTORY_DEF * TeeFactory    FACTORY_NAME StringConcatenator_2    INPUT  FEATURE_TYPE SQLCreator_2_RESULT    OUTPUT FEATURE_TYPE StringConcatenator_2_OUTPUT        @Tcl2("StringConcatenator_2_55436f4f_81ce_406e_8f5d_626c2152c5f51_doSetAttr {@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>BFSNR<closeparen><at>Value<openparen>GBKR<closeparen>,StringConcatenator_2)} ")
+
+# -------------------------------------------------------------------------
+
+# Create the prefix attributes just one time, at startup, to avoid doing it
+# over and over and over and over and over again for each attribute of each
+# feature.
+
+Tcl2 set AttributePrefixer_2_start {};      set AttributePrefixer_2_end {};      if [string equal End End] {          set AttributePrefixer_2_end {_NEU}      } else {          set AttributePrefixer_2_start {_NEU}      }
+Tcl2 proc AttributePrefixer_2_prefix {} {     global AttributePrefixer_2_end AttributePrefixer_2_start;     foreach attr [FME_AttributeNames] {         if {![regexp "^fme_" $attr]} {           FME_RenameAttribute [set AttributePrefixer_2_start]$attr[set AttributePrefixer_2_end] $attr;         };     }; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME AttributePrefixer_2    INPUT  FEATURE_TYPE StringConcatenator_2_OUTPUT    OUTPUT FEATURE_TYPE AttributePrefixer_2_OUTPUT        @Tcl2("AttributePrefixer_2_prefix")
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * CreationFactory    FACTORY_NAME SQLCreator_Creator    OUTPUT FEATURE_TYPE _____CREATED______
+FACTORY_DEF * QueryFactory    FACTORY_NAME SQLCreator    INPUT FEATURE_TYPE _____CREATED______    QUERY_SQL_STATEMENT  select<space>t.bfsnr<comma><space>t.gbkr<comma><space>count<openparen>*<closeparen><space>anzahl<space>from<space>geodb.dipanu_dipanuf<space>t<space>group<space>by<space>t.bfsnr<comma><space>t.gbkr<space>order<space>by<space>t.bfsnr<space>asc<comma><space>t.gbkr<space>asc    COMBINE_ATTRIBUTES   RESULT_ONLY    COMBINE_GEOMETRY     RESULT_ONLY    READER_TYPE         	ORACLE8I_DB    READER_DATASET      	"$(VEK1_DATABASE)"    READER_PARAMS     USER_NAME "$(VEK1_USERNAME)" USERID "$(VEK1_USERNAME)" PASSWORD "$(VEK1_PASSWORD)"     SERVER_TYPE ORACLE8i REMOVE_SCHEMA_QUALIFIER NO _DEFAULT_FILTER_ geo _MERGE_SCHEMAS YES    OUTPUT RESULT FEATURE_TYPE SQLCreator_RESULT
+
+# -------------------------------------------------------------------------
+
+Tcl2 proc StringConcatenator_54f3c4cf_6743_486b_ab25_eca1781f8c3c1_doSetAttr {attrText} {    FME_SetAttribute [FME_DecodeText {TEMPKEY}] [FME_DecodeText $attrText] }
+FACTORY_DEF * TeeFactory    FACTORY_NAME StringConcatenator    INPUT  FEATURE_TYPE SQLCreator_RESULT    OUTPUT FEATURE_TYPE StringConcatenator_OUTPUT        @Tcl2("StringConcatenator_54f3c4cf_6743_486b_ab25_eca1781f8c3c1_doSetAttr {@EvaluateExpression(STRING_ENCODED,<at>Value<openparen>BFSNR<closeparen><at>Value<openparen>GBKR<closeparen>,StringConcatenator)} ")
+
+# -------------------------------------------------------------------------
+
+# Create the prefix attributes just one time, at startup, to avoid doing it
+# over and over and over and over and over again for each attribute of each
+# feature.
+
+Tcl2 set AttributePrefixer_start {};      set AttributePrefixer_end {};      if [string equal End End] {          set AttributePrefixer_end {_ALT}      } else {          set AttributePrefixer_start {_ALT}      }
+Tcl2 proc AttributePrefixer_prefix {} {     global AttributePrefixer_end AttributePrefixer_start;     foreach attr [FME_AttributeNames] {         if {![regexp "^fme_" $attr]} {           FME_RenameAttribute [set AttributePrefixer_start]$attr[set AttributePrefixer_end] $attr;         };     }; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME AttributePrefixer    INPUT  FEATURE_TYPE StringConcatenator_OUTPUT    OUTPUT FEATURE_TYPE AttributePrefixer_OUTPUT        @Tcl2("AttributePrefixer_prefix")
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * ReferenceFactory    FACTORY_NAME FeatureMerger    INPUT REFERENCER FEATURE_TYPE AttributePrefixer_OUTPUT    INPUT REFERENCEE FEATURE_TYPE AttributePrefixer_2_OUTPUT    REFERENCE_INFO ATTRIBUTES    REFERENCEE_FIELDS "TEMPKEY_NEU"    REFERENCER_FIELDS "TEMPKEY_ALT"    MERGE_ATTRIBUTES Yes    MANAGE_FME_TYPE Yes    MODE COMPLETE    PROCESS_DUPLICATE_REFERENCEES No    BUILD_INCOMPLETE_REFERENCERS No    OUTPUT COMPLETE FEATURE_TYPE FeatureMerger_COMPLETE    OUTPUT INCOMPLETE FEATURE_TYPE FeatureMerger_INCOMPLETE    OUTPUT NO_REFERENCES FEATURE_TYPE FeatureMerger_EMPTY    OUTPUT UNREFERENCED FEATURE_TYPE FeatureMerger_UNREFERENCED
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME ExpressionEvaluator    INPUT  FEATURE_TYPE FeatureMerger_COMPLETE    OUTPUT FEATURE_TYPE ExpressionEvaluator_OUTPUT         "DIFF_ABS" @Evaluate("(@Value(ANZAHL_NEU)-@Value(ANZAHL_ALT))")
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME ExpressionEvaluator_2    INPUT  FEATURE_TYPE ExpressionEvaluator_OUTPUT    OUTPUT FEATURE_TYPE ExpressionEvaluator_2_OUTPUT         "DIFF_REL" @Evaluate("(@Value(DIFF_ABS)/(@Value(ANZAHL_ALT)/100.0))")
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "SQLCreator_4_RESULT -> doppelte2_Flächen Correlator"    INPUT FEATURE_TYPE SQLCreator_4_RESULT    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,XLS_ADO)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,doppelte2_Fl<u00e4>chen)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "FeatureMerger_UNREFERENCED -> hinzugekommenFlächen Correlator"    INPUT FEATURE_TYPE FeatureMerger_UNREFERENCED    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,XLS_ADO)       @CopyAttributes(ENCODED,BFSNR,BFSNR_NEU,GBKR,GBKR_NEU,ANZAHL,ANZAHL_NEU)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,hinzugekommenFl<u00e4>chen)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "FeatureMerger_2_INCOMPLETE -> verschwundenPoint Correlator"    INPUT FEATURE_TYPE FeatureMerger_2_INCOMPLETE    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,XLS_ADO)       @CopyAttributes(ENCODED,BFSNR,BFSNR_ALT,GBKR,GBKR_ALT,ANZAHL,ANZAHL_ALT)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,verschwundenPoint)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "FeatureMerger_2_EMPTY -> verschwundenPoint Correlator"    INPUT FEATURE_TYPE FeatureMerger_2_EMPTY    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,XLS_ADO)       @CopyAttributes(ENCODED,BFSNR,BFSNR_ALT,GBKR,GBKR_ALT,ANZAHL,ANZAHL_ALT)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,verschwundenPoint)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "ExpressionEvaluator_4_OUTPUT -> unveraendertPoint Correlator"    INPUT FEATURE_TYPE ExpressionEvaluator_4_OUTPUT    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,XLS_ADO)       @CopyAttributes(ENCODED,BFSNR,BFSNR_NEU,GBKR,GBKR_NEU)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,unveraendertPoint)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "SQLCreator_8_RESULT -> doppelte3_Punkte Correlator"    INPUT FEATURE_TYPE SQLCreator_8_RESULT    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,XLS_ADO)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,doppelte3_Punkte)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "SQLCreator_11_RESULT -> doppelte_EGRID Correlator"    INPUT FEATURE_TYPE SQLCreator_11_RESULT    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,XLS_ADO)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,doppelte_EGRID)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "SQLCreator_5_RESULT -> doppelte3_Flächen Correlator"    INPUT FEATURE_TYPE SQLCreator_5_RESULT    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,XLS_ADO)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,doppelte3_Fl<u00e4>chen)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "FeatureMerger_INCOMPLETE -> verschwundenFlächen Correlator"    INPUT FEATURE_TYPE FeatureMerger_INCOMPLETE    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,XLS_ADO)       @CopyAttributes(ENCODED,BFSNR,BFSNR_ALT,GBKR,GBKR_ALT,ANZAHL,ANZAHL_ALT)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,verschwundenFl<u00e4>chen)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "FeatureMerger_EMPTY -> verschwundenFlächen Correlator"    INPUT FEATURE_TYPE FeatureMerger_EMPTY    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,XLS_ADO)       @CopyAttributes(ENCODED,BFSNR,BFSNR_ALT,GBKR,GBKR_ALT,ANZAHL,ANZAHL_ALT)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,verschwundenFl<u00e4>chen)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "SQLCreator_6_RESULT -> doppelte_Punkte Correlator"    INPUT FEATURE_TYPE SQLCreator_6_RESULT    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,XLS_ADO)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,doppelte_Punkte)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "SQLCreator_7_RESULT -> doppelte2_Punkte Correlator"    INPUT FEATURE_TYPE SQLCreator_7_RESULT    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,XLS_ADO)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,doppelte2_Punkte)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "ExpressionEvaluator_2_OUTPUT -> unveraendertFlächen Correlator"    INPUT FEATURE_TYPE ExpressionEvaluator_2_OUTPUT    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,XLS_ADO)       @CopyAttributes(ENCODED,BFSNR,BFSNR_NEU,GBKR,GBKR_NEU)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,unveraendertFl<u00e4>chen)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "FeatureMerger_2_UNREFERENCED -> hinzugekommenPoint Correlator"    INPUT FEATURE_TYPE FeatureMerger_2_UNREFERENCED    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,XLS_ADO)       @CopyAttributes(ENCODED,BFSNR,BFSNR_NEU,GBKR,GBKR_NEU,ANZAHL,ANZAHL_NEU)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,hinzugekommenPoint)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TestFactory   FACTORY_NAME "Final Output Feature Type Router"   INPUT FEATURE_TYPE *   TEST @Value(__wb_out_feat_type__) != ""   OUTPUT PASSED FEATURE_TYPE *     @FeatureType(@Value(__wb_out_feat_type__))   OUTPUT FAILED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
+
+# -------------------------------------------------------------------------
+XLS_ADO_1_DEF doppelte2_Flächen   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   BFSNR                        double   GBKR                         double   GSTBEZ                       varchar(30)   ANZAHL                       double   PROJSTAT                     double
+# -------------------------------------------------------------------------
+XLS_ADO_1_DEF hinzugekommenFlächen   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   BFSNR                        double   GBKR                         double   ANZAHL                       double
+# -------------------------------------------------------------------------
+XLS_ADO_1_DEF verschwundenPoint   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   BFSNR                        double   GBKR                         double   ANZAHL                       double
+# -------------------------------------------------------------------------
+XLS_ADO_1_DEF unveraendertPoint   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   BFSNR                        double   GBKR                         double   ANZAHL_ALT                   double   ANZAHL_NEU                   double   DIFF_ABS                     double   DIFF_REL                     decimal(30,10)
+# -------------------------------------------------------------------------
+XLS_ADO_1_DEF doppelte3_Punkte   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   GENGBKRI                     varchar(50)   GSTBEZ                       varchar(50)   PROJSTAT                     double
+# -------------------------------------------------------------------------
+XLS_ADO_1_DEF doppelte_EGRID   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   EGRID                        varchar(50)   PROJSTAT                     varchar(50)   ANZAHL                       varchar(50)
+# -------------------------------------------------------------------------
+XLS_ADO_1_DEF doppelte3_Flächen   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   GENGBKRI                     varchar(50)   GSTBEZ                       varchar(50)   PROJSTAT                     varchar(50)
+# -------------------------------------------------------------------------
+XLS_ADO_1_DEF verschwundenFlächen   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   BFSNR                        double   GBKR                         double   ANZAHL                       double
+# -------------------------------------------------------------------------
+XLS_ADO_1_DEF doppelte_Punkte   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   BFSNR                        double   GBKR                         double   GSTBEZ                       varchar(30)   PROJSTAT                     double   ANZAHL                       double
+# -------------------------------------------------------------------------
+XLS_ADO_1_DEF doppelte2_Punkte   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   BFSNR                        double   GBKR                         double   ANZAHL                       double   GEMNAME                      varchar(50)   GSTNR                        double   GSTTEIL                      double   GSTART                       double   GZNR                         varchar(20)   PROJSTAT                     double
+# -------------------------------------------------------------------------
+XLS_ADO_1_DEF unveraendertFlächen   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   BFSNR                        double   GBKR                         double   ANZAHL_ALT                   double   ANZAHL_NEU                   double   DIFF_ABS                     double   DIFF_REL                     decimal(30,10)
+# -------------------------------------------------------------------------
+XLS_ADO_1_DEF hinzugekommenPoint   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   BFSNR                        double   GBKR                         double   ANZAHL                       double
