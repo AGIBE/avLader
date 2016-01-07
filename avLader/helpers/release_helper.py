@@ -19,7 +19,7 @@ def release(gprcode):
     task_objectid = get_objectid(config)
     flag_objectid = get_objectid(config)
     logger.info("TASK_OBJECTID geholt: " + task_objectid)
-    logger.info("TASK_OBJECTID geholt: " + flag_objectid)
+    logger.info("FLAG_OBJECTID geholt: " + flag_objectid)
     
     gzs_objectid_sql = "select GZS_OBJECTID from VW_GEOPRODUKT_ZEITSTAND where GPR_BEZEICHNUNG='" + gprcode + "' and GZS_AKTUELL=1"
     gzs_objectid_res = avLader.helpers.sql_helper.readSQL(config['GEODB_DD_TEAM']['connection_string'], gzs_objectid_sql)
