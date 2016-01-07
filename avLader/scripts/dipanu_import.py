@@ -16,9 +16,9 @@ def run():
     fme_logfile = avLader.helpers.fme_helper.prepare_fme_log(fme_script, config['LOGGING']['log_directory'])
     
     fme_script_qa = os.path.splitext(__file__)[0] + "_qa.fmw"
-    fme_logfile_qa = avLader.helpers.fme_helper.prepare_fme_log(fme_script, config['LOGGING']['log_directory'])
+    fme_logfile_qa = avLader.helpers.fme_helper.prepare_fme_log(fme_script_qa, config['LOGGING']['log_directory'])
     
-    qa_filename = "dipanu_import_qa_" + datetime.datetime.now().strftime("_%Y_%m_%d_%H_%M_%S") + ".xls"
+    qa_filename = "dipanu_import_qa" + datetime.datetime.now().strftime("_%Y_%m_%d_%H_%M_%S") + ".xls"
     qa_file = os.path.join(config['LOGGING']['log_directory'], qa_filename)
  
 
@@ -49,7 +49,10 @@ def run():
         logger.error(ex)
         logger.error("Import wird abgebrochen!")
         sys.exit()
-        
+
+    logger.info("Script " +  fme_script_qa + " wird ausgeführt.")
+    logger.info("Das FME-Logfile heisst: " + fme_logfile_qa)
+
     # QA-Script
     runner = fmeobjects.FMEWorkspaceRunner()
     # Der FMEWorkspaceRunner akzeptiert keine Unicode-Strings!
