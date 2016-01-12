@@ -20,6 +20,7 @@ def run():
     
     qa_filename = "dipanu_import_qa" + datetime.datetime.now().strftime("_%Y_%m_%d_%H_%M_%S") + ".xls"
     qa_file = os.path.join(config['LOGGING']['log_directory'], qa_filename)
+    logger.info("Das QA-Excelfile lautet: " + qa_file)
  
 
     logger.info("Script " +  fme_script + " wird ausgeführt.")
