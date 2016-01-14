@@ -56,5 +56,7 @@ def release(gprcode):
             logger.error("Die Freigabe kann nicht erteilt werden.")
             avLader.helpers.connection_helper.delete_connection_files(config, logger)
             sys.exit()
-
+            
+    logger.info("Die iLader-Importnummer lautet: " + task_objectid)
+    logger.info("Der iLader kann gestartet werden mit: iLader run " + task_objectid)
     avLader.helpers.connection_helper.delete_connection_files(config, logger)    
