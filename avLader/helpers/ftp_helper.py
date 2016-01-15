@@ -39,6 +39,20 @@ class tyFTP(ftplib.FTP_TLS):
             print(e)
         return self.welcome
 
+def download_statsfile(ftp_filename, config, logger):
+    ftp_host = config['ZAV_FTP']['host']
+    ftp_username = config['ZAV_FTP']['username']
+    ftp_password = config['ZAV_FTP']['password']
+    ftp_directory = config['ZAV_FTP']['statistics_directory']
+    ftp_file = ftp_filename
+    
+    downloaded_file = os.path.join(config['DIRECTORIES']['archiv'], os.path.splitext(ftp_filename)[0] + datetime.datetime.now().strftime("_%Y_%m_%d_%H_%M_%S") + os.path.splitext(ftp_filename)[1])
+    
+    ftp = ftplib.FTP(ftp_host, ftp_username, ftp_password)
+    ftp.cwd(ftp_directory)
+    ftp.retrbinary('RETR ' + ftp_file, open(downloaded_file,'wb').write)
+    ftp.quit()
+
 def download_fgdb(ftp_filename, config, logger):
     ftp_host = config['ZAV_FTP']['host']
     ftp_username = config['ZAV_FTP']['username']

@@ -7,6 +7,14 @@ import avLader.helpers.index_helper
 import os
 import arcpy
 import sys
+import shutil
+
+def download_statistics(config, logger):
+    statistics_filenames = config['ZAV_FTP']['statistics_files']
+    logger.info("Statistik-Files werden heruntergeladen.")
+    for statistics_filename in statistics_filenames:
+        logger.info("Lade herunter " + statistics_filename)
+        avLader.helpers.ftp_helper.download_statsfile(statistics_filename, config, logger)
 
 def run():
     config = avLader.helpers.config_helper.get_config('mopube_import')
@@ -76,21 +84,29 @@ def run():
         'MOPUBE_RLP',
     ]
     
-    source_fgdb = avLader.helpers.ftp_helper.download_fgdb(config['ZAV_FTP']['mopube_filename'], config, logger)
-    target_sde = config['NORM_TEAM']['connection_file']
+    download_statistics(config, logger)
     
+    source_fgdb = avLader.helpers.ftp_helper.download_fgdb(config['ZAV_FTP']['mopube_filename'], config, logger)
+     
+    downloaded_zip = os.path.join(config['DIRECTORIES']['local_data_dir'], config['ZAV_FTP']['mopube_filename'])
+    export_zip = os.path.join(config['DIRECTORIES']['zips'], "MOPUBE.zip")
+    logger.info("Export-ZIP wird kopiert nach " + export_zip)
+    shutil.copy2(downloaded_zip, export_zip)
+     
+    target_sde = config['NORM_TEAM']['connection_file']
+     
     for mopube_object in mopube_objects:
         logger.info("Importiere " + mopube_object)
         source_object = os.path.join(source_fgdb, mopube_object)
         target_object = os.path.join(target_sde, config['NORM_TEAM']['username'] + "." + mopube_object)
-        
+          
         needs_spatial_index = False
         if arcpy.Describe(target_object).datasetType == "FeatureClass":
             needs_spatial_index = True
-        
+          
         if arcpy.Exists(source_object):
             if arcpy.Exists(target_object):
-                
+                  
                 # Räumlichen Index entfernen
                 if needs_spatial_index and arcpy.Describe(target_object).hasSpatialIndex:
                     logger.info("Spatial Index wird entfernt.")
@@ -99,13 +115,13 @@ def run():
                         logger.info("Spatial Index erfolgreich entfernt.")
                     else:
                         logger.warn("Spatial Index konnte wegen eines Locks nicht entfernt werden.")
-                
+                  
                 logger.info("Truncating " + target_object)
                 arcpy.TruncateTable_management(target_object)
-                
+                  
                 logger.info("Appending " + source_object)
                 arcpy.Append_management(source_object, target_object, "TEST")
-                
+                  
                 # Räumlichen Index erstellen
                 if needs_spatial_index:
                     logger.info("Spatial Index wird erstellt.")
@@ -120,13 +136,13 @@ def run():
                         logger.info("Spatial Index erfolgreich erstellt.")
                     else:
                         logger.warn("Spatial Index konnte wegen eines Locks nicht erstellt werden.")
-                
+                  
                 logger.info("Zähle Records in der Quelle und im Ziel.")
                 source_count = int(arcpy.GetCount_management(source_object)[0])
                 logger.info("Anzahl Records in der Quelle: " + unicode(source_count))
                 target_count = int(arcpy.GetCount_management(target_object)[0])
                 logger.info("Anzahl Records im Ziel: " + unicode(target_count))
-                
+                  
                 if source_count==target_count:
                     logger.info("Anzahl Records identisch")
                 else:

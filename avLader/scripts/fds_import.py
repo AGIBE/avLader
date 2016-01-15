@@ -212,14 +212,14 @@ def run():
         logger.info("Importiere " + fds_object)
         source_object = os.path.join(source_fgdb, fds_object)
         target_object = os.path.join(target_sde, config['AV01_WORK']['username'] + "." + fds_object)
-
+ 
         needs_spatial_index = False
         if arcpy.Describe(target_object).datasetType == "FeatureClass":
             needs_spatial_index = True
-        
+         
         if arcpy.Exists(source_object):
             if arcpy.Exists(target_object):
-
+ 
                 # Räumlichen Index entfernen
                 if needs_spatial_index and arcpy.Describe(target_object).hasSpatialIndex:
                     logger.info("Spatial Index wird entfernt.")
@@ -228,13 +228,13 @@ def run():
                         logger.info("Spatial Index erfolgreich entfernt.")
                     else:
                         logger.warn("Spatial Index konnte wegen eines Locks nicht entfernt werden.")
-
+ 
                 logger.info("Truncating " + target_object)
                 arcpy.TruncateTable_management(target_object)
-                
+                 
                 logger.info("Appending " + source_object)
                 arcpy.Append_management(source_object, target_object, "TEST")
-
+ 
                 # Räumlichen Index erstellen
                 if needs_spatial_index:
                     logger.info("Spatial Index wird erstellt.")
@@ -249,13 +249,13 @@ def run():
                         logger.info("Spatial Index erfolgreich erstellt.")
                     else:
                         logger.warn("Spatial Index konnte wegen eines Locks nicht erstellt werden.")
-                
+                 
                 logger.info("Zähle Records in der Quelle und im Ziel.")
                 source_count = int(arcpy.GetCount_management(source_object)[0])
                 logger.info("Anzahl Records in der Quelle: " + unicode(source_count))
                 target_count = int(arcpy.GetCount_management(target_object)[0])
                 logger.info("Anzahl Records im Ziel: " + unicode(target_count))
-                 
+                  
                 if source_count==target_count:
                     logger.info("Anzahl Records identisch")
                 else:
