@@ -7,6 +7,7 @@ import os.path
 import shutil
 import sys
 import zipfile
+import datetime
 
 # Aus: http://stackoverflow.com/questions/12164470/python-ftp-tls-connection-issue
 class tyFTP(ftplib.FTP_TLS):
@@ -45,8 +46,11 @@ def download_fgdb(ftp_filename, config, logger):
     ftp_directory = config['ZAV_FTP']['directory']
     ftp_file = ftp_filename
     download_dir = config['DIRECTORIES']['local_data_dir']
+    archiv_dir = config['DIRECTORIES']['archiv']
+    archiv_filename = os.path.splitext(ftp_file)[0] + datetime.datetime.now().strftime("_%Y_%m_%d_%H_%M_%S") + os.path.splitext(ftp_file)[1] 
     
     downloaded_file = os.path.join(download_dir, ftp_file)
+    archived_file = os.path.join(archiv_dir, archiv_filename)
     fgdb = os.path.splitext(downloaded_file)[0]
     
     if os.path.exists(downloaded_file):
@@ -63,6 +67,10 @@ def download_fgdb(ftp_filename, config, logger):
     ftp.cwd(ftp_directory)
     ftp.retrbinary('RETR ' + ftp_file, open(downloaded_file,'wb').write)
     ftp.quit()
+    
+    logger.info(downloaded_file + " wird ins Archiv kopiert.")
+    
+    shutil.copy2(downloaded_file, archived_file)
     
     unzip_fgdb(downloaded_file, config, logger)
     if os.path.exists(fgdb):
