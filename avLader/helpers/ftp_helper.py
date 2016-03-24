@@ -8,6 +8,7 @@ import shutil
 import sys
 import zipfile
 import datetime
+import avLader.helpers.ftp_proxy
 
 # Aus: http://stackoverflow.com/questions/12164470/python-ftp-tls-connection-issue
 class tyFTP(ftplib.FTP_TLS):
@@ -105,6 +106,8 @@ def upload_zip(zip_file, zip_filename, config, logger):
     ftp_host = config['INFOGRIPS_FTP']['host']
     ftp_username = config['INFOGRIPS_FTP']['username']
     ftp_password = config['INFOGRIPS_FTP']['password']
+    
+    avLader.helpers.ftp_proxy.setup_http_proxy("proxy.be.ch", 8080)
 
     logger.info("Verbinde mit " + ftp_host)
     ftp = ftplib.FTP(ftp_host, ftp_username, ftp_password)
