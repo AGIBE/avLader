@@ -3,6 +3,7 @@ from __future__ import absolute_import, division, print_function, unicode_litera
 import argparse
 from avLader import __version__
 import avLader.scripts.gruda_upload
+import avLader.scripts.itf_download
 import avLader.scripts.grudaexp_import
 import avLader.scripts.mopube_import
 import avLader.scripts.dipanu_import
@@ -14,6 +15,10 @@ import avLader.scripts.oereb_liegenschaften
 def run_gruda_upload(args):
     avLader.scripts.gruda_upload.run()
     print("GRUDA-Upload SUCCESSFUL!")
+
+def run_itf_download(args):
+    avLader.scripts.itf_download.run()
+    print("ITF-Download SUCCESSFUL!")
     
 def run_grudaexp_import(args):
     avLader.scripts.grudaexp_import.run()
@@ -63,6 +68,10 @@ def main():
     # GRUDA_UPLOAD-Befehl
     gruda_upload_parser = subparsers.add_parser('gruda_upload', help='Lädt den Gruda-Export per FTP herunter und lädt ihn auf den infoGrips-Server.')
     gruda_upload_parser.set_defaults(func=run_gruda_upload)
+    
+    # ITF_DOWNLOAD-Befehl
+    itf_download_parser = subparsers.add_parser('itf_download', help="Lädt die originalen ITF-Dateien aller Gemeinden herunter.")
+    itf_download_parser.set_defaults(func=run_itf_download)
     
     # GRUDAEXP_IMPORT-Befehl
     grudaexp_import_parser = subparsers.add_parser('grudaexp_import', help='Produziert das Geoprodukt GRUDAEXP aus dem Gruda-Export-Interlis.')
