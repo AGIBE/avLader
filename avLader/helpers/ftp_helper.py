@@ -51,7 +51,13 @@ def download_statsfile(ftp_filename, config, logger):
     
     ftp = ftplib.FTP(ftp_host, ftp_username, ftp_password)
     ftp.cwd(ftp_directory)
-    ftp.retrbinary('RETR ' + ftp_file, open(downloaded_file,'wb').write)
+    try:
+        ftp_stat_file = open(downloaded_file,'wb')
+        ftp.retrbinary('RETR ' + ftp_file, ftp_stat_file.write)
+    except:
+        logger.warn("Statistik-File " + str(ftp_file) + " nicht auf FTP-Server vorhanden.")
+        ftp_stat_file.close()
+        os.remove(downloaded_file)
     ftp.quit()
 
 def download_fgdb(ftp_filename, config, logger):
