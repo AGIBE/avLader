@@ -206,7 +206,8 @@ def run():
     ]
     
     # Download vom FTP-Server funktioniert nur via Proxy
-    avLader.helpers.ftp_proxy.setup_http_proxy(config['PROXY']['host'], int(config['PROXY']['port']))
+    if config['ZAV_FTP']['use_proxy'] == 1:
+        avLader.helpers.ftp_proxy.setup_http_proxy(config['PROXY']['host'], int(config['PROXY']['port']))
     
     source_fgdb = avLader.helpers.ftp_helper.download_fgdb(config['ZAV_FTP']['fds_filename'], config, logger)
     target_sde = config['AV01_WORK']['connection_file']
