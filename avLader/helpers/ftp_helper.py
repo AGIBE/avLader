@@ -113,7 +113,8 @@ def upload_zip(zip_file, zip_filename, config, logger):
     ftp_username = config['INFOGRIPS_FTP']['username']
     ftp_password = config['INFOGRIPS_FTP']['password']
     
-    if config['INFOGRIPS_FTP']['use_proxy'] == 1:
+    if config['INFOGRIPS_FTP']['use_proxy'] == "1":
+        logger.info("FTP-Proxy wird gesetzt!")
         avLader.helpers.ftp_proxy.setup_http_proxy(config['PROXY']['host'], int(config['PROXY']['port']))
 
     logger.info("Verbinde mit " + ftp_host)

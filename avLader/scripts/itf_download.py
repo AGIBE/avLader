@@ -54,7 +54,8 @@ def run():
     logger.info("ITF-Download wird ausgeführt.")
 
     # Download vom FTP-Server funktioniert nur via Proxy
-    if config['ZAV_FTP']['use_proxy'] == 1:
+    if config['ZAV_FTP']['use_proxy'] == "1":
+        logger.info("FTP-Proxy wird gesetzt!")
         avLader.helpers.ftp_proxy.setup_http_proxy(config['PROXY']['host'], int(config['PROXY']['port']))
         
     download_files(config, logger)
