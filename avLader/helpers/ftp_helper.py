@@ -83,11 +83,15 @@ def download_fgdb(ftp_filename, config, logger):
         shutil.rmtree(fgdb)
 
     logger.info("Folgende Datei wird heruntergeladen: " + ftp_file)
-    logger.info("Ziel-Verzeichnis: " + download_dir)    
-    ftp = ftplib.FTP(ftp_host, ftp_username, ftp_password)
-    ftp.cwd(ftp_directory)
-    ftp.retrbinary('RETR ' + ftp_file, open(downloaded_file,'wb').write)
-    ftp.quit()
+    logger.info("Ziel-Verzeichnis: " + download_dir)
+    
+    try:
+        ftp = ftplib.FTP(ftp_host, ftp_username, ftp_password)
+        ftp.cwd(ftp_directory)
+        ftp.retrbinary('RETR ' + ftp_file, open(downloaded_file,'wb').write)
+        ftp.quit()
+    except ftplib.all_errors as e:
+        logger.error(ftp_file + " konnte nicht von FTP-Server heruntergeladen werden: " + e)
     
     logger.info(downloaded_file + " wird ins Archiv kopiert.")
     
@@ -116,9 +120,12 @@ def upload_zip(zip_file, zip_filename, config, logger):
     if config['INFOGRIPS_FTP']['use_proxy'] == "1":
         logger.info("FTP-Proxy wird gesetzt!")
         avLader.helpers.ftp_proxy.setup_http_proxy(config['PROXY']['host'], int(config['PROXY']['port']))
-
-    logger.info("Verbinde mit " + ftp_host)
-    ftp = ftplib.FTP(ftp_host, ftp_username, ftp_password)
-    logger.info("Datei " + zip_file + " wird hochgeladen.")
-    ftp.storbinary('STOR ' + zip_filename, open(zip_file, 'rb'), 1024)
-    ftp.quit()
+        
+    try:
+        logger.info("Verbinde mit " + ftp_host)
+        ftp = ftplib.FTP(ftp_host, ftp_username, ftp_password)
+        logger.info("Datei " + zip_file + " wird hochgeladen.")
+        ftp.storbinary('STOR ' + zip_filename, open(zip_file, 'rb'), 1024)
+        ftp.quit()
+    except ftplib.all_errors as e:
+        logger.warn("Probleme mit FTP-Server. File konnte nicht hochgeladen werden: " + e)
