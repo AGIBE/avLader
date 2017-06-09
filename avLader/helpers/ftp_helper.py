@@ -91,7 +91,7 @@ def download_fgdb(ftp_filename, config, logger):
         ftp.retrbinary('RETR ' + ftp_file, open(downloaded_file,'wb').write)
         ftp.quit()
     except ftplib.all_errors as e:
-        logger.error(ftp_file + " konnte nicht von FTP-Server heruntergeladen werden: " + e)
+        logger.error(ftp_file + " konnte nicht von FTP-Server heruntergeladen werden: " + str(e))
     
     logger.info(downloaded_file + " wird ins Archiv kopiert.")
     
@@ -128,4 +128,4 @@ def upload_zip(zip_file, zip_filename, config, logger):
         ftp.storbinary('STOR ' + zip_filename, open(zip_file, 'rb'), 1024)
         ftp.quit()
     except ftplib.all_errors as e:
-        logger.warn("Probleme mit FTP-Server. File konnte nicht hochgeladen werden: " + e)
+        logger.warn("Probleme mit FTP-Server. File konnte nicht hochgeladen werden: " + str(e))
