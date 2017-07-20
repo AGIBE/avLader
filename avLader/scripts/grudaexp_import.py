@@ -26,7 +26,7 @@ def run():
     logger.info("Script " +  fme_script + " wird ausgeführt.")
     logger.info("Das FME-Logfile heisst: " + fme_logfile)
     
-    itf_file = os.path.join(config['DIRECTORIES']['gruda'], config['GRUDA_FTP']['filename'])
+    itf_file = os.path.join(config['DIRECTORIES']['gruda'], config['DIRECTORIES']['gruda_filename'])
     
     # Import-Script
     runner = fmeobjects.FMEWorkspaceRunner()
