@@ -27,6 +27,11 @@ def run():
         'VEK2_DATABASE': str(config['GEODB_VEK2']['database']),
         'VEK2_USERNAME': str(config['GEODB_VEK2']['username']),
         'VEK2_PASSWORD': str(config['GEODB_VEK2']['password']),
+        'GEODB_PG_DATABASE': str(config['GEODB_VEK2_PG']['database']),
+        'GEODB_PG_USERNAME': str(config['GEODB_VEK2_PG']['username']),
+        'GEODB_PG_PASSWORD': str(config['GEODB_VEK2_PG']['password']),
+        'GEODB_PG_HOST': str(config['GEODB_VEK2_PG']['host']),
+        'GEODB_PG_PORT': str(config['GEODB_VEK2_PG']['port']),
         'LOGFILE': str(fme_logfile)
     }
     try:
