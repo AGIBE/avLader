@@ -93,6 +93,8 @@ def run():
         
     download_files(config, logger)
     logger.info("ITF-Download (AVCH) wird ausgeführt.")
+    global ftp_files
+    ftp_files = []
     download_files_avch(config, logger)
     
     avLader.helpers.connection_helper.delete_connection_files(config, logger)
