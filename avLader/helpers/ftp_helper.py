@@ -79,21 +79,3 @@ def unzip_fgdb(zip_file, config, logger):
     logger.info("Entpacke Zip-File.")
     with zipfile.ZipFile(zip_file) as avzip:
         avzip.extractall(config['DIRECTORIES']['local_data_dir'])
-        
-def upload_zip(zip_file, zip_filename, config, logger):
-    ftp_host = config['INFOGRIPS_FTP']['host']
-    ftp_username = config['INFOGRIPS_FTP']['username']
-    ftp_password = config['INFOGRIPS_FTP']['password']
-    
-    if config['INFOGRIPS_FTP']['use_proxy'] == "1":
-        logger.info("FTP-Proxy wird gesetzt!")
-        avLader.helpers.ftp_proxy.setup_http_proxy(config['PROXY']['host'], int(config['PROXY']['port']))
-        
-    try:
-        logger.info("Verbinde mit " + ftp_host)
-        ftp = ftplib.FTP(ftp_host, ftp_username, ftp_password)
-        logger.info("Datei " + zip_file + " wird hochgeladen.")
-        ftp.storbinary('STOR ' + zip_filename, open(zip_file, 'rb'), 1024)
-        ftp.quit()
-    except ftplib.all_errors as e:
-        logger.warn("Probleme mit FTP-Server. File konnte nicht hochgeladen werden: " + str(e))

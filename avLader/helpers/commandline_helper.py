@@ -2,7 +2,6 @@
 from __future__ import absolute_import, division, print_function, unicode_literals
 import argparse
 from avLader import __version__
-import avLader.scripts.gruda_upload
 import avLader.scripts.itf_download
 import avLader.scripts.grudaexp_import
 import avLader.scripts.mopube_import
@@ -11,10 +10,6 @@ import avLader.scripts.gebadr_import
 import avLader.scripts.fds_import
 import avLader.helpers.release_helper
 import avLader.scripts.oereb_liegenschaften
-
-def run_gruda_upload(args):
-    avLader.scripts.gruda_upload.run()
-    print("GRUDA-Upload SUCCESSFUL!")
 
 def run_itf_download(args):
     avLader.scripts.itf_download.run()
@@ -64,10 +59,6 @@ def main():
     version_text = "avLader v" + __version__
     parser = argparse.ArgumentParser(description="Kommandozeile fuer den avLader. Führt die verschiedenen Tasks des wöchentlichen AV-Imports aus.", prog="avLader.exe", version=version_text)
     subparsers = parser.add_subparsers(help='Folgende Befehle sind verfuegbar:')
-    
-    # GRUDA_UPLOAD-Befehl
-    gruda_upload_parser = subparsers.add_parser('gruda_upload', help='Lädt den Gruda-Export per FTP herunter und lädt ihn auf den infoGrips-Server.')
-    gruda_upload_parser.set_defaults(func=run_gruda_upload)
     
     # ITF_DOWNLOAD-Befehl
     itf_download_parser = subparsers.add_parser('itf_download', help="Lädt die originalen ITF-Dateien aller Gemeinden herunter.")
