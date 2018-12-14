@@ -7,6 +7,8 @@ import fmeobjects
 import os
 import sys
 import datetime
+import shutil
+import glob
 
 def run():
     config = avLader.helpers.config_helper.get_config('grudaexp_import')
@@ -25,8 +27,18 @@ def run():
     
     logger.info("Script " +  fme_script + " wird ausgeführt.")
     logger.info("Das FME-Logfile heisst: " + fme_logfile)
+
+    # GRUDA-Export herunterladen und vorbereiten
+    list_of_files = glob.glob(config['DIRECTORIES']['gruda_lieferung']) 
+    latest_file = max(list_of_files, key=os.path.getctime)
     
-    itf_file = os.path.join(config['DIRECTORIES']['gruda'], config['DIRECTORIES']['gruda_filename'])
+    zip_file_ori = os.path.join(config['DIRECTORIES']['gruda_lieferung'], latest_file)
+    zip_filename = config['DIRECTORIES']['gruda_filename']
+    zip_file = os.path.join(config['DIRECTORIES']['gruda'], zip_filename)
+    
+    # copy and replace old zip-file
+    shutil.copyfile(zip_file_ori, zip_file)
+    logger.info("Datei wird kopiert von " + zip_file_ori + " nach " + zip_file)
     
     # Import-Script
     runner = fmeobjects.FMEWorkspaceRunner()
@@ -37,7 +49,7 @@ def run():
         'USERNAME': str(config['NORM_TEAM']['username']),
         'PASSWORD': str(config['NORM_TEAM']['password']),
         'MODELLABLAGE': str(config['DIRECTORIES']['models']),
-        'ITF_FILE': str(itf_file),
+        'ITF_FILE': str(zip_file),
         'LOGFILE': str(fme_logfile)
     }
     try:
