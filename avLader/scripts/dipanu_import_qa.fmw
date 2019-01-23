@@ -24,8 +24,8 @@
 #!   END_TCL=""
 #!   EXPLICIT_BOOKMARK_ORDER="false"
 #!   FME_BUILD_NUM="18310"
-#!   FME_DOCUMENT_GUID="2c7cd1b7-89a0-4d7b-a03d-87a80c52ab52"
-#!   FME_DOCUMENT_PRIORGUID="0c1bd23d-7fa0-428c-96b6-a50e3f2cae25,1370209b-5e09-4739-ae32-01280a5291a0,14669378-7f2c-4754-ba9b-42fe990616b9,542831a6-4032-4199-9305-01f41bdf22ed,77fd3b0d-7f54-4bc0-b16c-c1bf5df497fc"
+#!   FME_DOCUMENT_GUID="9f87c3cd-1c79-4e4e-909a-3288c88a7b2b"
+#!   FME_DOCUMENT_PRIORGUID="0c1bd23d-7fa0-428c-96b6-a50e3f2cae25,1370209b-5e09-4739-ae32-01280a5291a0,14669378-7f2c-4754-ba9b-42fe990616b9,542831a6-4032-4199-9305-01f41bdf22ed,77fd3b0d-7f54-4bc0-b16c-c1bf5df497fc,2c7cd1b7-89a0-4d7b-a03d-87a80c52ab52"
 #!   FME_GEOMETRY_HANDLING="Classic"
 #!   FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Datum"
 #!   FME_REPROJECTION_ENGINE="FME"
@@ -34,7 +34,7 @@
 #!   HISTORY=""
 #!   IGNORE_READER_FAILURE="No"
 #!   LAST_SAVE_BUILD="FME(R) 2018.0.1.0 (20180518 - Build 18310 - WIN32)"
-#!   LAST_SAVE_DATE="2019-01-23T14:16:57"
+#!   LAST_SAVE_DATE="2019-01-23T16:45:42"
 #!   LOG_FILE="$(LOGFILE)"
 #!   LOG_MAX_RECORDED_FEATURES="200"
 #!   MARKDOWN_DESCRIPTION=""
@@ -52,10 +52,10 @@
 #!   TITLE=""
 #!   USAGE=""
 #!   USE_MARKDOWN=""
-#!   VIEW_POSITION="-422.394 -2046.72"
+#!   VIEW_POSITION="218.752 275.003"
 #!   WARN_INVALID_XFORM_PARAM="Yes"
 #!   WORKSPACE_VERSION="1"
-#!   ZOOM_SCALE="91"
+#!   ZOOM_SCALE="100"
 #! >
 #! <DATASETS>
 #! <DATASET
@@ -71,7 +71,7 @@
 #!   WRITE_DEFS="true"
 #!   DEFLINE_TEMPLATE="xls_update_key_columns &quot;&quot; xls_table_writer_mode INHERIT_FROM_WRITER xls_is_named_range NO"
 #!   DEFLINE_ATTRS="true"
-#!   EXPOSABLE_ATTRS="fme_fill_color varchar(50) fme_rotation double fme_type varchar(50) fme_dataset varchar(50) db_type varchar(254) fme_text_string varchar(50) fme_secondary_axis double fme_color varchar(50) fme_db_operation varchar(8) fme_text_size double fme_sweep_angle double fme_where varchar(254) fme_basename varchar(50) fme_primary_axis double fme_geometry fme_char(50) fme_start_angle double fme_feature_type varchar(50)"
+#!   EXPOSABLE_ATTRS="fme_text_size double fme_dataset varchar(50) fme_color varchar(50) fme_basename varchar(50) fme_type varchar(50) fme_where varchar(254) fme_text_string varchar(50) fme_db_operation varchar(8) db_type varchar(254) fme_primary_axis double fme_secondary_axis double fme_feature_type varchar(50) fme_rotation double fme_geometry fme_char(50) fme_sweep_angle double fme_start_angle double fme_fill_color varchar(50)"
 #!   DEFLINE_PARMS="&quot;GUI CHOICE xls_table_writer_mode INHERIT_FROM_WRITER%INSERT%UPDATE Writer Mode&quot; INHERIT_FROM_WRITER &quot;GUI OPTIONAL ATTRLIST_COMMAS xls_update_key_columns \&quot; \&quot; SQL Key Columns&quot; &quot;&quot; &quot;GUI CHOICE xls_is_named_range NO%YES Is Named Range&quot; NO "
 #!   ATTR_INDEX_TYPES=""
 #!   ATTR_NAME_INVALID_CHARS="./*#;:!&amp;-&quot;&apos;$[]"
@@ -355,7 +355,7 @@
 #!   FEATURE_TYPE_NAME_QUALIFIER=""
 #!   IS_EDITABLE="true"
 #!   IDENTIFIER="50"
-#!   FEAT_GEOMTYPE="&lt;NO_GEOMETRY&gt;"
+#!   FEAT_GEOMTYPE="All"
 #!   POSITION="1200 -4609"
 #!   BOUNDING_RECT="1200 -4609 543.73214303571581 71"
 #!   ORDER="68"
@@ -365,9 +365,9 @@
 #!   ENABLED="true"
 #!   SCHEMA_ATTRIBUTE_SOURCE="1"
 #! >
-#!     <FEAT_ATTRIBUTE ATTR_NAME="GENGBKRI" ATTR_TYPE="varchar(50)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="GENGBKRI" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
 #!     <FEAT_ATTRIBUTE ATTR_NAME="GSTBEZ" ATTR_TYPE="varchar(50)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#!     <FEAT_ATTRIBUTE ATTR_NAME="PROJSTAT" ATTR_TYPE="varchar(50)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="PROJSTAT" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
 #!     <DEFLINE_PARM PARM_NAME="xls_is_named_range" PARM_VALUE="NO"/>
 #!     <DEFLINE_PARM PARM_NAME="xls_table_writer_mode" PARM_VALUE="INHERIT_FROM_WRITER"/>
 #!     <DEFLINE_PARM PARM_NAME="xls_update_key_columns" PARM_VALUE=""/>
@@ -436,8 +436,8 @@
 #!   IS_EDITABLE="true"
 #!   IDENTIFIER="11"
 #!   FEAT_GEOMTYPE="&lt;NO_GEOMETRY&gt;"
-#!   POSITION="2351.6516826706729 -314.03870192548078"
-#!   BOUNDING_RECT="2351.6516826706729 -314.03870192548078 594.01555663908221 71"
+#!   POSITION="3026.6584327381738 -314.03870192548078"
+#!   BOUNDING_RECT="3026.6584327381738 -314.03870192548078 594.01555663908221 71"
 #!   ORDER="73"
 #!   COLLAPSED="false"
 #!   KEYWORD="XLS_ADO_1"
@@ -511,8 +511,8 @@
 #!   IS_EDITABLE="true"
 #!   IDENTIFIER="71"
 #!   FEAT_GEOMTYPE="&lt;NO_GEOMETRY&gt;"
-#!   POSITION="2621 -1885"
-#!   BOUNDING_RECT="2621 -1885 637.17036434100555 71"
+#!   POSITION="3067.8794687946879 -2010.0012500125003"
+#!   BOUNDING_RECT="3067.8794687946879 -2010.0012500125003 637.17036434100555 71"
 #!   ORDER="86"
 #!   COLLAPSED="false"
 #!   KEYWORD="XLS_ADO_1"
@@ -587,7 +587,7 @@
 #!   FEATURE_TYPE_NAME_QUALIFIER=""
 #!   IS_EDITABLE="true"
 #!   IDENTIFIER="54"
-#!   FEAT_GEOMTYPE="&lt;NO_GEOMETRY&gt;"
+#!   FEAT_GEOMTYPE="All"
 #!   POSITION="3210 -4629"
 #!   BOUNDING_RECT="3210 -4629 566.71950587637684 71"
 #!   ORDER="92"
@@ -597,7 +597,7 @@
 #!   ENABLED="true"
 #!   SCHEMA_ATTRIBUTE_SOURCE="1"
 #! >
-#!     <FEAT_ATTRIBUTE ATTR_NAME="GENGBKRI" ATTR_TYPE="varchar(50)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="GENGBKRI" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
 #!     <FEAT_ATTRIBUTE ATTR_NAME="GSTBEZ" ATTR_TYPE="varchar(50)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
 #!     <FEAT_ATTRIBUTE ATTR_NAME="PROJSTAT" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
 #!     <DEFLINE_PARM PARM_NAME="xls_is_named_range" PARM_VALUE="NO"/>
@@ -611,7 +611,7 @@
 #!   FEATURE_TYPE_NAME_QUALIFIER=""
 #!   IS_EDITABLE="true"
 #!   IDENTIFIER="107"
-#!   FEAT_GEOMTYPE="&lt;NO_GEOMETRY&gt;"
+#!   FEAT_GEOMTYPE="All"
 #!   POSITION="1198 -5070"
 #!   BOUNDING_RECT="1198 -5070 542.29804276064715 71"
 #!   ORDER="93"
@@ -622,8 +622,8 @@
 #!   SCHEMA_ATTRIBUTE_SOURCE="1"
 #! >
 #!     <FEAT_ATTRIBUTE ATTR_NAME="EGRID" ATTR_TYPE="varchar(50)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#!     <FEAT_ATTRIBUTE ATTR_NAME="PROJSTAT" ATTR_TYPE="varchar(50)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#!     <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL" ATTR_TYPE="varchar(50)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="PROJSTAT" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
 #!     <DEFLINE_PARM PARM_NAME="xls_is_named_range" PARM_VALUE="NO"/>
 #!     <DEFLINE_PARM PARM_NAME="xls_table_writer_mode" PARM_VALUE="INHERIT_FROM_WRITER"/>
 #!     <DEFLINE_PARM PARM_NAME="xls_update_key_columns" PARM_VALUE=""/>
@@ -1546,6 +1546,54 @@
 #!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
 #!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="SQLCreator_11"/>
 #! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="69"
+#!   TYPE="Sorter"
+#!   VERSION="2"
+#!   POSITION="2318.7731877318779 -403.12903129031292"
+#!   BOUNDING_RECT="2318.7731877318779 -403.12903129031292 -1 -1"
+#!   ORDER="500000000000001"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="18310"
+#! >
+#!     <OUTPUT_FEAT NAME="SORTED"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="BFSNR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="GBKR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ANZAHL_ALT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ANZAHL_NEU" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="DIFF_ABS" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="DIFF_REL" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="SORT_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="SORT_PARM" PARM_VALUE="DIFF_ABS NUMERIC ASCENDING"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Sorter"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="82"
+#!   TYPE="Sorter"
+#!   VERSION="2"
+#!   POSITION="2372.9235236308405 -2010.0012500125003"
+#!   BOUNDING_RECT="2372.9235236308405 -2010.0012500125003 -1 -1"
+#!   ORDER="500000000000001"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="18310"
+#! >
+#!     <OUTPUT_FEAT NAME="SORTED"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="BFSNR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="GBKR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ANZAHL_ALT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ANZAHL_NEU" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="DIFF_ABS" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="DIFF_REL" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="SORT_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="SORT_PARM" PARM_VALUE="DIFF_ABS NUMERIC ASCENDING"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Sorter_2"/>
+#! </TRANSFORMER>
 #! </TRANSFORMERS>
 #! <FEAT_LINKS>
 #! <FEAT_LINK
@@ -1681,6 +1729,17 @@
 #!   EXTRA_POINTS=""
 #! />
 #! <FEAT_LINK
+#!   IDENTIFIER="67"
+#!   SOURCE_NODE="18"
+#!   TARGET_NODE="33"
+#!   SOURCE_PORT_DESC="fo 0 MERGED"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
 #!   IDENTIFIER="40"
 #!   SOURCE_NODE="33"
 #!   TARGET_NODE="39"
@@ -1692,10 +1751,21 @@
 #!   EXTRA_POINTS=""
 #! />
 #! <FEAT_LINK
-#!   IDENTIFIER="41"
+#!   IDENTIFIER="73"
 #!   SOURCE_NODE="39"
-#!   TARGET_NODE="11"
+#!   TARGET_NODE="69"
 #!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="74"
+#!   SOURCE_NODE="69"
+#!   TARGET_NODE="11"
+#!   SOURCE_PORT_DESC="fo 0 SORTED"
 #!   TARGET_PORT_DESC="-1"
 #!   ENABLED="true"
 #!   EXECUTION_IDX="0"
@@ -1725,6 +1795,17 @@
 #!   EXTRA_POINTS=""
 #! />
 #! <FEAT_LINK
+#!   IDENTIFIER="66"
+#!   SOURCE_NODE="78"
+#!   TARGET_NODE="79"
+#!   SOURCE_PORT_DESC="fo 0 MERGED"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
 #!   IDENTIFIER="92"
 #!   SOURCE_NODE="79"
 #!   TARGET_NODE="80"
@@ -1736,33 +1817,22 @@
 #!   EXTRA_POINTS=""
 #! />
 #! <FEAT_LINK
-#!   IDENTIFIER="93"
+#!   IDENTIFIER="83"
 #!   SOURCE_NODE="80"
-#!   TARGET_NODE="71"
+#!   TARGET_NODE="82"
 #!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="84"
+#!   SOURCE_NODE="82"
+#!   TARGET_NODE="71"
+#!   SOURCE_PORT_DESC="fo 0 SORTED"
 #!   TARGET_PORT_DESC="-1"
-#!   ENABLED="true"
-#!   EXECUTION_IDX="0"
-#!   HIDDEN="false"
-#!   EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#!   IDENTIFIER="67"
-#!   SOURCE_NODE="18"
-#!   TARGET_NODE="33"
-#!   SOURCE_PORT_DESC="fo 0 MERGED"
-#!   TARGET_PORT_DESC="fi 0 "
-#!   ENABLED="true"
-#!   EXECUTION_IDX="0"
-#!   HIDDEN="false"
-#!   EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#!   IDENTIFIER="66"
-#!   SOURCE_NODE="78"
-#!   TARGET_NODE="79"
-#!   SOURCE_PORT_DESC="fo 0 MERGED"
-#!   TARGET_PORT_DESC="fi 0 "
 #!   ENABLED="true"
 #!   EXECUTION_IDX="0"
 #!   HIDDEN="false"
@@ -2088,6 +2158,10 @@ MACRO __fme_expressionevaluator_evaluateArgs__
 
 # -------------------------------------------------------------------------
 
+FACTORY_DEF * SortFactory    FACTORY_NAME Sorter_2    INPUT  FEATURE_TYPE ExpressionEvaluator_4_OUTPUT    SORT_BY DIFF_ABS NUMERIC ASCENDING    OUTPUT SORTED FEATURE_TYPE Sorter_2_SORTED
+
+# -------------------------------------------------------------------------
+
 FACTORY_DEF {*} TeeFactory    FACTORY_NAME BulkAttributeRenamer_2    INPUT  FEATURE_TYPE SQLCreator_2_RESULT    OUTPUT { FEATURE_TYPE BulkAttributeRenamer_2_OUTPUT        @RenameAttributes(PATTERN_REPLACE, ADDSUFFIX, <Unused>, "<Unused>", "_NEU", "<Unused>", "ANZAHL", "-_", "RENAME", "SELECTED")         }
 
 # -------------------------------------------------------------------------
@@ -2118,32 +2192,36 @@ MACRO __fme_expressionevaluator_evaluateArgs__
 
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC FeatureMerger_UNMERGED_REQUESTOR TO XLS_ADO __GO_TO_FINAL_OUTPUT_ROUTER__ <at>CopyAttributes<openparen>ENCODED<comma>ANZAHL<comma>ANZAHL_ALT<closeparen>,multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>verschwundenFl<lt>u00e4<gt>chen<closeparen> GEOMETRY    ROUTE FME_GENERIC SQLCreator_5_RESULT TO XLS_ADO __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>doppelte3_Fl<lt>u00e4<gt>chen<closeparen> GEOMETRY    ROUTE FME_GENERIC SQLCreator_7_RESULT TO XLS_ADO __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>doppelte2_Punkte<closeparen> GEOMETRY    ROUTE FME_GENERIC SQLCreator_4_RESULT TO XLS_ADO __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>doppelte2_Fl<lt>u00e4<gt>chen<closeparen> GEOMETRY    ROUTE FME_GENERIC ExpressionEvaluator_2_OUTPUT TO XLS_ADO __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>unveraendertFl<lt>u00e4<gt>chen<closeparen> GEOMETRY    ROUTE FME_GENERIC FeatureMerger_UNUSED_SUPPLIER TO XLS_ADO __GO_TO_FINAL_OUTPUT_ROUTER__ <at>CopyAttributes<openparen>ENCODED<comma>ANZAHL<comma>ANZAHL_NEU<closeparen>,multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>hinzugekommenFl<lt>u00e4<gt>chen<closeparen> GEOMETRY    ROUTE FME_GENERIC FeatureMerger_2_UNMERGED_REQUESTOR TO XLS_ADO __GO_TO_FINAL_OUTPUT_ROUTER__ <at>CopyAttributes<openparen>ENCODED<comma>ANZAHL<comma>ANZAHL_ALT<closeparen>,multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>verschwundenPoint<closeparen> GEOMETRY    ROUTE FME_GENERIC ExpressionEvaluator_4_OUTPUT TO XLS_ADO __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>unveraendertPoint<closeparen> GEOMETRY    ROUTE FME_GENERIC FeatureMerger_2_UNUSED_SUPPLIER TO XLS_ADO __GO_TO_FINAL_OUTPUT_ROUTER__ <at>CopyAttributes<openparen>ENCODED<comma>ANZAHL<comma>ANZAHL_NEU<closeparen>,multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>hinzugekommenPoint<closeparen> GEOMETRY    ROUTE FME_GENERIC SQLCreator_6_RESULT TO XLS_ADO __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>doppelte_Punkte<closeparen> GEOMETRY    ROUTE FME_GENERIC SQLCreator_8_RESULT TO XLS_ADO __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>doppelte3_Punkte<closeparen> GEOMETRY    ROUTE FME_GENERIC SQLCreator_11_RESULT TO XLS_ADO __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>doppelte_EGRID<closeparen> GEOMETRY   FEATURE_TYPE_ATTRIBUTE __wb_out_feat_type__   OUTPUT ROUTED FEATURE_TYPE *    OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+FACTORY_DEF * SortFactory    FACTORY_NAME Sorter    INPUT  FEATURE_TYPE ExpressionEvaluator_2_OUTPUT    SORT_BY DIFF_ABS NUMERIC ASCENDING    OUTPUT SORTED FEATURE_TYPE Sorter_SORTED
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC FeatureMerger_UNMERGED_REQUESTOR TO XLS_ADO __GO_TO_FINAL_OUTPUT_ROUTER__ <at>CopyAttributes<openparen>ENCODED<comma>ANZAHL<comma>ANZAHL_ALT<closeparen>,multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>verschwundenFl<lt>u00e4<gt>chen<closeparen> GEOMETRY    ROUTE FME_GENERIC SQLCreator_5_RESULT TO XLS_ADO __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>doppelte3_Fl<lt>u00e4<gt>chen<closeparen> GEOMETRY    ROUTE FME_GENERIC SQLCreator_7_RESULT TO XLS_ADO __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>doppelte2_Punkte<closeparen> GEOMETRY    ROUTE FME_GENERIC SQLCreator_4_RESULT TO XLS_ADO __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>doppelte2_Fl<lt>u00e4<gt>chen<closeparen> GEOMETRY    ROUTE FME_GENERIC Sorter_SORTED TO XLS_ADO __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>unveraendertFl<lt>u00e4<gt>chen<closeparen> GEOMETRY    ROUTE FME_GENERIC FeatureMerger_UNUSED_SUPPLIER TO XLS_ADO __GO_TO_FINAL_OUTPUT_ROUTER__ <at>CopyAttributes<openparen>ENCODED<comma>ANZAHL<comma>ANZAHL_NEU<closeparen>,multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>hinzugekommenFl<lt>u00e4<gt>chen<closeparen> GEOMETRY    ROUTE FME_GENERIC FeatureMerger_2_UNMERGED_REQUESTOR TO XLS_ADO __GO_TO_FINAL_OUTPUT_ROUTER__ <at>CopyAttributes<openparen>ENCODED<comma>ANZAHL<comma>ANZAHL_ALT<closeparen>,multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>verschwundenPoint<closeparen> GEOMETRY    ROUTE FME_GENERIC Sorter_2_SORTED TO XLS_ADO __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>unveraendertPoint<closeparen> GEOMETRY    ROUTE FME_GENERIC FeatureMerger_2_UNUSED_SUPPLIER TO XLS_ADO __GO_TO_FINAL_OUTPUT_ROUTER__ <at>CopyAttributes<openparen>ENCODED<comma>ANZAHL<comma>ANZAHL_NEU<closeparen>,multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>hinzugekommenPoint<closeparen> GEOMETRY    ROUTE FME_GENERIC SQLCreator_6_RESULT TO XLS_ADO __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>doppelte_Punkte<closeparen> GEOMETRY    ROUTE FME_GENERIC SQLCreator_8_RESULT TO XLS_ADO __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>doppelte3_Punkte<closeparen> GEOMETRY    ROUTE FME_GENERIC SQLCreator_11_RESULT TO XLS_ADO __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>doppelte_EGRID<closeparen> GEOMETRY   FEATURE_TYPE_ATTRIBUTE __wb_out_feat_type__   OUTPUT ROUTED FEATURE_TYPE *    OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
 # -------------------------------------------------------------------------
 
 FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
 
 # -------------------------------------------------------------------------
-XLS_ADO_1_DEF unveraendertPoint   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   BFSNR                        double   GBKR                         double   ANZAHL_ALT                   double   ANZAHL_NEU                   double   DIFF_ABS                     double   DIFF_REL                     decimal(30,10)
-# -------------------------------------------------------------------------
-XLS_ADO_1_DEF verschwundenPoint   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   BFSNR                        double   GBKR                         double   ANZAHL                       double
-# -------------------------------------------------------------------------
-XLS_ADO_1_DEF doppelte2_Punkte   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   BFSNR                        double   GBKR                         double   ANZAHL                       double   GEMNAME                      varchar(50)   GSTNR                        double   GSTTEIL                      double   GSTART                       double   GZNR                         varchar(20)   PROJSTAT                     double
-# -------------------------------------------------------------------------
 XLS_ADO_1_DEF hinzugekommenFlächen   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   BFSNR                        double   GBKR                         double   ANZAHL                       double
-# -------------------------------------------------------------------------
-XLS_ADO_1_DEF doppelte_EGRID   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   EGRID                        varchar(50)   PROJSTAT                     varchar(50)   ANZAHL                       varchar(50)
-# -------------------------------------------------------------------------
-XLS_ADO_1_DEF doppelte3_Punkte   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   GENGBKRI                     varchar(50)   GSTBEZ                       varchar(50)   PROJSTAT                     double
 # -------------------------------------------------------------------------
 XLS_ADO_1_DEF doppelte_Punkte   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   BFSNR                        double   GBKR                         double   GSTBEZ                       varchar(30)   PROJSTAT                     double   ANZAHL                       double
 # -------------------------------------------------------------------------
-XLS_ADO_1_DEF doppelte2_Flächen   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   BFSNR                        double   GBKR                         double   GSTBEZ                       varchar(30)   ANZAHL                       double   PROJSTAT                     double
+XLS_ADO_1_DEF unveraendertPoint   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   BFSNR                        double   GBKR                         double   ANZAHL_ALT                   double   ANZAHL_NEU                   double   DIFF_ABS                     double   DIFF_REL                     decimal(30,10)
+# -------------------------------------------------------------------------
+XLS_ADO_1_DEF doppelte3_Flächen   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   GENGBKRI                     double   GSTBEZ                       varchar(50)   PROJSTAT                     double
 # -------------------------------------------------------------------------
 XLS_ADO_1_DEF verschwundenFlächen   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   BFSNR                        double   GBKR                         double   ANZAHL                       double
 # -------------------------------------------------------------------------
-XLS_ADO_1_DEF doppelte3_Flächen   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   GENGBKRI                     varchar(50)   GSTBEZ                       varchar(50)   PROJSTAT                     varchar(50)
+XLS_ADO_1_DEF doppelte2_Punkte   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   BFSNR                        double   GBKR                         double   ANZAHL                       double   GEMNAME                      varchar(50)   GSTNR                        double   GSTTEIL                      double   GSTART                       double   GZNR                         varchar(20)   PROJSTAT                     double
+# -------------------------------------------------------------------------
+XLS_ADO_1_DEF verschwundenPoint   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   BFSNR                        double   GBKR                         double   ANZAHL                       double
 # -------------------------------------------------------------------------
 XLS_ADO_1_DEF unveraendertFlächen   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   BFSNR                        double   GBKR                         double   ANZAHL_ALT                   double   ANZAHL_NEU                   double   DIFF_ABS                     double   DIFF_REL                     decimal(30,10)
+# -------------------------------------------------------------------------
+XLS_ADO_1_DEF doppelte2_Flächen   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   BFSNR                        double   GBKR                         double   GSTBEZ                       varchar(30)   ANZAHL                       double   PROJSTAT                     double
+# -------------------------------------------------------------------------
+XLS_ADO_1_DEF doppelte_EGRID   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   EGRID                        varchar(50)   PROJSTAT                     double   ANZAHL                       double
+# -------------------------------------------------------------------------
+XLS_ADO_1_DEF doppelte3_Punkte   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   GENGBKRI                     double   GSTBEZ                       varchar(50)   PROJSTAT                     double
 # -------------------------------------------------------------------------
 XLS_ADO_1_DEF hinzugekommenPoint   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   BFSNR                        double   GBKR                         double   ANZAHL                       double
