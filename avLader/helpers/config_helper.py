@@ -80,5 +80,6 @@ def get_config(subcommand):
     config['GEODB_DD_TEAM']['connection_file'] = avLader.helpers.connection_helper.create_connection_files(config, 'GEODB_DD_TEAM', logger)
     config['NORM_TEAM']['connection_file'] = avLader.helpers.connection_helper.create_connection_files(config, 'NORM_TEAM', logger)
     config['GPS1_WORKH']['connection_file'] = avLader.helpers.connection_helper.create_connection_files(config, 'GPS1_WORKH', logger)
+    config['GEODB_VEK2']['connection_file'] = avLader.helpers.connection_helper.create_connection_files(config, 'GEODB_VEK2', logger)
 
     return config
