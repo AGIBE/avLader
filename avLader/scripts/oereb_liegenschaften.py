@@ -31,6 +31,7 @@ def run():
         'GEODB_PG_PASSWORD': str(config['GEODB_VEK2_PG']['password']),
         'GEODB_PG_HOST': str(config['GEODB_VEK2_PG']['host']),
         'GEODB_PG_PORT': str(config['GEODB_VEK2_PG']['port']),
+        'WHERE_CLAUSE': str(config['OEREB']['dipanu_where_clause']),
         'LOGFILE': str(fme_logfile)
     }
     try:
