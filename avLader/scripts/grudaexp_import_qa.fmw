@@ -24,8 +24,8 @@
 #!   END_TCL=""
 #!   EXPLICIT_BOOKMARK_ORDER="false"
 #!   FME_BUILD_NUM="18310"
-#!   FME_DOCUMENT_GUID="3a943e5e-5966-47c3-b01c-66317b273984"
-#!   FME_DOCUMENT_PRIORGUID="0c1bd23d-7fa0-428c-96b6-a50e3f2cae25,1370209b-5e09-4739-ae32-01280a5291a0,cc242024-0d79-4b35-892b-9aab422e8361,970c8f0c-26a0-43c8-9e1c-f20bd65b9d3e,2565319f-d445-45be-985a-5c6f83dba7e4,949fc907-e8b6-43d9-babb-ef6fb7b86cc1,7b2e5b02-e004-42a1-895b-e5b56039cb92,29d01c67-f51e-445e-bb3c-eb2ef7b84d1c,eb887955-675c-4013-9950-bdae7e8f492a,04c0a578-cb6c-41a0-a53e-e0a63b578838,fc0a43d3-85ae-4dbb-9df1-2660fd6771cd,845d19d7-45d7-4223-b909-f59ea3f92f59,ec57d14b-c70d-42ae-89c9-9b811953807d,31b44178-b525-44f1-9b65-aa2a875061d7,4cfa91d1-9f4b-4367-bdb0-cb981c11a955,386b9760-920f-42ff-951e-16ade2964911,96eaea2c-80a9-479c-95d8-0d56171f8141,c55a3080-ea33-4cf0-bb17-982c87d2b7e8,714da10f-4d8a-4008-b0f1-443f26672f6a,cd9d00fb-1d2d-40d7-aba8-7e24ae22a2a5,66acddc3-f9e2-41cc-a578-73cffff7fb42"
+#!   FME_DOCUMENT_GUID="66867cf0-4949-41e2-9a2d-7cd786563182"
+#!   FME_DOCUMENT_PRIORGUID="0c1bd23d-7fa0-428c-96b6-a50e3f2cae25,1370209b-5e09-4739-ae32-01280a5291a0,cc242024-0d79-4b35-892b-9aab422e8361,970c8f0c-26a0-43c8-9e1c-f20bd65b9d3e,2565319f-d445-45be-985a-5c6f83dba7e4,949fc907-e8b6-43d9-babb-ef6fb7b86cc1,7b2e5b02-e004-42a1-895b-e5b56039cb92,29d01c67-f51e-445e-bb3c-eb2ef7b84d1c,eb887955-675c-4013-9950-bdae7e8f492a,04c0a578-cb6c-41a0-a53e-e0a63b578838,fc0a43d3-85ae-4dbb-9df1-2660fd6771cd,845d19d7-45d7-4223-b909-f59ea3f92f59,ec57d14b-c70d-42ae-89c9-9b811953807d,31b44178-b525-44f1-9b65-aa2a875061d7,4cfa91d1-9f4b-4367-bdb0-cb981c11a955,386b9760-920f-42ff-951e-16ade2964911,96eaea2c-80a9-479c-95d8-0d56171f8141,c55a3080-ea33-4cf0-bb17-982c87d2b7e8,714da10f-4d8a-4008-b0f1-443f26672f6a,cd9d00fb-1d2d-40d7-aba8-7e24ae22a2a5,66acddc3-f9e2-41cc-a578-73cffff7fb42,3a943e5e-5966-47c3-b01c-66317b273984"
 #!   FME_GEOMETRY_HANDLING="Classic"
 #!   FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Datum"
 #!   FME_REPROJECTION_ENGINE="FME"
@@ -34,7 +34,7 @@
 #!   HISTORY=""
 #!   IGNORE_READER_FAILURE="No"
 #!   LAST_SAVE_BUILD="FME(R) 2018.0.1.0 (20180518 - Build 18310 - WIN32)"
-#!   LAST_SAVE_DATE="2019-02-01T10:04:08"
+#!   LAST_SAVE_DATE="2019-02-01T12:40:26"
 #!   LOG_FILE="$(LOGFILE)"
 #!   LOG_MAX_RECORDED_FEATURES="200"
 #!   MARKDOWN_DESCRIPTION=""
@@ -52,7 +52,7 @@
 #!   TITLE=""
 #!   USAGE=""
 #!   USE_MARKDOWN=""
-#!   VIEW_POSITION="-637.142 -9997.07"
+#!   VIEW_POSITION="-637.142 -9666.36"
 #!   WARN_INVALID_XFORM_PARAM="Yes"
 #!   WORKSPACE_VERSION="1"
 #!   ZOOM_SCALE="103"
@@ -61,20 +61,20 @@
 #! <DATASET
 #!   IS_SOURCE="false"
 #!   ROLE="WRITER"
-#!   FORMAT="XLS_ADO"
+#!   FORMAT="XLSXW"
 #!   DATASET="$(QA_EXCEL)"
-#!   KEYWORD="XLS_ADO_1"
+#!   KEYWORD="XLSXW_1"
 #!   MULTI_GEOM_ALLOWED="true"
 #!   ATTR_MAX_LENGTH="255"
 #!   ATTR_CASE="ANY"
 #!   ALLOWED_FEAT_TYPES=""
 #!   WRITE_DEFS="true"
-#!   DEFLINE_TEMPLATE="xls_update_key_columns &quot;&quot; xls_table_writer_mode INHERIT_FROM_WRITER xls_is_named_range NO"
+#!   DEFLINE_TEMPLATE="xlsx_drop_sheet No xlsx_trunc_sheet No xlsx_sheet_order &quot;&quot; xlsx_freeze_end_row &quot;&quot; xlsx_names_are_positions No xlsx_field_names_out Yes xlsx_start_col &quot;&quot; xlsx_start_row &quot;&quot; xlsx_offset_col &quot;&quot; xlsx_offset_row &quot;&quot; xlsx_raster_type PNG xlsx_table_writer_mode Insert xlsx_row_id_column &quot;&quot; xlsx_protect_sheet &quot;NO&quot; xlsx_protect_sheet_level &quot;&lt;Unused&gt;&quot; xlsx_protect_sheet_password &quot;&lt;Unused&gt;&quot; xlsx_protect_sheet_permissions &quot;&lt;Unused&gt;&quot;"
 #!   DEFLINE_ATTRS="true"
-#!   EXPOSABLE_ATTRS="fme_rotation double fme_geometry varchar(50) fme_start_angle double fme_text_string varchar(50) fme_text_size double fme_where varchar(254) fme_basename varchar(50) fme_type varchar(50) fme_dataset varchar(50) db_type varchar(254) fme_feature_type varchar(50) fme_sweep_angle double fme_color varchar(50) fme_db_operation varchar(8) fme_secondary_axis double fme_fill_color varchar(50) fme_primary_axis double"
-#!   DEFLINE_PARMS="&quot;GUI OPTIONAL NAMEDGROUP xls_layer_group xls_table_writer_mode%xls_update_key_columns%xls_is_named_range Sheet&quot; &quot;&quot; &quot;GUI LOOKUP_CHOICE xls_table_writer_mode Inherit&lt;space&gt;from&lt;space&gt;Writer,INHERIT_FROM_WRITER%Insert,INSERT%Update,UPDATE Writer Mode&quot; INHERIT_FROM_WRITER &quot;GUI OPTIONAL ATTRLIST_COMMAS xls_update_key_columns \&quot; \&quot; SQL Key Columns&quot; &quot;&quot; &quot;GUI CHOICE xls_is_named_range NO%YES Is Named Range&quot; NO "
+#!   EXPOSABLE_ATTRS="fme_dataset string(50) fme_type string(50) xlsx_col_id number(width,xlsx_col_props) fme_start_angle number(width,xlsx_col_props) xlsx_row_id number(width,xlsx_col_props) fme_color string(50) fme_db_operation string(width,xlsx_col_props) fme_sweep_angle number(width,xlsx_col_props) xlsx_raster_height number(width,xlsx_col_props) fme_text_string string(50) fme_rotation number(width,xlsx_col_props) fme_feature_type string(50) fme_secondary_axis number(width,xlsx_col_props) xlsx_row_formatting string(width,xlsx_col_props) xlsx_raster_width number(width,xlsx_col_props) fme_primary_axis number(width,xlsx_col_props) fme_basename string(50) fme_geometry string(50) xlsx_raster_scale_factor number(width,xlsx_col_props) fme_fill_color string(50) fme_text_size number(width,xlsx_col_props)"
+#!   DEFLINE_PARMS="&quot;GUI OPTIONAL NAMEDGROUP xlsx_layer_group xlsx_table_writer_mode%xlsx_field_names_out%xlsx_names_are_positions%xlsx_row_id_column%xlsx_truncate_group%xlsx_table_group%xlsx_rowcolumn_group%xlsx_protect_sheet%xlsx_advanced_group Sheet Settings&quot; &quot;&quot; &quot;GUI OPTIONAL DISCLOSUREGROUP xlsx_truncate_group xlsx_row_id%xlsx_drop_sheet%xlsx_trunc_sheet Drop/Truncate&quot; &quot;&quot; &quot;GUI OPTIONAL DISCLOSUREGROUP xlsx_rowcolumn_group xlsx_start_col%xlsx_start_row%xlsx_offset_col%xlsx_offset_row Start Position&quot; &quot;&quot; &quot;GUI ACTIVEDISCLOSUREGROUP xlsx_protect_sheet xlsx_protect_sheet_password%xlsx_protect_sheet_level%xlsx_protect_sheet_permissions Protect Sheet&quot; NO &quot;GUI OPTIONAL DISCLOSUREGROUP xlsx_advanced_group xlsx_sheet_order%xlsx_freeze_end_row%xlsx_raster_type Advanced&quot; &quot;&quot; &quot;GUI CHOICE xlsx_drop_sheet Yes%No Drop Existing Sheet/Named Range:&quot; No &quot;GUI CHOICE xlsx_trunc_sheet Yes%No Truncate Existing Sheet/Named Range:&quot; No &quot;GUI OPTIONAL RANGE_SLIDER xlsx_sheet_order 1%MAX Sheet Order (1 - n):&quot; &quot;&quot; &quot;GUI OPTIONAL RANGE_SLIDER xlsx_freeze_end_row 1%MAX Freeze First Row(s) (1 - n):&quot; &quot;&quot; &quot;GUI CHOICE xlsx_field_names_out Yes%No Output Field Names:&quot; Yes &quot;GUI CHOICE xlsx_names_are_positions Yes%No Use Attribute Names As Column Positions:&quot; No &quot;GUI OPTIONAL TEXT xlsx_start_col Named Range Start Column:&quot; &quot;&quot; &quot;GUI OPTIONAL INTEGER xlsx_start_row Named Range Start Row:&quot; &quot;&quot; &quot;GUI OPTIONAL TEXT xlsx_offset_col Start Column:&quot; &quot;&quot; &quot;GUI OPTIONAL INTEGER xlsx_offset_row Start Row:&quot; &quot;&quot; &quot;GUI CHOICE xlsx_raster_type BMP%JPEG%PNG Raster Format:&quot; PNG &quot;GUI OPTIONAL PASSWORD_ENCODED xlsx_protect_sheet_password Password:&quot; &lt;Unused&gt; &quot;GUI ACTIVECHOICE_LOOKUP xlsx_protect_sheet_level Select&lt;space&gt;Only&lt;space&gt;Permissions,PROT_DEFAULT,xlsx_protect_sheet_permissions%View&lt;space&gt;Only&lt;space&gt;Permissions,PROT_ALL,xlsx_protect_sheet_permissions%Specific&lt;space&gt;Permissions Protection Level:&quot; &lt;Unused&gt; &quot;GUI OPTIONAL LOOKUP_LISTBOX xlsx_protect_sheet_permissions Select&lt;space&gt;locked&lt;space&gt;cells,PROT_SEL_LOCKED_CELLS%Select&lt;space&gt;unlocked&lt;space&gt;cells,PROT_SEL_UNLOCKED_CELLS%Format&lt;space&gt;cells,PROT_FORMAT_CELLS%Format&lt;space&gt;columns,PROT_FORMAT_COLUMNS%Format&lt;space&gt;rows,PROT_FORMAT_ROWS%Insert&lt;space&gt;columns,PROT_INSERT_COLUMNS%Insert&lt;space&gt;rows,PROT_INSERT_ROWS%Add&lt;space&gt;hyperlinks&lt;space&gt;to&lt;space&gt;unlocked&lt;space&gt;cells,PROT_INSERT_HYPERLINKS%Delete&lt;space&gt;unlocked&lt;space&gt;columns,PROT_DELETE_COLUMNS%Delete&lt;space&gt;unlocked&lt;space&gt;rows,PROT_DELETE_ROWS%Sort&lt;space&gt;unlocked&lt;space&gt;cells/rows/columns\,PROT_SORT%Use&lt;space&gt;Autofilter&lt;space&gt;on&lt;space&gt;unlocked&lt;space&gt;cells,PROT_AUTOFILTER%Use&lt;space&gt;PivotTable&lt;space&gt;&amp;&lt;space&gt;PivotChart&lt;space&gt;on&lt;space&gt;unlocked&lt;space&gt;cells,PROT_PIVOTTABLES%Edit&lt;space&gt;unlocked&lt;space&gt;objects,PROT_OBJECTS%Edit&lt;space&gt;unprotected&lt;space&gt;scenarios,PROT_SCENARIOS Specific Permissions:&quot; &lt;Unused&gt; &quot;GUI ACTIVECHOICE xlsx_table_writer_mode Insert,+xlsx_row_id_column+%Update,+xlsx_row_id_column+xlsx_row_id%Delete,+xlsx_row_id_column+xlsx_row_id Writer Mode:&quot; Insert &quot;GUI OPTIONAL ATTR xlsx_row_id_column ALLOW_NEW Row Number Attribute:&quot; &quot;&quot; "
 #!   ATTR_INDEX_TYPES=""
-#!   ATTR_NAME_INVALID_CHARS=".#!\\&quot;[]"
+#!   ATTR_NAME_INVALID_CHARS="\\&quot;*{}$"
 #!   SUPPORTS_FEATURE_TYPE_FANOUT="true"
 #!   ENABLED="true"
 #!   DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
@@ -82,12 +82,28 @@
 #!   GENERATE_FME_BUILD_NUM="18310"
 #!   NAME="QA_EXCEL"
 #!   COORDSYS=""
-#!   FANOUT_EXPRESSION="&lt;Unused&gt;"
+#!   FANOUT_EXPRESSION=""
 #!   FANOUT_GROUP="NO"
 #! >
 #! <METAFILE_PARAMETER
+#!   NAME="ALLOW_DATASET_CONFLICT"
+#!   VALUE="YES"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="ATTRIBUTE_READING"
+#!   VALUE="DEFLINE"
+#! />
+#! <METAFILE_PARAMETER
 #!   NAME="DATASET_NAME"
-#!   VALUE="Database"
+#!   VALUE="xlsx file"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="DEFAULT_ATTR_TYPE"
+#!   VALUE="auto"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="DEFAULT_READER"
+#!   VALUE="XLSXR"
 #! />
 #! <METAFILE_PARAMETER
 #!   NAME="FEATURE_TYPE_DEFAULT_NAME"
@@ -102,12 +118,8 @@
 #!   VALUE="application/vnd.ms-excel ADD_DISPOSITION"
 #! />
 #! <METAFILE_PARAMETER
-#!   NAME="READER_DATASET_HINT"
-#!   VALUE="Select the Microsoft Excel file(s)"
-#! />
-#! <METAFILE_PARAMETER
-#!   NAME="SUPPORTS_SCHEMA_IN_FEATURE_TYPE_NAME"
-#!   VALUE="NO"
+#!   NAME="USER_ATTRIBUTES_COLUMNS"
+#!   VALUE="Width,Cell Width%Precision,Formatting"
 #! />
 #! <METAFILE_PARAMETER
 #!   NAME="WRITER_DATASET_HINT"
@@ -118,239 +130,245 @@
 #! <DATA_TYPES>
 #! <DATA_TYPE
 #!   IS_SOURCE="false"
-#!   FORMAT_TYPE="varchar(width)"
+#!   FORMAT_TYPE="string(width,xlsx_col_props)"
 #!   FME_TYPE="fme_varchar(width)"
-#!   FORMAT="XLS_ADO"
+#!   FORMAT="XLSXW"
 #! />
 #! <DATA_TYPE
 #!   IS_SOURCE="false"
-#!   FORMAT_TYPE="varchar(width)"
+#!   FORMAT_TYPE="string(width,xlsx_col_props)"
 #!   FME_TYPE="fme_varbinary(width)"
-#!   FORMAT="XLS_ADO"
+#!   FORMAT="XLSXW"
 #! />
 #! <DATA_TYPE
 #!   IS_SOURCE="false"
-#!   FORMAT_TYPE="varchar(width)"
+#!   FORMAT_TYPE="string(width,xlsx_col_props)"
 #!   FME_TYPE="fme_char(width)"
-#!   FORMAT="XLS_ADO"
+#!   FORMAT="XLSXW"
 #! />
 #! <DATA_TYPE
 #!   IS_SOURCE="false"
-#!   FORMAT_TYPE="varchar(width)"
+#!   FORMAT_TYPE="string(width,xlsx_col_props)"
 #!   FME_TYPE="fme_binary(width)"
-#!   FORMAT="XLS_ADO"
+#!   FORMAT="XLSXW"
 #! />
 #! <DATA_TYPE
 #!   IS_SOURCE="false"
-#!   FORMAT_TYPE="text"
+#!   FORMAT_TYPE="string(width,xlsx_col_props)"
 #!   FME_TYPE="fme_buffer"
-#!   FORMAT="XLS_ADO"
+#!   FORMAT="XLSXW"
 #! />
 #! <DATA_TYPE
 #!   IS_SOURCE="false"
-#!   FORMAT_TYPE="text"
+#!   FORMAT_TYPE="string(width,xlsx_col_props)"
 #!   FME_TYPE="fme_binarybuffer"
-#!   FORMAT="XLS_ADO"
+#!   FORMAT="XLSXW"
 #! />
 #! <DATA_TYPE
 #!   IS_SOURCE="false"
-#!   FORMAT_TYPE="text"
+#!   FORMAT_TYPE="string(width,xlsx_col_props)"
 #!   FME_TYPE="fme_xml"
-#!   FORMAT="XLS_ADO"
+#!   FORMAT="XLSXW"
 #! />
 #! <DATA_TYPE
 #!   IS_SOURCE="false"
-#!   FORMAT_TYPE="text"
+#!   FORMAT_TYPE="string(width,xlsx_col_props)"
 #!   FME_TYPE="fme_json"
-#!   FORMAT="XLS_ADO"
+#!   FORMAT="XLSXW"
 #! />
 #! <DATA_TYPE
 #!   IS_SOURCE="false"
-#!   FORMAT_TYPE="datetime"
+#!   FORMAT_TYPE="auto(width,xlsx_col_props)"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="XLSXW"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="datetime(width,xlsx_col_props)"
 #!   FME_TYPE="fme_datetime"
-#!   FORMAT="XLS_ADO"
+#!   FORMAT="XLSXW"
 #! />
 #! <DATA_TYPE
 #!   IS_SOURCE="false"
-#!   FORMAT_TYPE="datetime"
+#!   FORMAT_TYPE="time(width,xlsx_col_props)"
 #!   FME_TYPE="fme_time"
-#!   FORMAT="XLS_ADO"
+#!   FORMAT="XLSXW"
 #! />
 #! <DATA_TYPE
 #!   IS_SOURCE="false"
-#!   FORMAT_TYPE="datetime"
+#!   FORMAT_TYPE="date(width,xlsx_col_props)"
 #!   FME_TYPE="fme_date"
-#!   FORMAT="XLS_ADO"
+#!   FORMAT="XLSXW"
 #! />
 #! <DATA_TYPE
 #!   IS_SOURCE="false"
-#!   FORMAT_TYPE="decimal(width,decimal)"
+#!   FORMAT_TYPE="number(width,xlsx_col_props)"
 #!   FME_TYPE="fme_decimal(width,decimal)"
-#!   FORMAT="XLS_ADO"
+#!   FORMAT="XLSXW"
 #! />
 #! <DATA_TYPE
 #!   IS_SOURCE="false"
-#!   FORMAT_TYPE="currency(width,decimal)"
-#!   FME_TYPE="fme_decimal(width,decimal)"
-#!   FORMAT="XLS_ADO"
-#! />
-#! <DATA_TYPE
-#!   IS_SOURCE="false"
-#!   FORMAT_TYPE="double"
+#!   FORMAT_TYPE="number(width,xlsx_col_props)"
 #!   FME_TYPE="fme_real64"
-#!   FORMAT="XLS_ADO"
+#!   FORMAT="XLSXW"
 #! />
 #! <DATA_TYPE
 #!   IS_SOURCE="false"
-#!   FORMAT_TYPE="double"
+#!   FORMAT_TYPE="number(width,xlsx_col_props)"
 #!   FME_TYPE="fme_real32"
-#!   FORMAT="XLS_ADO"
+#!   FORMAT="XLSXW"
 #! />
 #! <DATA_TYPE
 #!   IS_SOURCE="false"
-#!   FORMAT_TYPE="double"
+#!   FORMAT_TYPE="number(width,xlsx_col_props)"
 #!   FME_TYPE="fme_int32"
-#!   FORMAT="XLS_ADO"
+#!   FORMAT="XLSXW"
 #! />
 #! <DATA_TYPE
 #!   IS_SOURCE="false"
-#!   FORMAT_TYPE="double"
+#!   FORMAT_TYPE="number(width,xlsx_col_props)"
 #!   FME_TYPE="fme_uint32"
-#!   FORMAT="XLS_ADO"
+#!   FORMAT="XLSXW"
 #! />
 #! <DATA_TYPE
 #!   IS_SOURCE="false"
-#!   FORMAT_TYPE="varchar(20)"
+#!   FORMAT_TYPE="number(width,xlsx_col_props)"
 #!   FME_TYPE="fme_int64"
-#!   FORMAT="XLS_ADO"
+#!   FORMAT="XLSXW"
 #! />
 #! <DATA_TYPE
 #!   IS_SOURCE="false"
-#!   FORMAT_TYPE="varchar(20)"
+#!   FORMAT_TYPE="number(width,xlsx_col_props)"
 #!   FME_TYPE="fme_uint64"
-#!   FORMAT="XLS_ADO"
+#!   FORMAT="XLSXW"
 #! />
 #! <DATA_TYPE
 #!   IS_SOURCE="false"
-#!   FORMAT_TYPE="double"
+#!   FORMAT_TYPE="number(width,xlsx_col_props)"
 #!   FME_TYPE="fme_int16"
-#!   FORMAT="XLS_ADO"
+#!   FORMAT="XLSXW"
 #! />
 #! <DATA_TYPE
 #!   IS_SOURCE="false"
-#!   FORMAT_TYPE="double"
+#!   FORMAT_TYPE="number(width,xlsx_col_props)"
 #!   FME_TYPE="fme_uint16"
-#!   FORMAT="XLS_ADO"
+#!   FORMAT="XLSXW"
 #! />
 #! <DATA_TYPE
 #!   IS_SOURCE="false"
-#!   FORMAT_TYPE="double"
+#!   FORMAT_TYPE="number(width,xlsx_col_props)"
 #!   FME_TYPE="fme_int8"
-#!   FORMAT="XLS_ADO"
+#!   FORMAT="XLSXW"
 #! />
 #! <DATA_TYPE
 #!   IS_SOURCE="false"
-#!   FORMAT_TYPE="double"
+#!   FORMAT_TYPE="number(width,xlsx_col_props)"
 #!   FME_TYPE="fme_uint8"
-#!   FORMAT="XLS_ADO"
+#!   FORMAT="XLSXW"
 #! />
 #! <DATA_TYPE
 #!   IS_SOURCE="false"
-#!   FORMAT_TYPE="bit"
+#!   FORMAT_TYPE="boolean(width,xlsx_col_props)"
 #!   FME_TYPE="fme_boolean"
-#!   FORMAT="XLS_ADO"
+#!   FORMAT="XLSXW"
 #! />
 #! </DATA_TYPES>
 #! <GEOM_TYPES>
 #! <GEOM_TYPE
 #!   IS_SOURCE="false"
-#!   FORMAT_TYPE="db_none"
+#!   FORMAT_TYPE="xlsx_none"
 #!   FME_TYPE="fme_no_geom"
-#!   FORMAT="XLS_ADO"
+#!   FORMAT="XLSXW"
 #! />
 #! <GEOM_TYPE
 #!   IS_SOURCE="false"
-#!   FORMAT_TYPE="db_none"
+#!   FORMAT_TYPE="xlsx_none"
 #!   FME_TYPE="fme_point"
-#!   FORMAT="XLS_ADO"
+#!   FORMAT="XLSXW"
 #! />
 #! <GEOM_TYPE
 #!   IS_SOURCE="false"
-#!   FORMAT_TYPE="db_none"
+#!   FORMAT_TYPE="xlsx_point"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="XLSXW"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xlsx_none"
 #!   FME_TYPE="fme_line"
-#!   FORMAT="XLS_ADO"
+#!   FORMAT="XLSXW"
 #! />
 #! <GEOM_TYPE
 #!   IS_SOURCE="false"
-#!   FORMAT_TYPE="db_none"
+#!   FORMAT_TYPE="xlsx_none"
 #!   FME_TYPE="fme_area"
-#!   FORMAT="XLS_ADO"
+#!   FORMAT="XLSXW"
 #! />
 #! <GEOM_TYPE
 #!   IS_SOURCE="false"
-#!   FORMAT_TYPE="db_none"
+#!   FORMAT_TYPE="xlsx_none"
 #!   FME_TYPE="fme_text"
-#!   FORMAT="XLS_ADO"
+#!   FORMAT="XLSXW"
 #! />
 #! <GEOM_TYPE
 #!   IS_SOURCE="false"
-#!   FORMAT_TYPE="db_none"
+#!   FORMAT_TYPE="xlsx_none"
 #!   FME_TYPE="fme_ellipse"
-#!   FORMAT="XLS_ADO"
+#!   FORMAT="XLSXW"
 #! />
 #! <GEOM_TYPE
 #!   IS_SOURCE="false"
-#!   FORMAT_TYPE="db_none"
+#!   FORMAT_TYPE="xlsx_none"
 #!   FME_TYPE="fme_arc"
-#!   FORMAT="XLS_ADO"
+#!   FORMAT="XLSXW"
 #! />
 #! <GEOM_TYPE
 #!   IS_SOURCE="false"
-#!   FORMAT_TYPE="db_none"
+#!   FORMAT_TYPE="xlsx_none"
 #!   FME_TYPE="fme_rectangle"
-#!   FORMAT="XLS_ADO"
+#!   FORMAT="XLSXW"
 #! />
 #! <GEOM_TYPE
 #!   IS_SOURCE="false"
-#!   FORMAT_TYPE="db_none"
+#!   FORMAT_TYPE="xlsx_none"
 #!   FME_TYPE="fme_rounded_rectangle"
-#!   FORMAT="XLS_ADO"
+#!   FORMAT="XLSXW"
 #! />
 #! <GEOM_TYPE
 #!   IS_SOURCE="false"
-#!   FORMAT_TYPE="db_none"
+#!   FORMAT_TYPE="xlsx_none"
 #!   FME_TYPE="fme_collection"
-#!   FORMAT="XLS_ADO"
+#!   FORMAT="XLSXW"
 #! />
 #! <GEOM_TYPE
 #!   IS_SOURCE="false"
-#!   FORMAT_TYPE="db_none"
-#!   FME_TYPE="fme_raster"
-#!   FORMAT="XLS_ADO"
-#! />
-#! <GEOM_TYPE
-#!   IS_SOURCE="false"
-#!   FORMAT_TYPE="db_none"
+#!   FORMAT_TYPE="xlsx_none"
 #!   FME_TYPE="fme_surface"
-#!   FORMAT="XLS_ADO"
+#!   FORMAT="XLSXW"
 #! />
 #! <GEOM_TYPE
 #!   IS_SOURCE="false"
-#!   FORMAT_TYPE="db_none"
+#!   FORMAT_TYPE="xlsx_none"
 #!   FME_TYPE="fme_solid"
-#!   FORMAT="XLS_ADO"
+#!   FORMAT="XLSXW"
 #! />
 #! <GEOM_TYPE
 #!   IS_SOURCE="false"
-#!   FORMAT_TYPE="db_none"
+#!   FORMAT_TYPE="xlsx_none"
+#!   FME_TYPE="fme_raster"
+#!   FORMAT="XLSXW"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xlsx_none"
 #!   FME_TYPE="fme_point_cloud"
-#!   FORMAT="XLS_ADO"
+#!   FORMAT="XLSXW"
 #! />
 #! <GEOM_TYPE
 #!   IS_SOURCE="false"
-#!   FORMAT_TYPE="db_none"
+#!   FORMAT_TYPE="xlsx_none"
 #!   FME_TYPE="fme_feature_table"
-#!   FORMAT="XLS_ADO"
+#!   FORMAT="XLSXW"
 #! />
 #! </GEOM_TYPES>
 #! <FEATURE_TYPES>
@@ -361,23 +379,40 @@
 #!   FEATURE_TYPE_NAME_QUALIFIER=""
 #!   IS_EDITABLE="true"
 #!   IDENTIFIER="8"
-#!   FEAT_GEOMTYPE="All"
+#!   FEAT_GEOMTYPE="&lt;NO_GEOMETRY&gt;"
 #!   POSITION="2769.9293198814348 -4595.6881673858743"
 #!   BOUNDING_RECT="2769.9293198814348 -4595.6881673858743 862.73977975073831 71"
 #!   ORDER="500000000000008"
 #!   COLLAPSED="false"
-#!   KEYWORD="XLS_ADO_1"
+#!   KEYWORD="XLSXW_1"
 #!   PARMS_EDITED="true"
 #!   ENABLED="true"
 #!   SCHEMA_ATTRIBUTE_SOURCE="1"
 #! >
-#!     <FEAT_ATTRIBUTE ATTR_NAME="BFSNR" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#!     <FEAT_ATTRIBUTE ATTR_NAME="GBKRNR" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#!     <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#!     <DEFLINE_PARM PARM_NAME="xls_is_named_range" PARM_VALUE="NO"/>
-#!     <DEFLINE_PARM PARM_NAME="xls_layer_group" PARM_VALUE=""/>
-#!     <DEFLINE_PARM PARM_NAME="xls_table_writer_mode" PARM_VALUE="INHERIT_FROM_WRITER"/>
-#!     <DEFLINE_PARM PARM_NAME="xls_update_key_columns" PARM_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BFSNR" ATTR_TYPE="number(20,version;1;number_format_string;;font;;font_color;;background_color;;pattern_color;;pattern_style;;CELL_BORDER_FORMATTING;NO;CELL_BORDER_COLOR;;CELL_BORDER_STYLE;;text_alignment;NO;horizontal_alignment;;vertical_alignment;;indent;;text_orientation;;text_control;;cell_protection;NO;hide_cells;;lock_cells;)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="GBKRNR" ATTR_TYPE="number(20,version;1;number_format_string;;font;;font_color;;background_color;;pattern_color;;pattern_style;;CELL_BORDER_FORMATTING;NO;CELL_BORDER_COLOR;;CELL_BORDER_STYLE;;text_alignment;NO;horizontal_alignment;;vertical_alignment;;indent;;text_orientation;;text_control;;cell_protection;NO;hide_cells;;lock_cells;)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL" ATTR_TYPE="number(20,version;1;number_format_string;;font;;font_color;;background_color;;pattern_color;;pattern_style;;CELL_BORDER_FORMATTING;NO;CELL_BORDER_COLOR;;CELL_BORDER_STYLE;;text_alignment;NO;horizontal_alignment;;vertical_alignment;;indent;;text_orientation;;text_control;;cell_protection;NO;hide_cells;;lock_cells;)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_advanced_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_drop_sheet" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_field_names_out" PARM_VALUE="Yes"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_freeze_end_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_layer_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_names_are_positions" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_offset_col" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_offset_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet" PARM_VALUE="NO"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_level" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_password" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_permissions" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_raster_type" PARM_VALUE="PNG"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_row_id_column" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_rowcolumn_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_sheet_order" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_start_col" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_start_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_table_writer_mode" PARM_VALUE="Insert"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_trunc_sheet" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_truncate_group" PARM_VALUE=""/>
 #! </FEATURE_TYPE>
 #! <FEATURE_TYPE
 #!   IS_SOURCE="false"
@@ -386,26 +421,43 @@
 #!   FEATURE_TYPE_NAME_QUALIFIER=""
 #!   IS_EDITABLE="true"
 #!   IDENTIFIER="11"
-#!   FEAT_GEOMTYPE="All"
+#!   FEAT_GEOMTYPE="&lt;NO_GEOMETRY&gt;"
 #!   POSITION="3503.514674295679 -4004.2263839194784"
 #!   BOUNDING_RECT="3503.514674295679 -4004.2263839194784 720.91566209779739 71"
 #!   ORDER="500000000000005"
 #!   COLLAPSED="false"
-#!   KEYWORD="XLS_ADO_1"
+#!   KEYWORD="XLSXW_1"
 #!   PARMS_EDITED="true"
 #!   ENABLED="true"
 #!   SCHEMA_ATTRIBUTE_SOURCE="1"
 #! >
-#!     <FEAT_ATTRIBUTE ATTR_NAME="BFSNR" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#!     <FEAT_ATTRIBUTE ATTR_NAME="GBKRNR" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#!     <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL_ALT" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#!     <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL_NEU" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#!     <FEAT_ATTRIBUTE ATTR_NAME="DIFF_ABS" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#!     <FEAT_ATTRIBUTE ATTR_NAME="DIFF_REL" ATTR_TYPE="decimal(30,4)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#!     <DEFLINE_PARM PARM_NAME="xls_is_named_range" PARM_VALUE="NO"/>
-#!     <DEFLINE_PARM PARM_NAME="xls_layer_group" PARM_VALUE=""/>
-#!     <DEFLINE_PARM PARM_NAME="xls_table_writer_mode" PARM_VALUE="INHERIT_FROM_WRITER"/>
-#!     <DEFLINE_PARM PARM_NAME="xls_update_key_columns" PARM_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BFSNR" ATTR_TYPE="number(20,version;1;number_format_string;;font;;font_color;;background_color;;pattern_color;;pattern_style;;CELL_BORDER_FORMATTING;NO;CELL_BORDER_COLOR;;CELL_BORDER_STYLE;;text_alignment;NO;horizontal_alignment;;vertical_alignment;;indent;;text_orientation;;text_control;;cell_protection;NO;hide_cells;;lock_cells;)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="GBKRNR" ATTR_TYPE="number(20,version;1;number_format_string;;font;;font_color;;background_color;;pattern_color;;pattern_style;;CELL_BORDER_FORMATTING;NO;CELL_BORDER_COLOR;;CELL_BORDER_STYLE;;text_alignment;NO;horizontal_alignment;;vertical_alignment;;indent;;text_orientation;;text_control;;cell_protection;NO;hide_cells;;lock_cells;)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL_ALT" ATTR_TYPE="number(20,version;1;number_format_string;;font;;font_color;;background_color;;pattern_color;;pattern_style;;CELL_BORDER_FORMATTING;NO;CELL_BORDER_COLOR;;CELL_BORDER_STYLE;;text_alignment;NO;horizontal_alignment;;vertical_alignment;;indent;;text_orientation;;text_control;;cell_protection;NO;hide_cells;;lock_cells;)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL_NEU" ATTR_TYPE="number(20,version;1;number_format_string;;font;;font_color;;background_color;;pattern_color;;pattern_style;;CELL_BORDER_FORMATTING;NO;CELL_BORDER_COLOR;;CELL_BORDER_STYLE;;text_alignment;NO;horizontal_alignment;;vertical_alignment;;indent;;text_orientation;;text_control;;cell_protection;NO;hide_cells;;lock_cells;)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="DIFF_ABS" ATTR_TYPE="number(20,version;1;number_format_string;;font;;font_color;;background_color;;pattern_color;;pattern_style;;CELL_BORDER_FORMATTING;NO;CELL_BORDER_COLOR;;CELL_BORDER_STYLE;;text_alignment;NO;horizontal_alignment;;vertical_alignment;;indent;;text_orientation;;text_control;;cell_protection;NO;hide_cells;;lock_cells;)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="DIFF_REL" ATTR_TYPE="number(30,version;1;number_format_string;;font;;font_color;;background_color;;pattern_color;;pattern_style;;CELL_BORDER_FORMATTING;NO;CELL_BORDER_COLOR;;CELL_BORDER_STYLE;;text_alignment;NO;horizontal_alignment;;vertical_alignment;;indent;;text_orientation;;text_control;;cell_protection;NO;hide_cells;;lock_cells;)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_advanced_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_drop_sheet" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_field_names_out" PARM_VALUE="Yes"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_freeze_end_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_layer_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_names_are_positions" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_offset_col" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_offset_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet" PARM_VALUE="NO"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_level" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_password" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_permissions" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_raster_type" PARM_VALUE="PNG"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_row_id_column" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_rowcolumn_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_sheet_order" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_start_col" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_start_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_table_writer_mode" PARM_VALUE="Insert"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_trunc_sheet" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_truncate_group" PARM_VALUE=""/>
 #! </FEATURE_TYPE>
 #! <FEATURE_TYPE
 #!   IS_SOURCE="false"
@@ -414,23 +466,40 @@
 #!   FEATURE_TYPE_NAME_QUALIFIER=""
 #!   IS_EDITABLE="true"
 #!   IDENTIFIER="10"
-#!   FEAT_GEOMTYPE="All"
+#!   FEAT_GEOMTYPE="&lt;NO_GEOMETRY&gt;"
 #!   POSITION="2820.9035478590085 -4945.7472115057271"
 #!   BOUNDING_RECT="2820.9035478590085 -4945.7472115057271 811.76555177316459 71"
 #!   ORDER="500000000000007"
 #!   COLLAPSED="false"
-#!   KEYWORD="XLS_ADO_1"
+#!   KEYWORD="XLSXW_1"
 #!   PARMS_EDITED="true"
 #!   ENABLED="true"
 #!   SCHEMA_ATTRIBUTE_SOURCE="1"
 #! >
-#!     <FEAT_ATTRIBUTE ATTR_NAME="BFSNR" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#!     <FEAT_ATTRIBUTE ATTR_NAME="GBKRNR" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#!     <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#!     <DEFLINE_PARM PARM_NAME="xls_is_named_range" PARM_VALUE="NO"/>
-#!     <DEFLINE_PARM PARM_NAME="xls_layer_group" PARM_VALUE=""/>
-#!     <DEFLINE_PARM PARM_NAME="xls_table_writer_mode" PARM_VALUE="INHERIT_FROM_WRITER"/>
-#!     <DEFLINE_PARM PARM_NAME="xls_update_key_columns" PARM_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BFSNR" ATTR_TYPE="number(20,version;1;number_format_string;;font;;font_color;;background_color;;pattern_color;;pattern_style;;CELL_BORDER_FORMATTING;NO;CELL_BORDER_COLOR;;CELL_BORDER_STYLE;;text_alignment;NO;horizontal_alignment;;vertical_alignment;;indent;;text_orientation;;text_control;;cell_protection;NO;hide_cells;;lock_cells;)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="GBKRNR" ATTR_TYPE="number(20,version;1;number_format_string;;font;;font_color;;background_color;;pattern_color;;pattern_style;;CELL_BORDER_FORMATTING;NO;CELL_BORDER_COLOR;;CELL_BORDER_STYLE;;text_alignment;NO;horizontal_alignment;;vertical_alignment;;indent;;text_orientation;;text_control;;cell_protection;NO;hide_cells;;lock_cells;)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL" ATTR_TYPE="number(20,version;1;number_format_string;;font;;font_color;;background_color;;pattern_color;;pattern_style;;CELL_BORDER_FORMATTING;NO;CELL_BORDER_COLOR;;CELL_BORDER_STYLE;;text_alignment;NO;horizontal_alignment;;vertical_alignment;;indent;;text_orientation;;text_control;;cell_protection;NO;hide_cells;;lock_cells;)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_advanced_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_drop_sheet" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_field_names_out" PARM_VALUE="Yes"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_freeze_end_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_layer_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_names_are_positions" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_offset_col" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_offset_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet" PARM_VALUE="NO"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_level" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_password" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_permissions" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_raster_type" PARM_VALUE="PNG"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_row_id_column" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_rowcolumn_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_sheet_order" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_start_col" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_start_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_table_writer_mode" PARM_VALUE="Insert"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_trunc_sheet" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_truncate_group" PARM_VALUE=""/>
 #! </FEATURE_TYPE>
 #! <FEATURE_TYPE
 #!   IS_SOURCE="false"
@@ -439,23 +508,40 @@
 #!   FEATURE_TYPE_NAME_QUALIFIER=""
 #!   IS_EDITABLE="true"
 #!   IDENTIFIER="143"
-#!   FEAT_GEOMTYPE="All"
+#!   FEAT_GEOMTYPE="&lt;NO_GEOMETRY&gt;"
 #!   POSITION="2903.5231839297899 -5664.2670995249273"
 #!   BOUNDING_RECT="2903.5231839297899 -5664.2670995249273 569.96595613014961 71"
 #!   ORDER="73"
 #!   COLLAPSED="false"
-#!   KEYWORD="XLS_ADO_1"
+#!   KEYWORD="XLSXW_1"
 #!   PARMS_EDITED="true"
 #!   ENABLED="true"
 #!   SCHEMA_ATTRIBUTE_SOURCE="1"
 #! >
-#!     <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL_ALT" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#!     <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL_NEU" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#!     <FEAT_ATTRIBUTE ATTR_NAME="DIFF_ABS" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#!     <DEFLINE_PARM PARM_NAME="xls_is_named_range" PARM_VALUE="NO"/>
-#!     <DEFLINE_PARM PARM_NAME="xls_layer_group" PARM_VALUE=""/>
-#!     <DEFLINE_PARM PARM_NAME="xls_table_writer_mode" PARM_VALUE="INHERIT_FROM_WRITER"/>
-#!     <DEFLINE_PARM PARM_NAME="xls_update_key_columns" PARM_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL_ALT" ATTR_TYPE="number(20,version;1;number_format_string;;font;;font_color;;background_color;;pattern_color;;pattern_style;;CELL_BORDER_FORMATTING;NO;CELL_BORDER_COLOR;;CELL_BORDER_STYLE;;text_alignment;NO;horizontal_alignment;;vertical_alignment;;indent;;text_orientation;;text_control;;cell_protection;NO;hide_cells;;lock_cells;)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL_NEU" ATTR_TYPE="number(20,version;1;number_format_string;;font;;font_color;;background_color;;pattern_color;;pattern_style;;CELL_BORDER_FORMATTING;NO;CELL_BORDER_COLOR;;CELL_BORDER_STYLE;;text_alignment;NO;horizontal_alignment;;vertical_alignment;;indent;;text_orientation;;text_control;;cell_protection;NO;hide_cells;;lock_cells;)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="DIFF_ABS" ATTR_TYPE="number(20,version;1;number_format_string;;font;;font_color;;background_color;;pattern_color;;pattern_style;;CELL_BORDER_FORMATTING;NO;CELL_BORDER_COLOR;;CELL_BORDER_STYLE;;text_alignment;NO;horizontal_alignment;;vertical_alignment;;indent;;text_orientation;;text_control;;cell_protection;NO;hide_cells;;lock_cells;)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_advanced_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_drop_sheet" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_field_names_out" PARM_VALUE="Yes"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_freeze_end_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_layer_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_names_are_positions" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_offset_col" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_offset_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet" PARM_VALUE="NO"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_level" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_password" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_permissions" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_raster_type" PARM_VALUE="PNG"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_row_id_column" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_rowcolumn_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_sheet_order" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_start_col" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_start_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_table_writer_mode" PARM_VALUE="Insert"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_trunc_sheet" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_truncate_group" PARM_VALUE=""/>
 #! </FEATURE_TYPE>
 #! <FEATURE_TYPE
 #!   IS_SOURCE="false"
@@ -464,22 +550,39 @@
 #!   FEATURE_TYPE_NAME_QUALIFIER=""
 #!   IS_EDITABLE="true"
 #!   IDENTIFIER="179"
-#!   FEAT_GEOMTYPE="All"
+#!   FEAT_GEOMTYPE="&lt;NO_GEOMETRY&gt;"
 #!   POSITION="665.14348315590496 -11064.855269595104"
 #!   BOUNDING_RECT="665.14348315590496 -11064.855269595104 699.62891155227271 71"
 #!   ORDER="500000000000046"
 #!   COLLAPSED="false"
-#!   KEYWORD="XLS_ADO_1"
+#!   KEYWORD="XLSXW_1"
 #!   PARMS_EDITED="true"
 #!   ENABLED="true"
 #!   SCHEMA_ATTRIBUTE_SOURCE="1"
 #! >
-#!     <FEAT_ATTRIBUTE ATTR_NAME="GEB_ID" ATTR_TYPE="varchar(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#!     <FEAT_ATTRIBUTE ATTR_NAME="GST_ID" ATTR_TYPE="varchar(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#!     <DEFLINE_PARM PARM_NAME="xls_is_named_range" PARM_VALUE="NO"/>
-#!     <DEFLINE_PARM PARM_NAME="xls_layer_group" PARM_VALUE=""/>
-#!     <DEFLINE_PARM PARM_NAME="xls_table_writer_mode" PARM_VALUE="INHERIT_FROM_WRITER"/>
-#!     <DEFLINE_PARM PARM_NAME="xls_update_key_columns" PARM_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="GEB_ID" ATTR_TYPE="string(200,version;1;number_format_string;;font;;font_color;;background_color;;pattern_color;;pattern_style;;CELL_BORDER_FORMATTING;NO;CELL_BORDER_COLOR;;CELL_BORDER_STYLE;;text_alignment;NO;horizontal_alignment;;vertical_alignment;;indent;;text_orientation;;text_control;;cell_protection;NO;hide_cells;;lock_cells;)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="GST_ID" ATTR_TYPE="string(200,version;1;number_format_string;;font;;font_color;;background_color;;pattern_color;;pattern_style;;CELL_BORDER_FORMATTING;NO;CELL_BORDER_COLOR;;CELL_BORDER_STYLE;;text_alignment;NO;horizontal_alignment;;vertical_alignment;;indent;;text_orientation;;text_control;;cell_protection;NO;hide_cells;;lock_cells;)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_advanced_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_drop_sheet" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_field_names_out" PARM_VALUE="Yes"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_freeze_end_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_layer_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_names_are_positions" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_offset_col" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_offset_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet" PARM_VALUE="NO"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_level" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_password" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_permissions" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_raster_type" PARM_VALUE="PNG"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_row_id_column" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_rowcolumn_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_sheet_order" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_start_col" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_start_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_table_writer_mode" PARM_VALUE="Insert"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_trunc_sheet" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_truncate_group" PARM_VALUE=""/>
 #! </FEATURE_TYPE>
 #! <FEATURE_TYPE
 #!   IS_SOURCE="false"
@@ -488,21 +591,38 @@
 #!   FEATURE_TYPE_NAME_QUALIFIER=""
 #!   IS_EDITABLE="true"
 #!   IDENTIFIER="181"
-#!   FEAT_GEOMTYPE="All"
+#!   FEAT_GEOMTYPE="&lt;NO_GEOMETRY&gt;"
 #!   POSITION="665.14348315590496 -11457.19537882144"
 #!   BOUNDING_RECT="665.14348315590496 -11457.19537882144 587.24165476948883 71"
 #!   ORDER="500000000000047"
 #!   COLLAPSED="false"
-#!   KEYWORD="XLS_ADO_1"
+#!   KEYWORD="XLSXW_1"
 #!   PARMS_EDITED="true"
 #!   ENABLED="true"
 #!   SCHEMA_ATTRIBUTE_SOURCE="1"
 #! >
-#!     <FEAT_ATTRIBUTE ATTR_NAME="GEB_ID" ATTR_TYPE="varchar(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#!     <DEFLINE_PARM PARM_NAME="xls_is_named_range" PARM_VALUE="NO"/>
-#!     <DEFLINE_PARM PARM_NAME="xls_layer_group" PARM_VALUE=""/>
-#!     <DEFLINE_PARM PARM_NAME="xls_table_writer_mode" PARM_VALUE="INHERIT_FROM_WRITER"/>
-#!     <DEFLINE_PARM PARM_NAME="xls_update_key_columns" PARM_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="GEB_ID" ATTR_TYPE="string(200,version;1;number_format_string;;font;;font_color;;background_color;;pattern_color;;pattern_style;;CELL_BORDER_FORMATTING;NO;CELL_BORDER_COLOR;;CELL_BORDER_STYLE;;text_alignment;NO;horizontal_alignment;;vertical_alignment;;indent;;text_orientation;;text_control;;cell_protection;NO;hide_cells;;lock_cells;)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_advanced_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_drop_sheet" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_field_names_out" PARM_VALUE="Yes"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_freeze_end_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_layer_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_names_are_positions" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_offset_col" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_offset_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet" PARM_VALUE="NO"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_level" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_password" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_permissions" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_raster_type" PARM_VALUE="PNG"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_row_id_column" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_rowcolumn_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_sheet_order" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_start_col" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_start_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_table_writer_mode" PARM_VALUE="Insert"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_trunc_sheet" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_truncate_group" PARM_VALUE=""/>
 #! </FEATURE_TYPE>
 #! <FEATURE_TYPE
 #!   IS_SOURCE="false"
@@ -511,22 +631,39 @@
 #!   FEATURE_TYPE_NAME_QUALIFIER=""
 #!   IS_EDITABLE="true"
 #!   IDENTIFIER="253"
-#!   FEAT_GEOMTYPE="All"
+#!   FEAT_GEOMTYPE="&lt;NO_GEOMETRY&gt;"
 #!   POSITION="665.14348315590496 -11846.603509893041"
 #!   BOUNDING_RECT="665.14348315590496 -11846.603509893041 613.71275771581213 71"
 #!   ORDER="500000000000048"
 #!   COLLAPSED="false"
-#!   KEYWORD="XLS_ADO_1"
+#!   KEYWORD="XLSXW_1"
 #!   PARMS_EDITED="true"
 #!   ENABLED="true"
 #!   SCHEMA_ATTRIBUTE_SOURCE="1"
 #! >
-#!     <FEAT_ATTRIBUTE ATTR_NAME="GEB_ID" ATTR_TYPE="varchar(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#!     <FEAT_ATTRIBUTE ATTR_NAME="GST_ID" ATTR_TYPE="varchar(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#!     <DEFLINE_PARM PARM_NAME="xls_is_named_range" PARM_VALUE="NO"/>
-#!     <DEFLINE_PARM PARM_NAME="xls_layer_group" PARM_VALUE=""/>
-#!     <DEFLINE_PARM PARM_NAME="xls_table_writer_mode" PARM_VALUE="INHERIT_FROM_WRITER"/>
-#!     <DEFLINE_PARM PARM_NAME="xls_update_key_columns" PARM_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="GEB_ID" ATTR_TYPE="string(200,version;1;number_format_string;;font;;font_color;;background_color;;pattern_color;;pattern_style;;CELL_BORDER_FORMATTING;NO;CELL_BORDER_COLOR;;CELL_BORDER_STYLE;;text_alignment;NO;horizontal_alignment;;vertical_alignment;;indent;;text_orientation;;text_control;;cell_protection;NO;hide_cells;;lock_cells;)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="GST_ID" ATTR_TYPE="string(200,version;1;number_format_string;;font;;font_color;;background_color;;pattern_color;;pattern_style;;CELL_BORDER_FORMATTING;NO;CELL_BORDER_COLOR;;CELL_BORDER_STYLE;;text_alignment;NO;horizontal_alignment;;vertical_alignment;;indent;;text_orientation;;text_control;;cell_protection;NO;hide_cells;;lock_cells;)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_advanced_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_drop_sheet" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_field_names_out" PARM_VALUE="Yes"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_freeze_end_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_layer_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_names_are_positions" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_offset_col" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_offset_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet" PARM_VALUE="NO"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_level" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_password" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_permissions" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_raster_type" PARM_VALUE="PNG"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_row_id_column" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_rowcolumn_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_sheet_order" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_start_col" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_start_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_table_writer_mode" PARM_VALUE="Insert"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_trunc_sheet" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_truncate_group" PARM_VALUE=""/>
 #! </FEATURE_TYPE>
 #! <FEATURE_TYPE
 #!   IS_SOURCE="false"
@@ -535,21 +672,38 @@
 #!   FEATURE_TYPE_NAME_QUALIFIER=""
 #!   IS_EDITABLE="true"
 #!   IDENTIFIER="255"
-#!   FEAT_GEOMTYPE="All"
+#!   FEAT_GEOMTYPE="&lt;NO_GEOMETRY&gt;"
 #!   POSITION="687.37840962281678 -12195.454177331758"
 #!   BOUNDING_RECT="687.37840962281678 -12195.454177331758 565.0067283025769 71"
 #!   ORDER="500000000000049"
 #!   COLLAPSED="false"
-#!   KEYWORD="XLS_ADO_1"
+#!   KEYWORD="XLSXW_1"
 #!   PARMS_EDITED="true"
 #!   ENABLED="true"
 #!   SCHEMA_ATTRIBUTE_SOURCE="1"
 #! >
-#!     <FEAT_ATTRIBUTE ATTR_NAME="GEB_ID" ATTR_TYPE="varchar(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#!     <DEFLINE_PARM PARM_NAME="xls_is_named_range" PARM_VALUE="NO"/>
-#!     <DEFLINE_PARM PARM_NAME="xls_layer_group" PARM_VALUE=""/>
-#!     <DEFLINE_PARM PARM_NAME="xls_table_writer_mode" PARM_VALUE="INHERIT_FROM_WRITER"/>
-#!     <DEFLINE_PARM PARM_NAME="xls_update_key_columns" PARM_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="GEB_ID" ATTR_TYPE="string(200,version;1;number_format_string;;font;;font_color;;background_color;;pattern_color;;pattern_style;;CELL_BORDER_FORMATTING;NO;CELL_BORDER_COLOR;;CELL_BORDER_STYLE;;text_alignment;NO;horizontal_alignment;;vertical_alignment;;indent;;text_orientation;;text_control;;cell_protection;NO;hide_cells;;lock_cells;)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_advanced_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_drop_sheet" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_field_names_out" PARM_VALUE="Yes"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_freeze_end_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_layer_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_names_are_positions" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_offset_col" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_offset_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet" PARM_VALUE="NO"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_level" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_password" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_permissions" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_raster_type" PARM_VALUE="PNG"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_row_id_column" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_rowcolumn_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_sheet_order" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_start_col" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_start_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_table_writer_mode" PARM_VALUE="Insert"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_trunc_sheet" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_truncate_group" PARM_VALUE=""/>
 #! </FEATURE_TYPE>
 #! <FEATURE_TYPE
 #!   IS_SOURCE="false"
@@ -558,23 +712,40 @@
 #!   FEATURE_TYPE_NAME_QUALIFIER=""
 #!   IS_EDITABLE="true"
 #!   IDENTIFIER="132"
-#!   FEAT_GEOMTYPE="All"
+#!   FEAT_GEOMTYPE="&lt;NO_GEOMETRY&gt;"
 #!   POSITION="2903.5231839297899 -6678.9939262313965"
 #!   BOUNDING_RECT="2903.5231839297899 -6678.9939262313965 569.96595613014961 71"
 #!   ORDER="73"
 #!   COLLAPSED="false"
-#!   KEYWORD="XLS_ADO_1"
+#!   KEYWORD="XLSXW_1"
 #!   PARMS_EDITED="true"
 #!   ENABLED="true"
 #!   SCHEMA_ATTRIBUTE_SOURCE="1"
 #! >
-#!     <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL_ALT" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#!     <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL_NEU" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#!     <FEAT_ATTRIBUTE ATTR_NAME="DIFF_ABS" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#!     <DEFLINE_PARM PARM_NAME="xls_is_named_range" PARM_VALUE="NO"/>
-#!     <DEFLINE_PARM PARM_NAME="xls_layer_group" PARM_VALUE=""/>
-#!     <DEFLINE_PARM PARM_NAME="xls_table_writer_mode" PARM_VALUE="INHERIT_FROM_WRITER"/>
-#!     <DEFLINE_PARM PARM_NAME="xls_update_key_columns" PARM_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL_ALT" ATTR_TYPE="number(20,version;1;number_format_string;;font;;font_color;;background_color;;pattern_color;;pattern_style;;CELL_BORDER_FORMATTING;NO;CELL_BORDER_COLOR;;CELL_BORDER_STYLE;;text_alignment;NO;horizontal_alignment;;vertical_alignment;;indent;;text_orientation;;text_control;;cell_protection;NO;hide_cells;;lock_cells;)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL_NEU" ATTR_TYPE="number(20,version;1;number_format_string;;font;;font_color;;background_color;;pattern_color;;pattern_style;;CELL_BORDER_FORMATTING;NO;CELL_BORDER_COLOR;;CELL_BORDER_STYLE;;text_alignment;NO;horizontal_alignment;;vertical_alignment;;indent;;text_orientation;;text_control;;cell_protection;NO;hide_cells;;lock_cells;)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="DIFF_ABS" ATTR_TYPE="number(20,version;1;number_format_string;;font;;font_color;;background_color;;pattern_color;;pattern_style;;CELL_BORDER_FORMATTING;NO;CELL_BORDER_COLOR;;CELL_BORDER_STYLE;;text_alignment;NO;horizontal_alignment;;vertical_alignment;;indent;;text_orientation;;text_control;;cell_protection;NO;hide_cells;;lock_cells;)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_advanced_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_drop_sheet" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_field_names_out" PARM_VALUE="Yes"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_freeze_end_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_layer_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_names_are_positions" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_offset_col" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_offset_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet" PARM_VALUE="NO"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_level" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_password" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_permissions" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_raster_type" PARM_VALUE="PNG"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_row_id_column" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_rowcolumn_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_sheet_order" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_start_col" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_start_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_table_writer_mode" PARM_VALUE="Insert"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_trunc_sheet" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_truncate_group" PARM_VALUE=""/>
 #! </FEATURE_TYPE>
 #! <FEATURE_TYPE
 #!   IS_SOURCE="false"
@@ -583,23 +754,40 @@
 #!   FEATURE_TYPE_NAME_QUALIFIER=""
 #!   IS_EDITABLE="true"
 #!   IDENTIFIER="151"
-#!   FEAT_GEOMTYPE="All"
+#!   FEAT_GEOMTYPE="&lt;NO_GEOMETRY&gt;"
 #!   POSITION="2928.8096621268151 -7721.84243040602"
 #!   BOUNDING_RECT="2928.8096621268151 -7721.84243040602 569.96595613014961 71"
 #!   ORDER="73"
 #!   COLLAPSED="false"
-#!   KEYWORD="XLS_ADO_1"
+#!   KEYWORD="XLSXW_1"
 #!   PARMS_EDITED="true"
 #!   ENABLED="true"
 #!   SCHEMA_ATTRIBUTE_SOURCE="1"
 #! >
-#!     <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL_ALT" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#!     <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL_NEU" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#!     <FEAT_ATTRIBUTE ATTR_NAME="DIFF_ABS" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#!     <DEFLINE_PARM PARM_NAME="xls_is_named_range" PARM_VALUE="NO"/>
-#!     <DEFLINE_PARM PARM_NAME="xls_layer_group" PARM_VALUE=""/>
-#!     <DEFLINE_PARM PARM_NAME="xls_table_writer_mode" PARM_VALUE="INHERIT_FROM_WRITER"/>
-#!     <DEFLINE_PARM PARM_NAME="xls_update_key_columns" PARM_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL_ALT" ATTR_TYPE="number(20,version;1;number_format_string;;font;;font_color;;background_color;;pattern_color;;pattern_style;;CELL_BORDER_FORMATTING;NO;CELL_BORDER_COLOR;;CELL_BORDER_STYLE;;text_alignment;NO;horizontal_alignment;;vertical_alignment;;indent;;text_orientation;;text_control;;cell_protection;NO;hide_cells;;lock_cells;)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL_NEU" ATTR_TYPE="number(20,version;1;number_format_string;;font;;font_color;;background_color;;pattern_color;;pattern_style;;CELL_BORDER_FORMATTING;NO;CELL_BORDER_COLOR;;CELL_BORDER_STYLE;;text_alignment;NO;horizontal_alignment;;vertical_alignment;;indent;;text_orientation;;text_control;;cell_protection;NO;hide_cells;;lock_cells;)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="DIFF_ABS" ATTR_TYPE="number(20,version;1;number_format_string;;font;;font_color;;background_color;;pattern_color;;pattern_style;;CELL_BORDER_FORMATTING;NO;CELL_BORDER_COLOR;;CELL_BORDER_STYLE;;text_alignment;NO;horizontal_alignment;;vertical_alignment;;indent;;text_orientation;;text_control;;cell_protection;NO;hide_cells;;lock_cells;)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_advanced_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_drop_sheet" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_field_names_out" PARM_VALUE="Yes"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_freeze_end_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_layer_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_names_are_positions" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_offset_col" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_offset_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet" PARM_VALUE="NO"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_level" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_password" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_permissions" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_raster_type" PARM_VALUE="PNG"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_row_id_column" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_rowcolumn_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_sheet_order" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_start_col" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_start_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_table_writer_mode" PARM_VALUE="Insert"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_trunc_sheet" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_truncate_group" PARM_VALUE=""/>
 #! </FEATURE_TYPE>
 #! <FEATURE_TYPE
 #!   IS_SOURCE="false"
@@ -608,23 +796,40 @@
 #!   FEATURE_TYPE_NAME_QUALIFIER=""
 #!   IS_EDITABLE="true"
 #!   IDENTIFIER="266"
-#!   FEAT_GEOMTYPE="All"
+#!   FEAT_GEOMTYPE="&lt;NO_GEOMETRY&gt;"
 #!   POSITION="2939 -8768.2001034001696"
 #!   BOUNDING_RECT="2939 -8768.2001034001696 569.96595613014961 71"
 #!   ORDER="73"
 #!   COLLAPSED="false"
-#!   KEYWORD="XLS_ADO_1"
+#!   KEYWORD="XLSXW_1"
 #!   PARMS_EDITED="true"
 #!   ENABLED="true"
 #!   SCHEMA_ATTRIBUTE_SOURCE="1"
 #! >
-#!     <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL_ALT" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#!     <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL_NEU" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#!     <FEAT_ATTRIBUTE ATTR_NAME="DIFF_ABS" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#!     <DEFLINE_PARM PARM_NAME="xls_is_named_range" PARM_VALUE="NO"/>
-#!     <DEFLINE_PARM PARM_NAME="xls_layer_group" PARM_VALUE=""/>
-#!     <DEFLINE_PARM PARM_NAME="xls_table_writer_mode" PARM_VALUE="INHERIT_FROM_WRITER"/>
-#!     <DEFLINE_PARM PARM_NAME="xls_update_key_columns" PARM_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL_ALT" ATTR_TYPE="number(20,version;1;number_format_string;;font;;font_color;;background_color;;pattern_color;;pattern_style;;CELL_BORDER_FORMATTING;NO;CELL_BORDER_COLOR;;CELL_BORDER_STYLE;;text_alignment;NO;horizontal_alignment;;vertical_alignment;;indent;;text_orientation;;text_control;;cell_protection;NO;hide_cells;;lock_cells;)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL_NEU" ATTR_TYPE="number(20,version;1;number_format_string;;font;;font_color;;background_color;;pattern_color;;pattern_style;;CELL_BORDER_FORMATTING;NO;CELL_BORDER_COLOR;;CELL_BORDER_STYLE;;text_alignment;NO;horizontal_alignment;;vertical_alignment;;indent;;text_orientation;;text_control;;cell_protection;NO;hide_cells;;lock_cells;)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="DIFF_ABS" ATTR_TYPE="number(20,version;1;number_format_string;;font;;font_color;;background_color;;pattern_color;;pattern_style;;CELL_BORDER_FORMATTING;NO;CELL_BORDER_COLOR;;CELL_BORDER_STYLE;;text_alignment;NO;horizontal_alignment;;vertical_alignment;;indent;;text_orientation;;text_control;;cell_protection;NO;hide_cells;;lock_cells;)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_advanced_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_drop_sheet" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_field_names_out" PARM_VALUE="Yes"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_freeze_end_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_layer_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_names_are_positions" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_offset_col" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_offset_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet" PARM_VALUE="NO"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_level" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_password" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_permissions" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_raster_type" PARM_VALUE="PNG"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_row_id_column" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_rowcolumn_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_sheet_order" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_start_col" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_start_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_table_writer_mode" PARM_VALUE="Insert"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_trunc_sheet" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_truncate_group" PARM_VALUE=""/>
 #! </FEATURE_TYPE>
 #! <FEATURE_TYPE
 #!   IS_SOURCE="false"
@@ -633,22 +838,39 @@
 #!   FEATURE_TYPE_NAME_QUALIFIER=""
 #!   IS_EDITABLE="true"
 #!   IDENTIFIER="286"
-#!   FEAT_GEOMTYPE="All"
+#!   FEAT_GEOMTYPE="&lt;NO_GEOMETRY&gt;"
 #!   POSITION="2974.4972675123126 -9692.0681140022898"
 #!   BOUNDING_RECT="2974.4972675123126 -9692.0681140022898 708.10393198805468 71"
 #!   ORDER="73"
 #!   COLLAPSED="false"
-#!   KEYWORD="XLS_ADO_1"
+#!   KEYWORD="XLSXW_1"
 #!   PARMS_EDITED="true"
 #!   ENABLED="true"
 #!   SCHEMA_ATTRIBUTE_SOURCE="1"
 #! >
-#!     <FEAT_ATTRIBUTE ATTR_NAME="BEGID" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#!     <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#!     <DEFLINE_PARM PARM_NAME="xls_is_named_range" PARM_VALUE="NO"/>
-#!     <DEFLINE_PARM PARM_NAME="xls_layer_group" PARM_VALUE=""/>
-#!     <DEFLINE_PARM PARM_NAME="xls_table_writer_mode" PARM_VALUE="INHERIT_FROM_WRITER"/>
-#!     <DEFLINE_PARM PARM_NAME="xls_update_key_columns" PARM_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BEGID" ATTR_TYPE="number(20,version;1;number_format_string;;font;;font_color;;background_color;;pattern_color;;pattern_style;;CELL_BORDER_FORMATTING;NO;CELL_BORDER_COLOR;;CELL_BORDER_STYLE;;text_alignment;NO;horizontal_alignment;;vertical_alignment;;indent;;text_orientation;;text_control;;cell_protection;NO;hide_cells;;lock_cells;)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL" ATTR_TYPE="number(20,version;1;number_format_string;;font;;font_color;;background_color;;pattern_color;;pattern_style;;CELL_BORDER_FORMATTING;NO;CELL_BORDER_COLOR;;CELL_BORDER_STYLE;;text_alignment;NO;horizontal_alignment;;vertical_alignment;;indent;;text_orientation;;text_control;;cell_protection;NO;hide_cells;;lock_cells;)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_advanced_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_drop_sheet" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_field_names_out" PARM_VALUE="Yes"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_freeze_end_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_layer_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_names_are_positions" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_offset_col" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_offset_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet" PARM_VALUE="NO"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_level" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_password" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_permissions" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_raster_type" PARM_VALUE="PNG"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_row_id_column" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_rowcolumn_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_sheet_order" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_start_col" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_start_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_table_writer_mode" PARM_VALUE="Insert"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_trunc_sheet" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_truncate_group" PARM_VALUE=""/>
 #! </FEATURE_TYPE>
 #! <FEATURE_TYPE
 #!   IS_SOURCE="false"
@@ -657,22 +879,39 @@
 #!   FEATURE_TYPE_NAME_QUALIFIER=""
 #!   IS_EDITABLE="true"
 #!   IDENTIFIER="288"
-#!   FEAT_GEOMTYPE="All"
+#!   FEAT_GEOMTYPE="&lt;NO_GEOMETRY&gt;"
 #!   POSITION="2974.4972675123126 -10247.697435742853"
 #!   BOUNDING_RECT="2974.4972675123126 -10247.697435742853 780.77907734416203 71"
 #!   ORDER="73"
 #!   COLLAPSED="false"
-#!   KEYWORD="XLS_ADO_1"
+#!   KEYWORD="XLSXW_1"
 #!   PARMS_EDITED="true"
 #!   ENABLED="true"
 #!   SCHEMA_ATTRIBUTE_SOURCE="1"
 #! >
-#!     <FEAT_ATTRIBUTE ATTR_NAME="GWR_EGID" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#!     <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#!     <DEFLINE_PARM PARM_NAME="xls_is_named_range" PARM_VALUE="NO"/>
-#!     <DEFLINE_PARM PARM_NAME="xls_layer_group" PARM_VALUE=""/>
-#!     <DEFLINE_PARM PARM_NAME="xls_table_writer_mode" PARM_VALUE="INHERIT_FROM_WRITER"/>
-#!     <DEFLINE_PARM PARM_NAME="xls_update_key_columns" PARM_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="GWR_EGID" ATTR_TYPE="number(20,version;1;number_format_string;;font;;font_color;;background_color;;pattern_color;;pattern_style;;CELL_BORDER_FORMATTING;NO;CELL_BORDER_COLOR;;CELL_BORDER_STYLE;;text_alignment;NO;horizontal_alignment;;vertical_alignment;;indent;;text_orientation;;text_control;;cell_protection;NO;hide_cells;;lock_cells;)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ANZAHL" ATTR_TYPE="number(20,version;1;number_format_string;;font;;font_color;;background_color;;pattern_color;;pattern_style;;CELL_BORDER_FORMATTING;NO;CELL_BORDER_COLOR;;CELL_BORDER_STYLE;;text_alignment;NO;horizontal_alignment;;vertical_alignment;;indent;;text_orientation;;text_control;;cell_protection;NO;hide_cells;;lock_cells;)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_advanced_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_drop_sheet" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_field_names_out" PARM_VALUE="Yes"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_freeze_end_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_layer_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_names_are_positions" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_offset_col" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_offset_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet" PARM_VALUE="NO"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_level" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_password" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_permissions" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_raster_type" PARM_VALUE="PNG"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_row_id_column" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_rowcolumn_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_sheet_order" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_start_col" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_start_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_table_writer_mode" PARM_VALUE="Insert"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_trunc_sheet" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_truncate_group" PARM_VALUE=""/>
 #! </FEATURE_TYPE>
 #! <FEATURE_TYPE
 #!   IS_SOURCE="false"
@@ -681,21 +920,38 @@
 #!   FEATURE_TYPE_NAME_QUALIFIER=""
 #!   IS_EDITABLE="true"
 #!   IDENTIFIER="191"
-#!   FEAT_GEOMTYPE="All"
+#!   FEAT_GEOMTYPE="&lt;NO_GEOMETRY&gt;"
 #!   POSITION="665.14348315590496 -10726.079375768213"
 #!   BOUNDING_RECT="665.14348315590496 -10726.079375768213 653.94893419522396 71"
 #!   ORDER="500000000000045"
 #!   COLLAPSED="false"
-#!   KEYWORD="XLS_ADO_1"
+#!   KEYWORD="XLSXW_1"
 #!   PARMS_EDITED="true"
 #!   ENABLED="true"
 #!   SCHEMA_ATTRIBUTE_SOURCE="1"
 #! >
-#!     <FEAT_ATTRIBUTE ATTR_NAME="GST_ID" ATTR_TYPE="varchar(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#!     <DEFLINE_PARM PARM_NAME="xls_is_named_range" PARM_VALUE="NO"/>
-#!     <DEFLINE_PARM PARM_NAME="xls_layer_group" PARM_VALUE=""/>
-#!     <DEFLINE_PARM PARM_NAME="xls_table_writer_mode" PARM_VALUE="INHERIT_FROM_WRITER"/>
-#!     <DEFLINE_PARM PARM_NAME="xls_update_key_columns" PARM_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="GST_ID" ATTR_TYPE="string(200,version;1;number_format_string;;font;;font_color;;background_color;;pattern_color;;pattern_style;;CELL_BORDER_FORMATTING;NO;CELL_BORDER_COLOR;;CELL_BORDER_STYLE;;text_alignment;NO;horizontal_alignment;;vertical_alignment;;indent;;text_orientation;;text_control;;cell_protection;NO;hide_cells;;lock_cells;)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_advanced_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_drop_sheet" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_field_names_out" PARM_VALUE="Yes"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_freeze_end_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_layer_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_names_are_positions" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_offset_col" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_offset_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet" PARM_VALUE="NO"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_level" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_password" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_protect_sheet_permissions" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_raster_type" PARM_VALUE="PNG"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_row_id_column" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_rowcolumn_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_sheet_order" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_start_col" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_start_row" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_table_writer_mode" PARM_VALUE="Insert"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_trunc_sheet" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="xlsx_truncate_group" PARM_VALUE=""/>
 #! </FEATURE_TYPE>
 #! </FEATURE_TYPES>
 #! <FMESERVER>
@@ -2916,39 +3172,25 @@
 #!   TARGET_PORT_DESC="0"
 #! />
 #! <ATTR_LINK
-#!   IDENTIFIER="131366"
+#!   IDENTIFIER="65830"
 #!   SOURCE_NODE="18"
 #!   TARGET_NODE="8"
 #!   SOURCE_PORT_DESC="ao 1 1 UNMERGED_REQUESTOR"
 #!   TARGET_PORT_DESC="1"
 #! />
 #! <ATTR_LINK
-#!   IDENTIFIER="196902"
+#!   IDENTIFIER="131366"
 #!   SOURCE_NODE="18"
 #!   TARGET_NODE="8"
 #!   SOURCE_PORT_DESC="ao 1 0 UNMERGED_REQUESTOR"
 #!   TARGET_PORT_DESC="0"
 #! />
 #! <ATTR_LINK
-#!   IDENTIFIER="65830"
+#!   IDENTIFIER="196902"
 #!   SOURCE_NODE="18"
 #!   TARGET_NODE="8"
 #!   SOURCE_PORT_DESC="ao 1 2 UNMERGED_REQUESTOR"
 #!   TARGET_PORT_DESC="2"
-#! />
-#! <ATTR_LINK
-#!   IDENTIFIER="131367"
-#!   SOURCE_NODE="18"
-#!   TARGET_NODE="10"
-#!   SOURCE_PORT_DESC="ao 3 1 UNUSED_SUPPLIER"
-#!   TARGET_PORT_DESC="1"
-#! />
-#! <ATTR_LINK
-#!   IDENTIFIER="65831"
-#!   SOURCE_NODE="18"
-#!   TARGET_NODE="10"
-#!   SOURCE_PORT_DESC="ao 3 0 UNUSED_SUPPLIER"
-#!   TARGET_PORT_DESC="0"
 #! />
 #! <ATTR_LINK
 #!   IDENTIFIER="196903"
@@ -2957,6 +3199,20 @@
 #!   SOURCE_PORT_DESC="ao 3 2 UNUSED_SUPPLIER"
 #!   TARGET_PORT_DESC="2"
 #! />
+#! <ATTR_LINK
+#!   IDENTIFIER="65831"
+#!   SOURCE_NODE="18"
+#!   TARGET_NODE="10"
+#!   SOURCE_PORT_DESC="ao 3 1 UNUSED_SUPPLIER"
+#!   TARGET_PORT_DESC="1"
+#! />
+#! <ATTR_LINK
+#!   IDENTIFIER="131367"
+#!   SOURCE_NODE="18"
+#!   TARGET_NODE="10"
+#!   SOURCE_PORT_DESC="ao 3 0 UNUSED_SUPPLIER"
+#!   TARGET_PORT_DESC="0"
+#! />
 #! </ATTR_LINKS>
 #! <SUBDOCUMENTS>
 #! </SUBDOCUMENTS>
@@ -2964,7 +3220,7 @@
 #! </LOOKUP_TABLES>
 #! </WORKSPACE>
 FME_PYTHON_VERSION 2or3
-GUI IGNORE DestDataset_XLS_ADO_1,XLS_ADO_OUT_FME_GROUP_NAMED1_XLS_ADO_1,XLS_ADO_OUT_OVERWRITE_FILE_XLS_ADO_1,XLS_ADO_OUT_VERSION_XLS_ADO_1,XLS_ADO_OUT_WRITER_MODE_XLS_ADO_1,XLS_ADO_OUT_START_TRANSACTION_XLS_ADO_1,XLS_ADO_OUT_BEGIN_SQL_XLS_ADO_1,XLS_ADO_OUT_END_SQL_XLS_ADO_1
+GUI IGNORE DestDataset_XLSXW_1,XLSXW_OUT_FME_GROUP_NAMED1_XLSXW_1,XLSXW_OUT_OVERWRITE_FILE_XLSXW_1,XLSXW_OUT_TEMPLATEFILE_XLSXW_1,XLSXW_OUT_TEMPLATE_SHEET_XLSXW_1
 DEFAULT_MACRO QA_EXCEL 
 GUI FILENAME QA_EXCEL Excel_Files(*.xls;*.xlsx;*.xlsb)|*.xls;*.xlsx;*.xlsb|All_files(*.*)|*.* Destination Microsoft Excel File:
 DEFAULT_MACRO LOGFILE 
@@ -2996,14 +3252,14 @@ READER_TYPE MULTI_READER
 WRITER_TYPE MULTI_WRITER
 MULTI_WRITER_DATASET_ORDER BY_ID
 MULTI_WRITER_FIRST_WRITER_ID 0
-MULTI_WRITER_TYPE{0} XLS_ADO
-MULTI_WRITER_KEYWORD{0} XLS_ADO_1
+MULTI_WRITER_TYPE{0} XLSXW
+MULTI_WRITER_KEYWORD{0} XLSXW_1
 #! END_WB_HEADER
 
 #! START_WB_HEADER
-MACRO WB_KEYWORD "XLS_ADO_1"
+MACRO WB_KEYWORD "XLSXW_1"
 #! END_WB_HEADER
-#! START_DEST_HEADER XLS_ADO XLS_ADO_1
+#! START_DEST_HEADER XLSXW XLSXW_1
 # ============================================================================
 # First get the dataset for the database. For Excel, it's the file name.
 # For now we'll use whatever they had when they generated this mapping file,
@@ -3012,60 +3268,71 @@ MACRO WB_KEYWORD "XLS_ADO_1"
 #! START_WB_HEADER
 DEFAULT_MACRO DestDataset
 INCLUDE [ if {"$(DestDataset)" != ""} {                          \
- puts {DEFAULT_MACRO DestDataset_XLS_ADO_1 $(DestDataset)}         \
+ puts {DEFAULT_MACRO DestDataset_XLSXW_1 $(DestDataset)}         \
  } ]
 #! END_WB_HEADER
-#! START_DEST_HEADER XLS_ADO XLS_ADO_1
-DEFAULT_MACRO DestDataset_XLS_ADO_1 $(QA_EXCEL)
-GUI FILENAME DestDataset_XLS_ADO_1 Excel_Files(*.xls;*.xlsx;*.xlsb;*.xlsm)|*.xls;*.xlsx;*.xlsb;*.xlsm|All_files(*)|* Destination Microsoft Excel File:
-DEFAULT_MACRO XLS_ADO_OUT_FME_GROUP_NAMED1_XLS_ADO_1 
-GUI OPTIONAL DISCLOSUREGROUP XLS_ADO_OUT_FME_GROUP_NAMED1_XLS_ADO_1 XLS_ADO_OUT_OVERWRITE_FILE_XLS_ADO_1%XLS_ADO_OUT_VERSION_XLS_ADO_1 Write Parameters
+#! START_DEST_HEADER XLSXW XLSXW_1
+DEFAULT_MACRO DestDataset_XLSXW_1 $(QA_EXCEL)
+GUI FILENAME DestDataset_XLSXW_1 Excel_Files(*.xlsx;*.xlsm;*.xls)|*.xlsx;*.xlsm;*.xls|All_files(*)|* Destination Microsoft Excel File:
 # ============================================================================
+DEFAULT_MACRO XLSXW_OUT_FME_GROUP_NAMED1_XLSXW_1 
+GUI OPTIONAL DISCLOSUREGROUP XLSXW_OUT_FME_GROUP_NAMED1_XLSXW_1 XLSXW_OUT_OVERWRITE_FILE_XLSXW_1%XLSXW_OUT_TEMPLATEFILE_XLSXW_1%XLSXW_OUT_TEMPLATE_SHEET_XLSXW_1 Writer Parameters
 # Whether or not to overwrite the file
-DEFAULT_MACRO XLS_ADO_OUT_OVERWRITE_FILE_XLS_ADO_1 No
-XLS_ADO_1_OVERWRITE_FILE "$(XLS_ADO_OUT_OVERWRITE_FILE_XLS_ADO_1)"
-GUI CHOICE XLS_ADO_OUT_OVERWRITE_FILE_XLS_ADO_1 Yes%No Overwrite Existing File:
+DEFAULT_MACRO XLSXW_OUT_OVERWRITE_FILE_XLSXW_1 No
+XLSXW_1_OVERWRITE_FILE "$(XLSXW_OUT_OVERWRITE_FILE_XLSXW_1)"
+GUI ACTIVECHOICE XLSXW_OUT_OVERWRITE_FILE_XLSXW_1 Yes%No,XLSXW_OUT_TEMPLATEFILE_XLSXW_1,XLSXW_OUT_TEMPLATE_SHEET_XLSXW_1,XLSXW_OUT_+TEMPLATEFILE+<Unused> Overwrite Existing File:
+# Template file option
+DEFAULT_MACRO XLSXW_OUT_TEMPLATEFILE_XLSXW_1 
+XLSXW_1_TEMPLATEFILE "$(XLSXW_OUT_TEMPLATEFILE_XLSXW_1)"
+GUI OPTIONAL FILENAME_MUSTEXIST XLSXW_OUT_TEMPLATEFILE_XLSXW_1 Excel_Files(*.xlsx;*.xlsm;*.xls)|*.xlsx;*.xlsm;*.xls|Excel_Workbook_2007(*.xlsx)|*.xlsx|Excel_Macro_Workbook(*.xlsm)|*.xlsm|Excel_Workbook_Pre_2007(*.xls)|*.xls|All_files(*)|* Template File:
+GUI LOOKUP XLSXW_OUT_TEMPLATEFILE_XLSXW_1 <Unused>, 
+DEFAULT_MACRO XLSXW_OUT_TEMPLATE_SHEET_XLSXW_1 
+XLSXW_1_TEMPLATE_SHEET "$(XLSXW_OUT_TEMPLATE_SHEET_XLSXW_1)"
+GUI OPTIONAL DYNAMIC_SINGLE_SELECT XLSXW_OUT_TEMPLATE_SHEET_XLSXW_1 $[XLSXW_OUT_TEMPLATEFILE_XLSXW_1],RETRIEVE_ALL_TABLE_NAMES,Yes,IGNORE_ALL_NAMED_RANGES,Yes,_FORMAT_OVERRIDE_,XLSXW Template Sheet:
+GUI LOOKUP XLSXW_OUT_TEMPLATE_SHEET_XLSXW_1 <Unused>, 
 # ============================================================================
-# Optional Version (defaultstonewestversion)
-DEFAULT_MACRO XLS_ADO_OUT_VERSION_XLS_ADO_1 2007
-XLS_ADO_1_VERSION "$(XLS_ADO_OUT_VERSION_XLS_ADO_1)"
-# GUI RADIO_GROUP VERSION 5%2007,2007%97/2000/2002/2003%5.0/95%4.0%3.0 Excel Version
-GUI CHOICE XLS_ADO_OUT_VERSION_XLS_ADO_1 2007%97/2000/2002/2003%5.0/95%4.0%3.0 Excel Version
+# Parameters whose values will be percolated to the feature types, but will not
+# remain as writer level settings
+# Default to not drop feature type first
+DEFAULT_MACRO XLSXW_OUT_DROP_TABLE_XLSXW_1 No
+XLSXW_1_DROP_TABLE "$(XLSXW_OUT_DROP_TABLE_XLSXW_1)"
+# Default to not truncate feature type first (removeallcelldata,retainformatting/headers,etc.)
+DEFAULT_MACRO XLSXW_OUT_TRUNCATE_TABLE_XLSXW_1 No
+XLSXW_1_TRUNCATE_TABLE "$(XLSXW_OUT_TRUNCATE_TABLE_XLSXW_1)"
+# Maintain compatibility with lenient attrName.* matching
+DEFAULT_MACRO XLSXW_OUT_STRICT_SCHEMA_ADDITIONAL_ATTRIBUTE_MATCHING_XLSXW_1 yes
+XLSXW_1_STRICT_SCHEMA_ADDITIONAL_ATTRIBUTE_MATCHING "$(XLSXW_OUT_STRICT_SCHEMA_ADDITIONAL_ATTRIBUTE_MATCHING_XLSXW_1)"
+# Default to write out the field names
+DEFAULT_MACRO XLSXW_OUT_FIELD_NAMES_OUT_XLSXW_1 Yes
+XLSXW_1_FIELD_NAMES_OUT "$(XLSXW_OUT_FIELD_NAMES_OUT_XLSXW_1)"
+# Default writer mode
+DEFAULT_MACRO XLSXW_OUT_WRITER_MODE_XLSXW_1 Insert
+XLSXW_1_WRITER_MODE "$(XLSXW_OUT_WRITER_MODE_XLSXW_1)"
+# Default raster writing type
+DEFAULT_MACRO XLSXW_OUT_RASTER_FORMAT_XLSXW_1 PNG
+XLSXW_1_RASTER_FORMAT "$(XLSXW_OUT_RASTER_FORMAT_XLSXW_1)"
+# ============================================================================
+# Choose excel file protection mode
+DEFAULT_MACRO XLSXW_OUT_PROTECT_SHEET_XLSXW_1 NO
+XLSXW_1_PROTECT_SHEET "$(XLSXW_OUT_PROTECT_SHEET_XLSXW_1)"
+# Whether or not to enable sheet password protection
+DEFAULT_MACRO XLSXW_OUT_PROTECT_SHEET_PASSWORD_XLSXW_1 <Unused>
+XLSXW_1_PROTECT_SHEET_PASSWORD "$(XLSXW_OUT_PROTECT_SHEET_PASSWORD_XLSXW_1)"
+# Which kind of protection level
+DEFAULT_MACRO XLSXW_OUT_PROTECT_SHEET_LEVEL_XLSXW_1 <Unused>
+XLSXW_1_PROTECT_SHEET_LEVEL "$(XLSXW_OUT_PROTECT_SHEET_LEVEL_XLSXW_1)"
+# Which kind of specific permissions will be enabled
+DEFAULT_MACRO XLSXW_OUT_PROTECT_SHEET_PERMISSIONS_XLSXW_1 <Unused>
+XLSXW_1_PROTECT_SHEET_PERMISSIONS "$(XLSXW_OUT_PROTECT_SHEET_PERMISSIONS_XLSXW_1)"
 # ============================================================================
 # Opt in for destination dataset type vs format type validation
-DEFAULT_MACRO XLS_ADO_OUT_DESTINATION_DATASETTYPE_VALIDATION_XLS_ADO_1 Yes
-XLS_ADO_1_DESTINATION_DATASETTYPE_VALIDATION "$(XLS_ADO_OUT_DESTINATION_DATASETTYPE_VALIDATION_XLS_ADO_1)"
-DEFAULT_MACRO XLS_ADO_OUT_COORDINATE_SYSTEM_GRANULARITY_XLS_ADO_1 FEATURE
-XLS_ADO_1_COORDINATE_SYSTEM_GRANULARITY "$(XLS_ADO_OUT_COORDINATE_SYSTEM_GRANULARITY_XLS_ADO_1)"
+DEFAULT_MACRO XLSXW_OUT_DESTINATION_DATASETTYPE_VALIDATION_XLSXW_1 Yes
+XLSXW_1_DESTINATION_DATASETTYPE_VALIDATION "$(XLSXW_OUT_DESTINATION_DATASETTYPE_VALIDATION_XLSXW_1)"
+DEFAULT_MACRO XLSXW_OUT_COORDINATE_SYSTEM_GRANULARITY_XLSXW_1 FEATURE
+XLSXW_1_COORDINATE_SYSTEM_GRANULARITY "$(XLSXW_OUT_COORDINATE_SYSTEM_GRANULARITY_XLSXW_1)"
 # ============================================================================ 
-XLS_ADO_1_GENERATE_FME_BUILD_NUM 18310
-# ============================================================================
-# This keyword sets the mode of the writer
-DEFAULT_MACRO XLS_ADO_OUT_WRITER_MODE_XLS_ADO_1 INSERT
-GUI LOOKUP_CHOICE XLS_ADO_OUT_WRITER_MODE_XLS_ADO_1 Insert,INSERT%Update,UPDATE Writer Mode:
-XLS_ADO_1_WRITER_MODE $(XLS_ADO_OUT_WRITER_MODE_XLS_ADO_1)
-# ============================================================================
-# This keyword sets the starting transaction
-DEFAULT_MACRO XLS_ADO_OUT_START_TRANSACTION_XLS_ADO_1 0
-GUI OPTIONAL TEXT XLS_ADO_OUT_START_TRANSACTION_XLS_ADO_1 Start Transaction At:
-XLS_ADO_1_START_TRANSACTION $(XLS_ADO_OUT_START_TRANSACTION_XLS_ADO_1)
-# ============================================================================
-# This keyword sets the number of features between transaction commits
-DEFAULT_MACRO XLS_ADO_OUT_TRANSACTION_INTERVAL_XLS_ADO_1 1
-XLS_ADO_1_TRANSACTION_INTERVAL $(XLS_ADO_OUT_TRANSACTION_INTERVAL_XLS_ADO_1)
-# ============================================================================
-# The following specifies an SQL command to execute before opening the first
-# table.
-DEFAULT_MACRO XLS_ADO_OUT_BEGIN_SQL_XLS_ADO_1 
-GUI OPTIONAL TEXT_EDIT_SQL XLS_ADO_OUT_BEGIN_SQL_XLS_ADO_1 SQL Statement to Execute Before Translation:
-XLS_ADO_1_BEGIN_SQL{0} "$(XLS_ADO_OUT_BEGIN_SQL_XLS_ADO_1)"
-# ============================================================================
-# The following specifies an SQL command to execute after closing all the
-# tables.
-DEFAULT_MACRO XLS_ADO_OUT_END_SQL_XLS_ADO_1 
-GUI OPTIONAL TEXT_EDIT_SQL XLS_ADO_OUT_END_SQL_XLS_ADO_1 SQL Statement to Execute After Translation:
-XLS_ADO_1_END_SQL{0} "$(XLS_ADO_OUT_END_SQL_XLS_ADO_1)"
-XLS_ADO_1_DATASET "$(DestDataset_XLS_ADO_1)"
+XLSXW_1_GENERATE_FME_BUILD_NUM 18310
+XLSXW_1_DATASET "$(DestDataset_XLSXW_1)"
 #! END_DEST_HEADER
 #! START_WB_HEADER
 #! END_WB_HEADER
@@ -3081,7 +3348,7 @@ FME_IMPLICIT_CSMAP_REPROJECTION_MODE Datum
 FME_GEOMETRY_HANDLING Classic
 FME_STROKE_MAX_DEVIATION 0
 LOG_FILTER_MASK -1
-DEFAULT_MACRO DATASET_KEYWORD_XLS_ADO_1 XLS_ADO_1
+DEFAULT_MACRO DATASET_KEYWORD_XLSXW_1 XLSXW_1
 FME_PASSWORD_PARAMETER_LIST NORM_PASSWORD VEK1_PASSWORD
 # -------------------------------------------------------------------------
 
@@ -3376,36 +3643,36 @@ FACTORY_DEF * SortFactory    FACTORY_NAME Sorter    INPUT  FEATURE_TYPE Expressi
 
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC FeatureMerger_UNMERGED_REQUESTOR TO XLS_ADO __GO_TO_FINAL_OUTPUT_ROUTER__ <at>CopyAttributes<openparen>ENCODED<comma>BFSNR<comma>BFSNR_ALT<comma>GBKRNR<comma>GBKRNR_ALT<comma>ANZAHL<comma>ANZAHL_ALT<closeparen>,multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>GRUDAGST_verschwunden<closeparen> GEOMETRY    ROUTE FME_GENERIC Sorter_SORTED TO XLS_ADO __GO_TO_FINAL_OUTPUT_ROUTER__ <at>CopyAttributes<openparen>ENCODED<comma>BFSNR<comma>BFSNR_NEU<comma>GBKRNR<comma>GBKRNR_NEU<closeparen>,multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>GRUDAGST_unveraendert<closeparen> GEOMETRY    ROUTE FME_GENERIC FeatureMerger_UNUSED_SUPPLIER TO XLS_ADO __GO_TO_FINAL_OUTPUT_ROUTER__ <at>CopyAttributes<openparen>ENCODED<comma>BFSNR<comma>BFSNR_NEU<comma>GBKRNR<comma>GBKRNR_NEU<comma>ANZAHL<comma>ANZAHL_NEU<closeparen>,multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>GRUDAGST_hinzugekommen<closeparen> GEOMETRY    ROUTE FME_GENERIC ExpressionEvaluator_3_OUTPUT TO XLS_ADO __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>GRUDAGEB_anzahl<closeparen> GEOMETRY    ROUTE FME_GENERIC SQLCreator_19_RESULT TO XLS_ADO __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>Kein_GST_zu_GEB_via_GZG<closeparen> GEOMETRY    ROUTE FME_GENERIC SQLCreator_17_RESULT TO XLS_ADO __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>GEB_hat_kein_GZG<closeparen> GEOMETRY    ROUTE FME_GENERIC SQLCreator_6_RESULT TO XLS_ADO __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>GZG_findet_kein_GEB<closeparen> GEOMETRY    ROUTE FME_GENERIC SQLCreator_5_RESULT TO XLS_ADO __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>GEB_ohne_GAD<closeparen> GEOMETRY    ROUTE FME_GENERIC ExpressionEvaluator_4_OUTPUT TO XLS_ADO __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>GRUDAGZG<closeparen> GEOMETRY    ROUTE FME_GENERIC ExpressionEvaluator_5_OUTPUT TO XLS_ADO __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>GRUDABBF<closeparen> GEOMETRY    ROUTE FME_GENERIC ExpressionEvaluator_6_OUTPUT TO XLS_ADO __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>GRUDAGAD<closeparen> GEOMETRY    ROUTE FME_GENERIC SQLCreator_12_RESULT TO XLS_ADO __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>GRUDAGEB_BEGID_doppelt<closeparen> GEOMETRY    ROUTE FME_GENERIC SQLCreator_13_RESULT TO XLS_ADO __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>GRUDAGEB_EGID_doppelt<closeparen> GEOMETRY    ROUTE FME_GENERIC SQLCreator_18_RESULT TO XLS_ADO __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>Kein_BBF_zu_GST<closeparen> GEOMETRY   FEATURE_TYPE_ATTRIBUTE __wb_out_feat_type__   OUTPUT ROUTED FEATURE_TYPE *    OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC FeatureMerger_UNMERGED_REQUESTOR TO XLSXW __GO_TO_FINAL_OUTPUT_ROUTER__ <at>CopyAttributes<openparen>ENCODED<comma>BFSNR<comma>BFSNR_ALT<comma>GBKRNR<comma>GBKRNR_ALT<comma>ANZAHL<comma>ANZAHL_ALT<closeparen>,multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>GRUDAGST_verschwunden<closeparen> GEOMETRY    ROUTE FME_GENERIC Sorter_SORTED TO XLSXW __GO_TO_FINAL_OUTPUT_ROUTER__ <at>CopyAttributes<openparen>ENCODED<comma>BFSNR<comma>BFSNR_NEU<comma>GBKRNR<comma>GBKRNR_NEU<closeparen>,multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>GRUDAGST_unveraendert<closeparen> GEOMETRY    ROUTE FME_GENERIC FeatureMerger_UNUSED_SUPPLIER TO XLSXW __GO_TO_FINAL_OUTPUT_ROUTER__ <at>CopyAttributes<openparen>ENCODED<comma>BFSNR<comma>BFSNR_NEU<comma>GBKRNR<comma>GBKRNR_NEU<comma>ANZAHL<comma>ANZAHL_NEU<closeparen>,multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>GRUDAGST_hinzugekommen<closeparen> GEOMETRY    ROUTE FME_GENERIC ExpressionEvaluator_3_OUTPUT TO XLSXW __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>GRUDAGEB_anzahl<closeparen> GEOMETRY    ROUTE FME_GENERIC SQLCreator_19_RESULT TO XLSXW __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>Kein_GST_zu_GEB_via_GZG<closeparen> GEOMETRY    ROUTE FME_GENERIC SQLCreator_17_RESULT TO XLSXW __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>GEB_hat_kein_GZG<closeparen> GEOMETRY    ROUTE FME_GENERIC SQLCreator_6_RESULT TO XLSXW __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>GZG_findet_kein_GEB<closeparen> GEOMETRY    ROUTE FME_GENERIC SQLCreator_5_RESULT TO XLSXW __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>GEB_ohne_GAD<closeparen> GEOMETRY    ROUTE FME_GENERIC ExpressionEvaluator_4_OUTPUT TO XLSXW __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>GRUDAGZG<closeparen> GEOMETRY    ROUTE FME_GENERIC ExpressionEvaluator_5_OUTPUT TO XLSXW __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>GRUDABBF<closeparen> GEOMETRY    ROUTE FME_GENERIC ExpressionEvaluator_6_OUTPUT TO XLSXW __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>GRUDAGAD<closeparen> GEOMETRY    ROUTE FME_GENERIC SQLCreator_12_RESULT TO XLSXW __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>GRUDAGEB_BEGID_doppelt<closeparen> GEOMETRY    ROUTE FME_GENERIC SQLCreator_13_RESULT TO XLSXW __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>GRUDAGEB_EGID_doppelt<closeparen> GEOMETRY    ROUTE FME_GENERIC SQLCreator_18_RESULT TO XLSXW __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>Kein_BBF_zu_GST<closeparen> GEOMETRY   FEATURE_TYPE_ATTRIBUTE __wb_out_feat_type__   OUTPUT ROUTED FEATURE_TYPE *    OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
 # -------------------------------------------------------------------------
 
 FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
 
 # -------------------------------------------------------------------------
-XLS_ADO_1_DEF GEB_ohne_GAD   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   GEB_ID                       varchar(200)
+XLSXW_1_DEF GZG_findet_kein_GEB   xlsx_drop_sheet              No   xlsx_trunc_sheet             No   xlsx_sheet_order             ""   xlsx_freeze_end_row          ""   xlsx_names_are_positions     No   xlsx_field_names_out         Yes   xlsx_start_col               ""   xlsx_start_row               ""   xlsx_offset_col              ""   xlsx_offset_row              ""   xlsx_raster_type             PNG   xlsx_table_writer_mode       Insert   xlsx_row_id_column           ""   xlsx_protect_sheet           NO   xlsx_protect_sheet_level     <Unused>   xlsx_protect_sheet_password  <Unused>   xlsx_protect_sheet_permissions <Unused>   GEB_ID                       string(200,version<semicolon>1<semicolon>number_format_string<semicolon><semicolon>font<semicolon><semicolon>font_color<semicolon><semicolon>background_color<semicolon><semicolon>pattern_color<semicolon><semicolon>pattern_style<semicolon><semicolon>CELL_BORDER_FORMATTING<semicolon>NO<semicolon>CELL_BORDER_COLOR<semicolon><semicolon>CELL_BORDER_STYLE<semicolon><semicolon>text_alignment<semicolon>NO<semicolon>horizontal_alignment<semicolon><semicolon>vertical_alignment<semicolon><semicolon>indent<semicolon><semicolon>text_orientation<semicolon><semicolon>text_control<semicolon><semicolon>cell_protection<semicolon>NO<semicolon>hide_cells<semicolon><semicolon>lock_cells<semicolon>)   GST_ID                       string(200,version<semicolon>1<semicolon>number_format_string<semicolon><semicolon>font<semicolon><semicolon>font_color<semicolon><semicolon>background_color<semicolon><semicolon>pattern_color<semicolon><semicolon>pattern_style<semicolon><semicolon>CELL_BORDER_FORMATTING<semicolon>NO<semicolon>CELL_BORDER_COLOR<semicolon><semicolon>CELL_BORDER_STYLE<semicolon><semicolon>text_alignment<semicolon>NO<semicolon>horizontal_alignment<semicolon><semicolon>vertical_alignment<semicolon><semicolon>indent<semicolon><semicolon>text_orientation<semicolon><semicolon>text_control<semicolon><semicolon>cell_protection<semicolon>NO<semicolon>hide_cells<semicolon><semicolon>lock_cells<semicolon>)
 # -------------------------------------------------------------------------
-XLS_ADO_1_DEF GRUDAGEB_BEGID_doppelt   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   BEGID                        double   ANZAHL                       double
+XLSXW_1_DEF GRUDABBF   xlsx_drop_sheet              No   xlsx_trunc_sheet             No   xlsx_sheet_order             ""   xlsx_freeze_end_row          ""   xlsx_names_are_positions     No   xlsx_field_names_out         Yes   xlsx_start_col               ""   xlsx_start_row               ""   xlsx_offset_col              ""   xlsx_offset_row              ""   xlsx_raster_type             PNG   xlsx_table_writer_mode       Insert   xlsx_row_id_column           ""   xlsx_protect_sheet           NO   xlsx_protect_sheet_level     <Unused>   xlsx_protect_sheet_password  <Unused>   xlsx_protect_sheet_permissions <Unused>   ANZAHL_ALT                   number(20,version<semicolon>1<semicolon>number_format_string<semicolon><semicolon>font<semicolon><semicolon>font_color<semicolon><semicolon>background_color<semicolon><semicolon>pattern_color<semicolon><semicolon>pattern_style<semicolon><semicolon>CELL_BORDER_FORMATTING<semicolon>NO<semicolon>CELL_BORDER_COLOR<semicolon><semicolon>CELL_BORDER_STYLE<semicolon><semicolon>text_alignment<semicolon>NO<semicolon>horizontal_alignment<semicolon><semicolon>vertical_alignment<semicolon><semicolon>indent<semicolon><semicolon>text_orientation<semicolon><semicolon>text_control<semicolon><semicolon>cell_protection<semicolon>NO<semicolon>hide_cells<semicolon><semicolon>lock_cells<semicolon>)   ANZAHL_NEU                   number(20,version<semicolon>1<semicolon>number_format_string<semicolon><semicolon>font<semicolon><semicolon>font_color<semicolon><semicolon>background_color<semicolon><semicolon>pattern_color<semicolon><semicolon>pattern_style<semicolon><semicolon>CELL_BORDER_FORMATTING<semicolon>NO<semicolon>CELL_BORDER_COLOR<semicolon><semicolon>CELL_BORDER_STYLE<semicolon><semicolon>text_alignment<semicolon>NO<semicolon>horizontal_alignment<semicolon><semicolon>vertical_alignment<semicolon><semicolon>indent<semicolon><semicolon>text_orientation<semicolon><semicolon>text_control<semicolon><semicolon>cell_protection<semicolon>NO<semicolon>hide_cells<semicolon><semicolon>lock_cells<semicolon>)   DIFF_ABS                     number(20,version<semicolon>1<semicolon>number_format_string<semicolon><semicolon>font<semicolon><semicolon>font_color<semicolon><semicolon>background_color<semicolon><semicolon>pattern_color<semicolon><semicolon>pattern_style<semicolon><semicolon>CELL_BORDER_FORMATTING<semicolon>NO<semicolon>CELL_BORDER_COLOR<semicolon><semicolon>CELL_BORDER_STYLE<semicolon><semicolon>text_alignment<semicolon>NO<semicolon>horizontal_alignment<semicolon><semicolon>vertical_alignment<semicolon><semicolon>indent<semicolon><semicolon>text_orientation<semicolon><semicolon>text_control<semicolon><semicolon>cell_protection<semicolon>NO<semicolon>hide_cells<semicolon><semicolon>lock_cells<semicolon>)
 # -------------------------------------------------------------------------
-XLS_ADO_1_DEF GRUDAGST_unveraendert   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   BFSNR                        double   GBKRNR                       double   ANZAHL_ALT                   double   ANZAHL_NEU                   double   DIFF_ABS                     double   DIFF_REL                     decimal(30,4)
+XLSXW_1_DEF GRUDAGST_unveraendert   xlsx_drop_sheet              No   xlsx_trunc_sheet             No   xlsx_sheet_order             ""   xlsx_freeze_end_row          ""   xlsx_names_are_positions     No   xlsx_field_names_out         Yes   xlsx_start_col               ""   xlsx_start_row               ""   xlsx_offset_col              ""   xlsx_offset_row              ""   xlsx_raster_type             PNG   xlsx_table_writer_mode       Insert   xlsx_row_id_column           ""   xlsx_protect_sheet           NO   xlsx_protect_sheet_level     <Unused>   xlsx_protect_sheet_password  <Unused>   xlsx_protect_sheet_permissions <Unused>   BFSNR                        number(20,version<semicolon>1<semicolon>number_format_string<semicolon><semicolon>font<semicolon><semicolon>font_color<semicolon><semicolon>background_color<semicolon><semicolon>pattern_color<semicolon><semicolon>pattern_style<semicolon><semicolon>CELL_BORDER_FORMATTING<semicolon>NO<semicolon>CELL_BORDER_COLOR<semicolon><semicolon>CELL_BORDER_STYLE<semicolon><semicolon>text_alignment<semicolon>NO<semicolon>horizontal_alignment<semicolon><semicolon>vertical_alignment<semicolon><semicolon>indent<semicolon><semicolon>text_orientation<semicolon><semicolon>text_control<semicolon><semicolon>cell_protection<semicolon>NO<semicolon>hide_cells<semicolon><semicolon>lock_cells<semicolon>)   GBKRNR                       number(20,version<semicolon>1<semicolon>number_format_string<semicolon><semicolon>font<semicolon><semicolon>font_color<semicolon><semicolon>background_color<semicolon><semicolon>pattern_color<semicolon><semicolon>pattern_style<semicolon><semicolon>CELL_BORDER_FORMATTING<semicolon>NO<semicolon>CELL_BORDER_COLOR<semicolon><semicolon>CELL_BORDER_STYLE<semicolon><semicolon>text_alignment<semicolon>NO<semicolon>horizontal_alignment<semicolon><semicolon>vertical_alignment<semicolon><semicolon>indent<semicolon><semicolon>text_orientation<semicolon><semicolon>text_control<semicolon><semicolon>cell_protection<semicolon>NO<semicolon>hide_cells<semicolon><semicolon>lock_cells<semicolon>)   ANZAHL_ALT                   number(20,version<semicolon>1<semicolon>number_format_string<semicolon><semicolon>font<semicolon><semicolon>font_color<semicolon><semicolon>background_color<semicolon><semicolon>pattern_color<semicolon><semicolon>pattern_style<semicolon><semicolon>CELL_BORDER_FORMATTING<semicolon>NO<semicolon>CELL_BORDER_COLOR<semicolon><semicolon>CELL_BORDER_STYLE<semicolon><semicolon>text_alignment<semicolon>NO<semicolon>horizontal_alignment<semicolon><semicolon>vertical_alignment<semicolon><semicolon>indent<semicolon><semicolon>text_orientation<semicolon><semicolon>text_control<semicolon><semicolon>cell_protection<semicolon>NO<semicolon>hide_cells<semicolon><semicolon>lock_cells<semicolon>)   ANZAHL_NEU                   number(20,version<semicolon>1<semicolon>number_format_string<semicolon><semicolon>font<semicolon><semicolon>font_color<semicolon><semicolon>background_color<semicolon><semicolon>pattern_color<semicolon><semicolon>pattern_style<semicolon><semicolon>CELL_BORDER_FORMATTING<semicolon>NO<semicolon>CELL_BORDER_COLOR<semicolon><semicolon>CELL_BORDER_STYLE<semicolon><semicolon>text_alignment<semicolon>NO<semicolon>horizontal_alignment<semicolon><semicolon>vertical_alignment<semicolon><semicolon>indent<semicolon><semicolon>text_orientation<semicolon><semicolon>text_control<semicolon><semicolon>cell_protection<semicolon>NO<semicolon>hide_cells<semicolon><semicolon>lock_cells<semicolon>)   DIFF_ABS                     number(20,version<semicolon>1<semicolon>number_format_string<semicolon><semicolon>font<semicolon><semicolon>font_color<semicolon><semicolon>background_color<semicolon><semicolon>pattern_color<semicolon><semicolon>pattern_style<semicolon><semicolon>CELL_BORDER_FORMATTING<semicolon>NO<semicolon>CELL_BORDER_COLOR<semicolon><semicolon>CELL_BORDER_STYLE<semicolon><semicolon>text_alignment<semicolon>NO<semicolon>horizontal_alignment<semicolon><semicolon>vertical_alignment<semicolon><semicolon>indent<semicolon><semicolon>text_orientation<semicolon><semicolon>text_control<semicolon><semicolon>cell_protection<semicolon>NO<semicolon>hide_cells<semicolon><semicolon>lock_cells<semicolon>)   DIFF_REL                     number(30,version<semicolon>1<semicolon>number_format_string<semicolon><semicolon>font<semicolon><semicolon>font_color<semicolon><semicolon>background_color<semicolon><semicolon>pattern_color<semicolon><semicolon>pattern_style<semicolon><semicolon>CELL_BORDER_FORMATTING<semicolon>NO<semicolon>CELL_BORDER_COLOR<semicolon><semicolon>CELL_BORDER_STYLE<semicolon><semicolon>text_alignment<semicolon>NO<semicolon>horizontal_alignment<semicolon><semicolon>vertical_alignment<semicolon><semicolon>indent<semicolon><semicolon>text_orientation<semicolon><semicolon>text_control<semicolon><semicolon>cell_protection<semicolon>NO<semicolon>hide_cells<semicolon><semicolon>lock_cells<semicolon>)
 # -------------------------------------------------------------------------
-XLS_ADO_1_DEF GEB_hat_kein_GZG   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   GEB_ID                       varchar(200)
+XLSXW_1_DEF GEB_hat_kein_GZG   xlsx_drop_sheet              No   xlsx_trunc_sheet             No   xlsx_sheet_order             ""   xlsx_freeze_end_row          ""   xlsx_names_are_positions     No   xlsx_field_names_out         Yes   xlsx_start_col               ""   xlsx_start_row               ""   xlsx_offset_col              ""   xlsx_offset_row              ""   xlsx_raster_type             PNG   xlsx_table_writer_mode       Insert   xlsx_row_id_column           ""   xlsx_protect_sheet           NO   xlsx_protect_sheet_level     <Unused>   xlsx_protect_sheet_password  <Unused>   xlsx_protect_sheet_permissions <Unused>   GEB_ID                       string(200,version<semicolon>1<semicolon>number_format_string<semicolon><semicolon>font<semicolon><semicolon>font_color<semicolon><semicolon>background_color<semicolon><semicolon>pattern_color<semicolon><semicolon>pattern_style<semicolon><semicolon>CELL_BORDER_FORMATTING<semicolon>NO<semicolon>CELL_BORDER_COLOR<semicolon><semicolon>CELL_BORDER_STYLE<semicolon><semicolon>text_alignment<semicolon>NO<semicolon>horizontal_alignment<semicolon><semicolon>vertical_alignment<semicolon><semicolon>indent<semicolon><semicolon>text_orientation<semicolon><semicolon>text_control<semicolon><semicolon>cell_protection<semicolon>NO<semicolon>hide_cells<semicolon><semicolon>lock_cells<semicolon>)
 # -------------------------------------------------------------------------
-XLS_ADO_1_DEF GZG_findet_kein_GEB   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   GEB_ID                       varchar(200)   GST_ID                       varchar(200)
+XLSXW_1_DEF GEB_ohne_GAD   xlsx_drop_sheet              No   xlsx_trunc_sheet             No   xlsx_sheet_order             ""   xlsx_freeze_end_row          ""   xlsx_names_are_positions     No   xlsx_field_names_out         Yes   xlsx_start_col               ""   xlsx_start_row               ""   xlsx_offset_col              ""   xlsx_offset_row              ""   xlsx_raster_type             PNG   xlsx_table_writer_mode       Insert   xlsx_row_id_column           ""   xlsx_protect_sheet           NO   xlsx_protect_sheet_level     <Unused>   xlsx_protect_sheet_password  <Unused>   xlsx_protect_sheet_permissions <Unused>   GEB_ID                       string(200,version<semicolon>1<semicolon>number_format_string<semicolon><semicolon>font<semicolon><semicolon>font_color<semicolon><semicolon>background_color<semicolon><semicolon>pattern_color<semicolon><semicolon>pattern_style<semicolon><semicolon>CELL_BORDER_FORMATTING<semicolon>NO<semicolon>CELL_BORDER_COLOR<semicolon><semicolon>CELL_BORDER_STYLE<semicolon><semicolon>text_alignment<semicolon>NO<semicolon>horizontal_alignment<semicolon><semicolon>vertical_alignment<semicolon><semicolon>indent<semicolon><semicolon>text_orientation<semicolon><semicolon>text_control<semicolon><semicolon>cell_protection<semicolon>NO<semicolon>hide_cells<semicolon><semicolon>lock_cells<semicolon>)
 # -------------------------------------------------------------------------
-XLS_ADO_1_DEF GRUDAGEB_EGID_doppelt   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   GWR_EGID                     double   ANZAHL                       double
+XLSXW_1_DEF Kein_GST_zu_GEB_via_GZG   xlsx_drop_sheet              No   xlsx_trunc_sheet             No   xlsx_sheet_order             ""   xlsx_freeze_end_row          ""   xlsx_names_are_positions     No   xlsx_field_names_out         Yes   xlsx_start_col               ""   xlsx_start_row               ""   xlsx_offset_col              ""   xlsx_offset_row              ""   xlsx_raster_type             PNG   xlsx_table_writer_mode       Insert   xlsx_row_id_column           ""   xlsx_protect_sheet           NO   xlsx_protect_sheet_level     <Unused>   xlsx_protect_sheet_password  <Unused>   xlsx_protect_sheet_permissions <Unused>   GEB_ID                       string(200,version<semicolon>1<semicolon>number_format_string<semicolon><semicolon>font<semicolon><semicolon>font_color<semicolon><semicolon>background_color<semicolon><semicolon>pattern_color<semicolon><semicolon>pattern_style<semicolon><semicolon>CELL_BORDER_FORMATTING<semicolon>NO<semicolon>CELL_BORDER_COLOR<semicolon><semicolon>CELL_BORDER_STYLE<semicolon><semicolon>text_alignment<semicolon>NO<semicolon>horizontal_alignment<semicolon><semicolon>vertical_alignment<semicolon><semicolon>indent<semicolon><semicolon>text_orientation<semicolon><semicolon>text_control<semicolon><semicolon>cell_protection<semicolon>NO<semicolon>hide_cells<semicolon><semicolon>lock_cells<semicolon>)   GST_ID                       string(200,version<semicolon>1<semicolon>number_format_string<semicolon><semicolon>font<semicolon><semicolon>font_color<semicolon><semicolon>background_color<semicolon><semicolon>pattern_color<semicolon><semicolon>pattern_style<semicolon><semicolon>CELL_BORDER_FORMATTING<semicolon>NO<semicolon>CELL_BORDER_COLOR<semicolon><semicolon>CELL_BORDER_STYLE<semicolon><semicolon>text_alignment<semicolon>NO<semicolon>horizontal_alignment<semicolon><semicolon>vertical_alignment<semicolon><semicolon>indent<semicolon><semicolon>text_orientation<semicolon><semicolon>text_control<semicolon><semicolon>cell_protection<semicolon>NO<semicolon>hide_cells<semicolon><semicolon>lock_cells<semicolon>)
 # -------------------------------------------------------------------------
-XLS_ADO_1_DEF GRUDABBF   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   ANZAHL_ALT                   double   ANZAHL_NEU                   double   DIFF_ABS                     double
+XLSXW_1_DEF GRUDAGEB_BEGID_doppelt   xlsx_drop_sheet              No   xlsx_trunc_sheet             No   xlsx_sheet_order             ""   xlsx_freeze_end_row          ""   xlsx_names_are_positions     No   xlsx_field_names_out         Yes   xlsx_start_col               ""   xlsx_start_row               ""   xlsx_offset_col              ""   xlsx_offset_row              ""   xlsx_raster_type             PNG   xlsx_table_writer_mode       Insert   xlsx_row_id_column           ""   xlsx_protect_sheet           NO   xlsx_protect_sheet_level     <Unused>   xlsx_protect_sheet_password  <Unused>   xlsx_protect_sheet_permissions <Unused>   BEGID                        number(20,version<semicolon>1<semicolon>number_format_string<semicolon><semicolon>font<semicolon><semicolon>font_color<semicolon><semicolon>background_color<semicolon><semicolon>pattern_color<semicolon><semicolon>pattern_style<semicolon><semicolon>CELL_BORDER_FORMATTING<semicolon>NO<semicolon>CELL_BORDER_COLOR<semicolon><semicolon>CELL_BORDER_STYLE<semicolon><semicolon>text_alignment<semicolon>NO<semicolon>horizontal_alignment<semicolon><semicolon>vertical_alignment<semicolon><semicolon>indent<semicolon><semicolon>text_orientation<semicolon><semicolon>text_control<semicolon><semicolon>cell_protection<semicolon>NO<semicolon>hide_cells<semicolon><semicolon>lock_cells<semicolon>)   ANZAHL                       number(20,version<semicolon>1<semicolon>number_format_string<semicolon><semicolon>font<semicolon><semicolon>font_color<semicolon><semicolon>background_color<semicolon><semicolon>pattern_color<semicolon><semicolon>pattern_style<semicolon><semicolon>CELL_BORDER_FORMATTING<semicolon>NO<semicolon>CELL_BORDER_COLOR<semicolon><semicolon>CELL_BORDER_STYLE<semicolon><semicolon>text_alignment<semicolon>NO<semicolon>horizontal_alignment<semicolon><semicolon>vertical_alignment<semicolon><semicolon>indent<semicolon><semicolon>text_orientation<semicolon><semicolon>text_control<semicolon><semicolon>cell_protection<semicolon>NO<semicolon>hide_cells<semicolon><semicolon>lock_cells<semicolon>)
 # -------------------------------------------------------------------------
-XLS_ADO_1_DEF Kein_GST_zu_GEB_via_GZG   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   GEB_ID                       varchar(200)   GST_ID                       varchar(200)
+XLSXW_1_DEF GRUDAGEB_anzahl   xlsx_drop_sheet              No   xlsx_trunc_sheet             No   xlsx_sheet_order             ""   xlsx_freeze_end_row          ""   xlsx_names_are_positions     No   xlsx_field_names_out         Yes   xlsx_start_col               ""   xlsx_start_row               ""   xlsx_offset_col              ""   xlsx_offset_row              ""   xlsx_raster_type             PNG   xlsx_table_writer_mode       Insert   xlsx_row_id_column           ""   xlsx_protect_sheet           NO   xlsx_protect_sheet_level     <Unused>   xlsx_protect_sheet_password  <Unused>   xlsx_protect_sheet_permissions <Unused>   ANZAHL_ALT                   number(20,version<semicolon>1<semicolon>number_format_string<semicolon><semicolon>font<semicolon><semicolon>font_color<semicolon><semicolon>background_color<semicolon><semicolon>pattern_color<semicolon><semicolon>pattern_style<semicolon><semicolon>CELL_BORDER_FORMATTING<semicolon>NO<semicolon>CELL_BORDER_COLOR<semicolon><semicolon>CELL_BORDER_STYLE<semicolon><semicolon>text_alignment<semicolon>NO<semicolon>horizontal_alignment<semicolon><semicolon>vertical_alignment<semicolon><semicolon>indent<semicolon><semicolon>text_orientation<semicolon><semicolon>text_control<semicolon><semicolon>cell_protection<semicolon>NO<semicolon>hide_cells<semicolon><semicolon>lock_cells<semicolon>)   ANZAHL_NEU                   number(20,version<semicolon>1<semicolon>number_format_string<semicolon><semicolon>font<semicolon><semicolon>font_color<semicolon><semicolon>background_color<semicolon><semicolon>pattern_color<semicolon><semicolon>pattern_style<semicolon><semicolon>CELL_BORDER_FORMATTING<semicolon>NO<semicolon>CELL_BORDER_COLOR<semicolon><semicolon>CELL_BORDER_STYLE<semicolon><semicolon>text_alignment<semicolon>NO<semicolon>horizontal_alignment<semicolon><semicolon>vertical_alignment<semicolon><semicolon>indent<semicolon><semicolon>text_orientation<semicolon><semicolon>text_control<semicolon><semicolon>cell_protection<semicolon>NO<semicolon>hide_cells<semicolon><semicolon>lock_cells<semicolon>)   DIFF_ABS                     number(20,version<semicolon>1<semicolon>number_format_string<semicolon><semicolon>font<semicolon><semicolon>font_color<semicolon><semicolon>background_color<semicolon><semicolon>pattern_color<semicolon><semicolon>pattern_style<semicolon><semicolon>CELL_BORDER_FORMATTING<semicolon>NO<semicolon>CELL_BORDER_COLOR<semicolon><semicolon>CELL_BORDER_STYLE<semicolon><semicolon>text_alignment<semicolon>NO<semicolon>horizontal_alignment<semicolon><semicolon>vertical_alignment<semicolon><semicolon>indent<semicolon><semicolon>text_orientation<semicolon><semicolon>text_control<semicolon><semicolon>cell_protection<semicolon>NO<semicolon>hide_cells<semicolon><semicolon>lock_cells<semicolon>)
 # -------------------------------------------------------------------------
-XLS_ADO_1_DEF GRUDAGST_verschwunden   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   BFSNR                        double   GBKRNR                       double   ANZAHL                       double
+XLSXW_1_DEF GRUDAGST_hinzugekommen   xlsx_drop_sheet              No   xlsx_trunc_sheet             No   xlsx_sheet_order             ""   xlsx_freeze_end_row          ""   xlsx_names_are_positions     No   xlsx_field_names_out         Yes   xlsx_start_col               ""   xlsx_start_row               ""   xlsx_offset_col              ""   xlsx_offset_row              ""   xlsx_raster_type             PNG   xlsx_table_writer_mode       Insert   xlsx_row_id_column           ""   xlsx_protect_sheet           NO   xlsx_protect_sheet_level     <Unused>   xlsx_protect_sheet_password  <Unused>   xlsx_protect_sheet_permissions <Unused>   BFSNR                        number(20,version<semicolon>1<semicolon>number_format_string<semicolon><semicolon>font<semicolon><semicolon>font_color<semicolon><semicolon>background_color<semicolon><semicolon>pattern_color<semicolon><semicolon>pattern_style<semicolon><semicolon>CELL_BORDER_FORMATTING<semicolon>NO<semicolon>CELL_BORDER_COLOR<semicolon><semicolon>CELL_BORDER_STYLE<semicolon><semicolon>text_alignment<semicolon>NO<semicolon>horizontal_alignment<semicolon><semicolon>vertical_alignment<semicolon><semicolon>indent<semicolon><semicolon>text_orientation<semicolon><semicolon>text_control<semicolon><semicolon>cell_protection<semicolon>NO<semicolon>hide_cells<semicolon><semicolon>lock_cells<semicolon>)   GBKRNR                       number(20,version<semicolon>1<semicolon>number_format_string<semicolon><semicolon>font<semicolon><semicolon>font_color<semicolon><semicolon>background_color<semicolon><semicolon>pattern_color<semicolon><semicolon>pattern_style<semicolon><semicolon>CELL_BORDER_FORMATTING<semicolon>NO<semicolon>CELL_BORDER_COLOR<semicolon><semicolon>CELL_BORDER_STYLE<semicolon><semicolon>text_alignment<semicolon>NO<semicolon>horizontal_alignment<semicolon><semicolon>vertical_alignment<semicolon><semicolon>indent<semicolon><semicolon>text_orientation<semicolon><semicolon>text_control<semicolon><semicolon>cell_protection<semicolon>NO<semicolon>hide_cells<semicolon><semicolon>lock_cells<semicolon>)   ANZAHL                       number(20,version<semicolon>1<semicolon>number_format_string<semicolon><semicolon>font<semicolon><semicolon>font_color<semicolon><semicolon>background_color<semicolon><semicolon>pattern_color<semicolon><semicolon>pattern_style<semicolon><semicolon>CELL_BORDER_FORMATTING<semicolon>NO<semicolon>CELL_BORDER_COLOR<semicolon><semicolon>CELL_BORDER_STYLE<semicolon><semicolon>text_alignment<semicolon>NO<semicolon>horizontal_alignment<semicolon><semicolon>vertical_alignment<semicolon><semicolon>indent<semicolon><semicolon>text_orientation<semicolon><semicolon>text_control<semicolon><semicolon>cell_protection<semicolon>NO<semicolon>hide_cells<semicolon><semicolon>lock_cells<semicolon>)
 # -------------------------------------------------------------------------
-XLS_ADO_1_DEF GRUDAGST_hinzugekommen   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   BFSNR                        double   GBKRNR                       double   ANZAHL                       double
+XLSXW_1_DEF GRUDAGZG   xlsx_drop_sheet              No   xlsx_trunc_sheet             No   xlsx_sheet_order             ""   xlsx_freeze_end_row          ""   xlsx_names_are_positions     No   xlsx_field_names_out         Yes   xlsx_start_col               ""   xlsx_start_row               ""   xlsx_offset_col              ""   xlsx_offset_row              ""   xlsx_raster_type             PNG   xlsx_table_writer_mode       Insert   xlsx_row_id_column           ""   xlsx_protect_sheet           NO   xlsx_protect_sheet_level     <Unused>   xlsx_protect_sheet_password  <Unused>   xlsx_protect_sheet_permissions <Unused>   ANZAHL_ALT                   number(20,version<semicolon>1<semicolon>number_format_string<semicolon><semicolon>font<semicolon><semicolon>font_color<semicolon><semicolon>background_color<semicolon><semicolon>pattern_color<semicolon><semicolon>pattern_style<semicolon><semicolon>CELL_BORDER_FORMATTING<semicolon>NO<semicolon>CELL_BORDER_COLOR<semicolon><semicolon>CELL_BORDER_STYLE<semicolon><semicolon>text_alignment<semicolon>NO<semicolon>horizontal_alignment<semicolon><semicolon>vertical_alignment<semicolon><semicolon>indent<semicolon><semicolon>text_orientation<semicolon><semicolon>text_control<semicolon><semicolon>cell_protection<semicolon>NO<semicolon>hide_cells<semicolon><semicolon>lock_cells<semicolon>)   ANZAHL_NEU                   number(20,version<semicolon>1<semicolon>number_format_string<semicolon><semicolon>font<semicolon><semicolon>font_color<semicolon><semicolon>background_color<semicolon><semicolon>pattern_color<semicolon><semicolon>pattern_style<semicolon><semicolon>CELL_BORDER_FORMATTING<semicolon>NO<semicolon>CELL_BORDER_COLOR<semicolon><semicolon>CELL_BORDER_STYLE<semicolon><semicolon>text_alignment<semicolon>NO<semicolon>horizontal_alignment<semicolon><semicolon>vertical_alignment<semicolon><semicolon>indent<semicolon><semicolon>text_orientation<semicolon><semicolon>text_control<semicolon><semicolon>cell_protection<semicolon>NO<semicolon>hide_cells<semicolon><semicolon>lock_cells<semicolon>)   DIFF_ABS                     number(20,version<semicolon>1<semicolon>number_format_string<semicolon><semicolon>font<semicolon><semicolon>font_color<semicolon><semicolon>background_color<semicolon><semicolon>pattern_color<semicolon><semicolon>pattern_style<semicolon><semicolon>CELL_BORDER_FORMATTING<semicolon>NO<semicolon>CELL_BORDER_COLOR<semicolon><semicolon>CELL_BORDER_STYLE<semicolon><semicolon>text_alignment<semicolon>NO<semicolon>horizontal_alignment<semicolon><semicolon>vertical_alignment<semicolon><semicolon>indent<semicolon><semicolon>text_orientation<semicolon><semicolon>text_control<semicolon><semicolon>cell_protection<semicolon>NO<semicolon>hide_cells<semicolon><semicolon>lock_cells<semicolon>)
 # -------------------------------------------------------------------------
-XLS_ADO_1_DEF GRUDAGEB_anzahl   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   ANZAHL_ALT                   double   ANZAHL_NEU                   double   DIFF_ABS                     double
+XLSXW_1_DEF GRUDAGAD   xlsx_drop_sheet              No   xlsx_trunc_sheet             No   xlsx_sheet_order             ""   xlsx_freeze_end_row          ""   xlsx_names_are_positions     No   xlsx_field_names_out         Yes   xlsx_start_col               ""   xlsx_start_row               ""   xlsx_offset_col              ""   xlsx_offset_row              ""   xlsx_raster_type             PNG   xlsx_table_writer_mode       Insert   xlsx_row_id_column           ""   xlsx_protect_sheet           NO   xlsx_protect_sheet_level     <Unused>   xlsx_protect_sheet_password  <Unused>   xlsx_protect_sheet_permissions <Unused>   ANZAHL_ALT                   number(20,version<semicolon>1<semicolon>number_format_string<semicolon><semicolon>font<semicolon><semicolon>font_color<semicolon><semicolon>background_color<semicolon><semicolon>pattern_color<semicolon><semicolon>pattern_style<semicolon><semicolon>CELL_BORDER_FORMATTING<semicolon>NO<semicolon>CELL_BORDER_COLOR<semicolon><semicolon>CELL_BORDER_STYLE<semicolon><semicolon>text_alignment<semicolon>NO<semicolon>horizontal_alignment<semicolon><semicolon>vertical_alignment<semicolon><semicolon>indent<semicolon><semicolon>text_orientation<semicolon><semicolon>text_control<semicolon><semicolon>cell_protection<semicolon>NO<semicolon>hide_cells<semicolon><semicolon>lock_cells<semicolon>)   ANZAHL_NEU                   number(20,version<semicolon>1<semicolon>number_format_string<semicolon><semicolon>font<semicolon><semicolon>font_color<semicolon><semicolon>background_color<semicolon><semicolon>pattern_color<semicolon><semicolon>pattern_style<semicolon><semicolon>CELL_BORDER_FORMATTING<semicolon>NO<semicolon>CELL_BORDER_COLOR<semicolon><semicolon>CELL_BORDER_STYLE<semicolon><semicolon>text_alignment<semicolon>NO<semicolon>horizontal_alignment<semicolon><semicolon>vertical_alignment<semicolon><semicolon>indent<semicolon><semicolon>text_orientation<semicolon><semicolon>text_control<semicolon><semicolon>cell_protection<semicolon>NO<semicolon>hide_cells<semicolon><semicolon>lock_cells<semicolon>)   DIFF_ABS                     number(20,version<semicolon>1<semicolon>number_format_string<semicolon><semicolon>font<semicolon><semicolon>font_color<semicolon><semicolon>background_color<semicolon><semicolon>pattern_color<semicolon><semicolon>pattern_style<semicolon><semicolon>CELL_BORDER_FORMATTING<semicolon>NO<semicolon>CELL_BORDER_COLOR<semicolon><semicolon>CELL_BORDER_STYLE<semicolon><semicolon>text_alignment<semicolon>NO<semicolon>horizontal_alignment<semicolon><semicolon>vertical_alignment<semicolon><semicolon>indent<semicolon><semicolon>text_orientation<semicolon><semicolon>text_control<semicolon><semicolon>cell_protection<semicolon>NO<semicolon>hide_cells<semicolon><semicolon>lock_cells<semicolon>)
 # -------------------------------------------------------------------------
-XLS_ADO_1_DEF GRUDAGZG   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   ANZAHL_ALT                   double   ANZAHL_NEU                   double   DIFF_ABS                     double
+XLSXW_1_DEF GRUDAGEB_EGID_doppelt   xlsx_drop_sheet              No   xlsx_trunc_sheet             No   xlsx_sheet_order             ""   xlsx_freeze_end_row          ""   xlsx_names_are_positions     No   xlsx_field_names_out         Yes   xlsx_start_col               ""   xlsx_start_row               ""   xlsx_offset_col              ""   xlsx_offset_row              ""   xlsx_raster_type             PNG   xlsx_table_writer_mode       Insert   xlsx_row_id_column           ""   xlsx_protect_sheet           NO   xlsx_protect_sheet_level     <Unused>   xlsx_protect_sheet_password  <Unused>   xlsx_protect_sheet_permissions <Unused>   GWR_EGID                     number(20,version<semicolon>1<semicolon>number_format_string<semicolon><semicolon>font<semicolon><semicolon>font_color<semicolon><semicolon>background_color<semicolon><semicolon>pattern_color<semicolon><semicolon>pattern_style<semicolon><semicolon>CELL_BORDER_FORMATTING<semicolon>NO<semicolon>CELL_BORDER_COLOR<semicolon><semicolon>CELL_BORDER_STYLE<semicolon><semicolon>text_alignment<semicolon>NO<semicolon>horizontal_alignment<semicolon><semicolon>vertical_alignment<semicolon><semicolon>indent<semicolon><semicolon>text_orientation<semicolon><semicolon>text_control<semicolon><semicolon>cell_protection<semicolon>NO<semicolon>hide_cells<semicolon><semicolon>lock_cells<semicolon>)   ANZAHL                       number(20,version<semicolon>1<semicolon>number_format_string<semicolon><semicolon>font<semicolon><semicolon>font_color<semicolon><semicolon>background_color<semicolon><semicolon>pattern_color<semicolon><semicolon>pattern_style<semicolon><semicolon>CELL_BORDER_FORMATTING<semicolon>NO<semicolon>CELL_BORDER_COLOR<semicolon><semicolon>CELL_BORDER_STYLE<semicolon><semicolon>text_alignment<semicolon>NO<semicolon>horizontal_alignment<semicolon><semicolon>vertical_alignment<semicolon><semicolon>indent<semicolon><semicolon>text_orientation<semicolon><semicolon>text_control<semicolon><semicolon>cell_protection<semicolon>NO<semicolon>hide_cells<semicolon><semicolon>lock_cells<semicolon>)
 # -------------------------------------------------------------------------
-XLS_ADO_1_DEF GRUDAGAD   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   ANZAHL_ALT                   double   ANZAHL_NEU                   double   DIFF_ABS                     double
+XLSXW_1_DEF GRUDAGST_verschwunden   xlsx_drop_sheet              No   xlsx_trunc_sheet             No   xlsx_sheet_order             ""   xlsx_freeze_end_row          ""   xlsx_names_are_positions     No   xlsx_field_names_out         Yes   xlsx_start_col               ""   xlsx_start_row               ""   xlsx_offset_col              ""   xlsx_offset_row              ""   xlsx_raster_type             PNG   xlsx_table_writer_mode       Insert   xlsx_row_id_column           ""   xlsx_protect_sheet           NO   xlsx_protect_sheet_level     <Unused>   xlsx_protect_sheet_password  <Unused>   xlsx_protect_sheet_permissions <Unused>   BFSNR                        number(20,version<semicolon>1<semicolon>number_format_string<semicolon><semicolon>font<semicolon><semicolon>font_color<semicolon><semicolon>background_color<semicolon><semicolon>pattern_color<semicolon><semicolon>pattern_style<semicolon><semicolon>CELL_BORDER_FORMATTING<semicolon>NO<semicolon>CELL_BORDER_COLOR<semicolon><semicolon>CELL_BORDER_STYLE<semicolon><semicolon>text_alignment<semicolon>NO<semicolon>horizontal_alignment<semicolon><semicolon>vertical_alignment<semicolon><semicolon>indent<semicolon><semicolon>text_orientation<semicolon><semicolon>text_control<semicolon><semicolon>cell_protection<semicolon>NO<semicolon>hide_cells<semicolon><semicolon>lock_cells<semicolon>)   GBKRNR                       number(20,version<semicolon>1<semicolon>number_format_string<semicolon><semicolon>font<semicolon><semicolon>font_color<semicolon><semicolon>background_color<semicolon><semicolon>pattern_color<semicolon><semicolon>pattern_style<semicolon><semicolon>CELL_BORDER_FORMATTING<semicolon>NO<semicolon>CELL_BORDER_COLOR<semicolon><semicolon>CELL_BORDER_STYLE<semicolon><semicolon>text_alignment<semicolon>NO<semicolon>horizontal_alignment<semicolon><semicolon>vertical_alignment<semicolon><semicolon>indent<semicolon><semicolon>text_orientation<semicolon><semicolon>text_control<semicolon><semicolon>cell_protection<semicolon>NO<semicolon>hide_cells<semicolon><semicolon>lock_cells<semicolon>)   ANZAHL                       number(20,version<semicolon>1<semicolon>number_format_string<semicolon><semicolon>font<semicolon><semicolon>font_color<semicolon><semicolon>background_color<semicolon><semicolon>pattern_color<semicolon><semicolon>pattern_style<semicolon><semicolon>CELL_BORDER_FORMATTING<semicolon>NO<semicolon>CELL_BORDER_COLOR<semicolon><semicolon>CELL_BORDER_STYLE<semicolon><semicolon>text_alignment<semicolon>NO<semicolon>horizontal_alignment<semicolon><semicolon>vertical_alignment<semicolon><semicolon>indent<semicolon><semicolon>text_orientation<semicolon><semicolon>text_control<semicolon><semicolon>cell_protection<semicolon>NO<semicolon>hide_cells<semicolon><semicolon>lock_cells<semicolon>)
 # -------------------------------------------------------------------------
-XLS_ADO_1_DEF Kein_BBF_zu_GST   xls_update_key_columns       ""   xls_table_writer_mode        INHERIT_FROM_WRITER   xls_is_named_range           NO   GST_ID                       varchar(200)
+XLSXW_1_DEF Kein_BBF_zu_GST   xlsx_drop_sheet              No   xlsx_trunc_sheet             No   xlsx_sheet_order             ""   xlsx_freeze_end_row          ""   xlsx_names_are_positions     No   xlsx_field_names_out         Yes   xlsx_start_col               ""   xlsx_start_row               ""   xlsx_offset_col              ""   xlsx_offset_row              ""   xlsx_raster_type             PNG   xlsx_table_writer_mode       Insert   xlsx_row_id_column           ""   xlsx_protect_sheet           NO   xlsx_protect_sheet_level     <Unused>   xlsx_protect_sheet_password  <Unused>   xlsx_protect_sheet_permissions <Unused>   GST_ID                       string(200,version<semicolon>1<semicolon>number_format_string<semicolon><semicolon>font<semicolon><semicolon>font_color<semicolon><semicolon>background_color<semicolon><semicolon>pattern_color<semicolon><semicolon>pattern_style<semicolon><semicolon>CELL_BORDER_FORMATTING<semicolon>NO<semicolon>CELL_BORDER_COLOR<semicolon><semicolon>CELL_BORDER_STYLE<semicolon><semicolon>text_alignment<semicolon>NO<semicolon>horizontal_alignment<semicolon><semicolon>vertical_alignment<semicolon><semicolon>indent<semicolon><semicolon>text_orientation<semicolon><semicolon>text_control<semicolon><semicolon>cell_protection<semicolon>NO<semicolon>hide_cells<semicolon><semicolon>lock_cells<semicolon>)
