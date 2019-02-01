@@ -31,15 +31,10 @@ def run():
     # Der FMEWorkspaceRunner akzeptiert keine Unicode-Strings!
     # Daher müssen workspace und parameters umgewandelt werden!
     parameters = {
-        'NORM_DATABASE': str(config['NORM_TEAM']['database']),
-        'NORM_USERNAME': str(config['NORM_TEAM']['username']),
-        'NORM_PASSWORD': str(config['NORM_TEAM']['password']),
-        'VEK1_DATABASE': str(config['GEO_VEK1']['database']),
-        'VEK1_USERNAME': str(config['GEO_VEK1']['username']),
-        'VEK1_PASSWORD': str(config['GEO_VEK1']['password']),
-        'AV01_DATABASE': str(config['AV01_WORKH']['database']),
-        'AV01_USERNAME': str(config['AV01_WORKH']['username']),
-        'AV01_PASSWORD': str(config['AV01_WORKH']['password']),
+        'NORM_CONNECTIONFILE': str(config['NORM_TEAM']['connection_file']),
+        'AV01_CONNECTIONFILE': str(config['AV01_WORK']['connection_file']),
+        'GPS1_CONNECTIONFILE': str(config['GPS1_WORKH']['connection_file']),
+        'VEK1_CONNECTIONFILE': str(config['GEO_VEK1']['connection_file']),
         'LOGFILE': str(fme_logfile)
     }
     try:
