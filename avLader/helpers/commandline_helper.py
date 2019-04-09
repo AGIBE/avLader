@@ -10,6 +10,7 @@ import avLader.scripts.gebadr_import
 import avLader.scripts.fds_import
 import avLader.helpers.release_helper
 import avLader.scripts.oereb_liegenschaften
+import avLader.scripts.oereb_adressen
 
 def run_itf_download(args):
     avLader.scripts.itf_download.run()
@@ -54,6 +55,10 @@ def run_gebadr_release(args):
 def run_oereb_liegenschaften(args):
     avLader.scripts.oereb_liegenschaften.run()
     print("ÖREB-Liegenschaften SUCCESSFUL!")
+
+def run_oereb_adressen(args):
+    avLader.scripts.oereb_adressen.run()
+    print("ÖREB-Adressen SUCCESSFUL!")
 
 def main():
     version_text = "avLader v" + __version__
@@ -103,6 +108,10 @@ def main():
     # OEREB_LIEGENSCHAFTEN-Befehl
     oereb_liegenschaften_parser = subparsers.add_parser('oereb_liegenschaften', help='Aktualisiert den ÖREBK-Liegenschaftslayer.')
     oereb_liegenschaften_parser.set_defaults(func=run_oereb_liegenschaften)
+
+    # OEREB_ADRESSEN-Befehl
+    oereb_adressen_parser = subparsers.add_parser('oereb_adressen', help='Aktualisiert den ÖREBK-Adresslayer.')
+    oereb_adressen_parser.set_defaults(func=run_oereb_adressen)
     
     args = parser.parse_args()
     args.func(args)
