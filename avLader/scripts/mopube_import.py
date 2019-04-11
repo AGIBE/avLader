@@ -11,13 +11,6 @@ import sys
 import shutil
 import datetime
 
-def download_statistics(config, logger):
-    statistics_filenames = config['ZAV_FTP']['statistics_files']
-    logger.info("Statistik-Files werden heruntergeladen.")
-    for statistics_filename in statistics_filenames:
-        logger.info("Lade herunter " + statistics_filename)
-        avLader.helpers.ftp_helper.download_statsfile(statistics_filename, config, logger)
-
 def run():
     config = avLader.helpers.config_helper.get_config('mopube_import')
     logger = config['LOGGING']['logger']
@@ -91,8 +84,6 @@ def run():
         logger.info("FTP-Proxy wird gesetzt!")
         avLader.helpers.ftp_proxy.setup_http_proxy(config['PROXY']['host'], int(config['PROXY']['port']))
     
-    download_statistics(config, logger)
-     
     source_fgdb = avLader.helpers.ftp_helper.download_fgdb(config['ZAV_FTP']['mopube_filename'], config, logger)
       
     downloaded_zip = os.path.join(config['DIRECTORIES']['local_data_dir'], config['ZAV_FTP']['mopube_filename'])
