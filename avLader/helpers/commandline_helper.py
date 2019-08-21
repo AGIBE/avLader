@@ -11,6 +11,7 @@ import avLader.scripts.fds_import
 import avLader.helpers.release_helper
 import avLader.scripts.oereb_liegenschaften
 import avLader.scripts.oereb_adressen
+import avLader.scripts.lk_import
 
 def run_itf_download(args):
     avLader.scripts.itf_download.run()
@@ -59,6 +60,18 @@ def run_oereb_liegenschaften(args):
 def run_oereb_adressen(args):
     avLader.scripts.oereb_adressen.run()
     print("ÖREB-Adressen SUCCESSFUL!")
+    
+def run_lk_import(args):
+    avLader.scripts.lk_import.run()
+    print("LK-Import SUCCESSFUL!")
+
+def run_lkmeta_release(args):
+    avLader.helpers.release_helper.release('LKMETA')
+    print("LKMETA-Release SUCCESSFUL!")
+    
+def run_lkmap_release(args):
+    avLader.helpers.release_helper.release('LKMAP')
+    print("LKMAP-Release SUCCESSFUL!")
 
 def main():
     version_text = "avLader v" + __version__
@@ -112,6 +125,18 @@ def main():
     # OEREB_ADRESSEN-Befehl
     oereb_adressen_parser = subparsers.add_parser('oereb_adressen', help='Aktualisiert den ÖREBK-Adresslayer.')
     oereb_adressen_parser.set_defaults(func=run_oereb_adressen)
+    
+    # LK_IMPORT-Befehl
+    lk_import_parser = subparsers.add_parser('lk_import', help='Importiert LKMETA und LKMAP von der Rampe ins NORM.')
+    lk_import_parser.set_defaults(func=run_lk_import)
+    
+    # LKMETA_RELEASE-Befehl
+    gebadr_release_parser = subparsers.add_parser('lkmeta_release', help='Gibt LKMETA frei für den iLader-Import.')
+    gebadr_release_parser.set_defaults(func=run_lkmeta_release)
+    
+    # LKMAP_RELEASE-Befehl
+    gebadr_release_parser = subparsers.add_parser('lkmap_release', help='Gibt LKMAP frei für den iLader-Import.')
+    gebadr_release_parser.set_defaults(func=run_lkmap_release)
     
     args = parser.parse_args()
     args.func(args)

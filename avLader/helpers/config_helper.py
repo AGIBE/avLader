@@ -74,6 +74,7 @@ def get_config(subcommand):
     create_connection_string(config, 'AV01_WORK')
     create_connection_string(config, 'GEODB_DD_TEAM')
     create_connection_string(config, 'NORM_TEAM')
+    create_connection_string(config, 'GEODB_VEK2')
     
     # Connection-Files erstellen
     config['AV01_WORK']['connection_file'] = avLader.helpers.connection_helper.create_connection_files(config, 'AV01_WORK', logger)
