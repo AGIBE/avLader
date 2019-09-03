@@ -85,18 +85,20 @@ def run():
     # Der FMEWorkspaceRunner akzeptiert keine Unicode-Strings!
     # Daher müssen workspace und parameters umgewandelt werden!
     parameters = {
-        'SourceDataset_XLSXR_5': str(config['LK_PARAMETER']['lk_meta_wt']), 
-        'DestDataset_ESRISHAPE': str(config['LK_PARAMETER']['lk_stand']), 
+        'SourceDataset_XLSXR_5': str(config['LK_PARAMETER']['lk_meta_wt']),
         'SourceDataset_XLSXR_4': str(config['LK_PARAMETER']['lk_etapp']),
+        'LKBE_gpkg': str(os.path.join(config['LK_PARAMETER']['lk_gpkg'], config['LK_PARAMETER']['lk_gpkg_file'])),
+        'DestDataset_GEODATABASE_FILE': str(config['LK_PARAMETER']['lk_gdb_stand']),
+        'DestDataset_XLSXW': str(config['LK_PARAMETER']['lk_xlsx_stand']),
+        'SourceDataset_XLSXR': str(config['LK_PARAMETER']['lk_xlsx_stand']),
+        'LOGFILE': str(fme_logfile),
+        'VEK1_CONNECTIONFILE': str(config['GEO_VEK1']['connection_file']),
         'POSTGIS_DB': str(config['NORM_TEAM_PG']['database']),
         'POSTGIS_HOST': str(config['NORM_TEAM_PG']['host']),
-        'POSTGIS_PORT': str(config['NORM_TEAM_PG']['port']),
-        'POSTGIS_USER': str(config['NORM_TEAM_PG']['username']),
         'POSTGIS_PASSWORD': str(config['NORM_TEAM_PG']['password']),
-        'LKBE_gpkg': str(os.path.join(config['LK_PARAMETER']['lk_gpkg'], config['LK_PARAMETER']['lk_gpkg_file'])),
-        'NORM_CONNECTIONFILE': str(config['NORM_TEAM']['connection_file']),
-        'VEK1_CONNECTIONFILE': str(config['GEO_VEK1']['connection_file']),
-        'LOGFILE': str(fme_logfile)
+        'POSTGIS_PORT': str(config['NORM_TEAM_PG']['port']),
+        'POSTGIS_USER': str(config['NORM_TEAM_PG']['username']),        
+        'NORM_CONNECTIONFILE': str(config['NORM_TEAM']['connection_file'])
     }
     try:
         runner.runWithParameters(str(fme_script), parameters)
