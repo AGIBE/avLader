@@ -75,7 +75,7 @@ def check_count_features(config, logger, gp, attr_group = [], quelle_pg = False,
 		#Div by zero verhindern:
 		if(count_norm == 0 or count_norm is None) and count_vek2 == 0:
 			division = 0
-		elif count_norm == 0 or count_norm is None:
+		elif count_norm == 0 or count_norm is None or count_vek2 == 0:
 			division = -100
 		else:
 			division = 100*count_norm/count_vek2-100
