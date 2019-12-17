@@ -144,6 +144,8 @@ def check_count_features(config, logger, gp, attr_group = [], quelle_pg = False,
 						line_gem.append(value[1])
 						# Entsprechende Wert in norm
 						value_norm = [item for item in count_norm if item[0] == value[0]]
+						if value_norm == []:
+							value_norm = [(value[0], 0)]
 						line_gem.append(value_norm[0][1])
 						divison_gem = 100*value_norm[0][1]/value[1]-100
 						line_gem.append(divison_gem)
