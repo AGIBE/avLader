@@ -14,6 +14,7 @@ def readSQL(connection_string, sql_statement):
 
 def writeSQL(connection_string, sql_statement):
     with cx_Oracle.connect(connection_string) as conn:
+        conn.autocommit = True
         cur = conn.cursor()
         cur.execute(sql_statement)
         
