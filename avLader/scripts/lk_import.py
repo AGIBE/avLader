@@ -142,7 +142,7 @@ def run():
     
     # Check ausführen
     gp = 'LKMETA'
-    avLader.helpers.qacheck_helper.check_count_features(config, logger, gp, quelle_pg = False,  gemeinde = True)
+    avLader.helpers.qacheck_helper.check_count_features(config, logger, gp, quelle_pg = False,  gemeinde = False)
     gp = 'LKMAP'
     avLader.helpers.qacheck_helper.check_count_features(config, logger, gp, quelle_pg = True, gemeinde = True)
     
