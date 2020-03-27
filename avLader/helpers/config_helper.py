@@ -18,7 +18,7 @@ def decrypt_passwords(section, key):
     # Hilfsklasse für die Entschlüsselung
     
     # Annahme: alle Keys, die "password" heissen, enthalten zu entschlüsselnde Passwörter
-    crypter = avLader.helpers.crypto_helper.Crypter()
+    crypter = avLader.helpers.crypto_helper.Crypter(key_envvar='AVIMPORTSECRETPRO')
     if key == "password":
         encrypted_password = section[key]
         decrypted_password = crypter.decrypt(encrypted_password)

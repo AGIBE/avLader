@@ -1,30 +1,35 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import, division, print_function, unicode_literals
-import keyczar.keyczar
+from cryptography.fernet import Fernet
 import os
 
 class Crypter(object):
     '''
-    Hilfsklasse für die Ent- und Verschlüsselung der Passwörter
-    inspiriert durch: https://code.google.com/p/keyczar/wiki/SamplePythonUsage
-    Die Schlüssel werden mit dem Keyczar-Tool (jar-File) erzeugt
+    Hilfsklasse für die Ent- und Verschlüsselung der Passwörter sowie
+    für die Erstellung von Schlüsseln
+    Basiert auf der cryptography-Library: https://cryptography.io/en/latest/fernet/
+    Der zu verwendende Schlüssel wird über eine Umgebungsvariable übergeben.
     '''
     
     @staticmethod
-    def _read(loc):
+    def generate_key():
+        return Fernet.generate_key().decode("utf-8")
+
+    def __init__(self, key_envvar='AGILIBSECRET'):
         '''
-        statische Methode, die den Schlüssel einliest
-        :param loc: Ordner, in dem der Schlüssel liegt
+        @summary: Konstruktor
+        :param key_envvar (string): Name der Umgebungsvariable, in der der Schlüssel für die Verschlüsselung abgelegt ist. (default: AGILIBSECRET)
+        """
         '''
-        return keyczar.keyczar.Crypter.Read(loc)
-    
-    def __init__(self):
-        '''
-        Konstruktor
-        '''
-        self.key_directory = os.environ['AVIMPORTSECRET']
-        
-        self.crypt = self._read(self.key_directory)
+        self.key_envvar = key_envvar
+        if os.getenv(self.key_envvar, None) is not None:
+            self.key = os.environ[key_envvar].encode("utf-8")
+            self.fernet = Fernet(self.key)
+        else:
+            raise OSError(
+                "Die Umgebungsvariable %s wurde nicht gefunden." %
+                (self.key_envvar)
+            )
         
     def encrypt(self, data):
         '''
@@ -32,7 +37,9 @@ class Crypter(object):
         
         :param data: zu verschlüsselnder String
         '''
-        return self.crypt.Encrypt(data)
+        # encode/decode ist notwendig, weil Fernet mit bytes arbeitet und nicht mit unicode
+        encrypted_bytes = self.fernet.encrypt(data.encode("utf-8"))
+        return encrypted_bytes.decode("utf-8")
     
     def decrypt(self, data):
         '''
@@ -40,4 +47,6 @@ class Crypter(object):
         
         :param data: zu entschlüsselnder String
         '''
-        return self.crypt.Decrypt(data).decode("iso-8859-1")
+        # encode/decode ist notwendig, weil Fernet mit bytes arbeitet und nicht mit unicode
+        decrypted_bytes = self.fernet.decrypt(data.encode("utf-8"))
+        return decrypted_bytes.decode("utf-8")
