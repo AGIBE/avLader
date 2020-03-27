@@ -75,7 +75,8 @@ def run_lkmap_release(args):
 
 def main():
     version_text = "avLader v" + __version__
-    parser = argparse.ArgumentParser(description="Kommandozeile fuer den avLader. Führt die verschiedenen Tasks des wöchentlichen AV-Imports aus.", prog="avLader.exe", version=version_text)
+    parser = argparse.ArgumentParser(description="Kommandozeile fuer den avLader. Führt die verschiedenen Tasks des wöchentlichen AV-Imports aus.", prog="avLader.exe")
+    parser.add_argument('--version', '-v', action='version', version=version_text)
     subparsers = parser.add_subparsers(help='Folgende Befehle sind verfuegbar:')
     
     # ITF_DOWNLOAD-Befehl
