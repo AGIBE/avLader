@@ -35,14 +35,14 @@ class ProxySock :
                 self.socket = socket.socket_formal(family, socktype, proto)
                 self.socket.connect(sockaddr)
                     
-            except socket.error, msg:
+            except (socket.error) as msg:
                 if self.socket:
                     self.socket.close()
                 self.socket = None
                 continue
             break
         if not self.socket :
-            raise socket.error, msg 
+            raise socket.error
         
         # Ask him to create a tunnel connection to the target host/port
         self.socket.send(
