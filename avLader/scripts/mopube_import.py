@@ -126,7 +126,7 @@ def run():
                     if arcpy.TestSchemaLock(target_object):
                         logger.info("Grid Size wird berechnet.")
                         grid_size = avLader.helpers.index_helper.calculate_grid_size(source_object)
-                        logger.info("Grid Size ist: " + unicode(grid_size))
+                        logger.info("Grid Size ist: " + str(grid_size))
                         if grid_size > 0:
                             arcpy.AddSpatialIndex_management(target_object, grid_size)
                         else:
@@ -137,9 +137,9 @@ def run():
                    
                 logger.info("Zähle Records in der Quelle und im Ziel.")
                 source_count = int(arcpy.GetCount_management(source_object)[0])
-                logger.info("Anzahl Records in der Quelle: " + unicode(source_count))
+                logger.info("Anzahl Records in der Quelle: " + str(source_count))
                 target_count = int(arcpy.GetCount_management(target_object)[0])
-                logger.info("Anzahl Records im Ziel: " + unicode(target_count))
+                logger.info("Anzahl Records im Ziel: " + str(target_count))
                    
                 if source_count==target_count:
                     logger.info("Anzahl Records identisch")
