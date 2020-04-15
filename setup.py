@@ -13,11 +13,11 @@ setup(
       # .fmw-Files werden von Python nicht erkannt. Deshalb müssen sie explizit als Package-Inhalt aufgelistet werden.
       package_data={'': ["*.fmw"]},
       # Abhängigkeiten
-      install_requires = ["configobj==5.0.6", "cx-Oracle>=5.1.3", "python-keyczar==0.715", "chromalog==1.0.4", "openpyxl>=2.6","psycopg2>=2.7"],
+      install_requires = ["AGILib>=0.3"],
       # PyPI metadata
-      author = "Peter Schär",
-      author_email = "peter.schaer@bve.be.ch",
-      description = "Import-Applikation AV-Daten Kanton Bern",
+      author = "Peter Schär, Martina Köhli",
+      author_email = "peter.schaer@be.ch,martina.koehli@be.ch",
+      description = "Import-Applikation AV- und LK-Daten Kanton Bern",
       url = "http://www.be.ch/geoportal",
       # https://pythonhosted.org/setuptools/setuptools.html#automatic-script-creation
     entry_points={
