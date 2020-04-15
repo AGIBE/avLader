@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import, division, print_function, unicode_literals
-import avLader.helpers.config_helper
-import avLader.helpers.connection_helper
-import avLader.helpers.ftp_proxy
+import avLader.helpers.helper
+import AGILib.folder_files
 import ftplib
 import os
 import sys
@@ -82,13 +81,10 @@ def get_itf_files_from_csv(csv_file):
     return (download_itf_files, download_log_files)
 
 def run():
-    config = avLader.helpers.config_helper.get_config('itf_download')
+    subcommand = 'itf_download'
+    config = avLader.helpers.helper.get_config(subcommand)
     logger = config['LOGGING']['logger']
-
-    # Download vom FTP-Server funktioniert nur via Proxy
-    if config['ZAV_FTP']['use_proxy'] == "1":
-        logger.info("FTP-Proxy wird gesetzt!")
-        avLader.helpers.ftp_proxy.setup_http_proxy(config['PROXY']['host'], int(config['PROXY']['port']))
+    logger.info("%s wird ausgeführt." % (subcommand))
 
     logger.info("Statistik-Download (für AI) wird ausgeführt.")
     statistik_files = config['ZAV_FTP']['statistics_files']
@@ -130,4 +126,4 @@ def run():
         logger.error("Es werden keine AVCH-Files heruntergeladen.")
         sys.exit()
 
-    avLader.helpers.connection_helper.delete_connection_files(config, logger)
+    avLader.helpers.helper.delete_connection_files(config, logger)

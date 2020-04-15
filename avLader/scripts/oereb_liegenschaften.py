@@ -1,33 +1,25 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import, division, print_function, unicode_literals
-import avLader.helpers.config_helper
-import avLader.helpers.sql_helper
-import fmeobjects
-import sys
+import avLader.helpers.helper
+import AGILib.connection
 import os
 
-def get_avdate(sysdate_string, connection_string):
+def get_avdate(sysdate_string, connection):
 
     avdate_sql = "select to_char(" + sysdate_string + ", 'YYYYMMDD') from dual"
-    avdate_result = avLader.helpers.sql_helper.readSQL(connection_string, avdate_sql)
+    avdate_result = connection.db_read(avdate_sql)
 
     return avdate_result[0][0]
 
 def run():
-    config = avLader.helpers.config_helper.get_config('oereb_liegenschaften')
-    
+    subcommand = 'oereb_liegenschaften'
+    config = avLader.helpers.helper.get_config(subcommand)
     logger = config['LOGGING']['logger']
-    logger.info("ÖREB-Liegenschaftslayer wird aktualisiert.")
+    logger.info("%s wird ausgeführt." % (subcommand))
 
     fme_script = os.path.splitext(__file__)[0] + ".fmw"
-    fme_logfile = avLader.helpers.fme_helper.prepare_fme_log(fme_script, config['LOGGING']['log_directory'])
+    fme_script_logfile = os.path.join(config['LOGGING']['log_directory'], subcommand + "_fme.log")
 
-    logger.info("Script " +  fme_script + " wird ausgeführt.")
-    logger.info("Das FME-Logfile heisst: " + fme_logfile)
-    
-    runner = fmeobjects.FMEWorkspaceRunner()
-    # Der FMEWorkspaceRunner akzeptiert keine Unicode-Strings!
-    # Daher müssen workspace und parameters umgewandelt werden!
     parameters = {
         'TEAM_CONNECTIONFILE': str(config['NORM_TEAM']['connection_file']),
         'TEAM_DATABASE': str(config['NORM_TEAM']['database']),
@@ -45,15 +37,13 @@ def run():
         'OEREB_PG_HOST': str(config['OEREB_VEK2_PG']['host']),
         'OEREB_PG_PORT': str(config['OEREB_VEK2_PG']['port']),
         'WHERE_CLAUSE': str(config['OEREB']['dipanu_where_clause']),
-        'AV_DATE': get_avdate(config['NACHFUEHRUNG']['mopube'], config['NORM_TEAM']['connection_string']),
-        'LOGFILE': str(fme_logfile)
+        'AV_DATE': get_avdate(config['NACHFUEHRUNG']['mopube'], config['NORM_TEAM']['connection'])
     }
-    try:
-        runner.runWithParameters(str(fme_script), parameters)
-    except fmeobjects.FMEException as ex:
-        logger.error("FME-Workbench " + fme_script + " konnte nicht ausgeführt werden!")
-        logger.error(ex)
-        logger.error("Import wird abgebrochen!")
-        sys.exit()    
+
+    logger.info("Script " +  fme_script + " wird ausgeführt.")
+    logger.info("Das FME-Logfile heisst: " + fme_script_logfile)
+
+    fme_runner = AGILib.fme.FMERunner(fme_workbench=fme_script, fme_workbench_parameters=parameters, fme_logfile=fme_script_logfile, fme_logfile_archive=True)
+    fme_runner.run()    
     
-    avLader.helpers.connection_helper.delete_connection_files(config, logger)
+    avLader.helpers.helper.delete_connection_files(config, logger)

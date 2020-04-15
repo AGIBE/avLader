@@ -1,15 +1,12 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import, division, print_function, unicode_literals
-import avLader.helpers.config_helper
-import avLader.helpers.connection_helper
-import avLader.helpers.ftp_helper
-import avLader.helpers.index_helper
+import avLader.helpers.helper
 import os
 import arcpy
 import sys
 
 def run():
-    config = avLader.helpers.config_helper.get_config('fds_import')
+    config = avLader.helpers.helper.get_config('fds_import')
     logger = config['LOGGING']['logger']
     logger.info("FDS-Import wird ausgeführt.")
     
@@ -205,78 +202,18 @@ def run():
     'TS_ToleranzstufePos'
     ]
     
-    # Download vom FTP-Server funktioniert nur via Proxy
-    if config['ZAV_FTP']['use_proxy'] == "1":
-        logger.info("FTP-Proxy wird gesetzt!")
-        avLader.helpers.ftp_proxy.setup_http_proxy(config['PROXY']['host'], int(config['PROXY']['port']))
+    fds_zipfile = config['ZAV_FTP']['fds_filename']
+    downloaded_zip = os.path.join(config['DIRECTORIES']['local_data_dir'], fds_zipfile)
+    source_fgdb = os.path.splitext(downloaded_zip)[0]
+
+    avLader.helpers.helper.download_zav_fgdb(fds_zipfile, downloaded_zip, source_fgdb, config)
     
-    source_fgdb = avLader.helpers.ftp_helper.download_fgdb(config['ZAV_FTP']['fds_filename'], config, logger)
     target_sde = config['AV01_WORK']['connection_file']
     
     for fds_object in fds_objects:
         logger.info("Importiere " + fds_object)
         source_object = os.path.join(source_fgdb, fds_object)
         target_object = os.path.join(target_sde, config['AV01_WORK']['username'] + "." + fds_object)
- 
-        needs_spatial_index = False
-        if arcpy.Describe(target_object).datasetType == "FeatureClass":
-            needs_spatial_index = True
-         
-        if arcpy.Exists(source_object):
-            if arcpy.Exists(target_object):
- 
-                # Räumlichen Index entfernen
-                if needs_spatial_index and arcpy.Describe(target_object).hasSpatialIndex:
-                    logger.info("Spatial Index wird entfernt.")
-                    if arcpy.TestSchemaLock(target_object):
-                        arcpy.RemoveSpatialIndex_management(target_object)
-                        logger.info("Spatial Index erfolgreich entfernt.")
-                    else:
-                        logger.warn("Spatial Index konnte wegen eines Locks nicht entfernt werden.")
- 
-                logger.info("Truncating " + target_object)
-                arcpy.TruncateTable_management(target_object)
-                 
-                logger.info("Appending " + source_object)
-                arcpy.Append_management(source_object, target_object, "TEST")
- 
-                # Räumlichen Index erstellen
-                if needs_spatial_index:
-                    logger.info("Spatial Index wird erstellt.")
-                    if arcpy.TestSchemaLock(target_object):
-                        logger.info("Grid Size wird berechnet.")
-                        grid_size = avLader.helpers.index_helper.calculate_grid_size(source_object)
-                        logger.info("Grid Size ist: " + unicode(grid_size))
-                        if grid_size > 0:
-                            arcpy.AddSpatialIndex_management(target_object, grid_size)
-                        else:
-                            arcpy.AddSpatialIndex_management(target_object)
-                        logger.info("Spatial Index erfolgreich erstellt.")
-                    else:
-                        logger.warn("Spatial Index konnte wegen eines Locks nicht erstellt werden.")
-                 
-                logger.info("Zähle Records in der Quelle und im Ziel.")
-                source_count = int(arcpy.GetCount_management(source_object)[0])
-                logger.info("Anzahl Records in der Quelle: " + unicode(source_count))
-                target_count = int(arcpy.GetCount_management(target_object)[0])
-                logger.info("Anzahl Records im Ziel: " + unicode(target_count))
-                  
-                if source_count==target_count:
-                    logger.info("Anzahl Records identisch")
-                else:
-                    logger.error("Anzahl Records nicht identisch. Ebene " + fds_object)
-                    logger.error("Import wird abgebrochen.")
-                    avLader.helpers.connection_helper.delete_connection_files(config, logger)
-                    sys.exit() 
-            else:
-                logger.error("Ziel-Objekt " + target_object + " existiert nicht.")
-                logger.error("Import wird abgebrochen.")
-                avLader.helpers.connection_helper.delete_connection_files(config, logger)
-                sys.exit()
-        else:
-            logger.error("Quell-Objekt " + source_object + " existiert nicht.")
-            logger.error("Import wird abgebrochen.")
-            avLader.helpers.connection_helper.delete_connection_files(config, logger)
-            sys.exit()
+        avLader.helpers.helper.append(object=fds_object, source_object=source_object, target_object=target_object, config=config)
     
-    avLader.helpers.connection_helper.delete_connection_files(config, logger)
+    avLader.helpers.helper.delete_connection_files(config, logger)

@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import, division, print_function, unicode_literals
-import avLader.helpers.config_helper
-import avLader.helpers.connection_helper
+import avLader.helpers.helper
 import avLader.helpers.qacheck_helper
+import AGILib.fme
 import os
 import sys
 import ftplib
 import zipfile
-import fmeobjects
 
 def download_files(source_dir, target_dir, config, logger, file_to_download):
     
@@ -59,14 +58,10 @@ def unzip_zip(zip_file, config, logger):
         avzip.extractall(config['LK_PARAMETER']['lk_gpkg'])
 
 def run():
-    config = avLader.helpers.config_helper.get_config('lk_import')
+    subcommand = 'lk_import'
+    config = avLader.helpers.helper.get_config(subcommand)
     logger = config['LOGGING']['logger']
-    logger.info("LK-Import wird ausgeführt.")
-    
-    # Download vom FTP-Server funktioniert nur via Proxy
-    if config['LK_FTP']['use_proxy'] == "1":
-        logger.info("FTP-Proxy wird gesetzt!")
-        avLader.helpers.ftp_proxy.setup_http_proxy(config['PROXY']['host'], int(config['PROXY']['port']))
+    logger.info("%s wird ausgeführt." % (subcommand))
     
     # Download des GPKG
     logger.info("GPKG-Download für LK wird ausgeführt.")
@@ -76,14 +71,8 @@ def run():
     # FME-Skripte
     # FME 1: LKMETA_gpkg2Norm: Schreibt die LKMETA-Daten vom Geopackage aufs NORM
     fme_script = os.path.splitext(__file__)[0] + "_1.fmw"
-    fme_logfile = avLader.helpers.fme_helper.prepare_fme_log(fme_script, config['LOGGING']['log_directory'])
-    
-    logger.info("Script " +  fme_script + " wird ausgeführt.")
-    logger.info("Das FME-Logfile heisst: " + fme_logfile)
-    
-    runner = fmeobjects.FMEWorkspaceRunner()
-    # Der FMEWorkspaceRunner akzeptiert keine Unicode-Strings!
-    # Daher müssen workspace und parameters umgewandelt werden!
+    fme_script_logfile = os.path.join(config['LOGGING']['log_directory'], subcommand + "_1_fme.log")
+
     parameters = {
         'SourceDataset_XLSXR_5': str(config['LK_PARAMETER']['lk_meta_wt']),
         'SourceDataset_XLSXR_4': str(config['LK_PARAMETER']['lk_etapp']),
@@ -91,7 +80,6 @@ def run():
         'DestDataset_GEODATABASE_FILE': str(config['LK_PARAMETER']['lk_gdb_stand']),
         'DestDataset_XLSXW': str(config['LK_PARAMETER']['lk_xlsx_stand']),
         'SourceDataset_XLSXR': str(config['LK_PARAMETER']['lk_xlsx_stand']),
-        'LOGFILE': str(fme_logfile),
         'VEK1_CONNECTIONFILE': str(config['GEO_VEK1']['connection_file']),
         'POSTGIS_DB': str(config['NORM_TEAM_PG']['database']),
         'POSTGIS_HOST': str(config['NORM_TEAM_PG']['host']),
@@ -100,29 +88,20 @@ def run():
         'POSTGIS_USER': str(config['NORM_TEAM_PG']['username']),        
         'NORM_CONNECTIONFILE': str(config['NORM_TEAM']['connection_file'])
     }
-    try:
-        runner.runWithParameters(str(fme_script), parameters)
-        pass
-    except fmeobjects.FMEException as ex:
-        logger.error("FME-Workbench " + fme_script + " konnte nicht ausgeführt werden!")
-        logger.error(ex)
-        logger.error("Import wird abgebrochen!")
-        sys.exit()
+
+    logger.info("Script " +  fme_script + " wird ausgeführt.")
+    logger.info("Das FME-Logfile heisst: " + fme_script_logfile)
+    
+    fme_runner = AGILib.fme.FMERunner(fme_workbench=fme_script, fme_workbench_parameters=parameters, fme_logfile=fme_script_logfile, fme_logfile_archive=True)
+    fme_runner.run()    
 
     # FME 2: LKMAP_geopackage_view2fNorm: Schreibt die LKMAP-Daten vom Geopackage aufs NORM
-    fme_script = os.path.splitext(__file__)[0] + "_2.fmw"
-    fme_logfile = avLader.helpers.fme_helper.prepare_fme_log(fme_script, config['LOGGING']['log_directory'])
-    
-    logger.info("Script " +  fme_script + " wird ausgeführt.")
-    logger.info("Das FME-Logfile heisst: " + fme_logfile)
-    
-    runner = fmeobjects.FMEWorkspaceRunner()
-    # Der FMEWorkspaceRunner akzeptiert keine Unicode-Strings!
-    # Daher müssen workspace und parameters umgewandelt werden!
-    parameters = {
+    fme_script2 = os.path.splitext(__file__)[0] + "_2.fmw"
+    fme_script_logfile2 = os.path.join(config['LOGGING']['log_directory'], subcommand + "_2_fme.log")
+
+    parameters2 = {
         'SourceDataset_XLSXR': str(config['LK_PARAMETER']['lk_map_wt']),
         'LKBE_gpkg': str(os.path.join(config['LK_PARAMETER']['lk_gpkg'], config['LK_PARAMETER']['lk_gpkg_file'])),
-        'LOGFILE': str(fme_logfile),
         'POSTGIS_DB': str(config['NORM_TEAM_PG']['database']),
         'POSTGIS_HOST': str(config['NORM_TEAM_PG']['host']),
         'POSTGIS_PORT': str(config['NORM_TEAM_PG']['port']),
@@ -130,20 +109,17 @@ def run():
         'POSTGIS_PASSWORD': str(config['NORM_TEAM_PG']['password']),
         'NORM_CONNECTIONFILE': str(config['NORM_TEAM']['connection_file'])
     }
-    try:
-        runner.runWithParameters(str(fme_script), parameters)
-        pass
-    except fmeobjects.FMEException as ex:
-        logger.error("FME-Workbench " + fme_script + " konnte nicht ausgeführt werden!")
-        logger.error(ex)
-        logger.error("Import wird abgebrochen!")
-        sys.exit()
+
+    logger.info("Script " +  fme_script2 + " wird ausgeführt.")
+    logger.info("Das FME-Logfile heisst: " + fme_script_logfile2)
     
-    
+    fme_runner = AGILib.fme.FMERunner(fme_workbench=fme_script2, fme_workbench_parameters=parameters2, fme_logfile=fme_script_logfile2, fme_logfile_archive=True)
+    fme_runner.run()    
+
     # Check ausführen
     gp = 'LKMETA'
     avLader.helpers.qacheck_helper.check_count_features(config, logger, gp, quelle_pg = False,  gemeinde = False)
     gp = 'LKMAP'
     avLader.helpers.qacheck_helper.check_count_features(config, logger, gp, quelle_pg = True, gemeinde = True)
     
-    avLader.helpers.connection_helper.delete_connection_files(config, logger)
+    avLader.helpers.helper.delete_connection_files(config, logger)

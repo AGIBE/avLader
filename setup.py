@@ -22,8 +22,8 @@ setup(
       # https://pythonhosted.org/setuptools/setuptools.html#automatic-script-creation
     entry_points={
          'console_scripts': [
-              'avLader = avLader.helpers.commandline_helper:main',
-              'al = avLader.helpers.commandline_helper:main'
+              'avLader = avLader.helpers.commandline:main',
+              'al = avLader.helpers.commandline:main'
           ]
     }
 )
