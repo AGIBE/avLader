@@ -2,63 +2,11 @@
 from __future__ import absolute_import, division, print_function, unicode_literals
 import avLader.helpers.helper
 import AGILib.folder_files
-import ftplib
+import AGILib.downloader
 import os
 import sys
 import datetime
 import codecs
-
-def download_files(source_dir, target_dir, config, logger, files_to_download=None):
-    
-    logger.info("Download-Verzeichnis: "+ target_dir)
-
-    ftp_host = config['ZAV_FTP']['host']
-    ftp_username = config['ZAV_FTP']['username']
-    ftp_password = config['ZAV_FTP']['password']
-
-    logger.info("Verbinde mit dem FTP-Server.")
-    ftp = ftplib.FTP(ftp_host, ftp_username, ftp_password)
-    logger.info("Wechsle ins FTP-Verzeichnis " + source_dir)
-    ftp.cwd(source_dir)
-    logger.info("Hole Liste aller Files.")
-    ftp_files = ftp.nlst()
-    
-    if len(ftp_files) > 0:
-        if os.path.exists(target_dir):
-            logger.info("Leere Download-Verzeichnis.")
-            clean_download_dir(target_dir, logger)
-        else:
-            logger.info("Download-Verzeichnis existiert nicht. Es wird erstellt.")
-            os.makedirs(target_dir)
-        
-        if files_to_download is not None:
-            logger.info("Lade nur bestimmte Files herunter.")
-            for file_to_download in files_to_download:
-                logger.info(file_to_download)
-                if file_to_download in ftp_files:
-                    downloaded_file = os.path.join(target_dir, file_to_download) 
-                    ftp.retrbinary('RETR ' + file_to_download, open(downloaded_file,'wb').write)
-                else:
-                    logger.warning("Datei nicht gefunden. Download nicht möglich.")
-        else:
-            logger.info("Keine Liste mit herunterzuladenden Files vorhanden. Lade sämtliche Files im Verzeichnis herunter.")
-            for download_file in ftp_files:
-                logger.info(download_file)
-                downloaded_file = os.path.join(target_dir, download_file) 
-                ftp.retrbinary('RETR ' + download_file, open(downloaded_file,'wb').write)
-        ftp.quit()
-    else:
-        ftp.quit()
-        logger.error("Die Liste der herunterzuladenden Dateien konnte nicht erstellt werden.")
-        sys.exit()
-
-def clean_download_dir(download_dir, logger):
-    filelist = os.listdir(download_dir)
-    for file_to_delete in filelist:
-        file_to_delete_path = os.path.join(download_dir, file_to_delete) 
-        if os.path.isfile(file_to_delete_path):
-            logger.info("Lösche " + file_to_delete_path)
-            os.remove(file_to_delete_path)
 
 def get_mode_from_csv(csv_file):
     file_content = ""
@@ -86,41 +34,60 @@ def run():
     logger = config['LOGGING']['logger']
     logger.info("%s wird ausgeführt." % (subcommand))
 
+    logger.info("Download-Ordner werden geleert:")
+    logger.info(config['DIRECTORIES']['itfs_ch'])
+    AGILib.folder_files.clean_folder_recursive(config['DIRECTORIES']['itfs_ch'])
+    logger.info(config['DIRECTORIES']['itfs'])
+    AGILib.folder_files.clean_folder_recursive(config['DIRECTORIES']['itfs'])
+
     logger.info("Statistik-Download (für AI) wird ausgeführt.")
     statistik_files = config['ZAV_FTP']['statistics_files']
     statistik_dir_ai = os.path.join(config['DIRECTORIES']['itfs_ch'], config['DIRECTORIES']['itfs_ch_subdir_statistik'])
-    download_files(config['ZAV_FTP']['statistics_directory'], statistik_dir_ai, config, logger, statistik_files)
+    if not os.path.exists(statistik_dir_ai):
+        os.makedirs(statistik_dir_ai)
+    ftp = AGILib.downloader.FTPDownloader(dest_dir=statistik_dir_ai, ftp_host=config['ZAV_FTP']['host'], ftp_username=config['ZAV_FTP']['username'], ftp_password=config['ZAV_FTP']['password'], ftp_directory=config['ZAV_FTP']['statistics_directory'], ftp_filenames=statistik_files)
+    ftp.download()
 
     logger.info("Statistik-Download (für DAT) wird ausgeführt.")
-    statistik_files = config['ZAV_FTP']['statistics_files']
     statistik_dir_dat = os.path.join(config['DIRECTORIES']['archiv'], datetime.datetime.now().strftime("%Y_%m_%d_%H_%M_%S"))
-    download_files(config['ZAV_FTP']['statistics_directory'], statistik_dir_dat, config, logger, statistik_files)
+    if os.path.exists(statistik_dir_dat):
+        AGILib.folder_files.clean_folder_recursive(statistik_dir_dat)
+    else:
+        os.makedirs(statistik_dir_dat)
+    AGILib.folder_files.clean_folder(statistik_dir_dat)
+    ftp = AGILib.downloader.FTPDownloader(dest_dir=statistik_dir_dat, ftp_host=config['ZAV_FTP']['host'], ftp_username=config['ZAV_FTP']['username'], ftp_password=config['ZAV_FTP']['password'], ftp_directory=config['ZAV_FTP']['statistics_directory'], ftp_filenames=statistik_files)
+    ftp.download()
 
     logger.info("ITF-Download (Modell Bern) wird ausgeführt.")
-    download_files(config['ZAV_FTP']['itf_directory'], config['DIRECTORIES']['itfs'], config, logger)
+    ftp = AGILib.downloader.FTPDownloader(dest_dir=config['DIRECTORIES']['itfs'], ftp_host=config['ZAV_FTP']['host'], ftp_username=config['ZAV_FTP']['username'], ftp_password=config['ZAV_FTP']['password'], ftp_directory=config['ZAV_FTP']['itf_directory'])
+    ftp.download()
 
     increment_mode_file = os.path.join(statistik_dir_ai, "zav_integration.csv")
     logger.info("Ermittle Inkrement-Modus aus " + increment_mode_file)
+    checker_logs_dir = os.path.join(config['DIRECTORIES']['itfs_ch'], config['DIRECTORIES']['itfs_ch_subdir_logs'])
+    if not os.path.exists(checker_logs_dir):
+        os.makedirs(checker_logs_dir)
     increment_mode = get_mode_from_csv(increment_mode_file)
     if increment_mode == "full":
         logger.info("Inkrement-Modus ist " + increment_mode)
         logger.info("Es werden sämtliche Files heruntergeladen.")
         logger.info("ITF-Download (AVCH) wird ausgeführt.")
-        download_files(config['ZAV_FTP']['itf_ch_directory'], config['DIRECTORIES']['itfs_ch'], config, logger)
+        ftp = AGILib.downloader.FTPDownloader(dest_dir=config['DIRECTORIES']['itfs_ch'], ftp_host=config['ZAV_FTP']['host'], ftp_username=config['ZAV_FTP']['username'], ftp_password=config['ZAV_FTP']['password'], ftp_directory=config['ZAV_FTP']['itf_ch_directory'])
+        ftp.download()
         logger.info("Checker-Log-Download wird ausgeführt.")
-        checker_logs_dir = os.path.join(config['DIRECTORIES']['itfs_ch'], config['DIRECTORIES']['itfs_ch_subdir_logs'])
-        download_files(config['ZAV_FTP']['itf_ch_logs'], checker_logs_dir, config, logger)
+        ftp = AGILib.downloader.FTPDownloader(dest_dir=checker_logs_dir, ftp_host=config['ZAV_FTP']['host'], ftp_username=config['ZAV_FTP']['username'], ftp_password=config['ZAV_FTP']['password'], ftp_directory=config['ZAV_FTP']['itf_ch_logs'])
+        ftp.download()
     elif increment_mode == "increment":
         logger.info("Inkrement-Modus ist " + increment_mode)
         logger.info("Liste der herunterzuladenden Files wird ausgelesen:")
         increment_file = os.path.join(statistik_dir_ai, "zav_inkrement.csv")
         (itf_files_to_download, log_files_to_download) = get_itf_files_from_csv(increment_file)
         logger.info("ITF-Download (AVCH) wird ausgeführt.")
-        download_files(config['ZAV_FTP']['itf_ch_directory'], config['DIRECTORIES']['itfs_ch'], config, logger, itf_files_to_download)
+        ftp = AGILib.downloader.FTPDownloader(dest_dir=config['DIRECTORIES']['itfs_ch'], ftp_host=config['ZAV_FTP']['host'], ftp_username=config['ZAV_FTP']['username'], ftp_password=config['ZAV_FTP']['password'], ftp_directory=config['ZAV_FTP']['itf_ch_directory'], ftp_filenames=itf_files_to_download)
+        ftp.download()
         logger.info("Checker-Log-Download wird ausgeführt.")
-        checker_logs_dir = os.path.join(config['DIRECTORIES']['itfs_ch'], config['DIRECTORIES']['itfs_ch_subdir_logs'])
-        download_files(config['ZAV_FTP']['itf_ch_logs'], checker_logs_dir, config, logger, log_files_to_download)
-
+        ftp = AGILib.downloader.FTPDownloader(dest_dir=checker_logs_dir, ftp_host=config['ZAV_FTP']['host'], ftp_username=config['ZAV_FTP']['username'], ftp_password=config['ZAV_FTP']['password'], ftp_directory=config['ZAV_FTP']['itf_ch_logs'], ftp_filenames=log_files_to_download)
+        ftp.download()
     else:
         logger.error("Ungültiger Wert zum Inkrement-Modus in " + increment_mode_file)
         logger.error("Es werden keine AVCH-Files heruntergeladen.")

@@ -105,7 +105,7 @@ def run():
     qa_filename = os.path.join(config['LOGGING']['log_directory'], subcommand + "_qa.xlsx")
 
     # Wenn das QA-File bereits existiert, wird es umbenannt
-    AGILib.folder_files.FileHandler().rename_file_with_timestamp(qa_filename)
+    AGILib.folder_files.rename_file_with_timestamp(qa_filename)
     logger.info("Das QA-Excelfile lautet: " + qa_filename)
 
     parameters = {

@@ -3,54 +3,10 @@ from __future__ import absolute_import, division, print_function, unicode_litera
 import avLader.helpers.helper
 import avLader.helpers.qacheck_helper
 import AGILib.fme
+import AGILib.downloader
 import os
 import sys
-import ftplib
 import zipfile
-
-def download_files(source_dir, target_dir, config, logger, file_to_download):
-    
-    logger.info("Download-Verzeichnis: "+ target_dir)
-
-    ftp_host = config['LK_FTP']['host']
-    ftp_username = config['LK_FTP']['username']
-    ftp_password = config['LK_FTP']['password']
-
-    logger.info("Verbinde mit dem FTP-Server.")
-    ftp = ftplib.FTP(ftp_host, ftp_username, ftp_password)
-    logger.info("Wechsle ins FTP-Verzeichnis " + source_dir)
-    ftp.cwd(source_dir)
-    logger.info("Hole Liste aller Files.")
-    ftp_files = ftp.nlst()
-    
-    if len(ftp_files) > 0:
-        if os.path.exists(target_dir):
-            logger.info("Leere Download-Verzeichnis.")
-            clean_download_dir(target_dir, logger)
-        else:
-            logger.info("Download-Verzeichnis existiert nicht. Es wird erstellt.")
-            os.makedirs(target_dir)
-        
-        logger.info("Lade Files herunter." + file_to_download)
-
-        if file_to_download in ftp_files:
-            downloaded_file = os.path.join(target_dir, file_to_download) 
-            ftp.retrbinary('RETR ' + file_to_download, open(downloaded_file,'wb').write)
-        else:
-            logger.warning("Datei nicht gefunden. Download nicht möglich.")
-
-    else:
-        ftp.quit()
-        logger.error("Die Liste der herunterzuladenden Dateien konnte nicht erstellt werden.")
-        sys.exit()
-
-def clean_download_dir(download_dir, logger):
-    filelist = os.listdir(download_dir)
-    for file_to_delete in filelist:
-        file_to_delete_path = os.path.join(download_dir, file_to_delete) 
-        if os.path.isfile(file_to_delete_path):
-            logger.info("Lösche " + file_to_delete_path)
-            os.remove(file_to_delete_path)
 
 def unzip_zip(zip_file, config, logger):
     logger.info("Entpacke Zip-File.")
@@ -65,7 +21,8 @@ def run():
     
     # Download des GPKG
     logger.info("GPKG-Download für LK wird ausgeführt.")
-    download_files(config['LK_FTP']['directory'], config['LK_PARAMETER']['lk_gpkg'], config, logger, config['LK_FTP']['lk_filename'])
+    ftp = AGILib.downloader.FTPDownloader(dest_dir=config['LK_PARAMETER']['lk_gpkg'], ftp_host=config['LK_FTP']['host'], ftp_username=config['LK_FTP']['username'], ftp_password=config['LK_FTP']['password'], ftp_directory=config['LK_FTP']['directory'], ftp_filenames=config['LK_FTP']['lk_filename'])
+    ftp.download()
     unzip_zip(os.path.join(config['LK_PARAMETER']['lk_gpkg'], config['LK_FTP']['lk_filename']), config, logger)
     
     # FME-Skripte
