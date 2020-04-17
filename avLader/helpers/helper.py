@@ -26,7 +26,7 @@ def download_zav_fgdb(file_to_download, downloaded_zip, source_fgdb, config):
 
     # FTP-Download
     logger.info("ZIP-File %s wird vom FTP-Server %s heruntergeladen..." % (file_to_download, config['ZAV_FTP']['host']))
-    ftp = AGILib.downloader.FTPDownloader(ftp_host=config['ZAV_FTP']['host'], ftp_username=config['ZAV_FTP']['username'], ftp_password=config['ZAV_FTP']['password'], ftp_directory=config['ZAV_FTP']['directory'], ftp_filename=file_to_download, dest_dir=config['DIRECTORIES']['local_data_dir'])
+    ftp = AGILib.downloader.FTPDownloader(ftp_host=config['ZAV_FTP']['host'], ftp_username=config['ZAV_FTP']['username'], ftp_password=config['ZAV_FTP']['password'], ftp_directory=config['ZAV_FTP']['directory'], ftp_filenames=file_to_download, dest_dir=config['DIRECTORIES']['local_data_dir'])
     ftp.download()
 
     # Archiv-Kopie

@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import, division, print_function, unicode_literals
 import avLader.helpers.helper
-import avLader.helpers.qacheck_helper
+import avLader.scripts.lk_import_qa
 import AGILib.fme
 import AGILib.downloader
 import os
 import sys
-import zipfile
+import zipfile 
 
 def unzip_zip(zip_file, config, logger):
     logger.info("Entpacke Zip-File.")
@@ -75,8 +75,8 @@ def run():
 
     # Check ausführen
     gp = 'LKMETA'
-    avLader.helpers.qacheck_helper.check_count_features(config, logger, gp, quelle_pg = False,  gemeinde = False)
+    avLader.scripts.lk_import_qa.check_count_features(config, logger, gp, quelle_pg = False,  gemeinde = False)
     gp = 'LKMAP'
-    avLader.helpers.qacheck_helper.check_count_features(config, logger, gp, quelle_pg = True, gemeinde = True)
+    avLader.scripts.lk_import_qa.check_count_features(config, logger, gp, quelle_pg = True, gemeinde = True)
     
     avLader.helpers.helper.delete_connection_files(config, logger)
