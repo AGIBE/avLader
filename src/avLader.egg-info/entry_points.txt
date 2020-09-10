@@ -1,0 +1,4 @@
+[console_scripts]
+al = avLader.__main__:main
+avLader = avLader.__main__:main
+
