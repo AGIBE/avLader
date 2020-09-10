@@ -14,19 +14,19 @@ def run():
     fme_script_logfile = os.path.join(config['LOGGING']['log_directory'], subcommand + "_fme.log")
 
     parameters = {
-        'TEAM_CONNECTIONFILE': str(config['NORM_TEAM']['connection_file']),
-        'VEK2_CONNECTIONFILE': str(config['GEODB_VEK2']['connection_file']),
-        'OEREB_PG_DATABASE': str(config['OEREB_VEK2_PG']['database']),
-        'OEREB_PG_USERNAME': str(config['OEREB_VEK2_PG']['username']),
-        'OEREB_PG_PASSWORD': str(config['OEREB_VEK2_PG']['password']),
-        'OEREB_PG_HOST': str(config['OEREB_VEK2_PG']['host']),
-        'OEREB_PG_PORT': str(config['OEREB_VEK2_PG']['port'])
+        'TEAM_CONNECTIONFILE': config['NORM_TEAM']['connection_file'],
+        'VEK2_CONNECTIONFILE': config['GEODB_VEK2']['connection_file'],
+        'OEREB_PG_DATABASE': config['OEREB_VEK2_PG']['database'],
+        'OEREB_PG_USERNAME': config['OEREB_VEK2_PG']['username'],
+        'OEREB_PG_PASSWORD': config['OEREB_VEK2_PG']['password'],
+        'OEREB_PG_HOST': config['OEREB_VEK2_PG']['host'],
+        'OEREB_PG_PORT': unicode(config['OEREB_VEK2_PG']['port']
     }
 
     logger.info("Script " +  fme_script + " wird ausgeführt.")
     logger.info("Das FME-Logfile heisst: " + fme_script_logfile)
 
-    fme_runner = AGILib.fme.FMERunner(fme_workbench=fme_script, fme_workbench_parameters=parameters, fme_logfile=fme_script_logfile, fme_logfile_archive=True)
+    fme_runner = AGILib.FMERunner(fme_workbench=fme_script, fme_workbench_parameters=parameters, fme_logfile=fme_script_logfile, fme_logfile_archive=True)
     fme_runner.run()    
     
     avLader.helpers.helper.delete_connection_files(config, logger)

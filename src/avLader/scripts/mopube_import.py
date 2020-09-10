@@ -110,16 +110,16 @@ def run():
     logger.info("Das QA-Excelfile lautet: " + qa_filename)
 
     parameters = {
-        'NORM_DATABASE': str(config['NORM_TEAM']['database']),
-        'NORM_USERNAME': str(config['NORM_TEAM']['username']),
-        'NORM_PASSWORD': str(config['NORM_TEAM']['password']),
-        'VEK1_DATABASE': str(config['GEO_VEK1']['database']),
-        'VEK1_USERNAME': str(config['GEO_VEK1']['username']),
-        'VEK1_PASSWORD': str(config['GEO_VEK1']['password']),
-        'QA_EXCEL': str(qa_filename)
+        'NORM_DATABASE': config['NORM_TEAM']['database'],
+        'NORM_USERNAME': config['NORM_TEAM']['username'],
+        'NORM_PASSWORD': config['NORM_TEAM']['password'],
+        'VEK1_DATABASE': config['GEO_VEK1']['database'],
+        'VEK1_USERNAME': config['GEO_VEK1']['username'],
+        'VEK1_PASSWORD': config['GEO_VEK1']['password'],
+        'QA_EXCEL': qa_filename
     }
 
-    fme_runner = AGILib.fme.FMERunner(fme_workbench=fme_script_qa, fme_workbench_parameters=parameters, fme_logfile=fme_script_logfile, fme_logfile_archive=True)
+    fme_runner = AGILib.FMERunner(fme_workbench=fme_script_qa, fme_workbench_parameters=parameters, fme_logfile=fme_script_logfile, fme_logfile_archive=True)
     fme_runner.run()    
     
     avLader.helpers.helper.delete_connection_files(config, logger)

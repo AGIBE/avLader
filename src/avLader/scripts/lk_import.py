@@ -31,25 +31,25 @@ def run():
     fme_script_logfile = os.path.join(config['LOGGING']['log_directory'], subcommand + "_1_fme.log")
 
     parameters = {
-        'SourceDataset_XLSXR_5': str(config['LK_PARAMETER']['lk_meta_wt']),
-        'SourceDataset_XLSXR_4': str(config['LK_PARAMETER']['lk_etapp']),
-        'LKBE_gpkg': str(os.path.join(config['LK_PARAMETER']['lk_gpkg'], config['LK_PARAMETER']['lk_gpkg_file'])),
-        'DestDataset_GEODATABASE_FILE': str(config['LK_PARAMETER']['lk_gdb_stand']),
-        'DestDataset_XLSXW': str(config['LK_PARAMETER']['lk_xlsx_stand']),
-        'SourceDataset_XLSXR': str(config['LK_PARAMETER']['lk_xlsx_stand']),
-        'VEK1_CONNECTIONFILE': str(config['GEO_VEK1']['connection_file']),
-        'POSTGIS_DB': str(config['NORM_TEAM_PG']['database']),
-        'POSTGIS_HOST': str(config['NORM_TEAM_PG']['host']),
-        'POSTGIS_PASSWORD': str(config['NORM_TEAM_PG']['password']),
-        'POSTGIS_PORT': str(config['NORM_TEAM_PG']['port']),
-        'POSTGIS_USER': str(config['NORM_TEAM_PG']['username']),        
-        'NORM_CONNECTIONFILE': str(config['NORM_TEAM']['connection_file'])
+        'SourceDataset_XLSXR_5': config['LK_PARAMETER']['lk_meta_wt']),
+        'SourceDataset_XLSXR_4': config['LK_PARAMETER']['lk_etapp']),
+        'LKBE_gpkg': os.path.join(config['LK_PARAMETER']['lk_gpkg'], config['LK_PARAMETER']['lk_gpkg_file'])),
+        'DestDataset_GEODATABASE_FILE': config['LK_PARAMETER']['lk_gdb_stand']),
+        'DestDataset_XLSXW': config['LK_PARAMETER']['lk_xlsx_stand']),
+        'SourceDataset_XLSXR': config['LK_PARAMETER']['lk_xlsx_stand']),
+        'VEK1_CONNECTIONFILE': config['GEO_VEK1']['connection_file']),
+        'POSTGIS_DB': config['NORM_TEAM_PG']['database']),
+        'POSTGIS_HOST': config['NORM_TEAM_PG']['host']),
+        'POSTGIS_PASSWORD': config['NORM_TEAM_PG']['password']),
+        'POSTGIS_PORT': unicode(config['NORM_TEAM_PG']['port']),
+        'POSTGIS_USER': config['NORM_TEAM_PG']['username'],
+        'NORM_CONNECTIONFILE': config['NORM_TEAM']['connection_file']
     }
 
     logger.info("Script " +  fme_script + " wird ausgeführt.")
     logger.info("Das FME-Logfile heisst: " + fme_script_logfile)
     
-    fme_runner = AGILib.fme.FMERunner(fme_workbench=fme_script, fme_workbench_parameters=parameters, fme_logfile=fme_script_logfile, fme_logfile_archive=True)
+    fme_runner = AGILib.FMERunner(fme_workbench=fme_script, fme_workbench_parameters=parameters, fme_logfile=fme_script_logfile, fme_logfile_archive=True)
     fme_runner.run()    
 
     # FME 2: LKMAP_geopackage_view2fNorm: Schreibt die LKMAP-Daten vom Geopackage aufs NORM
@@ -57,20 +57,20 @@ def run():
     fme_script_logfile2 = os.path.join(config['LOGGING']['log_directory'], subcommand + "_2_fme.log")
 
     parameters2 = {
-        'SourceDataset_XLSXR': str(config['LK_PARAMETER']['lk_map_wt']),
-        'LKBE_gpkg': str(os.path.join(config['LK_PARAMETER']['lk_gpkg'], config['LK_PARAMETER']['lk_gpkg_file'])),
-        'POSTGIS_DB': str(config['NORM_TEAM_PG']['database']),
-        'POSTGIS_HOST': str(config['NORM_TEAM_PG']['host']),
-        'POSTGIS_PORT': str(config['NORM_TEAM_PG']['port']),
-        'POSTGIS_USER': str(config['NORM_TEAM_PG']['username']),
-        'POSTGIS_PASSWORD': str(config['NORM_TEAM_PG']['password']),
-        'NORM_CONNECTIONFILE': str(config['NORM_TEAM']['connection_file'])
+        'SourceDataset_XLSXR': config['LK_PARAMETER']['lk_map_wt'],
+        'LKBE_gpkg': os.path.join(config['LK_PARAMETER']['lk_gpkg'], config['LK_PARAMETER']['lk_gpkg_file']),
+        'POSTGIS_DB': config['NORM_TEAM_PG']['database'],
+        'POSTGIS_HOST': config['NORM_TEAM_PG']['host'],
+        'POSTGIS_PORT': unicode(config['NORM_TEAM_PG']['port']),
+        'POSTGIS_USER': config['NORM_TEAM_PG']['username'],
+        'POSTGIS_PASSWORD': config['NORM_TEAM_PG']['password'],
+        'NORM_CONNECTIONFILE': config['NORM_TEAM']['connection_file']
     }
 
     logger.info("Script " +  fme_script2 + " wird ausgeführt.")
     logger.info("Das FME-Logfile heisst: " + fme_script_logfile2)
     
-    fme_runner = AGILib.fme.FMERunner(fme_workbench=fme_script2, fme_workbench_parameters=parameters2, fme_logfile=fme_script_logfile2, fme_logfile_archive=True)
+    fme_runner = AGILib.FMERunner(fme_workbench=fme_script2, fme_workbench_parameters=parameters2, fme_logfile=fme_script_logfile2, fme_logfile_archive=True)
     fme_runner.run()    
 
     # Check ausführen

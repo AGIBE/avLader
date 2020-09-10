@@ -18,15 +18,15 @@ def run():
     fme_script_logfile = os.path.join(config['LOGGING']['log_directory'], subcommand + "_fme.log")
 
     parameters = {
-        'NORM_CONNECTIONFILE': str(config['NORM_TEAM']['connection_file']),
-        'AV01_CONNECTIONFILE': str(config['AV01_WORK']['connection_file']),
-        'GPS1_CONNECTIONFILE': str(config['GPS1_WORKH']['connection_file']),
-        'VEK1_CONNECTIONFILE': str(config['GEO_VEK1']['connection_file'])
+        'NORM_CONNECTIONFILE': config['NORM_TEAM']['connection_file'],
+        'AV01_CONNECTIONFILE': config['AV01_WORK']['connection_file'],
+        'GPS1_CONNECTIONFILE': config['GPS1_WORKH']['connection_file'],
+        'VEK1_CONNECTIONFILE': config['GEO_VEK1']['connection_file']
     }
 
     logger.info("Script " +  fme_script + " wird ausgeführt.")
     logger.info("Das FME-Logfile heisst: " + fme_script_logfile)
-    fme_runner = AGILib.fme.FMERunner(fme_workbench=fme_script, fme_workbench_parameters=parameters, fme_logfile=fme_script_logfile, fme_logfile_archive=True)
+    fme_runner = AGILib.FMERunner(fme_workbench=fme_script, fme_workbench_parameters=parameters, fme_logfile=fme_script_logfile, fme_logfile_archive=True)
     fme_runner.run()    
 
     # QA-Script ausführen
@@ -38,18 +38,18 @@ def run():
     logger.info("Das QA-Excelfile lautet: " + qa_filename)
 
     parameters_qa = {
-        'NORM_DATABASE': str(config['NORM_TEAM']['database']),
-        'NORM_USERNAME': str(config['NORM_TEAM']['username']),
-        'NORM_PASSWORD': str(config['NORM_TEAM']['password']),
-        'VEK1_DATABASE': str(config['GEO_VEK1']['database']),
-        'VEK1_USERNAME': str(config['GEO_VEK1']['username']),
-        'VEK1_PASSWORD': str(config['GEO_VEK1']['password']),
-        'QA_EXCEL': str(qa_filename)
+        'NORM_DATABASE': config['NORM_TEAM']['database'],
+        'NORM_USERNAME': config['NORM_TEAM']['username'],
+        'NORM_PASSWORD': config['NORM_TEAM']['password'],
+        'VEK1_DATABASE': config['GEO_VEK1']['database'],
+        'VEK1_USERNAME': config['GEO_VEK1']['username'],
+        'VEK1_PASSWORD': config['GEO_VEK1']['password'],
+        'QA_EXCEL': qa_filename
     }
     
     logger.info("Script " +  fme_script_qa + " wird ausgeführt.")
     logger.info("Das FME-Logfile heisst: " + fme_script_logfile_qa)
-    fme_runner_qa = AGILib.fme.FMERunner(fme_workbench=fme_script_qa, fme_workbench_parameters=parameters_qa, fme_logfile=fme_script_logfile_qa, fme_logfile_archive=True)
+    fme_runner_qa = AGILib.FMERunner(fme_workbench=fme_script_qa, fme_workbench_parameters=parameters_qa, fme_logfile=fme_script_logfile_qa, fme_logfile_archive=True)
     fme_runner_qa.run()
 
     avLader.helpers.helper.delete_connection_files(config, logger)
