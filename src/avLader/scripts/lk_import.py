@@ -31,16 +31,16 @@ def run():
     fme_script_logfile = os.path.join(config['LOGGING']['log_directory'], subcommand + "_1_fme.log")
 
     parameters = {
-        'SourceDataset_XLSXR_5': config['LK_PARAMETER']['lk_meta_wt']),
-        'SourceDataset_XLSXR_4': config['LK_PARAMETER']['lk_etapp']),
-        'LKBE_gpkg': os.path.join(config['LK_PARAMETER']['lk_gpkg'], config['LK_PARAMETER']['lk_gpkg_file'])),
-        'DestDataset_GEODATABASE_FILE': config['LK_PARAMETER']['lk_gdb_stand']),
-        'DestDataset_XLSXW': config['LK_PARAMETER']['lk_xlsx_stand']),
-        'SourceDataset_XLSXR': config['LK_PARAMETER']['lk_xlsx_stand']),
-        'VEK1_CONNECTIONFILE': config['GEO_VEK1']['connection_file']),
-        'POSTGIS_DB': config['NORM_TEAM_PG']['database']),
-        'POSTGIS_HOST': config['NORM_TEAM_PG']['host']),
-        'POSTGIS_PASSWORD': config['NORM_TEAM_PG']['password']),
+        'SourceDataset_XLSXR_5': config['LK_PARAMETER']['lk_meta_wt'],
+        'SourceDataset_XLSXR_4': config['LK_PARAMETER']['lk_etapp'],
+        'LKBE_gpkg': os.path.join(config['LK_PARAMETER']['lk_gpkg'], config['LK_PARAMETER']['lk_gpkg_file']),
+        'DestDataset_GEODATABASE_FILE': config['LK_PARAMETER']['lk_gdb_stand'],
+        'DestDataset_XLSXW': config['LK_PARAMETER']['lk_xlsx_stand'],
+        'SourceDataset_XLSXR': config['LK_PARAMETER']['lk_xlsx_stand'],
+        'VEK1_CONNECTIONFILE': config['GEO_VEK1']['connection_file'],
+        'POSTGIS_DB': config['NORM_TEAM_PG']['database'],
+        'POSTGIS_HOST': config['NORM_TEAM_PG']['host'],
+        'POSTGIS_PASSWORD': config['NORM_TEAM_PG']['password'],
         'POSTGIS_PORT': unicode(config['NORM_TEAM_PG']['port']),
         'POSTGIS_USER': config['NORM_TEAM_PG']['username'],
         'NORM_CONNECTIONFILE': config['NORM_TEAM']['connection_file']

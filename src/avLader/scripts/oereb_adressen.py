@@ -20,7 +20,7 @@ def run():
         'OEREB_PG_USERNAME': config['OEREB_VEK2_PG']['username'],
         'OEREB_PG_PASSWORD': config['OEREB_VEK2_PG']['password'],
         'OEREB_PG_HOST': config['OEREB_VEK2_PG']['host'],
-        'OEREB_PG_PORT': unicode(config['OEREB_VEK2_PG']['port']
+        'OEREB_PG_PORT': unicode(config['OEREB_VEK2_PG']['port'])
     }
 
     logger.info("Script " +  fme_script + " wird ausgeführt.")
