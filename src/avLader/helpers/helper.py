@@ -136,7 +136,9 @@ def get_config(subcommand):
     
     logfile_name = subcommand + ".log"
     config['LOGGING']['log_directory'] = os.path.join(config['LOGGING']['basedir'], subcommand)
-    logger = AGILib.agilogger.initialize_agilogger(logfile_name=logfile_name, logfile_folder=config['LOGGING']['log_directory'], list_log_handler=['file','stream'], archive=True, logger_name='AGILogger')
+    if not os.path.exists(config['LOGGING']['log_directory']):
+        os.makedirs(config['LOGGING']['log_directory'])
+    logger = AGILib.agilogger.initialize_agilogger(logfile_name=logfile_name, logfile_folder=config['LOGGING']['log_directory'], list_log_handler=['file','stream'], archive=True, logger_name='avLaderLogger')
     logger.info('Konfiguration wird eingelesen.')
     config['LOGGING']['logger'] = logger
 
