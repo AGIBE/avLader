@@ -51,6 +51,9 @@ def run():
     
     fme_runner = AGILib.FMERunner(fme_workbench=fme_script, fme_workbench_parameters=parameters, fme_logfile=fme_script_logfile, fme_logfile_archive=True)
     fme_runner.run()    
+    if fme_runner.returncode != 0:
+        logger.error("FME-Script %s abgebrochen." % (fme_script))
+        raise RuntimeError("FME-Script %s abgebrochen." % (fme_script))
 
     # FME 2: LKMAP_geopackage_view2fNorm: Schreibt die LKMAP-Daten vom Geopackage aufs NORM
     fme_script2 = os.path.splitext(__file__)[0] + "_2.fmw"
@@ -72,6 +75,9 @@ def run():
     
     fme_runner = AGILib.FMERunner(fme_workbench=fme_script2, fme_workbench_parameters=parameters2, fme_logfile=fme_script_logfile2, fme_logfile_archive=True)
     fme_runner.run()    
+    if fme_runner.returncode != 0:
+        logger.error("FME-Script %s abgebrochen." % (fme_script2))
+        raise RuntimeError("FME-Script %s abgebrochen." % (fme_script2))
 
     # Check ausführen
     gp = 'LKMETA'

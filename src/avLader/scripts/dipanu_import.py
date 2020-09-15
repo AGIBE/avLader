@@ -24,6 +24,9 @@ def run():
     logger.info("Das FME-Logfile heisst: " + fme_script_logfile)
     fme_runner = AGILib.FMERunner(fme_workbench=fme_script, fme_workbench_parameters=parameters, fme_logfile=fme_script_logfile, fme_logfile_archive=True)
     fme_runner.run()    
+    if fme_runner.returncode != 0:
+        logger.error("FME-Script %s abgebrochen." % (fme_script))
+        raise RuntimeError("FME-Script %s abgebrochen." % (fme_script))
 
     # QA-Script ausführen
     fme_script_qa = os.path.splitext(__file__)[0] + "_qa.fmw"
@@ -47,5 +50,9 @@ def run():
     logger.info("Das FME-Logfile heisst: " + fme_script_logfile_qa)
     fme_runner_qa = AGILib.FMERunner(fme_workbench=fme_script_qa, fme_workbench_parameters=parameters_qa, fme_logfile=fme_script_logfile_qa, fme_logfile_archive=True)
     fme_runner_qa.run()
+    if fme_runner_qa.returncode != 0:
+        logger.error("FME-Script %s abgebrochen." % (fme_script_qa))
+        raise RuntimeError("FME-Script %s abgebrochen." % (fme_script_qa))
+
 
     avLader.helpers.helper.delete_connection_files(config, logger)

@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import, division, print_function, unicode_literals
 import avLader.helpers.helper
-import AGILib.connection
+import AGILib
 import os
 
 def get_avdate(sysdate_string, connection):
-
-    avdate_sql = "select to_char(" + sysdate_string + ", 'YYYYMMDD') from dual"
+    # to_char muss nach NVARCHAR" gecastet werden, da cx_Oracle char nach str mappt,
+    # erst NVARCHAR2 mappt nach unicode.
+    avdate_sql = "SELECT CAST (to_char(" + sysdate_string + ",'YYYYMMDD') AS nvarchar2(8)) FROM dual"
     avdate_result = connection.db_read(avdate_sql)
 
     return avdate_result[0][0]
@@ -45,5 +46,8 @@ def run():
 
     fme_runner = AGILib.FMERunner(fme_workbench=fme_script, fme_workbench_parameters=parameters, fme_logfile=fme_script_logfile, fme_logfile_archive=True)
     fme_runner.run()    
-    
+    if fme_runner.returncode != 0:
+        logger.error("FME-Script %s abgebrochen." % (fme_script))
+        raise RuntimeError("FME-Script %s abgebrochen." % (fme_script))
+   
     avLader.helpers.helper.delete_connection_files(config, logger)

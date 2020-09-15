@@ -121,5 +121,8 @@ def run():
 
     fme_runner = AGILib.FMERunner(fme_workbench=fme_script_qa, fme_workbench_parameters=parameters, fme_logfile=fme_script_logfile, fme_logfile_archive=True)
     fme_runner.run()    
+    if fme_runner.returncode != 0:
+        logger.error("FME-Script %s abgebrochen." % (fme_script_qa))
+        raise RuntimeError("FME-Script %s abgebrochen." % (fme_script_qa))
     
     avLader.helpers.helper.delete_connection_files(config, logger)
