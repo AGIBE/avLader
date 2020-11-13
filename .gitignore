@@ -5,7 +5,7 @@
 build/*
 dist/*
 docs/_build/*
-src/*.egginfo/*
+src/avLader.egg-info
 *.pyt.xml
 *.recover
 .vscode/*
