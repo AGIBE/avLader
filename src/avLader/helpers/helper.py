@@ -132,7 +132,7 @@ def delete_connection_files(config, logger):
         connObj.delete_all_sde_connections()
 
 def get_config(subcommand):
-    config = AGILib.configuration.Configuration(configfile_envvar="AVIMPORTHOMEPRO").config
+    config = AGILib.configuration.Configuration(configfile_envvar="AVIMPORTHOME").config
     
     logfile_name = subcommand + ".log"
     config['LOGGING']['log_directory'] = os.path.join(config['LOGGING']['basedir'], subcommand)
