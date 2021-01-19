@@ -117,14 +117,14 @@ def check_count_features(config, logger, gp, attr_group = [], quelle_pg = False,
 			if len(preselct_vek2) > 0 and len(preselct_norm) > 0:
 				# Get Anzahl von vek2p & Norm
 				if quelle_pg is True:
-					sql = 'SELECT grenz5_g5.gmde, count(grenz5_g5.gmde) FROM geodb.grenz5_g5 LEFT JOIN geodb.' + ebene.lower() + ' ON st_intersects(grenz5_g5.shape, ' + ebene.lower() + '.shape) group by grenz5_g5.gmde'
+					sql = 'SELECT grenz5_g5.bfsnr, count(grenz5_g5.bfsnr) FROM geodb.grenz5_g5 LEFT JOIN geodb.' + ebene.lower() + ' ON st_intersects(grenz5_g5.shape, ' + ebene.lower() + '.shape) group by grenz5_g5.bfsnr'
 					count_vek2 =  config['GEODB_VEK2_PG']['connection'].db_read(sql)
-					sql = 'SELECT grenz5_g5.gmde, count(grenz5_g5.gmde) FROM norm.grenz5_g5 LEFT JOIN norm.' + ebene.lower() + ' ON st_intersects(grenz5_g5.shape, '  + ebene.lower() + '.shape) group by grenz5_g5.gmde'
+					sql = 'SELECT grenz5_g5.bfsnr, count(grenz5_g5.bfsnr) FROM norm.grenz5_g5 LEFT JOIN norm.' + ebene.lower() + ' ON st_intersects(grenz5_g5.shape, '  + ebene.lower() + '.shape) group by grenz5_g5.bfsnr'
 					count_norm = config['NORM_TEAM_PG']['connection'].db_read(sql)
 				else:
-					sql = 'SELECT grenz5_g5.gmde, count(grenz5_g5.gmde) FROM GEODB.GRENZ5_G5, GEODB.' + ebene.upper() + ' where sde.st_intersects(grenz5_g5.shape, ' + ebene.upper() + '.shape) = 1 group by grenz5_g5.gmde'
+					sql = 'SELECT grenz5_g5.bfsnr, count(grenz5_g5.bfsnr) FROM GEODB.GRENZ5_G5, GEODB.' + ebene.upper() + ' where sde.st_intersects(grenz5_g5.shape, ' + ebene.upper() + '.shape) = 1 group by grenz5_g5.bfsnr'
 					count_vek2 = config['GEODB_VEK2']['connection'].db_read(sql)
-					sql = 'SELECT grenz5_g5.gmde, count(grenz5_g5.gmde) FROM NORM.GRENZ5_G5, NORM.' + ebene.upper() + ' where sde.st_intersects(grenz5_g5.shape, ' + ebene.upper() + '.shape) = 1 group by grenz5_g5.gmde'
+					sql = 'SELECT grenz5_g5.bfsnr, count(grenz5_g5.bfsnr) FROM NORM.GRENZ5_G5, NORM.' + ebene.upper() + ' where sde.st_intersects(grenz5_g5.shape, ' + ebene.upper() + '.shape) = 1 group by grenz5_g5.bfsnr'
 					count_norm = config['NORM_TEAM']['connection'].db_read(sql)
 	
 				if len(count_norm) == 0 and quelle_pg is False:
