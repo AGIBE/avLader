@@ -1,7 +1,7 @@
 #! <?xml version="1.0" encoding="UTF-8" ?>
 #! <WORKSPACE
 #    Command-line to run this workspace:
-#        "C:\Program Files (x86)\FME\fme.exe" D:\Daten\repos\avLader\avLader\scripts\grudaexp_import.fmw
+#        "C:\Program Files (x86)\FME\fme.exe" D:\Daten\repos\avLader\src\avLader\scripts\grudaexp_import.fmw
 #              --LOGFILE ""
 #              --CSVFOLDER ""
 #              --DATABASE ""
@@ -21,8 +21,8 @@
 #!   END_TCL=""
 #!   EXPLICIT_BOOKMARK_ORDER="false"
 #!   FME_BUILD_NUM="18310"
-#!   FME_DOCUMENT_GUID="5337c39a-87a9-4c7c-8efc-419a811dc0e6"
-#!   FME_DOCUMENT_PRIORGUID="b8ed3529-6319-4740-b235-51c64d7938ee,e684dc69-0f5e-4263-bc57-a87f4a135cb2,d43cac37-0c33-4964-9b5d-afd1e08358cb,171d19ae-a03e-4703-a29f-f450d9e3ab2a,09ffeb38-39cc-4023-8fc4-1d2286eaf1e4,2c3f3bf4-6cbb-441c-9193-673a1b82036e,1d1c9b2d-bf6e-447e-8ff1-b3fb4ee6d941,796d833b-1b7b-4d08-bcc7-69df018f6227,4e667f8b-eb03-49c4-a37a-838afca26851,fe10b594-61e4-4c34-9969-e92e4c170d75,ef82a5d3-0f74-4913-9127-64cb58d39d56,2d285488-25ee-4a3d-97e7-20010d90285d,41a69789-33ef-4f30-b16b-ba539cf4500f,10705311-cced-4a42-942e-02fc58109025,0e65ead1-e820-497d-915b-4f89980401c5,d6d5041f-269b-4059-91e8-9c139bd39e1a,3db54562-4294-4be1-9af4-c90f86ddf365,170f426e-996c-4324-9f86-23ce545a03c1,3f45daab-abb0-4b47-a8dd-5b897f95251e,31f670b8-8a78-451f-b343-22042408e3bc,bfeb088a-25f1-45dc-bdf2-fd8d88a5d30e,c5fe30eb-6a04-47ff-ab1f-07ff21dd0d1d,33a0ebc4-272f-4371-8978-a24989df4b50,c7bd0cdb-753f-4a6b-a82c-3dbcc2298819"
+#!   FME_DOCUMENT_GUID="a611db03-919c-4d0c-876e-6d5670003f91"
+#!   FME_DOCUMENT_PRIORGUID="b8ed3529-6319-4740-b235-51c64d7938ee,e684dc69-0f5e-4263-bc57-a87f4a135cb2,d43cac37-0c33-4964-9b5d-afd1e08358cb,171d19ae-a03e-4703-a29f-f450d9e3ab2a,09ffeb38-39cc-4023-8fc4-1d2286eaf1e4,2c3f3bf4-6cbb-441c-9193-673a1b82036e,1d1c9b2d-bf6e-447e-8ff1-b3fb4ee6d941,796d833b-1b7b-4d08-bcc7-69df018f6227,4e667f8b-eb03-49c4-a37a-838afca26851,fe10b594-61e4-4c34-9969-e92e4c170d75,ef82a5d3-0f74-4913-9127-64cb58d39d56,2d285488-25ee-4a3d-97e7-20010d90285d,41a69789-33ef-4f30-b16b-ba539cf4500f,10705311-cced-4a42-942e-02fc58109025,0e65ead1-e820-497d-915b-4f89980401c5,d6d5041f-269b-4059-91e8-9c139bd39e1a,3db54562-4294-4be1-9af4-c90f86ddf365,170f426e-996c-4324-9f86-23ce545a03c1,3f45daab-abb0-4b47-a8dd-5b897f95251e,31f670b8-8a78-451f-b343-22042408e3bc,bfeb088a-25f1-45dc-bdf2-fd8d88a5d30e,c5fe30eb-6a04-47ff-ab1f-07ff21dd0d1d,33a0ebc4-272f-4371-8978-a24989df4b50,c7bd0cdb-753f-4a6b-a82c-3dbcc2298819,5337c39a-87a9-4c7c-8efc-419a811dc0e6"
 #!   FME_GEOMETRY_HANDLING="Enhanced"
 #!   FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
 #!   FME_REPROJECTION_ENGINE="FME"
@@ -31,7 +31,7 @@
 #!   HISTORY=""
 #!   IGNORE_READER_FAILURE="No"
 #!   LAST_SAVE_BUILD="FME(R) 2018.0.1.0 (20180518 - Build 18310 - WIN32)"
-#!   LAST_SAVE_DATE="2019-01-24T16:36:38"
+#!   LAST_SAVE_DATE="2021-03-01T08:10:57"
 #!   LOG_FILE="$(LOGFILE)"
 #!   LOG_MAX_RECORDED_FEATURES="200"
 #!   MARKDOWN_DESCRIPTION=""
@@ -49,7 +49,7 @@
 #!   TITLE=""
 #!   USAGE=""
 #!   USE_MARKDOWN=""
-#!   VIEW_POSITION="1996.89 -1768.77"
+#!   VIEW_POSITION="250.003 -1409.39"
 #!   WARN_INVALID_XFORM_PARAM="Yes"
 #!   WORKSPACE_VERSION="1"
 #!   ZOOM_SCALE="100"
@@ -60,7 +60,7 @@
 #!   ROLE="READER"
 #!   FORMAT="CSV2"
 #!   DATASET="$(CSVFOLDER)"
-#!   KEYWORD="CSV2_2"
+#!   KEYWORD="CSV2_1"
 #!   MULTI_GEOM_ALLOWED="false"
 #!   ATTR_MAX_LENGTH="0"
 #!   ATTR_CASE="ANY"
@@ -68,7 +68,7 @@
 #!   WRITE_DEFS="true"
 #!   DEFLINE_TEMPLATE=""
 #!   DEFLINE_ATTRS="true"
-#!   EXPOSABLE_ATTRS="fme_color string csv_total_number_of_columns uint32 csv_number_of_fields uint32 fme_fill_color string fme_sweep_angle string fme_text_size string fme_geometry string multi_reader_id string fme_feature_type string fme_basename string fme_dataset string csv_type string csv_skipped_line string fme_start_angle string fme_rotation string csv_line_number uint64 fme_primary_axis string fme_type string multi_reader_type string multi_reader_full_id string multi_reader_keyword string fme_text_string string fme_secondary_axis string"
+#!   EXPOSABLE_ATTRS="fme_text_size string fme_type string multi_reader_type string csv_skipped_line string csv_line_number uint64 fme_dataset string fme_sweep_angle string csv_number_of_fields uint32 csv_total_number_of_columns uint32 fme_color string fme_secondary_axis string fme_basename string fme_start_angle string fme_primary_axis string fme_text_string string fme_geometry string csv_type string fme_feature_type string multi_reader_full_id string fme_fill_color string multi_reader_id string multi_reader_keyword string fme_rotation string"
 #!   DEFLINE_PARMS=""
 #!   ATTR_INDEX_TYPES=""
 #!   ATTR_NAME_INVALID_CHARS=""
@@ -127,7 +127,7 @@
 #!   WRITE_DEFS="true"
 #!   DEFLINE_TEMPLATE="oracle_create_table &quot;&quot; oracle_drop_table &quot;&quot; oracle_table_writer_mode &quot;&quot; oracle_update_key_columns &quot;&quot; oracle_truncate_table &quot;&quot; fme_feature_operation INSERT fme_table_handling CREATE_IF_MISSING fme_selection_method MATCH_COLUMNS fme_match_columns &quot;&quot; fme_where_builder_clause &quot;&quot; oracle_params &quot;&quot; oracle_sql_encoded &quot;&quot; oracle_sequenced_cols &quot;&quot;"
 #!   DEFLINE_ATTRS="true"
-#!   EXPOSABLE_ATTRS="fme_secondary_axis float fme_start_angle float fme_type char(50) fme_text_string char(50) fme_rotation float fme_text_size float fme_primary_axis float oracle_type char(50) fme_basename char(50) fme_dataset char(50) fme_feature_type char(50) fme_fill_color char(50) fme_color char(50) fme_db_operation char(8) fme_sweep_angle float fme_geometry char(50)"
+#!   EXPOSABLE_ATTRS="fme_feature_type char(50) fme_color char(50) fme_start_angle float oracle_type char(50) fme_secondary_axis float fme_basename char(50) fme_db_operation char(8) fme_fill_color char(50) fme_text_string char(50) fme_dataset char(50) fme_type char(50) fme_primary_axis float fme_sweep_angle float fme_text_size float fme_geometry char(50) fme_rotation float"
 #!   DEFLINE_PARMS="&quot;GUI OPTIONAL NAMEDGROUP fme_configuration_group fme_configuration_common_group%fme_spatial_group%fme_advanced_group%oracle_advanced_group Table&quot; &quot;&quot; &quot;GUI OPTIONAL NAMEDGROUP fme_configuration_common_group fme_feature_operation%fme_table_handling%oracle_model%fme_update_geometry%fme_selection_group%fme_table_creation_group General&quot; &quot;&quot; &quot;GUI ACTIVECHOICE_LOOKUP fme_feature_operation Insert,INSERT,fme_update_geometry,fme_selection_group%Update,UPDATE,++fme_table_handling+USE_EXISTING,++fme_selection_group+FME_DISCLOSURE_OPEN%Delete,DELETE,++fme_table_handling+USE_EXISTING,fme_update_geometry,++fme_selection_group+FME_DISCLOSURE_OPEN,fme_spatial_group,fme_advanced_group,oracle_sequenced_cols%&lt;at&gt;Value&lt;openparen&gt;fme_db_operation&lt;closeparen&gt;,MULTIPLE,++fme_table_handling+USE_EXISTING,++fme_selection_group+FME_DISCLOSURE_OPEN Feature Operation&quot; INSERT &quot;GUI ACTIVECHOICE_LOOKUP fme_table_handling Use&lt;space&gt;Existing,USE_EXISTING,fme_table_creation_group%Create&lt;space&gt;If&lt;space&gt;Needed,CREATE_IF_MISSING%Drop&lt;space&gt;and&lt;space&gt;Create,DROP_CREATE%Truncate&lt;space&gt;Existing,TRUNCATE_EXISTING,fme_table_creation_group Table Handling&quot; CREATE_IF_MISSING &quot;GUI OPTIONAL DISCLOSUREGROUP fme_selection_group fme_selection_method Row Selection&quot; &quot;&quot; &quot;GUI OPTIONAL WHOLE_LINE RADIOPARAMETERGROUP fme_selection_method fme_match_columns,MATCH_COLUMNS%fme_where_builder_clause,BUILDER Row Selection Method&quot; MATCH_COLUMNS &quot;GUI WHOLE_LINE ATTRLIST_COMMAS fme_match_columns \&quot; \&quot; Match Columns&quot; &quot;&quot; &quot;GUI WHOLE_LINE TEXT_EDIT_SQL_CFG_OR_ATTR fme_where_builder_clause MODE,WHERE WHERE Clause&quot; &quot;&quot; &quot;GUI OPTIONAL DISCLOSUREGROUP fme_table_creation_group oracle_params Table Creation Parameters&quot; &quot;&quot; &quot;GUI OPTIONAL WHOLE_LINE TEXT oracle_params Additional CREATE TABLE Clause(s)&quot; &quot;&quot; &quot;GUI OPTIONAL DISCLOSUREGROUP oracle_advanced_group oracle_sequenced_cols%oracle_sql_encoded Advanced&quot; &quot;&quot; &quot;GUI OPTIONAL WHOLE_LINE TEXT oracle_sequenced_cols Sequenced Table Columns&quot; &quot;&quot; &quot;GUI OPTIONAL WHOLE_LINE TEXT_EDIT_SQL_CFG oracle_sql_encoded MODE,SQL;FORMAT,ORACLE_NONSPATIAL SQL Statement (Overrides Feature Operation)&quot; &quot;&quot; "
 #!   ATTR_INDEX_TYPES="BTree Bitmap PrimaryKey Unique"
 #!   ATTR_NAME_INVALID_CHARS=".%&lt;&gt;|: []()?*&apos;&amp;+-/}{\\&quot;"
@@ -872,7 +872,7 @@
 #!   BOUNDING_RECT="117.84814848148483 -3755.1176828780126 595.015625 71"
 #!   ORDER="500000000000192"
 #!   COLLAPSED="true"
-#!   KEYWORD="CSV2_2"
+#!   KEYWORD="CSV2_1"
 #!   PARMS_EDITED="true"
 #!   ENABLED="true"
 #!   HIDDEN_USER_ATTRS=""
@@ -909,7 +909,7 @@
 #!   BOUNDING_RECT="117.84814848148483 -3030.3880470622894 -1 -1"
 #!   ORDER="500000000000188"
 #!   COLLAPSED="true"
-#!   KEYWORD="CSV2_2"
+#!   KEYWORD="CSV2_1"
 #!   PARMS_EDITED="true"
 #!   ENABLED="true"
 #!   HIDDEN_USER_ATTRS=""
@@ -954,7 +954,7 @@
 #!   BOUNDING_RECT="117.84814848148483 -2624.2253415391297 670.015625 71"
 #!   ORDER="500000000000000"
 #!   COLLAPSED="true"
-#!   KEYWORD="CSV2_2"
+#!   KEYWORD="CSV2_1"
 #!   PARMS_EDITED="true"
 #!   ENABLED="true"
 #!   HIDDEN_USER_ATTRS=""
@@ -993,7 +993,7 @@
 #!   BOUNDING_RECT="143.75043750437527 -1926.9371093710945 -1 -1"
 #!   ORDER="500000000000000"
 #!   COLLAPSED="true"
-#!   KEYWORD="CSV2_2"
+#!   KEYWORD="CSV2_1"
 #!   PARMS_EDITED="true"
 #!   ENABLED="true"
 #!   HIDDEN_USER_ATTRS=""
@@ -1041,7 +1041,7 @@
 #!   BOUNDING_RECT="143.75043750437527 -1663.7550625506258 588.015625 71"
 #!   ORDER="500000000000000"
 #!   COLLAPSED="true"
-#!   KEYWORD="CSV2_2"
+#!   KEYWORD="CSV2_1"
 #!   PARMS_EDITED="true"
 #!   ENABLED="true"
 #!   HIDDEN_USER_ATTRS=""
@@ -1074,7 +1074,7 @@
 #!   FEAT_GEOMTYPE="All"
 #!   POSITION="3672.8331149978158 -2624.2253415391297"
 #!   BOUNDING_RECT="3672.8331149978158 -2624.2253415391297 605.015625 71"
-#!   ORDER="500000000000000"
+#!   ORDER="500000000000227"
 #!   COLLAPSED="true"
 #!   KEYWORD="ORACLE_NONSPATIAL_1"
 #!   PARMS_EDITED="true"
@@ -2709,6 +2709,13 @@
 #! <BREAKPOINTS>
 #! </BREAKPOINTS>
 #! <ATTR_LINKS>
+#! <ATTR_LINK
+#!   IDENTIFIER="65627"
+#!   SOURCE_NODE="89"
+#!   TARGET_NODE="69"
+#!   SOURCE_PORT_DESC="ao 0 13 OUTPUT"
+#!   TARGET_PORT_DESC="15"
+#! />
 #! </ATTR_LINKS>
 #! <SUBDOCUMENTS>
 #! </SUBDOCUMENTS>
@@ -2716,7 +2723,7 @@
 #! </LOOKUP_TABLES>
 #! </WORKSPACE>
 FME_PYTHON_VERSION 2or3
-GUI IGNORE SourceDataset_CSV2_2,CSV2_IN_FIELDS_GROUP_CSV2_2,CSV2_IN_DELIMITER_CSV2_2,CSV2_IN_FIELD_NAMES_LINE_CSV2_2,CSV2_IN_DATA_START_LINE_CSV2_2,CSV2_IN_ADVANCED_GROUP_CSV2_2,CSV2_IN_FIELD_SEPARATION_GROUP_CSV2_2,CSV2_IN_SKIP_DUPLICATE_DELIMITERS_CSV2_2,CSV2_IN_FIELD_QUALIFIER_CHARACTER_CSV2_2,CSV2_IN_FIELD_QUALIFIER_ESCAPE_CHARACTER_CSV2_2,CSV2_IN_FIELD_NAMES_GROUP_CSV2_2,CSV2_IN_CASE_SENSITIVE_FIELD_NAMES_CSV2_2,CSV2_IN_ENFORCE_STRICT_SCHEMA_CSV2_2,CSV2_IN_FIELD_VALUES_GROUP_CSV2_2,CSV2_IN_TRIM_FIELD_VALUE_QUALIFIERS_CSV2_2,CSV2_IN_ENCODING_GROUP_CSV2_2,CSV2_IN_ENCODING_CSV2_2,CSV2_IN_PRESERVE_SOURCE_ENCODING_CSV2_2,CSV2_IN_SKIPPED_LINES_GROUP_CSV2_2,CSV2_IN_READ_SKIPPED_LINES_CSV2_2,CSV2_IN_NETWORK_AUTHENTICATION_CSV2_2,DestDataset_ORACLE_NONSPATIAL_1,ORACLE_NONSPATIAL_OUT_FME_CONNECTION_GROUP_ORACLE_NONSPATIAL_1,ORACLE_NONSPATIAL_OUT_USER_NAME_ORACLE_NONSPATIAL_1,ORACLE_NONSPATIAL_OUT_PASSWORD_ORACLE_NONSPATIAL_1,ORACLE_NONSPATIAL_OUT_PERSISTENT_CONNECTION_ORACLE_NONSPATIAL_1,ORACLE_NONSPATIAL_OUT_ORACLENONSPATIAL_WRT_ADV_PARA_ORACLE_NONSPATIAL_1,ORACLE_NONSPATIAL_OUT_START_TRANSACTION_ORACLE_NONSPATIAL_1,ORACLE_NONSPATIAL_OUT_CHUNK_SIZE_ORACLE_NONSPATIAL_1,ORACLE_NONSPATIAL_OUT_TRANSACTION_INTERVAL_ORACLE_NONSPATIAL_1,ORACLE_NONSPATIAL_OUT_BEGIN_SQL{0}_ORACLE_NONSPATIAL_1,ORACLE_NONSPATIAL_OUT_END_SQL{0}_ORACLE_NONSPATIAL_1,ORACLE_NONSPATIAL_OUT_STRICT_ATTR_CONVERSION_ORACLE_NONSPATIAL_1,ORACLE_NONSPATIAL_OUT_WORKSPACE_ORACLE_NONSPATIAL_1
+GUI IGNORE SourceDataset_CSV2_1,CSV2_IN_FIELDS_GROUP_CSV2_1,CSV2_IN_DELIMITER_CSV2_1,CSV2_IN_FIELD_NAMES_LINE_CSV2_1,CSV2_IN_DATA_START_LINE_CSV2_1,CSV2_IN_ADVANCED_GROUP_CSV2_1,CSV2_IN_FIELD_SEPARATION_GROUP_CSV2_1,CSV2_IN_SKIP_DUPLICATE_DELIMITERS_CSV2_1,CSV2_IN_FIELD_QUALIFIER_CHARACTER_CSV2_1,CSV2_IN_FIELD_QUALIFIER_ESCAPE_CHARACTER_CSV2_1,CSV2_IN_FIELD_NAMES_GROUP_CSV2_1,CSV2_IN_CASE_SENSITIVE_FIELD_NAMES_CSV2_1,CSV2_IN_ENFORCE_STRICT_SCHEMA_CSV2_1,CSV2_IN_FIELD_VALUES_GROUP_CSV2_1,CSV2_IN_TRIM_FIELD_VALUE_QUALIFIERS_CSV2_1,CSV2_IN_ENCODING_GROUP_CSV2_1,CSV2_IN_ENCODING_CSV2_1,CSV2_IN_PRESERVE_SOURCE_ENCODING_CSV2_1,CSV2_IN_SKIPPED_LINES_GROUP_CSV2_1,CSV2_IN_READ_SKIPPED_LINES_CSV2_1,CSV2_IN_NETWORK_AUTHENTICATION_CSV2_1,DestDataset_ORACLE_NONSPATIAL_1,ORACLE_NONSPATIAL_OUT_FME_CONNECTION_GROUP_ORACLE_NONSPATIAL_1,ORACLE_NONSPATIAL_OUT_USER_NAME_ORACLE_NONSPATIAL_1,ORACLE_NONSPATIAL_OUT_PASSWORD_ORACLE_NONSPATIAL_1,ORACLE_NONSPATIAL_OUT_PERSISTENT_CONNECTION_ORACLE_NONSPATIAL_1,ORACLE_NONSPATIAL_OUT_ORACLENONSPATIAL_WRT_ADV_PARA_ORACLE_NONSPATIAL_1,ORACLE_NONSPATIAL_OUT_START_TRANSACTION_ORACLE_NONSPATIAL_1,ORACLE_NONSPATIAL_OUT_CHUNK_SIZE_ORACLE_NONSPATIAL_1,ORACLE_NONSPATIAL_OUT_TRANSACTION_INTERVAL_ORACLE_NONSPATIAL_1,ORACLE_NONSPATIAL_OUT_BEGIN_SQL{0}_ORACLE_NONSPATIAL_1,ORACLE_NONSPATIAL_OUT_END_SQL{0}_ORACLE_NONSPATIAL_1,ORACLE_NONSPATIAL_OUT_STRICT_ATTR_CONVERSION_ORACLE_NONSPATIAL_1,ORACLE_NONSPATIAL_OUT_WORKSPACE_ORACLE_NONSPATIAL_1
 DEFAULT_MACRO LOGFILE 
 GUI TEXT LOGFILE LOGFILE:
 DEFAULT_MACRO CSVFOLDER 
@@ -2736,7 +2743,7 @@ INCLUDE [ if {{$(PASSWORD)} == {}} { puts_real {Parameter 'PASSWORD' must be giv
 #! START_WB_HEADER
 READER_TYPE MULTI_READER
 MULTI_READER_TYPE{0} CSV2
-MULTI_READER_KEYWORD{0} CSV2_2
+MULTI_READER_KEYWORD{0} CSV2_1
 MULTI_READER_GEN_DIRECTIVES{0} PREVIEW_PLACEHOLDER,,DATASET_GROUP,,FIELD_QUALIFIER_ESCAPE_CHARACTER,<lt>quote<gt>,SCAN_TYPES,No,FIELDS_GROUP,,_MERGE_SCHEMAS,YES,CASE_SENSITIVE_FIELD_NAMES,Yes,TRIM_FIELD_VALUE_QUALIFIERS,Yes,DELIMITER,<lt>semicolon<gt>,FIELD_VALUES_GROUP,,FIELD_NAMES_GROUP,FME_DISCLOSURE_OPEN,FIELD_SEPARATION_GROUP,FME_DISCLOSURE_OPEN,EXPOSE_ATTRS_GROUP,FME_DISCLOSURE_CLOSED,SCHEMA_GENERATION_GROUP,FME_DISCLOSURE_OPEN,SKIPPED_LINES_GROUP,FME_DISCLOSURE_CLOSED,FIELD_QUALIFIER_CHARACTER,<lt>quote<gt>,ENFORCE_STRICT_SCHEMA,No,ENCODING_GROUP,FME_DISCLOSURE_OPEN,ADVANCED_GROUP,FME_DISCLOSURE_OPEN,READ_SKIPPED_LINES,No,SKIP_DUPLICATE_DELIMITERS,No,SCAN_MAX_ROWS,100000,FIELD_NAMES_LINE,1,SCAN_ADDITIONAL_FIELDS,No,CSV2_EXPOSE_FORMAT_ATTRS,,SCHEMA,,QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS,Yes,DATA_START_LINE,2,PRESERVE_SOURCE_ENCODING,No,ENCODING,,USE_CUSTOM_SCHEMA,NO,TRIM_FIELD_NAME_QUALIFIERS,Yes,FEATURE_TYPE_NAME,FILE_NAME
 
 WRITER_TYPE MULTI_WRITER
@@ -2747,9 +2754,9 @@ MULTI_WRITER_KEYWORD{0} ORACLE_NONSPATIAL_1
 #! END_WB_HEADER
 
 #! START_WB_HEADER
-MACRO WB_KEYWORD "CSV2_2"
+MACRO WB_KEYWORD "CSV2_1"
 #! END_WB_HEADER
-#! START_SOURCE_HEADER CSV2 CSV2_2
+#! START_SOURCE_HEADER CSV2 CSV2_1
 # =====================================================================
 # The following GUI line prompts for a file to be used as the source CSV file.
 # The user input is stored in a macro, which is then used to define
@@ -2759,87 +2766,87 @@ MACRO WB_KEYWORD "CSV2_2"
 #! START_WB_HEADER
 DEFAULT_MACRO SourceDataset
 INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
- puts {DEFAULT_MACRO SourceDataset_CSV2_2 $(SourceDataset)}     \
+ puts {DEFAULT_MACRO SourceDataset_CSV2_1 $(SourceDataset)}     \
  } ]
 #! END_WB_HEADER
-#! START_SOURCE_HEADER CSV2 CSV2_2
-DEFAULT_MACRO SourceDataset_CSV2_2 $(CSVFOLDER)
-GUI MULTIFILE SourceDataset_CSV2_2 CSV/Compressed_CSV/TEXT_Files(*.csv;*.gz;*.txt)|*.csv;*.gz;*.txt|CSV_Files(*.csv)|*.csv|Compressed_CSV_Files(*.gz)|*.gz|Text_Files(*.txt)|*.txt|All_Files|* Source CSV (Comma Separated Value) File(s):
-DEFAULT_MACRO CSV2_IN_FEATURE_TYPE_NAME_CSV2_2 FILE_NAME
-CSV2_2_FEATURE_TYPE_NAME "$(CSV2_IN_FEATURE_TYPE_NAME_CSV2_2)"
-DEFAULT_MACRO CSV2_IN_FIELDS_GROUP_CSV2_2 
-GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_FIELDS_GROUP_CSV2_2 CSV2_IN_DELIMITER_CSV2_2%CSV2_IN_FIELD_NAMES_LINE_CSV2_2%CSV2_IN_DATA_START_LINE_CSV2_2 Fields
-DEFAULT_MACRO CSV2_IN_DELIMITER_CSV2_2 <semicolon>
-CSV2_2_DELIMITER "$(CSV2_IN_DELIMITER_CSV2_2)"
-GUI STRING_OR_CHOICE_ENCODED CSV2_IN_DELIMITER_CSV2_2 ,%;%|%space%tab Delimiter Character:
-DEFAULT_MACRO CSV2_IN_FIELD_NAMES_LINE_CSV2_2 1
-CSV2_2_FIELD_NAMES_LINE "$(CSV2_IN_FIELD_NAMES_LINE_CSV2_2)"
-GUI OPTIONAL INT_OR_CHOICE CSV2_IN_FIELD_NAMES_LINE_CSV2_2 None%1%2%3%4%5 Field Names Line:
-GUI LOOKUP CSV2_IN_FIELD_NAMES_LINE_CSV2_2 None, 
-DEFAULT_MACRO CSV2_IN_DATA_START_LINE_CSV2_2 2
-CSV2_2_DATA_START_LINE "$(CSV2_IN_DATA_START_LINE_CSV2_2)"
-GUI RANGE_SLIDER CSV2_IN_DATA_START_LINE_CSV2_2 1%MAX%0 Data Start Line:
-DEFAULT_MACRO CSV2_IN_ADVANCED_GROUP_CSV2_2 
-GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_ADVANCED_GROUP_CSV2_2 FME_DISCLOSURE_CLOSED%CSV2_IN_FIELD_SEPARATION_GROUP_CSV2_2%CSV2_IN_FIELD_NAMES_GROUP_CSV2_2%CSV2_IN_FIELD_VALUES_GROUP_CSV2_2%CSV2_IN_ENCODING_GROUP_CSV2_2%CSV2_IN_SKIPPED_LINES_GROUP_CSV2_2%CSV2_IN_SCHEMA_GENERATION_GROUP Advanced
-DEFAULT_MACRO CSV2_IN_FIELD_SEPARATION_GROUP_CSV2_2 
-GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_FIELD_SEPARATION_GROUP_CSV2_2 FME_DISCLOSURE_CLOSED%CSV2_IN_SKIP_DUPLICATE_DELIMITERS_CSV2_2%CSV2_IN_FIELD_QUALIFIER_CHARACTER_CSV2_2%CSV2_IN_FIELD_QUALIFIER_ESCAPE_CHARACTER_CSV2_2 Field Separation
-DEFAULT_MACRO CSV2_IN_SKIP_DUPLICATE_DELIMITERS_CSV2_2 No
-CSV2_2_SKIP_DUPLICATE_DELIMITERS "$(CSV2_IN_SKIP_DUPLICATE_DELIMITERS_CSV2_2)"
-GUI CHOICE CSV2_IN_SKIP_DUPLICATE_DELIMITERS_CSV2_2 Yes%No Skip Duplicate Delimiters:
-DEFAULT_MACRO CSV2_IN_FIELD_QUALIFIER_CHARACTER_CSV2_2 <quote>
-CSV2_2_FIELD_QUALIFIER_CHARACTER "$(CSV2_IN_FIELD_QUALIFIER_CHARACTER_CSV2_2)"
-GUI OPTIONAL STRING_ENCODED CSV2_IN_FIELD_QUALIFIER_CHARACTER_CSV2_2 Field Qualifier Character:
-DEFAULT_MACRO CSV2_IN_FIELD_QUALIFIER_ESCAPE_CHARACTER_CSV2_2 <quote>
-CSV2_2_FIELD_QUALIFIER_ESCAPE_CHARACTER "$(CSV2_IN_FIELD_QUALIFIER_ESCAPE_CHARACTER_CSV2_2)"
-GUI OPTIONAL STRING_ENCODED CSV2_IN_FIELD_QUALIFIER_ESCAPE_CHARACTER_CSV2_2 Field Qualifier Escape Character:
-DEFAULT_MACRO CSV2_IN_FIELD_NAMES_GROUP_CSV2_2 
-GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_FIELD_NAMES_GROUP_CSV2_2 FME_DISCLOSURE_CLOSED%CSV2_IN_CASE_SENSITIVE_FIELD_NAMES_CSV2_2%CSV2_IN_ENFORCE_STRICT_SCHEMA_CSV2_2 Field Names
-DEFAULT_MACRO CSV2_IN_TRIM_FIELD_NAME_QUALIFIERS_CSV2_2 Yes
-CSV2_2_TRIM_FIELD_NAME_QUALIFIERS "$(CSV2_IN_TRIM_FIELD_NAME_QUALIFIERS_CSV2_2)"
-DEFAULT_MACRO CSV2_IN_CASE_SENSITIVE_FIELD_NAMES_CSV2_2 Yes
-CSV2_2_CASE_SENSITIVE_FIELD_NAMES "$(CSV2_IN_CASE_SENSITIVE_FIELD_NAMES_CSV2_2)"
-GUI CHOICE CSV2_IN_CASE_SENSITIVE_FIELD_NAMES_CSV2_2 Yes%No Case Sensitive Field Names:
-DEFAULT_MACRO CSV2_IN_ENFORCE_STRICT_SCHEMA_CSV2_2 No
-CSV2_2_ENFORCE_STRICT_SCHEMA "$(CSV2_IN_ENFORCE_STRICT_SCHEMA_CSV2_2)"
-GUI CHOICE CSV2_IN_ENFORCE_STRICT_SCHEMA_CSV2_2 Yes%No Enforce Strict Schema:
-DEFAULT_MACRO CSV2_IN_FIELD_VALUES_GROUP_CSV2_2 
-GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_FIELD_VALUES_GROUP_CSV2_2 FME_DISCLOSURE_CLOSED%CSV2_IN_TRIM_FIELD_VALUE_QUALIFIERS_CSV2_2 Field Values
-DEFAULT_MACRO CSV2_IN_TRIM_FIELD_VALUE_QUALIFIERS_CSV2_2 Yes
-CSV2_2_TRIM_FIELD_VALUE_QUALIFIERS "$(CSV2_IN_TRIM_FIELD_VALUE_QUALIFIERS_CSV2_2)"
-GUI CHOICE CSV2_IN_TRIM_FIELD_VALUE_QUALIFIERS_CSV2_2 Yes%No Trim Field Qualifier Characters:
-DEFAULT_MACRO CSV2_IN_ENCODING_GROUP_CSV2_2 
-GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_ENCODING_GROUP_CSV2_2 FME_DISCLOSURE_CLOSED%CSV2_IN_ENCODING_CSV2_2%CSV2_IN_PRESERVE_SOURCE_ENCODING_CSV2_2 Encoding
-DEFAULT_MACRO CSV2_IN_ENCODING_CSV2_2 
-CSV2_2_ENCODING "$(CSV2_IN_ENCODING_CSV2_2)"
-GUI OPTIONAL STRING_OR_ENCODING CSV2_IN_ENCODING_CSV2_2 SYSTEM%* Character Encoding:
-DEFAULT_MACRO CSV2_IN_PRESERVE_SOURCE_ENCODING_CSV2_2 No
-CSV2_2_PRESERVE_SOURCE_ENCODING "$(CSV2_IN_PRESERVE_SOURCE_ENCODING_CSV2_2)"
-GUI CHOICE CSV2_IN_PRESERVE_SOURCE_ENCODING_CSV2_2 Yes%No Preserve Source Encoding:
-DEFAULT_MACRO CSV2_IN_SKIPPED_LINES_GROUP_CSV2_2 
-GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_SKIPPED_LINES_GROUP_CSV2_2 FME_DISCLOSURE_CLOSED%CSV2_IN_READ_SKIPPED_LINES_CSV2_2 Skipped Lines
-DEFAULT_MACRO CSV2_IN_READ_SKIPPED_LINES_CSV2_2 No
-CSV2_2_READ_SKIPPED_LINES "$(CSV2_IN_READ_SKIPPED_LINES_CSV2_2)"
-GUI CHOICE CSV2_IN_READ_SKIPPED_LINES_CSV2_2 Yes%No Read Skipped Lines:
-DEFAULT_MACRO CSV2_IN_SCAN_MAX_ROWS_CSV2_2 100000
-CSV2_2_SCAN_MAX_ROWS "$(CSV2_IN_SCAN_MAX_ROWS_CSV2_2)"
-DEFAULT_MACRO CSV2_IN_SCAN_TYPES_CSV2_2 No
-CSV2_2_SCAN_TYPES "$(CSV2_IN_SCAN_TYPES_CSV2_2)"
-DEFAULT_MACRO CSV2_IN_SCAN_ADDITIONAL_FIELDS_CSV2_2 No
-CSV2_2_SCAN_ADDITIONAL_FIELDS "$(CSV2_IN_SCAN_ADDITIONAL_FIELDS_CSV2_2)"
-DEFAULT_MACRO CSV2_IN_EXPOSE_ATTRS_GROUP_CSV2_2 FME_DISCLOSURE_CLOSED
-CSV2_2_EXPOSE_ATTRS_GROUP "$(CSV2_IN_EXPOSE_ATTRS_GROUP_CSV2_2)"
-DEFAULT_MACRO CSV2_IN_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS_CSV2_2 Yes
-CSV2_2_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS "$(CSV2_IN_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS_CSV2_2)"
+#! START_SOURCE_HEADER CSV2 CSV2_1
+DEFAULT_MACRO SourceDataset_CSV2_1 $(CSVFOLDER)
+GUI MULTIFILE SourceDataset_CSV2_1 CSV/Compressed_CSV/TEXT_Files(*.csv;*.gz;*.txt)|*.csv;*.gz;*.txt|CSV_Files(*.csv)|*.csv|Compressed_CSV_Files(*.gz)|*.gz|Text_Files(*.txt)|*.txt|All_Files|* Source CSV (Comma Separated Value) File(s):
+DEFAULT_MACRO CSV2_IN_FEATURE_TYPE_NAME_CSV2_1 FILE_NAME
+CSV2_1_FEATURE_TYPE_NAME "$(CSV2_IN_FEATURE_TYPE_NAME_CSV2_1)"
+DEFAULT_MACRO CSV2_IN_FIELDS_GROUP_CSV2_1 
+GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_FIELDS_GROUP_CSV2_1 CSV2_IN_DELIMITER_CSV2_1%CSV2_IN_FIELD_NAMES_LINE_CSV2_1%CSV2_IN_DATA_START_LINE_CSV2_1 Fields
+DEFAULT_MACRO CSV2_IN_DELIMITER_CSV2_1 <semicolon>
+CSV2_1_DELIMITER "$(CSV2_IN_DELIMITER_CSV2_1)"
+GUI STRING_OR_CHOICE_ENCODED CSV2_IN_DELIMITER_CSV2_1 ,%;%|%space%tab Delimiter Character:
+DEFAULT_MACRO CSV2_IN_FIELD_NAMES_LINE_CSV2_1 1
+CSV2_1_FIELD_NAMES_LINE "$(CSV2_IN_FIELD_NAMES_LINE_CSV2_1)"
+GUI OPTIONAL INT_OR_CHOICE CSV2_IN_FIELD_NAMES_LINE_CSV2_1 None%1%2%3%4%5 Field Names Line:
+GUI LOOKUP CSV2_IN_FIELD_NAMES_LINE_CSV2_1 None, 
+DEFAULT_MACRO CSV2_IN_DATA_START_LINE_CSV2_1 2
+CSV2_1_DATA_START_LINE "$(CSV2_IN_DATA_START_LINE_CSV2_1)"
+GUI RANGE_SLIDER CSV2_IN_DATA_START_LINE_CSV2_1 1%MAX%0 Data Start Line:
+DEFAULT_MACRO CSV2_IN_ADVANCED_GROUP_CSV2_1 
+GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_ADVANCED_GROUP_CSV2_1 FME_DISCLOSURE_CLOSED%CSV2_IN_FIELD_SEPARATION_GROUP_CSV2_1%CSV2_IN_FIELD_NAMES_GROUP_CSV2_1%CSV2_IN_FIELD_VALUES_GROUP_CSV2_1%CSV2_IN_ENCODING_GROUP_CSV2_1%CSV2_IN_SKIPPED_LINES_GROUP_CSV2_1%CSV2_IN_SCHEMA_GENERATION_GROUP Advanced
+DEFAULT_MACRO CSV2_IN_FIELD_SEPARATION_GROUP_CSV2_1 
+GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_FIELD_SEPARATION_GROUP_CSV2_1 FME_DISCLOSURE_CLOSED%CSV2_IN_SKIP_DUPLICATE_DELIMITERS_CSV2_1%CSV2_IN_FIELD_QUALIFIER_CHARACTER_CSV2_1%CSV2_IN_FIELD_QUALIFIER_ESCAPE_CHARACTER_CSV2_1 Field Separation
+DEFAULT_MACRO CSV2_IN_SKIP_DUPLICATE_DELIMITERS_CSV2_1 No
+CSV2_1_SKIP_DUPLICATE_DELIMITERS "$(CSV2_IN_SKIP_DUPLICATE_DELIMITERS_CSV2_1)"
+GUI CHOICE CSV2_IN_SKIP_DUPLICATE_DELIMITERS_CSV2_1 Yes%No Skip Duplicate Delimiters:
+DEFAULT_MACRO CSV2_IN_FIELD_QUALIFIER_CHARACTER_CSV2_1 <quote>
+CSV2_1_FIELD_QUALIFIER_CHARACTER "$(CSV2_IN_FIELD_QUALIFIER_CHARACTER_CSV2_1)"
+GUI OPTIONAL STRING_ENCODED CSV2_IN_FIELD_QUALIFIER_CHARACTER_CSV2_1 Field Qualifier Character:
+DEFAULT_MACRO CSV2_IN_FIELD_QUALIFIER_ESCAPE_CHARACTER_CSV2_1 <quote>
+CSV2_1_FIELD_QUALIFIER_ESCAPE_CHARACTER "$(CSV2_IN_FIELD_QUALIFIER_ESCAPE_CHARACTER_CSV2_1)"
+GUI OPTIONAL STRING_ENCODED CSV2_IN_FIELD_QUALIFIER_ESCAPE_CHARACTER_CSV2_1 Field Qualifier Escape Character:
+DEFAULT_MACRO CSV2_IN_FIELD_NAMES_GROUP_CSV2_1 
+GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_FIELD_NAMES_GROUP_CSV2_1 FME_DISCLOSURE_CLOSED%CSV2_IN_CASE_SENSITIVE_FIELD_NAMES_CSV2_1%CSV2_IN_ENFORCE_STRICT_SCHEMA_CSV2_1 Field Names
+DEFAULT_MACRO CSV2_IN_TRIM_FIELD_NAME_QUALIFIERS_CSV2_1 Yes
+CSV2_1_TRIM_FIELD_NAME_QUALIFIERS "$(CSV2_IN_TRIM_FIELD_NAME_QUALIFIERS_CSV2_1)"
+DEFAULT_MACRO CSV2_IN_CASE_SENSITIVE_FIELD_NAMES_CSV2_1 Yes
+CSV2_1_CASE_SENSITIVE_FIELD_NAMES "$(CSV2_IN_CASE_SENSITIVE_FIELD_NAMES_CSV2_1)"
+GUI CHOICE CSV2_IN_CASE_SENSITIVE_FIELD_NAMES_CSV2_1 Yes%No Case Sensitive Field Names:
+DEFAULT_MACRO CSV2_IN_ENFORCE_STRICT_SCHEMA_CSV2_1 No
+CSV2_1_ENFORCE_STRICT_SCHEMA "$(CSV2_IN_ENFORCE_STRICT_SCHEMA_CSV2_1)"
+GUI CHOICE CSV2_IN_ENFORCE_STRICT_SCHEMA_CSV2_1 Yes%No Enforce Strict Schema:
+DEFAULT_MACRO CSV2_IN_FIELD_VALUES_GROUP_CSV2_1 
+GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_FIELD_VALUES_GROUP_CSV2_1 FME_DISCLOSURE_CLOSED%CSV2_IN_TRIM_FIELD_VALUE_QUALIFIERS_CSV2_1 Field Values
+DEFAULT_MACRO CSV2_IN_TRIM_FIELD_VALUE_QUALIFIERS_CSV2_1 Yes
+CSV2_1_TRIM_FIELD_VALUE_QUALIFIERS "$(CSV2_IN_TRIM_FIELD_VALUE_QUALIFIERS_CSV2_1)"
+GUI CHOICE CSV2_IN_TRIM_FIELD_VALUE_QUALIFIERS_CSV2_1 Yes%No Trim Field Qualifier Characters:
+DEFAULT_MACRO CSV2_IN_ENCODING_GROUP_CSV2_1 
+GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_ENCODING_GROUP_CSV2_1 FME_DISCLOSURE_CLOSED%CSV2_IN_ENCODING_CSV2_1%CSV2_IN_PRESERVE_SOURCE_ENCODING_CSV2_1 Encoding
+DEFAULT_MACRO CSV2_IN_ENCODING_CSV2_1 
+CSV2_1_ENCODING "$(CSV2_IN_ENCODING_CSV2_1)"
+GUI OPTIONAL STRING_OR_ENCODING CSV2_IN_ENCODING_CSV2_1 SYSTEM%* Character Encoding:
+DEFAULT_MACRO CSV2_IN_PRESERVE_SOURCE_ENCODING_CSV2_1 No
+CSV2_1_PRESERVE_SOURCE_ENCODING "$(CSV2_IN_PRESERVE_SOURCE_ENCODING_CSV2_1)"
+GUI CHOICE CSV2_IN_PRESERVE_SOURCE_ENCODING_CSV2_1 Yes%No Preserve Source Encoding:
+DEFAULT_MACRO CSV2_IN_SKIPPED_LINES_GROUP_CSV2_1 
+GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_SKIPPED_LINES_GROUP_CSV2_1 FME_DISCLOSURE_CLOSED%CSV2_IN_READ_SKIPPED_LINES_CSV2_1 Skipped Lines
+DEFAULT_MACRO CSV2_IN_READ_SKIPPED_LINES_CSV2_1 No
+CSV2_1_READ_SKIPPED_LINES "$(CSV2_IN_READ_SKIPPED_LINES_CSV2_1)"
+GUI CHOICE CSV2_IN_READ_SKIPPED_LINES_CSV2_1 Yes%No Read Skipped Lines:
+DEFAULT_MACRO CSV2_IN_SCAN_MAX_ROWS_CSV2_1 100000
+CSV2_1_SCAN_MAX_ROWS "$(CSV2_IN_SCAN_MAX_ROWS_CSV2_1)"
+DEFAULT_MACRO CSV2_IN_SCAN_TYPES_CSV2_1 No
+CSV2_1_SCAN_TYPES "$(CSV2_IN_SCAN_TYPES_CSV2_1)"
+DEFAULT_MACRO CSV2_IN_SCAN_ADDITIONAL_FIELDS_CSV2_1 No
+CSV2_1_SCAN_ADDITIONAL_FIELDS "$(CSV2_IN_SCAN_ADDITIONAL_FIELDS_CSV2_1)"
+DEFAULT_MACRO CSV2_IN_EXPOSE_ATTRS_GROUP_CSV2_1 FME_DISCLOSURE_CLOSED
+CSV2_1_EXPOSE_ATTRS_GROUP "$(CSV2_IN_EXPOSE_ATTRS_GROUP_CSV2_1)"
+DEFAULT_MACRO CSV2_IN_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS_CSV2_1 Yes
+CSV2_1_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS "$(CSV2_IN_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS_CSV2_1)"
 # ===========================================================================
-DEFAULT_MACRO CSV2_IN_NETWORK_AUTHENTICATION_CSV2_2 
-CSV2_2_NETWORK_AUTHENTICATION "$(CSV2_IN_NETWORK_AUTHENTICATION_CSV2_2)"
-GUI OPTIONAL AUTHENTICATOR CSV2_IN_NETWORK_AUTHENTICATION_CSV2_2 CONTAINER%GROUP%CONTAINER_TITLE%"Network Authentication"%PROMPT_TYPE%NETWORK Network Authentication
+DEFAULT_MACRO CSV2_IN_NETWORK_AUTHENTICATION_CSV2_1 
+CSV2_1_NETWORK_AUTHENTICATION "$(CSV2_IN_NETWORK_AUTHENTICATION_CSV2_1)"
+GUI OPTIONAL AUTHENTICATOR CSV2_IN_NETWORK_AUTHENTICATION_CSV2_1 CONTAINER%GROUP%CONTAINER_TITLE%"Network Authentication"%PROMPT_TYPE%NETWORK Network Authentication
 # ============================================================================ 
-DEFAULT_MACRO CSV2_IN_ATTRIBUTE_READING_CSV2_2 DEFLINE
-CSV2_2_ATTRIBUTE_READING "$(CSV2_IN_ATTRIBUTE_READING_CSV2_2)"
+DEFAULT_MACRO CSV2_IN_ATTRIBUTE_READING_CSV2_1 DEFLINE
+CSV2_1_ATTRIBUTE_READING "$(CSV2_IN_ATTRIBUTE_READING_CSV2_1)"
 # ============================================================================ 
-CSV2_2_GENERATE_FME_BUILD_NUM 18310
-CSV2_2_DATASET "$(SourceDataset_CSV2_2)"
+CSV2_1_GENERATE_FME_BUILD_NUM 18310
+CSV2_1_DATASET "$(SourceDataset_CSV2_1)"
 #! END_SOURCE_HEADER
 #! START_WB_HEADER
 MACRO WB_KEYWORD "ORACLE_NONSPATIAL_1"
@@ -2941,12 +2948,12 @@ FME_IMPLICIT_CSMAP_REPROJECTION_MODE Auto
 FME_GEOMETRY_HANDLING Enhanced
 FME_STROKE_MAX_DEVIATION 0
 LOG_FILTER_MASK -1
-DEFAULT_MACRO DATASET_KEYWORD_CSV2_2 CSV2_2
+DEFAULT_MACRO DATASET_KEYWORD_CSV2_1 CSV2_1
 DEFAULT_MACRO DATASET_KEYWORD_ORACLE_NONSPATIAL_1 ORACLE_NONSPATIAL_1
 FME_PASSWORD_PARAMETER_LIST PASSWORD
 # -------------------------------------------------------------------------
 
-CSV2_2_READER_META_ATTRIBUTES fme_feature_type
+CSV2_1_READER_META_ATTRIBUTES fme_feature_type
 
 # -------------------------------------------------------------------------
 
@@ -2958,32 +2965,32 @@ MACRO WORKSPACE_NAME grudaexp_import
 MACRO FME_VIEWER_APP fmedatainspector
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * RoutingFactory   FACTORY_NAME "Router and Unexpected Input Remover"   COMMAND_PARM_EVALUATION SINGLE_PASS   MULTI_READER_KEYWORD $(DATASET_KEYWORD_CSV2_2)   INPUT FEATURE_TYPE *    ROUTE CSV2 CSV2_2::grundstueck_gebaeude multi_reader_keyword,$(DATASET_KEYWORD_CSV2_2) TO FME_GENERIC ::grundstueck_gebaeude ALIAS_GEOMETRY    ROUTE CSV2 CSV2_2::grundstueck multi_reader_keyword,$(DATASET_KEYWORD_CSV2_2) TO FME_GENERIC ::grundstueck ALIAS_GEOMETRY    ROUTE CSV2 CSV2_2::bodenbedeckung_anteil multi_reader_keyword,$(DATASET_KEYWORD_CSV2_2) TO FME_GENERIC ::bodenbedeckung_anteil ALIAS_GEOMETRY    ROUTE CSV2 CSV2_2::gebaeude multi_reader_keyword,$(DATASET_KEYWORD_CSV2_2) TO FME_GENERIC ::gebaeude ALIAS_GEOMETRY    ROUTE CSV2 CSV2_2::gebaeude_eingang_adresse multi_reader_keyword,$(DATASET_KEYWORD_CSV2_2) TO FME_GENERIC ::gebaeude_eingang_adresse ALIAS_GEOMETRY    MERGE_INPUT Yes   OUTPUT ROUTED FEATURE_TYPE *
-CSV2_2_MERGE_DEF CSV2_2::grundstueck_gebaeude EXACT grundstueck_gebaeude DEFLINE fme_attribute_reading,defined,GrundstueckREF,string,GebaeudeREF,string,Flaechenmass,string,Gueltigkeit,string,ErstellZeitpunkt,string,GeschaeftNrBFS,string,GeschaeftNrJahr,string,GeschaeftNrNummer,string,GeschaeftNrIndex,string,MutNrNBIdent,string,MutNrNummer,string,col11,string
-CSV2_2_MERGE_DEF CSV2_2::grundstueck EXACT grundstueck DEFLINE fme_attribute_reading,defined,GrundstueckId,string,GemeindeBFSNr,string,Gemeindename,string,GemeindeNBIdent,string,GBGemeindeKreisNr,string,GBGemeindeNameDe,string,GBGemeindeNameFr,string,NBIdentKreis,string,Amtssprache,string,Nummer,string,NummerZusatz,string,EGRID,string,GrundstueckArt,string,Flaechenmass,string,QualitaetsstandardAV,string,FlaechenmaessigNichtAusgeschieden,string,Gueltigkeit,string,ErstellZeitpunkt,string,GeschaeftNrBFS,string,GeschaeftNrJahr,string,GeschaeftNrNummer,string,GeschaeftNrIndex,string,MutNrNBIdent,string,MutNrNummer,string,col24,string
-CSV2_2_MERGE_DEF CSV2_2::bodenbedeckung_anteil EXACT bodenbedeckung_anteil DEFLINE fme_attribute_reading,defined,GrundstueckREF,string,Art,string,Flaechenmass,string,ArtBezeichnung,string,LNAnteil,string,Gueltigkeit,string,ErstellZeitpunkt,string,GeschaeftNrBFS,string,GeschaeftNrJahr,string,GeschaeftNrNummer,string,GeschaeftNrIndex,string,MutNrNBIdent,string,MutNrNummer,string,col13,string
-CSV2_2_MERGE_DEF CSV2_2::gebaeude EXACT gebaeude DEFLINE fme_attribute_reading,defined,GebaeudeId,string,GWR_EGID,string,kantGID,string,Nummer,string,istProjektiert,string,istUnterirdisch,string,istEinzelobjekt,string,GebaeudeArtDe,string,GebaeudeArtFr,string,GebaeudeArtIt,string,GebaeudeArtCode,string,GebauedeArtZusatz,string,Flaechenmass,string,Gueltigkeit,string,ErstellZeitpunkt,string,GeschaeftNrBFS,string,GeschaeftNrJahr,string,GeschaeftNrNummer,string,GeschaeftNrIndex,string,MutNrNBIdent,string,MutNrNummer,string,col21,string
-CSV2_2_MERGE_DEF CSV2_2::gebaeude_eingang_adresse EXACT gebaeude_eingang_adresse DEFLINE fme_attribute_reading,defined,GebaeudeREF,string,Strasse,string,StrasseSprache2,string,GebauedeBezeichnung,string,BenanntesGebiet,string,BenanntesGebietSprache2,string,Hausnummer,string,PLZ,string,PLZZusatzziffern,string,Ortschaft,string,GWR_EGID,string,GWR_EDID,string,KantDID,string,Gueltigkeit,string,ErstellZeitpunkt,string,col15,string
+FACTORY_DEF * RoutingFactory   FACTORY_NAME "Router and Unexpected Input Remover"   COMMAND_PARM_EVALUATION SINGLE_PASS   MULTI_READER_KEYWORD $(DATASET_KEYWORD_CSV2_1)   INPUT FEATURE_TYPE *    ROUTE CSV2 CSV2_1::gebaeude_eingang_adresse multi_reader_keyword,$(DATASET_KEYWORD_CSV2_1) TO FME_GENERIC ::gebaeude_eingang_adresse ALIAS_GEOMETRY    ROUTE CSV2 CSV2_1::grundstueck multi_reader_keyword,$(DATASET_KEYWORD_CSV2_1) TO FME_GENERIC ::grundstueck ALIAS_GEOMETRY    ROUTE CSV2 CSV2_1::gebaeude multi_reader_keyword,$(DATASET_KEYWORD_CSV2_1) TO FME_GENERIC ::gebaeude ALIAS_GEOMETRY    ROUTE CSV2 CSV2_1::grundstueck_gebaeude multi_reader_keyword,$(DATASET_KEYWORD_CSV2_1) TO FME_GENERIC ::grundstueck_gebaeude ALIAS_GEOMETRY    ROUTE CSV2 CSV2_1::bodenbedeckung_anteil multi_reader_keyword,$(DATASET_KEYWORD_CSV2_1) TO FME_GENERIC ::bodenbedeckung_anteil ALIAS_GEOMETRY    MERGE_INPUT Yes   OUTPUT ROUTED FEATURE_TYPE *
+CSV2_1_MERGE_DEF CSV2_1::gebaeude_eingang_adresse EXACT gebaeude_eingang_adresse DEFLINE fme_attribute_reading,defined,GebaeudeREF,string,Strasse,string,StrasseSprache2,string,GebauedeBezeichnung,string,BenanntesGebiet,string,BenanntesGebietSprache2,string,Hausnummer,string,PLZ,string,PLZZusatzziffern,string,Ortschaft,string,GWR_EGID,string,GWR_EDID,string,KantDID,string,Gueltigkeit,string,ErstellZeitpunkt,string,col15,string
+CSV2_1_MERGE_DEF CSV2_1::grundstueck EXACT grundstueck DEFLINE fme_attribute_reading,defined,GrundstueckId,string,GemeindeBFSNr,string,Gemeindename,string,GemeindeNBIdent,string,GBGemeindeKreisNr,string,GBGemeindeNameDe,string,GBGemeindeNameFr,string,NBIdentKreis,string,Amtssprache,string,Nummer,string,NummerZusatz,string,EGRID,string,GrundstueckArt,string,Flaechenmass,string,QualitaetsstandardAV,string,FlaechenmaessigNichtAusgeschieden,string,Gueltigkeit,string,ErstellZeitpunkt,string,GeschaeftNrBFS,string,GeschaeftNrJahr,string,GeschaeftNrNummer,string,GeschaeftNrIndex,string,MutNrNBIdent,string,MutNrNummer,string,col24,string
+CSV2_1_MERGE_DEF CSV2_1::gebaeude EXACT gebaeude DEFLINE fme_attribute_reading,defined,GebaeudeId,string,GWR_EGID,string,kantGID,string,Nummer,string,istProjektiert,string,istUnterirdisch,string,istEinzelobjekt,string,GebaeudeArtDe,string,GebaeudeArtFr,string,GebaeudeArtIt,string,GebaeudeArtCode,string,GebauedeArtZusatz,string,Flaechenmass,string,Gueltigkeit,string,ErstellZeitpunkt,string,GeschaeftNrBFS,string,GeschaeftNrJahr,string,GeschaeftNrNummer,string,GeschaeftNrIndex,string,MutNrNBIdent,string,MutNrNummer,string,col21,string
+CSV2_1_MERGE_DEF CSV2_1::grundstueck_gebaeude EXACT grundstueck_gebaeude DEFLINE fme_attribute_reading,defined,GrundstueckREF,string,GebaeudeREF,string,Flaechenmass,string,Gueltigkeit,string,ErstellZeitpunkt,string,GeschaeftNrBFS,string,GeschaeftNrJahr,string,GeschaeftNrNummer,string,GeschaeftNrIndex,string,MutNrNBIdent,string,MutNrNummer,string,col11,string
+CSV2_1_MERGE_DEF CSV2_1::bodenbedeckung_anteil EXACT bodenbedeckung_anteil DEFLINE fme_attribute_reading,defined,GrundstueckREF,string,Art,string,Flaechenmass,string,ArtBezeichnung,string,LNAnteil,string,Gueltigkeit,string,ErstellZeitpunkt,string,GeschaeftNrBFS,string,GeschaeftNrJahr,string,GeschaeftNrNummer,string,GeschaeftNrIndex,string,MutNrNBIdent,string,MutNrNummer,string,col13,string
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * TeeFactory    FACTORY_NAME "bodenbedeckung_anteil (CSV2_2) Splitter"    INPUT FEATURE_TYPE bodenbedeckung_anteil    OUTPUT FEATURE_TYPE bodenbedeckung_anteil_CSV2_2
+FACTORY_DEF * TeeFactory    FACTORY_NAME "bodenbedeckung_anteil (CSV2_1) Splitter"    INPUT FEATURE_TYPE bodenbedeckung_anteil    OUTPUT FEATURE_TYPE bodenbedeckung_anteil_CSV2_1
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * TeeFactory    FACTORY_NAME "gebaeude (CSV2_2) Splitter"    INPUT FEATURE_TYPE gebaeude    OUTPUT FEATURE_TYPE gebaeude_CSV2_2
+FACTORY_DEF * TeeFactory    FACTORY_NAME "gebaeude (CSV2_1) Splitter"    INPUT FEATURE_TYPE gebaeude    OUTPUT FEATURE_TYPE gebaeude_CSV2_1
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * TeeFactory    FACTORY_NAME "gebaeude_eingang_adresse (CSV2_2) Splitter"    INPUT FEATURE_TYPE gebaeude_eingang_adresse    OUTPUT FEATURE_TYPE gebaeude_eingang_adresse_CSV2_2
+FACTORY_DEF * TeeFactory    FACTORY_NAME "gebaeude_eingang_adresse (CSV2_1) Splitter"    INPUT FEATURE_TYPE gebaeude_eingang_adresse    OUTPUT FEATURE_TYPE gebaeude_eingang_adresse_CSV2_1
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * TeeFactory    FACTORY_NAME "grundstueck (CSV2_2) Splitter"    INPUT FEATURE_TYPE grundstueck    OUTPUT FEATURE_TYPE grundstueck_CSV2_2
+FACTORY_DEF * TeeFactory    FACTORY_NAME "grundstueck (CSV2_1) Splitter"    INPUT FEATURE_TYPE grundstueck    OUTPUT FEATURE_TYPE grundstueck_CSV2_1
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * TeeFactory    FACTORY_NAME "grundstueck_gebaeude (CSV2_2) Splitter"    INPUT FEATURE_TYPE grundstueck_gebaeude    OUTPUT FEATURE_TYPE grundstueck_gebaeude_CSV2_2
+FACTORY_DEF * TeeFactory    FACTORY_NAME "grundstueck_gebaeude (CSV2_1) Splitter"    INPUT FEATURE_TYPE grundstueck_gebaeude    OUTPUT FEATURE_TYPE grundstueck_gebaeude_CSV2_1
 DEFAULT_MACRO WB_CURRENT_CONTEXT
 # -------------------------------------------------------------------------
 Lookup AttributeValueMapper_9_LOOKUP_TABLE   PROV            0   RECHTSG         1   ""              ""   ENCODED_SUPPORTUNICODE
 
-FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeValueMapper_9    INPUT  FEATURE_TYPE grundstueck_gebaeude_CSV2_2    OUTPUT FEATURE_TYPE AttributeValueMapper_9_OUTPUT         @Lookup(AttributeValueMapper_9_LOOKUP_TABLE,"Gueltigkeit",FORWARD|ENCODED_ATTR|REAL_NULL_SUPPORT, Gueltigkeit_Aufgeloest)
+FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeValueMapper_9    INPUT  FEATURE_TYPE grundstueck_gebaeude_CSV2_1    OUTPUT FEATURE_TYPE AttributeValueMapper_9_OUTPUT         @Lookup(AttributeValueMapper_9_LOOKUP_TABLE,"Gueltigkeit",FORWARD|ENCODED_ATTR|REAL_NULL_SUPPORT, Gueltigkeit_Aufgeloest)
 
 
 # -------------------------------------------------------------------------
@@ -3005,7 +3012,7 @@ FACTORY_DEF * TeeFactory FACTORY_NAME Counter_<Rejected> INPUT FEATURE_TYPE Coun
 # -------------------------------------------------------------------------
 Lookup AttributeValueMapper_5_LOOKUP_TABLE   de              1   fr              2   it              3   rm              4   en              5   ""              ""   ENCODED_SUPPORTUNICODE
 
-FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeValueMapper_5    INPUT  FEATURE_TYPE grundstueck_CSV2_2    OUTPUT FEATURE_TYPE AttributeValueMapper_5_OUTPUT         @Lookup(AttributeValueMapper_5_LOOKUP_TABLE,"Amtssprache",FORWARD|ENCODED_ATTR|REAL_NULL_SUPPORT, Amtssprache_aufgeloest)
+FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeValueMapper_5    INPUT  FEATURE_TYPE grundstueck_CSV2_1    OUTPUT FEATURE_TYPE AttributeValueMapper_5_OUTPUT         @Lookup(AttributeValueMapper_5_LOOKUP_TABLE,"Amtssprache",FORWARD|ENCODED_ATTR|REAL_NULL_SUPPORT, Amtssprache_aufgeloest)
 
 
 # -------------------------------------------------------------------------
@@ -3051,7 +3058,7 @@ FACTORY_DEF * TeeFactory FACTORY_NAME Counter_2_<Rejected> INPUT FEATURE_TYPE Co
 # -------------------------------------------------------------------------
 Lookup AttributeValueMapper_11_LOOKUP_TABLE   PROV            0   RECHTSG         1   ""              ""   ENCODED_SUPPORTUNICODE
 
-FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeValueMapper_11    INPUT  FEATURE_TYPE gebaeude_eingang_adresse_CSV2_2    OUTPUT FEATURE_TYPE AttributeValueMapper_11_OUTPUT         @Lookup(AttributeValueMapper_11_LOOKUP_TABLE,"Gueltigkeit",FORWARD|ENCODED_ATTR|REAL_NULL_SUPPORT, Gueltigkeit_Aufgeloest)
+FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeValueMapper_11    INPUT  FEATURE_TYPE gebaeude_eingang_adresse_CSV2_1    OUTPUT FEATURE_TYPE AttributeValueMapper_11_OUTPUT         @Lookup(AttributeValueMapper_11_LOOKUP_TABLE,"Gueltigkeit",FORWARD|ENCODED_ATTR|REAL_NULL_SUPPORT, Gueltigkeit_Aufgeloest)
 
 
 # -------------------------------------------------------------------------
@@ -3073,7 +3080,7 @@ FACTORY_DEF * TeeFactory FACTORY_NAME Counter_3_<Rejected> INPUT FEATURE_TYPE Co
 # -------------------------------------------------------------------------
 Lookup AttributeValueMapper_2_LOOKUP_TABLE   false           0   true            1   ""              ""   ENCODED_SUPPORTUNICODE
 
-FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeValueMapper_2    INPUT  FEATURE_TYPE gebaeude_CSV2_2    OUTPUT FEATURE_TYPE AttributeValueMapper_2_OUTPUT         @Lookup(AttributeValueMapper_2_LOOKUP_TABLE,"istEinzelobjekt",FORWARD|ENCODED_ATTR|REAL_NULL_SUPPORT, istEinzelobjekt_Aufgeloest)
+FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeValueMapper_2    INPUT  FEATURE_TYPE gebaeude_CSV2_1    OUTPUT FEATURE_TYPE AttributeValueMapper_2_OUTPUT         @Lookup(AttributeValueMapper_2_LOOKUP_TABLE,"istEinzelobjekt",FORWARD|ENCODED_ATTR|REAL_NULL_SUPPORT, istEinzelobjekt_Aufgeloest)
 
 
 # -------------------------------------------------------------------------
@@ -3113,7 +3120,7 @@ FACTORY_DEF * TeeFactory FACTORY_NAME Counter_4_<Rejected> INPUT FEATURE_TYPE Co
 # -------------------------------------------------------------------------
 Lookup AttributeValueMapper_12_LOOKUP_TABLE   PROV            0   RECHTSG         1   ""              ""   ENCODED_SUPPORTUNICODE
 
-FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeValueMapper_12    INPUT  FEATURE_TYPE bodenbedeckung_anteil_CSV2_2    OUTPUT FEATURE_TYPE AttributeValueMapper_12_OUTPUT         @Lookup(AttributeValueMapper_12_LOOKUP_TABLE,"Gueltigkeit",FORWARD|ENCODED_ATTR|REAL_NULL_SUPPORT, Gueltigkeit_Aufgeloest)
+FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeValueMapper_12    INPUT  FEATURE_TYPE bodenbedeckung_anteil_CSV2_1    OUTPUT FEATURE_TYPE AttributeValueMapper_12_OUTPUT         @Lookup(AttributeValueMapper_12_LOOKUP_TABLE,"Gueltigkeit",FORWARD|ENCODED_ATTR|REAL_NULL_SUPPORT, Gueltigkeit_Aufgeloest)
 
 
 # -------------------------------------------------------------------------
@@ -3134,7 +3141,7 @@ DEFAULT_MACRO _WB_BYPASS_TERMINATION No
 FACTORY_DEF * TeeFactory FACTORY_NAME Counter_5_<Rejected> INPUT FEATURE_TYPE Counter_5_<REJECTED>  OUTPUT FAILED FEATURE_TYPE * @Abort(ENCODED, Counter_5<space>output<space>a<space><lt>Rejected<gt><space>feature.<space><space>To<space>continue<space>translation<space>when<space>features<space>are<space>rejected<comma><space>change<space><apos>Workspace<space>Parameters<apos><space><gt><space>Translation<space><gt><space><apos>Rejected<space>Feature<space>Handling<apos><space>to<space><apos>Continue<space>Translation<apos>)
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC Counter_3_OUTPUT TO ORACLE_NONSPATIAL __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>GRUDAEXP_GRUDAGAD<closeparen> GEOMETRY    ROUTE FME_GENERIC Counter_4_OUTPUT TO ORACLE_NONSPATIAL __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>GRUDAEXP_GRUDAGEB<closeparen> GEOMETRY    ROUTE FME_GENERIC Counter_2_OUTPUT TO ORACLE_NONSPATIAL __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>GRUDAEXP_GRUDAGST<closeparen> GEOMETRY    ROUTE FME_GENERIC Counter_OUTPUT TO ORACLE_NONSPATIAL __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>GRUDAEXP_GRUDAGZG<closeparen> GEOMETRY    ROUTE FME_GENERIC Counter_5_OUTPUT TO ORACLE_NONSPATIAL __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>GRUDAEXP_GRUDABBF<closeparen> GEOMETRY   FEATURE_TYPE_ATTRIBUTE __wb_out_feat_type__   OUTPUT ROUTED FEATURE_TYPE *    OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC Counter_3_OUTPUT TO ORACLE_NONSPATIAL __GO_TO_FINAL_OUTPUT_ROUTER__ <at>CopyAttributes<openparen>ENCODED<comma>ERSTELLZPK<comma>ErstellZeitpunkt<closeparen>,multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>GRUDAEXP_GRUDAGAD<closeparen> GEOMETRY    ROUTE FME_GENERIC Counter_4_OUTPUT TO ORACLE_NONSPATIAL __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>GRUDAEXP_GRUDAGEB<closeparen> GEOMETRY    ROUTE FME_GENERIC Counter_2_OUTPUT TO ORACLE_NONSPATIAL __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>GRUDAEXP_GRUDAGST<closeparen> GEOMETRY    ROUTE FME_GENERIC Counter_OUTPUT TO ORACLE_NONSPATIAL __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>GRUDAEXP_GRUDAGZG<closeparen> GEOMETRY    ROUTE FME_GENERIC Counter_5_OUTPUT TO ORACLE_NONSPATIAL __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>GRUDAEXP_GRUDABBF<closeparen> GEOMETRY   FEATURE_TYPE_ATTRIBUTE __wb_out_feat_type__   OUTPUT ROUTED FEATURE_TYPE *    OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
 # -------------------------------------------------------------------------
 
 FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
@@ -3142,10 +3149,10 @@ FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYP
 # -------------------------------------------------------------------------
 ORACLE_NONSPATIAL_1_DEF GRUDAEXP_GRUDAGEB   oracle_create_table          ""   oracle_drop_table            ""   oracle_table_writer_mode     ""   oracle_update_key_columns    ""   oracle_truncate_table        ""   fme_feature_operation        INSERT   fme_table_handling           TRUNCATE_EXISTING   OBJECTID                     number(38,0)   GEB_ID                       nvarchar(40)   GWR_EGID                     number(38,0)   KANT_GID                     number(38,0)   NUMMERZUS                    nvarchar(12)   PROJEKT                      number(5,0)   UNTERIRD                     number(5,0)   EINZELOBJ                    number(5,0)   GEB_ART_DE                   nvarchar(30)   GEB_ART_FR                   nvarchar(30)   GEB_ART_IT                   nvarchar(30)   GEBARTCODE                   nvarchar(4)   GEBARTZUS                    nvarchar(255)   GEBFLAECHE                   number(38,0)   GUELTIGKEI                   number(5,0)   ERSTELLZPK                   nvarchar(20)   G_NR_BFS                     number(5,0)   G_NR_JAHR                    number(5,0)   G_NR_NR                      number(5,0)   G_NR_INDEX                   number(5,0)   M_NR_NBI                     nvarchar(12)   M_NR_NR                      nvarchar(12)
 # -------------------------------------------------------------------------
-ORACLE_NONSPATIAL_1_DEF GRUDAEXP_GRUDABBF   oracle_create_table          ""   oracle_drop_table            ""   oracle_table_writer_mode     ""   oracle_update_key_columns    ""   oracle_truncate_table        ""   fme_feature_operation        INSERT   fme_table_handling           TRUNCATE_EXISTING   OBJECTID                     number(38,0)   GST_ID                       nvarchar(40)   ART                          nvarchar(40)   FLAECHENT                    number(38,0)   ART_BEZ                      nvarchar(40)   LN_ANTEIL                    number(38,0)   GUELTIGKEI                   number(5,0)   ERSTELLZPK                   nvarchar(20)   G_NR_BFS                     number(5,0)   G_NR_JAHR                    number(5,0)   G_NR_NR                      number(5,0)   G_NR_INDEX                   number(5,0)   M_NR_NBI                     nvarchar(12)   M_NR_NR                      nvarchar(12)
-# -------------------------------------------------------------------------
-ORACLE_NONSPATIAL_1_DEF GRUDAEXP_GRUDAGST   oracle_create_table          ""   oracle_drop_table            ""   oracle_table_writer_mode     ""   oracle_update_key_columns    ""   oracle_truncate_table        ""   fme_feature_operation        INSERT   fme_table_handling           TRUNCATE_EXISTING   OBJECTID                     number(38,0)   GST_ID                       nvarchar(40)   BFSNR                        number(5,0)   GEMNAME                      nvarchar(30)   NBIDENT                      nvarchar(12)   GBKRNR                       number(5,0)   GBKRNAMEDE                   nvarchar(30)   GBKRNAMEFR                   nvarchar(30)   NBIDENTKR                    nvarchar(12)   SPRACHE                      number(5,0)   GSTNR                        nvarchar(12)   NR_ZUSATZ                    nvarchar(12)   EGRID                        nvarchar(14)   GSTART                       number(5,0)   FLAECHE                      number(10,0)   Q_STAND_AV                   number(5,0)   FLAE_AUSGE                   number(5,0)   GUELTIGKEI                   number(5,0)   ERSTELLZPK                   nvarchar(20)   G_NR_BFS                     number(5,0)   G_NR_JAHR                    number(5,0)   G_NR_NR                      number(5,0)   G_NR_INDEX                   number(5,0)   M_NR_NBI                     nvarchar(12)   M_NR_NR                      nvarchar(12)
+ORACLE_NONSPATIAL_1_DEF GRUDAEXP_GRUDAGAD   oracle_create_table          ""   oracle_drop_table            ""   oracle_table_writer_mode     ""   oracle_update_key_columns    ""   oracle_truncate_table        ""   fme_feature_operation        INSERT   fme_table_handling           TRUNCATE_EXISTING   OBJECTID                     number(38,0)   GEB_ID                       nvarchar(40)   STRNAME                      nvarchar(60)   STRNAME2                     nvarchar(60)   GEB_BEZ                      nvarchar(60)   BENGEBIET                    nvarchar(60)   BENGEBIET2                   nvarchar(60)   GEBNR                        nvarchar(10)   PLZ                          number(5,0)   PLZZ                         number(5,0)   ORTSCHAFT                    nvarchar(40)   GWR_EGID                     nvarchar(12)   GWR_EDID                     number(5,0)   BEDID                        number(5,0)   GUELTIGKEI                   number(5,0)   ERSTELLZPK                   nvarchar(20)
 # -------------------------------------------------------------------------
 ORACLE_NONSPATIAL_1_DEF GRUDAEXP_GRUDAGZG   oracle_create_table          ""   oracle_drop_table            ""   oracle_table_writer_mode     ""   oracle_update_key_columns    ""   oracle_truncate_table        ""   fme_feature_operation        INSERT   fme_table_handling           TRUNCATE_EXISTING   OBJECTID                     number(38,0)   GST_ID                       nvarchar(40)   GEB_ID                       nvarchar(40)   AS_FLAECHE                   number(38,0)   GUELTIGKEI                   number(5,0)   ERSTELLZPK                   nvarchar(20)   G_NR_BFS                     number(5,0)   G_NR_JAHR                    number(5,0)   G_NR_NR                      number(5,0)   G_NR_INDEX                   number(5,0)   M_NR_NBI                     nvarchar(12)   M_NR_NR                      nvarchar(12)
 # -------------------------------------------------------------------------
-ORACLE_NONSPATIAL_1_DEF GRUDAEXP_GRUDAGAD   oracle_create_table          ""   oracle_drop_table            ""   oracle_table_writer_mode     ""   oracle_update_key_columns    ""   oracle_truncate_table        ""   fme_feature_operation        INSERT   fme_table_handling           TRUNCATE_EXISTING   OBJECTID                     number(38,0)   GEB_ID                       nvarchar(40)   STRNAME                      nvarchar(60)   STRNAME2                     nvarchar(60)   GEB_BEZ                      nvarchar(60)   BENGEBIET                    nvarchar(60)   BENGEBIET2                   nvarchar(60)   GEBNR                        nvarchar(10)   PLZ                          number(5,0)   PLZZ                         number(5,0)   ORTSCHAFT                    nvarchar(40)   GWR_EGID                     nvarchar(12)   GWR_EDID                     number(5,0)   BEDID                        number(5,0)   GUELTIGKEI                   number(5,0)   ERSTELLZPK                   nvarchar(20)
+ORACLE_NONSPATIAL_1_DEF GRUDAEXP_GRUDABBF   oracle_create_table          ""   oracle_drop_table            ""   oracle_table_writer_mode     ""   oracle_update_key_columns    ""   oracle_truncate_table        ""   fme_feature_operation        INSERT   fme_table_handling           TRUNCATE_EXISTING   OBJECTID                     number(38,0)   GST_ID                       nvarchar(40)   ART                          nvarchar(40)   FLAECHENT                    number(38,0)   ART_BEZ                      nvarchar(40)   LN_ANTEIL                    number(38,0)   GUELTIGKEI                   number(5,0)   ERSTELLZPK                   nvarchar(20)   G_NR_BFS                     number(5,0)   G_NR_JAHR                    number(5,0)   G_NR_NR                      number(5,0)   G_NR_INDEX                   number(5,0)   M_NR_NBI                     nvarchar(12)   M_NR_NR                      nvarchar(12)
+# -------------------------------------------------------------------------
+ORACLE_NONSPATIAL_1_DEF GRUDAEXP_GRUDAGST   oracle_create_table          ""   oracle_drop_table            ""   oracle_table_writer_mode     ""   oracle_update_key_columns    ""   oracle_truncate_table        ""   fme_feature_operation        INSERT   fme_table_handling           TRUNCATE_EXISTING   OBJECTID                     number(38,0)   GST_ID                       nvarchar(40)   BFSNR                        number(5,0)   GEMNAME                      nvarchar(30)   NBIDENT                      nvarchar(12)   GBKRNR                       number(5,0)   GBKRNAMEDE                   nvarchar(30)   GBKRNAMEFR                   nvarchar(30)   NBIDENTKR                    nvarchar(12)   SPRACHE                      number(5,0)   GSTNR                        nvarchar(12)   NR_ZUSATZ                    nvarchar(12)   EGRID                        nvarchar(14)   GSTART                       number(5,0)   FLAECHE                      number(10,0)   Q_STAND_AV                   number(5,0)   FLAE_AUSGE                   number(5,0)   GUELTIGKEI                   number(5,0)   ERSTELLZPK                   nvarchar(20)   G_NR_BFS                     number(5,0)   G_NR_JAHR                    number(5,0)   G_NR_NR                      number(5,0)   G_NR_INDEX                   number(5,0)   M_NR_NBI                     nvarchar(12)   M_NR_NR                      nvarchar(12)
