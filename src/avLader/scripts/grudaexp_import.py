@@ -92,7 +92,8 @@ def run():
     fme_script_logfile_qa = os.path.join(config['LOGGING']['log_directory'], subcommand + "_qa_fme.log")
     
     qa_filename = os.path.join(config['LOGGING']['log_directory'], subcommand + "_qa.xlsx")
-    AGILib.folder_files.rename_file_with_timestamp(qa_filename)
+    if os.path.exists(qa_filename):
+        AGILib.folder_files.rename_file_with_timestamp(qa_filename)
     logger.info("Das QA-Excelfile lautet: " + qa_filename)
 
     parameters_qa = {
