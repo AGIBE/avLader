@@ -55,11 +55,11 @@ def run_gebadr_release(args):
     
 def run_oereb_liegenschaften(args):
     avLader.scripts.oereb_liegenschaften.run()
-    print("ÖREB-Liegenschaften SUCCESSFUL!")
+    print("OEREB-Liegenschaften SUCCESSFUL!")
 
 def run_oereb_adressen(args):
     avLader.scripts.oereb_adressen.run()
-    print("ÖREB-Adressen SUCCESSFUL!")
+    print("OEREB-Adressen SUCCESSFUL!")
     
 def run_lk_import(args):
     avLader.scripts.lk_import.run()
