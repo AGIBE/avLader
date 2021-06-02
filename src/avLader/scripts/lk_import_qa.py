@@ -3,6 +3,7 @@ from __future__ import division
 import AGILib.connection
 import AGILib.excel_writer
 import os
+import psycopg2
 from datetime import datetime as dt
 
 
@@ -117,10 +118,16 @@ def check_count_features(config, logger, gp, attr_group = [], quelle_pg = False,
 			if len(preselct_vek2) > 0 and len(preselct_norm) > 0:
 				# Get Anzahl von vek2p & Norm
 				if quelle_pg is True:
-					sql = 'SELECT grenz5_g5.bfsnr, count(grenz5_g5.bfsnr) FROM geodb.grenz5_g5 LEFT JOIN geodb.' + ebene.lower() + ' ON st_intersects(grenz5_g5.shape, ' + ebene.lower() + '.shape) group by grenz5_g5.bfsnr'
-					count_vek2 =  config['GEODB_VEK2_PG']['connection'].db_read(sql)
-					sql = 'SELECT grenz5_g5.bfsnr, count(grenz5_g5.bfsnr) FROM norm.grenz5_g5 LEFT JOIN norm.' + ebene.lower() + ' ON st_intersects(grenz5_g5.shape, '  + ebene.lower() + '.shape) group by grenz5_g5.bfsnr'
-					count_norm = config['NORM_TEAM_PG']['connection'].db_read(sql)
+					try:
+						sql = 'SELECT grenz5_g5.bfsnr, count(grenz5_g5.bfsnr) FROM geodb.grenz5_g5 LEFT JOIN geodb.' + ebene.lower() + ' ON st_intersects(grenz5_g5.shape, ' + ebene.lower() + '.shape) group by grenz5_g5.bfsnr'
+						count_vek2 =  config['GEODB_VEK2_PG']['connection'].db_read(sql)
+						sql = 'SELECT grenz5_g5.bfsnr, count(grenz5_g5.bfsnr) FROM norm.grenz5_g5 LEFT JOIN norm.' + ebene.lower() + ' ON st_intersects(grenz5_g5.shape, '  + ebene.lower() + '.shape) group by grenz5_g5.bfsnr'
+						count_norm = config['NORM_TEAM_PG']['connection'].db_read(sql)
+					except psycopg2.Error as e:
+						logger.warn("Die PostGIS-Abfrage hat einen Fehler zurückgegeben.")
+						logger.warn(e.pgerror)
+						logger.warn(e.cursor.query)
+						count_norm = ""
 				else:
 					sql = 'SELECT grenz5_g5.bfsnr, count(grenz5_g5.bfsnr) FROM GEODB.GRENZ5_G5, GEODB.' + ebene.upper() + ' where sde.st_intersects(grenz5_g5.shape, ' + ebene.upper() + '.shape) = 1 group by grenz5_g5.bfsnr'
 					count_vek2 = config['GEODB_VEK2']['connection'].db_read(sql)
