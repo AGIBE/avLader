@@ -124,7 +124,7 @@ def check_count_features(config, logger, gp, attr_group = [], quelle_pg = False,
 						sql = 'SELECT grenz5_g5.bfsnr, count(grenz5_g5.bfsnr) FROM norm.grenz5_g5 LEFT JOIN norm.' + ebene.lower() + ' ON st_intersects(grenz5_g5.shape, '  + ebene.lower() + '.shape) group by grenz5_g5.bfsnr'
 						count_norm = config['NORM_TEAM_PG']['connection'].db_read(sql)
 					except psycopg2.Error as e:
-						logger.warn("Die PostGIS-Abfrage hat einen Fehler zurückgegeben.")
+						logger.warn("Die PostGIS-Abfrage hat einen Fehler zurueckgegeben.")
 						logger.warn(e.pgerror)
 						logger.warn(e.cursor.query)
 						count_norm = ""
