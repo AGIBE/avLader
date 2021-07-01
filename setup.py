@@ -35,7 +35,8 @@ setup(
     entry_points={
          'console_scripts': [
               'avLader = avLader.__main__:main',
-              'al = avLader.__main__:main'
+              'al = avLader.__main__:main',
+              'prepImportAV = avLader.__main__:main'
           ]
     }
 )
